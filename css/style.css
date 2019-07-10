@@ -1595,6 +1595,9 @@ footer textarea {
     .my_email {
        min-width: 250px;
     }
+    .my_works {
+        overflow-x: hidden;
+    }
 }
 @media screen and (max-width:600px) {
     .skills {
@@ -1660,10 +1663,59 @@ footer textarea {
     .my_works {
         overflow-x: hidden;
     }
-}
-@media screen and (max-width:360px) {
-    .skills {
+        .skills {
         width: 260px;
+    }
+    .text {
+        font-size: 18px;
+    }
+    .post_title {
+        font-size: 24px;
+    }
+    .post {
+        padding-top: 30px;
+    }
+    .postcards_block {
+        width: 240px;
+        height: 280px;
+    }
+    .title_cards {
+        font-size: 18px;
+    }
+    .details p {
+        font-size: 14px;
+    }
+    .html:after {
+        right: 20px;
+    }
+    .css:after {
+        right: 0px;
+    }
+    .border {
+        margin: 25px auto;
+    }
+    .services-section {
+        padding: 40px 0;
+    }
+    .service-box {
+        width: 100%;
+        max-width: 300px;
+        margin-top: 5px;
+    }
+    .qualities {
+        padding: 40px 0;
+    }
+    .accardeon_header {
+    padding: 12px 10px 12px 70px;
+    }
+    .full_block .accardeon_content {
+        padding: 20px 20px;
+    }
+    .swiper-container {
+        padding: 40px 0 100px;
+    }
+    .sb {
+        padding: 20px;
     }
 }
 
