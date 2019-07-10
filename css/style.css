@@ -26,6 +26,19 @@ h6 {
     box-sizing: border-box;
 }
 
+.show {
+    visibility: visible !important;
+}
+video {
+    visibility: hidden;
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+}
+.animation_logo{
+    position: relative;
+    height: 100%;
+}
 
 /* scroll bar
 ============================================ */
@@ -329,12 +342,11 @@ section:before {
     height: 100%;
     pointer-events: none;
 }
-
-h1 {
+ h1 {
     margin: 0;
     padding: 0;
     position: absolute;
-    top: 40%;
+    top: 50%;
     transform: translateY(-50%);
     width: 100%;
     text-align: center;
@@ -343,11 +355,26 @@ h1 {
     font-family: 'Varela Round', sans-serif;
     letter-spacing: 0.2em;
 }
-
+.wrapper_video {
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+    width: 100%;
+}
 .smokk {
     display: inline-block;
     animation: animate 1s linear forwards;
     opacity: 0;
+}
+
+.show {
+    visibility: visible !important;
+}
+video {
+    visibility: hidden;
+    object-fit: cover;
+    width: 100%;
+    height: auto;
 }
 
 @keyframes animate {

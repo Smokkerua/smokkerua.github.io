@@ -182,6 +182,19 @@ $(function() {
     })
  });
 
+        /* video */
+         $("#play").on("click", function(event) {
+             event.preventDefault();
+
+            $("#video-id").addClass("show");
+         var video = $('#video-id').get(0);
+         if (video.classList.contains("show")) {
+             video.play();
+             setTimeout(function(){
+                 $("#video-id").removeClass("show");
+            }, 8000);
+         }
+        });
 
 });
 
