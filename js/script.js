@@ -112,10 +112,6 @@ $(function() {
                 dots: true,
             });
 
-        /* animation */
-        new WOW().init();
-
-
     /* E-mail */
     $("form").submit(function() { //Change
         var th = $(this);
