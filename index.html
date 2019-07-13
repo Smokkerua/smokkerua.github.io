@@ -246,7 +246,6 @@
                     <h2>01</h2>
                     <h3>Моя работа - мое хобби</h3>
                     <p>Мне искренне нравиться верстать, создавать что-то полезное для людей и делать это хорошо.</p>
-                    <a  class="creativ" id="full_block-1" href="#">Читать больше</a>
                 </div>
             </div>
             <div class="my_box">
@@ -254,7 +253,6 @@
                     <h2>02</h2>
                     <h3>Ответственный</h3>
                     <p>Я не предлагаю услуги, если не могу это сделать. А если предложил - то сделаю в указаные строки и это будет качественно.</p>
-                    <a  class="creativ" id="full_block-2" href="#">Читать больше</a>
                 </div>
             </div>
             <div class="my_box">
@@ -262,7 +260,6 @@
                     <h2>03</h2>
                     <h3>Гибкий</h3>
                     <p>Могу подстроиться под любую из ситуаций, работать со всеми людьми и находить общий язык.</p>
-                    <a  id="full_block-3"  class="creativ" href="#">Читать больше</a>
                 </div>
             </div>
             <div class="my_box">
@@ -270,7 +267,6 @@
                     <h2>04</h2>
                     <h3>24/7 на связи</h3>
                     <p>Если вы обнаружили какой-либо баг в моей работе или что-то требуется откорректировать - я внеочереди исправлю это бесплатно.</p>
-                    <a  id="full_block-4" class="creativ" href="#">Читать больше</a>
                 </div>
             </div>
         </div>
@@ -475,16 +471,12 @@
                    <p>kynpan3@gmai.com<br>kunpansmokk@gmail.com<p>
                 </div>
              </div>
-             <form>
+             <form action="/testform/submit.php" method="POST">
 
-                <input type="hidden" name="project_name" value="Smokker.ua">
-                <input type="hidden" name="admin_email" value="kynpan3@gmail.com">
-                <input type="hidden" name="form_subject" value="Верстка сайта">
-
-                <input class="input_name" name="Name" type="text" placeholder="Ваше имя">
-                <input  class="input_email" name="E-mail" type="email" placeholder="Ваша почта">
-                <textarea class="my_message" name="Message" id="message" cols="30" rows="13" placeholder="Напишите сообщение"></textarea>
-                <button class="my_btn" >Отправить</button>
+                <input class="input_name" name="name" type="text" placeholder="Ваше имя">
+                <input  class="input_email" name="email" type="email" placeholder="Ваша почта">
+                <textarea class="my_message" name="message" id="message" cols="30" rows="13" placeholder="Напишите сообщение"></textarea>
+                <button  type="submit" class="my_btn" >Отправить</button>
              </form>
         </div>
             <div class="bottom_line">

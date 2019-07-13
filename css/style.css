@@ -1185,30 +1185,6 @@ h2 {
     font-size: 16px;
 }
 
-.creativ {
-    position: relative;
-    margin: 20px 0 0;
-    padding: 10px 20px;
-    text-decoration: none;
-    border: 1px solid #fff;
-    display: inline-block;
-    color: #fff;
-    transition: 0.5s;
-    transform: translateY(-40px);
-    opacity: 0;
-    visibility: hidden;
-}
-
-.my_box:hover .creativ {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-}
-
-.creativ:hover {
-    color: #000;
-    background: #fff;
-}
 /* accardeon
 =====================*/
 .accardeon_blocks {
@@ -1436,7 +1412,8 @@ footer textarea {
     transition: 0.3s;
     position: absolute;
     bottom: 0;
-    right: 0;
+    left: 50%;
+    transform: translateX(-50%);
     cursor: pointer;
 }
 
