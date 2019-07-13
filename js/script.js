@@ -181,6 +181,7 @@ $(function() {
         });
 
          /* form */
+    $(function() {
       document.getElementById('ajax-contact-form').addEventListener('submit', function(evt){
     var http = new XMLHttpRequest(), f = this;
     var th = $(this);
@@ -199,6 +200,6 @@ $(function() {
     }
     http.send(new FormData(f));
   }, false);
-
+});
 });
 
