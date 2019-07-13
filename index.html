@@ -471,13 +471,15 @@
                    <p>kynpan3@gmai.com<br>kunpansmokk@gmail.com<p>
                 </div>
              </div>
-             <form action="/testform/submit.php" method="POST">
 
-                <input class="input_name" name="name" type="text" placeholder="Ваше имя">
-                <input  class="input_email" name="email" type="email" placeholder="Ваша почта">
-                <textarea class="my_message" name="message" id="message" cols="30" rows="13" placeholder="Напишите сообщение"></textarea>
-                <button  type="submit" class="my_btn" >Отправить</button>
+             <form id="ajax-contact-form" enctype="multipart/form-data" method="post">
+
+                <input class="input_name" id="nameFF" name="nameFF" type="text" placeholder="Ваше имя">
+                <input  class="input_email" id="contactFF" name="contactFF" type="email" placeholder="Ваша почта">
+                <textarea class="my_message"  id="projectFF" name="projectFF" cols="30" rows="13" placeholder="Напишите сообщение"></textarea>
+                <button  type="submit"  id="submitFF" class="my_btn" >Отправить</button>
              </form>
+
         </div>
             <div class="bottom_line">
                  _SmoKKeR_Ua_ - ваш верстальщик!
