@@ -298,7 +298,8 @@ header {
 }
 
 .sm-container i:hover {
-    transform: scale(1.2);
+    transform: scale(1.4);
+    color: #fff;
 }
 
 .sm-menu {
@@ -1197,7 +1198,16 @@ h2 {
 .accardeon_text {
     margin-bottom: 40px;
 }
+.minus {
+    opacity: 0;
+}
+.full_block.show .minus {
+    opacity: 1;
+}
 
+.full_block.show .plus {
+    opacity: 0;
+}
 .accardeon_header {
     border-top: 1px solid #e7e7e7;
     border-bottom: 1px solid #e7e7e7;
@@ -1208,6 +1218,10 @@ h2 {
     background: #f7f7f7;
     color: #ff2251;
     position: relative;
+}
+.right-icon {
+    position: absolute;
+    right: 20px;
 }
 .icon {
     position: absolute;
@@ -1412,8 +1426,7 @@ footer textarea {
     transition: 0.3s;
     position: absolute;
     bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
+    right: 0;
     cursor: pointer;
 }
 
@@ -1717,6 +1730,7 @@ footer textarea {
     }
     .accardeon_header {
     padding: 12px 10px 12px 70px;
+        font-size: 16px;
     }
     .full_block .accardeon_content {
         padding: 20px 20px;
@@ -1727,6 +1741,7 @@ footer textarea {
     .sb {
         padding: 20px;
     }
+    .
 }
 
 
