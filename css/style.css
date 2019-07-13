@@ -1092,11 +1092,11 @@ h1 .smokk:nth-child(7) {
     position: relative;
     width: 80%;
     margin: auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-    grid-gap: 0 40px;
-    grid-template-rows: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     z-index: 3;
+    flex-wrap: wrap;
 }
 
 .my_box:before {
@@ -1145,6 +1145,8 @@ h1 .smokk:nth-child(7) {
     justify-content: center;
     align-items: center;
     border: 1px solid #000;
+    max-width: 280px;
+    margin:  15px;
 }
 
 .content {
@@ -1455,7 +1457,15 @@ footer textarea {
 
 /* media
 =====================*/
-
+@media (max-width: 1570px){
+    .my_blocks {
+        justify-content: center;
+    }
+    .my_box {
+        margin: 15px 100px;
+        max-width: 350px;
+    }
+}
 @media (max-width: 1470px) {
     .my_blocks {
         width: 92%;
@@ -1463,10 +1473,9 @@ footer textarea {
 }
 
 @media (max-width: 1300px) {
-    .my_blocks {
-        width: 60%;
-    }
     .my_box {
+        margin-right: 40px;
+        margin-left: 40px;
         margin-bottom: 40px;
     }
     .footer_wrap {
@@ -1488,6 +1497,10 @@ footer textarea {
     }
     .slick-next {
         right: -70px;
+    }
+    .my_box {
+        margin: 15px 30px;
+        max-width: 350px;
     }
 }
 @media (max-width: 991px) {
@@ -1680,14 +1693,10 @@ footer textarea {
         font-size: 16px;
         padding: 16px 40px;
     }
-    .my_blocks {
-    width: 80%;
-    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-    }
     .my_works {
         overflow-x: hidden;
     }
-        .skills {
+    .skills {
         width: 260px;
     }
     .text {
