@@ -202,7 +202,36 @@ header {
     display: block;
     transition: all 0.2s linear;
 }
-
+.sub-menu {
+    position: absolute;
+    padding: 0;
+    display: none;
+    width: 200px;
+}
+.hover-works {
+    position: relative;
+}
+.padding-right {
+    padding-right: 35px !important;
+}
+.down {
+    position: absolute;
+    right: 15px;
+    top: 40%;
+    transform: translateY(-50%);
+    color: #fff;
+}
+.hover-works:hover .sub-menu {
+    display: block;
+    background: #333;
+}
+.hover-works:hover{
+    background: #333;
+}
+.works-a {
+    display: block;
+    left: 0;
+}
 .nav_link:hover,
 .nav_link.active {
     color: #fff;
@@ -1567,6 +1596,28 @@ footer textarea {
         flex-wrap: wrap;
         justify-content: center;
     }
+    
+    .sub-menu {
+        position: relative;;
+
+        width: 100%;
+    }
+    .hover-works {
+        position: relative;
+    }
+    .padding-right {
+        padding: 0px !important;
+    }
+    .down {
+        position: absolute;
+        right: 45%;
+        top: 40%;
+        transform: translateY(-50%);
+    }
+    .works-a {
+        display: block;
+        background: #404040;
+    }
 }
 
 @media screen and (max-width:960px) {
@@ -1576,7 +1627,16 @@ footer textarea {
     }
 }
 
+@media screen and (max-width:900px) {
+    .down {
+        right: 44%;
+    }
+}
+
 @media screen and (max-width:768px) {
+    .down {
+        right: 43%;
+    }
     h1 {
         font-size: 34px;
     }
@@ -1659,8 +1719,14 @@ footer textarea {
     .bottom_line {
         font-size: 14px;
     }
+     .down {
+        right: 41%;
+    }
 }
 @media screen and (max-width:480px) {
+    .down {
+        right: 38%;
+    }
     h1 {
         font-size: 26px;
     }
@@ -1741,9 +1807,13 @@ footer textarea {
     .sb {
         padding: 20px;
     }
-    .
-}
 
+}
+@media screen and (max-width:360px) {
+    .down {
+        right: 36%;
+    }
+}
 
 
 
