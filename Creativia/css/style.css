@@ -170,7 +170,7 @@ h6 {
 .header_bottom {
     background: url(../img/firstfone.png) center no-repeat;
     background-size: cover;
-    min-height: 630px;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -2743,6 +2743,105 @@ footer {
 =====================*/
     .col_text {
         margin-bottom: 30px;
+    }
+    /* progress_bar
+=====================*/
+    .bars_block {
+        margin: 20px 25px;
+        width: 50%;
+        max-width: 200px;
+    }
+    .progress_title {
+        margin-bottom: 30px;
+    }
+    .container_bars {
+        margin-bottom: 50px;
+    }
+    .bars_title {
+        margin-top: 0;
+    }
+    /* last_twit
+====================*/
+    .last_twit_text {
+        max-width: 360px;
+        font-size: 10px;
+    }
+    .last_twit {
+        min-height: 160px;
+    }
+    .last_twit_foto {
+        font-size: 28px;
+        margin-bottom: 5px;
+    }
+    /* our_blog
+=====================*/
+    .blog_foto {
+        min-width: 300px;
+        max-width: 300px;
+        margin: auto;
+        padding-bottom: 20px;
+    }
+    .blog_title {
+        font-size: 18px;
+    }
+    .blog_text {
+        font-size: 14px;
+        margin: 10px 0 25px 0;
+        max-width: 370px;
+    }
+    .hide {
+        height: 460px;
+    }
+    .message {
+        width: 360px;
+        padding-left: 0px;
+        padding-right: 0;
+        height: 450px;
+    }
+    .mini-input {
+        max-width: 100%;
+        padding: 5px;
+        margin-bottom: 10px;
+        margin-left: 10px;
+        border-left: 1px solid #000;
+    }
+    .btn-message {
+        right: 40px;
+    }
+    h6 {
+        margin-left: 15px;
+    }
+}
+
+@media (max-width: 412px) {
+    .slider-clients {
+        overflow: hidden;
+    }
+    .title_text {
+        font-size: 10px;
+        margin: 0 30px;
+    }
+    .slider_text {
+        font-size: 10px;
+        max-width: 340px;
+        margin: auto;
+        padding-bottom: 30px;
+    }
+    .header_links {
+        max-width: 310px;
+        margin: auto;
+    }
+    .header_bottom {
+        overflow: hidden;
+    }
+    .slider {
+        width: 100%;
+        max-width: 375px;
+        overflow: hidden;
+    }
+    .slick-list {
+        max-width: 375px;;
+        width: 100%;
     }
     /* progress_bar
 =====================*/

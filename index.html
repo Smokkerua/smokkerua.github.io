@@ -489,11 +489,11 @@
                 </div>
              </div>
 
-             <form class="contact-form" id="contact-form_1" method="POST" enctype="multipart/form-data">
+             <form name="MyForm" action="mail.php" method="post">
 
-                <input name="name" type="text" class="input_name contact-form__input contact-form__input_name" placeholder="Ваше имя">
-                <input name="email" type="email" class="input_email contact-form__input contact-form__input_email" placeholder="Ваша почта">
-                <textarea class="my_message"  id="projectFF" name="projectFF" cols="30" rows="13" placeholder="Напишите сообщение"></textarea>
+                <input name="name" type="text" class="input_name" placeholder="Ваше имя">
+                <input name="email" type="email" class="input_email" placeholder="Ваша почта">
+                <textarea class="my_message" name="sub" cols="30" rows="13" placeholder="Напишите сообщение"></textarea>
                 <button type="submit" class="my_btn contact-form__button" >Отправить</button>
              </form>
 
