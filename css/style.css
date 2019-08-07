@@ -118,7 +118,7 @@ header {
     line-height: 40px;
 }
 #header_top.fixed .text {
-    font-size: 36px;
+    font-size: 20px;
 }
 .header_top {
     position: absolute;
