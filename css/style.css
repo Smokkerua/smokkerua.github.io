@@ -92,7 +92,80 @@ header:after {
     width: 100%;
     margin: auto;
 }
+/* modal window
+=====================*/
+#modal {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: auto;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 10000;
+    display: none
+}
 
+.containerModal {
+    margin: 25vh auto;
+    width: 800px;
+    box-sizing: border-box;
+    display: block;
+    position: relative;
+    background: linear-gradient(to bottom, #fff, #f9f9f9);
+    padding: 15px;
+
+}
+
+.containerModal .closeModal {
+    position: absolute;
+    right: 15px;
+    top: 25px;
+    font-size: 20px;
+    color: #b9b8b8;
+    transition: all .2s linear
+}
+
+.closeModal:hover {
+    color: #000
+}
+
+.modalContent{
+    display: none;
+
+}
+.modal_content {
+    color: #333;
+    font-size: 18px;
+    padding: 20px;
+    text-align: left;
+}
+.my_box .showModal {
+    position: relative;
+    margin: 20px 0 0;
+    padding: 10px 20px;
+    text-decoration: none;
+    border: 1px solid #fff;
+    display: inline-block;
+    color: #333;
+    font-size: 17px;
+    transition: 0.5s;
+    transform: translateY(-40px);
+    opacity: 0;
+    visibility: hidden;
+    z-index: 99999;
+    background: transparent;
+}
+.my_box:hover .showModal {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+.my_box .showModal:hover {
+    color: #000;
+    background: #fff;
+
+}
 
 /* header
 =====================*/
@@ -1166,7 +1239,23 @@ h1 .smokk:nth-child(7) {
     height: 100%;
     background: rgba(255, 255, 255, 0.05);
 }
-
+.modal_header {
+    text-align: center;
+    font-size: 22px;
+    margin-top: 15px;
+}
+.header-red {
+    color: #ff0057;
+}
+.header-blue {
+    color: #00bcd4;
+}
+.header-purple {
+    color: #5d02ff;
+}
+.header-yellow {
+    color:  #ffc107;
+}
 .my_box {
     position: relative;
     height: 400px;
@@ -1182,6 +1271,8 @@ h1 .smokk:nth-child(7) {
 .content {
     position: relative;
     padding: 20px;
+    z-index: 999;
+    text-align: left;
     transform: translateY(40px);
 }
 

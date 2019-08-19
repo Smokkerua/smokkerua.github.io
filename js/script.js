@@ -1,3 +1,4 @@
+
 $(function() {
 
             /* my skills */
@@ -179,8 +180,32 @@ $(function() {
             }, 8000);
          }
         });
-
-         /* form */
+   
 
 });
 
+/* modal window */
+  $(function () {
+    var c = {
+        self: $("#modal")
+        , showModal: function (d) {
+            this.self.find("#innerModal").html(d);
+            this.self.fadeIn(200)
+        }
+        , hideModal: function () {
+            this.self.fadeOut(200);
+            this.self.find("#innerModal").html("")
+        }
+    };
+    $(".showModal").on("click", function (f) {
+        var g = $(this).data("id");
+        var d = $("#cont" + g).html();
+        c.showModal(d)
+    });
+    $("#modal").on("click", function (d) {
+        if ($(d.target).attr("id") === "modal" || $(d.target).hasClass("closeModal")) {
+            c.hideModal()
+        }
+    });
+    
+});  
