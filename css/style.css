@@ -443,6 +443,7 @@ section:before {
     left: 0;
     width: 100%;
     height: 100%;
+    z-index: -1;
 }
  h1 {
     margin: 0;
@@ -1614,6 +1615,9 @@ footer textarea {
     }
 }
 @media (max-width: 991px) {
+    .containerModal {
+        width: 700px;
+    }
     .menu-toggle {
         display: block;
     }
@@ -1725,6 +1729,9 @@ footer textarea {
 }
 
 @media screen and (max-width:768px) {
+    .containerModal {
+        width: 600px;
+    }
     .down {
         right: 43%;
     }
@@ -1778,6 +1785,15 @@ footer textarea {
     }
 }
 @media screen and (max-width:600px) {
+    .containerModal {
+        width: 470px;
+    }
+    .modal_content {
+        color: #333;
+        font-size: 17px;
+        padding: 15px;
+        text-align: left;
+    }
     .skills {
         width: 360px;
     }
@@ -1815,6 +1831,15 @@ footer textarea {
     }
 }
 @media screen and (max-width:480px) {
+    .containerModal {
+        width: 350px;
+    }
+    .modal_content {
+        color: #333;
+        font-size: 16px;
+        padding: 15px;
+        text-align: left;
+    }
     .down {
         right: 38%;
     }
@@ -1903,6 +1928,15 @@ footer textarea {
 @media screen and (max-width:360px) {
     .down {
         right: 36%;
+    }
+    .containerModal {
+        width: 300px;
+    }
+    .modal_content {
+        color: #333;
+        font-size: 16px;
+        padding: 15px;
+        text-align: left;
     }
 }
 
