@@ -1833,6 +1833,7 @@ footer textarea {
 @media screen and (max-width:480px) {
     .containerModal {
         width: 350px;
+        margin: 100px auto;
     }
     .modal_content {
         color: #333;
