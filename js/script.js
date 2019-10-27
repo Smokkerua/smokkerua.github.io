@@ -15,6 +15,25 @@ $(function () {
     let header = $("#header");
     let sectionH
     let scrollOffset = $(window).scrollTop();
+    // Проверка отправки сообщения, если успешно - закрываем окно и выводим сообщение "спасибо за заявку"
+        $("#form").submit(function () {
+        $.ajax({
+            type: "POST"
+            , url: "/mail.php"
+            , data: $(this).serialize()
+        }).done(function () {
+            $(this).find("input").val("");
+            $("#form").trigger("reset");
+            document.getElementById('modalForm').style.display = 'none';
+            visible = false;
+            swal({
+                title: "Спасибо, ваша заявка принята!"
+                , icon: "success"
+                , button: "Закрыть окно"
+            , });
+        });
+        return false;
+    });
     /* Fixed Header */
     checkScroll(scrollOffset);
     $(window).on("scroll load resize", function () {
@@ -161,6 +180,7 @@ button_alert.addEventListener('click', function () {
         , button: "Закрыть окно"
     , });
 });
+
 /* modal window */
 $(function () {
     var c = {

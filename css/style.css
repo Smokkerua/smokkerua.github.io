@@ -947,6 +947,7 @@ video {
     cursor: pointer;
     position: relative;
     overflow: hidden;
+    margin: auto;
     margin-bottom: 50px;
 }
 .works_container__box a img{
@@ -959,17 +960,28 @@ video {
     font-weight: bold;
     position: absolute;
     bottom: 0px;
-    padding: 15px 0 15px 20px;
+    padding: 15px 20px;
     left: 0px;
     transform: translateY(50px);
     transition: all 0.2s linear;
     opacity: 0;
     width: 100%;
     background: rgba(0,0,0, 0.8);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 5;
 }
 .works_container__box:hover .works_container__title {
     transform: translateY(-0px);
     opacity: 1;
+}
+.works_container__title a{
+    cursor: pointer;
+    display: block;
+    font-size: 12px;
+    color: #fff;
+    text-transform: none;
 }
 .works_container__box a {
     text-decoration: none;

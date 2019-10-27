@@ -7,6 +7,7 @@
     <title>_SmoKKeR_</title>
     <link rel="stylesheet" href="./css/swiper.min.css">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/adaptive-style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300i,400,500,700,900|Varela+Round&display=swap" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
@@ -222,38 +223,56 @@
                             <div class="works_container__box">
                                 <a href="http://korolev-gruzoperevozki.ru/">
                                    <img src="./img/vyvoz-musora-mo.jpg" alt="Вывоз мусора МО">
-                                    <h5 class="works_container__title">Вывоз мусора МО</h5>
-                                </a>
+                                </a>   
+                                   <div class="works_container__title">
+                                       <h5 class="">Вывоз мусора МО</h5>
+                                       <a href="#">Подробнее...</a>
+                                   </div>  
                             </div>
-                            <div class="works_container__box">
+                            <div class="works_container__box musorcom">
                                 <a href="https://tara-klop.ru/">
                                     <img src="./img/klop.jpg" alt="Тара-клоп">
-                                    <h5 class="works_container__title">Тара-клоп</h5>
                                 </a>
+                                <div class="works_container__title">
+                                    <h5 class="">Вывоз мусора МО</h5>
+                                    <a href="#">Подробнее...</a>
+                                </div>  
                             </div>
                             <div class="works_container__box">
                                 <a href="https://gruzchuku.ru/">
                                     <img src="./img/gruzchuku.jpg" alt="Грузчики">
-                                    <h5 class="works_container__title">Грузчики</h5>
                                 </a>
+                                <div class="works_container__title">
+                                    <h5 class="">Грузчики</h5>
+                                    <a href="#">Подробнее...</a>
+                                </div>  
                             </div>
                             <div class="works_container__box">
                                 <a href="http://gruzchikii.ru/">
                                     <img src="./img/gruz.jpg" alt="Грузчики МО">
-                                    <h5 class="works_container__title">Грузчики МО</h5>
                                 </a>
-                            </div>  
-                            <div class="works_container__box musorcom">
+                                <div class="works_container__title">
+                                    <h5 class="">Грузчики МО</h5>
+                                    <a href="#">Подробнее...</a>
+                                </div>  
+                            </div>
+                            <div class="works_container__box">
                                 <a href="https://musorcom.ru/">
                                     <img src="./img/muscor-com.jpg" alt="Мусорком">
-                                    <h5 class="works_container__title">Мусорком</h5>
                                 </a>
-                            </div>
+                                <div class="works_container__title">
+                                    <h5 class="">Мусорком</h5>
+                                    <a href="#">Подробнее...</a>
+                                </div>  
+                            </div>  
                             <div class="works_container__box">
                                 <a href="https://chpu-rezka.ru/">
                                     <img src="./img/chpu.jpg" alt="ЧПУ Резка">
-                                    <h5 class="works_container__title">ЧПУ Резка</h5>
                                 </a>
+                                <div class="works_container__title">
+                                    <h5 class="">ЧПУ Резка</h5>
+                                    <a href="#">Подробнее...</a>
+                                </div>  
                             </div>
                             
                         </div>
@@ -338,7 +357,7 @@
                             <p>
                     </div>
                 </div>
-                <form method="post">
+                <form method="post" id="form">
                     <input name="name" type="text" class="input_name" placeholder="Ваше имя">
                     <input name="email" type="email" class="input_email" placeholder="Ваша почта">
                     <textarea class="my_message" name="sub" cols="30" rows="13" placeholder="Напишите сообщение"></textarea>
