@@ -371,7 +371,6 @@ header {
 }
 .sm-container i:hover {
     transform: scale(1.4);
-    color: #fff;
 }
 .sm-menu {
     background: #fff;
