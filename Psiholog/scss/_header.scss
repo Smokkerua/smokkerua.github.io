@@ -1,0 +1,332 @@
+// main: ./sass/style.scss
+
+$color-main: #262626;
+$color-secondary: #37204c;
+$color-white: #fff;
+$transishion-main: all 0.2s linear; 
+
+.header {
+    color: $color-secondary;
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 11px 0;
+        &-logo {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            & img {
+                margin-right: 27px;
+            }
+        }
+        &-callback {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            & a {
+                margin-right: 30px;
+                color: $color-secondary;
+            }
+        }
+    }
+    &__container {
+        padding-bottom: 56px;
+    }
+    &__bottom {
+        padding: 30px;
+        position: relative;
+        background: url(../images/form_bg.jpg) center no-repeat;
+        background-size: cover;
+        border-radius: 6px;
+        left: -35px;
+        min-width: 1245px;
+        box-sizing: border-box;
+        &-girl_bg {
+            position: absolute;
+            top: -445px;
+            right: 130px;
+            z-index: -1;
+        }
+    }
+}
+.phone {
+    font-size: 24px;
+    font-weight: 900;
+    text-decoration: none;
+}
+.titlebox {
+    max-width: 710px;
+    &-title {
+        font-size: 60px;
+        font-weight: 700;
+        margin-bottom: 30px;
+        margin-top: 8px;
+    }
+    &-subtitle {
+        font-size: 24px;
+        font-weight: 500;
+        max-width: 670px;
+        margin-bottom: 45px;
+        line-height: 1.15;
+    }
+}
+.nav {
+    float: right;
+    text-align: right;
+    & .navigation {
+        margin-top: 10px;
+        &-item a{
+            color: $color-secondary;
+            font-size: 14px;
+            font-weight: 900;
+            text-decoration: none;
+            text-transform: uppercase;
+            padding: 10px 0;
+            display: block;
+        }
+    }
+}
+.icons {
+    display: flex;
+    &__box {
+        max-width: 240px;
+        &-img {
+            height: 75px;
+            display: block;
+        }
+        &-text {
+            font-size: 18px;
+            font-weight: 900;
+            color: #825447;
+            line-height: 1.4;
+        }
+        &-1 {
+            margin-right: 48px;
+        }
+    }
+}
+.form-title {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 500;
+    text-align: center;
+    line-height: 1.1;
+    & span {
+        font-weight: 900;
+    }
+}
+.form_header {
+    padding-bottom: 10px;
+    margin-top: 25px;
+}
+
+@media only screen and (max-width: 1300px) {
+    .header__bottom {
+        left: 0;
+        min-width: 101px;
+        padding: 20px;
+        margin: 5px;
+    } 
+    .header__top {
+        padding: 11px 20px;
+    }
+    .nav {
+        margin-right: 20px;
+    }
+    .header__bottom-girl_bg {
+        top: -375px;
+        right: 120px;
+        max-width: 280px;
+    }
+    .titlebox {
+        padding-left: 20px;
+    }
+    .titlebox-title {
+        font-size: 50px;
+    }
+    .titlebox-subtitle {
+        font-size: 20px;
+        margin-bottom: 35px;
+    }
+    .icons {
+        padding-left: 20px;
+    }
+    .icons__box-1 {
+        margin-right: 28px;
+    }
+    .icons__box-2 {
+        max-width: 220px;
+    }
+}
+ 
+@media only screen and (max-width: 1100px) {
+    .header__bottom-girl_bg {
+        top: -295px;
+        right: 50px;
+        max-width: 220px;
+    }
+    .header__top-logo img {
+        margin-right: 15px;
+    }
+    .phone {
+        font-size: 20px;
+    }
+    .header__top-callback a {
+        margin-right: 15px;
+    }
+}
+@media only screen and (max-width: 991px) {
+    .header__top {
+        display: block;
+    }
+    .header__top-logo {
+        justify-content: center;
+        padding: 20px 0;
+    }
+    .header__top-logo img {
+        margin-right: 35px;
+    }
+    .header__top-callback {
+        justify-content: space-around;
+    }
+    .titlebox-title {
+        margin-top: 20px;
+    }
+    .header__bottom-girl_bg {
+        display: none;
+    }
+    .icons {
+        justify-content: space-around;
+    }
+    .icons__box-1 {
+        margin-right: 0px;
+    }
+    .header__bottom .form {
+        display: block;
+    }
+    .form .form-input {
+        margin-right: 30px;
+        margin: 10px auto;
+    }
+    .button-form {
+        margin: 10px auto;
+        display: block;
+    }
+}  
+@media only screen and (max-width: 768px) {
+    .form-title {
+        font-size: 20px;
+    }
+    .titlebox-title {
+        font-size: 40px;
+        max-width: 450px;
+    }
+    .titlebox-subtitle {
+        max-width: 100%;
+        margin-right: 20px;
+    }
+    .icons {
+        display: block;
+    }
+    .icons__box-2 {
+        max-width: 240px;
+    }
+    .icons__box{
+        margin: 10px auto;
+        display: block;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .form-title {
+        font-size: 17px;
+    }
+    .header__top-callback {
+        display: block;
+    }
+    .header__top-callback a {
+        margin: 10px auto;
+        padding: 0 10px;
+        padding-bottom: 15px;
+        display: block;
+        text-align: center;
+    }
+    .button {
+        display: block;
+        margin: 10px auto;
+    }
+    .header__top-logo {
+        display: block;
+    }
+    .header__top-logo img {
+        margin: 10px auto;
+        display: block;
+    }
+    .our-city {
+        text-align: center;
+        display: block;
+        margin: 15px auto;
+    }
+    .nav {
+        float: none;
+        margin-right: 0;
+    }
+    .nav .navigation {
+        margin-top: 10px;
+        display: flex;
+        justify-content: space-around;
+    }
+    .nav .navigation-item a {
+        min-width: 105px;
+        text-align: center;
+    }
+    .header__bottom {
+        padding: 20px 5px;
+        margin: 5px;
+        width: 100%;
+    }
+    .header__bottom {
+        margin: 0px;
+    }
+}
+    
+@media only screen and (max-width: 360px)  {
+    .titlebox-title {
+        font-size: 30px;
+    }
+} 
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+
+
+
+
+
+

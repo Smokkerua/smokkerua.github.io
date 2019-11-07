@@ -1,0 +1,146 @@
+@import 'reset';
+@import 'fonts';
+@import 'header';
+@import 'spent';
+@import 'consultation';
+@import 'modalWindows';
+
+$color-main: #262626;
+$color-secondary: #37204c;
+$color-white: #fff;
+
+// скролл бар 
+::-webkit-scrollbar {
+    background: #ddd;
+    width: 14px;
+}
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 10px #00000070;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(#FFC312,#EE5A24,#FFC312);
+    border-radius: 10px;
+}
+// /скролл бар 
+
+html, body {
+    font-family: 'MuseoSansCyrl', 'sans-serif';
+    font-weight: 500;
+    font-size: 16px;
+    color: $color-main;
+    overflow-x: hidden;
+}
+body {
+    background: url(../images/header_bg.png) no-repeat;
+    background-size: contain;
+}
+.wrapper {
+    max-width: 1170px;
+    margin: 0 auto;
+}
+.main-title {
+    color: $color-secondary;
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+    line-height: 1.2;
+}
+.button {
+    background: none;
+    color: $color-secondary;
+    border-radius: 30px;
+    border: 2px solid $color-secondary;
+    font-size: 16px;
+    font-weight: 500px;
+    cursor: pointer;
+    transition: $transishion-main;
+    width: 270px;
+    box-sizing: border-box;
+    height: 55px;
+    margin-top: 5px;
+    line-height: 0.6;
+    &-header:hover {
+        background: $color-secondary;
+        color: #fff;
+    }
+    &:active, &:focus {
+        outline: none;
+    }
+    &-form {
+        color: #fff;
+        background: #5c23a1;
+        border: none;
+        font-size: 18px;
+        line-height: 0.9;
+        font-weight: 700;
+        border: 2px solid transparent;
+        height: 60px;
+        box-sizing: border-box;
+        &:hover {
+            color: #5c23a1;
+            background: #fff;
+            border: 2px solid #5c23a1;    
+        }
+    }
+    &-main {
+        font-size: 18px;
+        text-align: center;
+        max-height: 60px;
+        color: #fff;
+        border: 2px solid transparent;
+        line-height: 0.9;
+        background-size: 200%;
+        transition: 0.6s;
+        background-image: linear-gradient(to left, #5d24a2,#6d53ca,#5d24a2);
+        &:hover {
+            background-position: right;
+        }
+    }
+    &-callback {
+        display: block;
+        margin: auto;
+    }
+}
+
+.form {
+    display: flex;
+    align-items: center;
+    color: $color-main;
+    &-input {
+        display: block;
+        height: 60px;
+        width: 270px;
+        padding: 20px 25px;
+        color: $color-main;
+        box-sizing: border-box;
+        border-radius: 30px;
+        border: none;
+        margin-right: 30px;
+        &:focus, &:active {
+            outline: none;
+        }
+        &-textarea {
+            height: 80px;
+            resize: none;
+            border-radius: 40px;
+        }
+        &-callback {
+            display: block;
+            margin: 10px auto;
+        }
+    } 
+    &_callback {
+        padding-bottom: 55px;
+    }
+}
+.thanks {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 50%;
+    top: 50%;
+    transform: translate3d(-50%,-50%,0);
+    z-index: 10000;
+    display: none;
+}

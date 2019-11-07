@@ -1,0 +1,41 @@
+// main: ./sass/style.scss
+
+@font-face { 
+  font-family: 'MuseoSansCyrl'; 
+  src: url('../fonts/MuseoSansCyrl-300/MuseoSansCyrl_0.otf'), 
+    url('../fonts/MuseoSansCyrl-300/MuseoSansCyrl-300.woff2') format('woff2'), 
+    url('webfont.ttf')  format('truetype'), /* Только если нужна поддержка старых Android, иначе закомментировать */ 
+    url('webfont.woff') format('woff'); 
+  font-weight: 300; 
+  font-style: normal; 
+} 
+
+@font-face { 
+  font-family: 'MuseoSansCyrl'; 
+  src: url('../fonts/MuseoSansCyrl-500/MuseoSansCyrl_1.otf'), 
+    url('../fonts/MuseoSansCyrl-500/MuseoSansCyrl-500.woff2') format('woff2'), 
+    url('webfont.ttf')  format('truetype'), /* Только если нужна поддержка старых Android, иначе закомментировать */ 
+    url('webfont.woff') format('woff'); 
+  font-weight: 500; 
+  font-style: normal; 
+} 
+
+@font-face { 
+  font-family: 'MuseoSansCyrl'; 
+  src: url('../fonts/MuseoSansCyrl-700/MuseoSansCyrl_2.otf'), 
+    url('../fonts/MuseoSansCyrl-700/MuseoSansCyrl-700.woff2') format('woff2'), 
+    url('webfont.ttf')  format('truetype'), /* Только если нужна поддержка старых Android, иначе закомментировать */ 
+    url('webfont.woff') format('woff'); 
+  font-weight: 700; 
+  font-style: normal; 
+}
+
+@font-face { 
+  font-family: 'MuseoSansCyrl'; 
+  src: url('../fonts/MuseoSansCyrl-900/MuseoSansCyrl_3.otf'), 
+    url('../fonts/MuseoSansCyrl-900/MuseoSansCyrl-900.woff2') format('woff2'), 
+    url('webfont.ttf')  format('truetype'), /* Только если нужна поддержка старых Android, иначе закомментировать */ 
+    url('webfont.woff') format('woff'); 
+  font-weight: 900; 
+  font-style: normal; 
+}

@@ -1,0 +1,208 @@
+// main: ./sass/style.scss
+
+$color-main: #262626;
+$color-secondary: #37204c;
+$color-white: #fff;
+
+.consultation {
+    background: url(../images/main_bg.png) no-repeat;
+    background-size: cover;
+    padding-top: 150px;
+    padding-bottom: 100px;
+    &__container {
+        margin-top: 90px;
+    }
+    &__box {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 130px;
+        &-left {
+            width: 50%;
+        }
+        &-right{
+            width: 50%;
+            padding-left: 30px;
+        }
+        &-title {
+            font-size: 26px;
+            font-weight: 900;
+            margin-bottom: 30px;
+        }
+        &-content {
+            font-size: 18px;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+        &-2 {
+            margin-bottom: 90px;
+        }
+        &-3 {
+            margin-bottom: 130px;
+        }
+        &-4 {
+            margin-bottom: 70px;
+        }
+        &-5 {
+            margin-bottom: 70px;
+        }
+    }
+    &__foto {
+        display: block;
+        width: 470px;
+        height: 335px;
+        position: relative;
+        &-mrright {
+            margin-left: auto;
+        }
+        &-img {
+            width: 100%;
+            height: auto;
+            border-radius: 6px;
+            z-index: 2;
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+        }
+        &-bg{
+            position: absolute;
+            z-index: 1;
+            &-left {
+                top: 50px;
+                right: 0;
+                transform: translateX(50%);
+            }
+            &-right {
+                top: 50px;
+                left: 0;
+                transform: translateX(-50%);
+            }
+        }
+    }
+}
+.list {
+    list-style: disc;
+    padding-left: 20px;
+    margin-bottom: 33px;
+    &-title {
+        font-size: 18px;
+        font-weight: 900;
+        line-height: 1.5;
+    }
+    &-item {
+        font-size: 18px;
+        line-height: 1.4;
+        margin-bottom: 5px;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .consultation {
+        padding-top: 100px;
+    }
+    .consultation__box {
+        padding: 0 20px;
+    }
+}
+@media only screen and (max-width: 991px) {
+    .consultation {
+        padding-top: 00px;
+        padding-bottom: 30px;
+    }
+    .consultation__box {
+        flex-wrap: wrap;
+        margin-bottom: 70px;
+    }
+    .consultation__box-left {
+        width: 100%;
+    }
+    .consultation__box-right {
+        width: 100%;
+    }
+    .consultation__foto {
+        margin: 15px auto;
+    }
+    .consultation__container {
+        margin-top: 30px;
+    }
+    .consultation__box-title {
+        text-align: center;
+        margin: 35px 10px;
+    }
+    .list {
+        padding-left: 20px;
+        display: block;
+        max-width: 470px;
+        margin: 15px auto;
+    }
+    .list-title {
+        text-align: center;
+    }
+    .button-main {
+        display: block;
+        margin: 10px auto;
+    }
+    .consultation__box-content {
+        max-width: 600px;
+        margin: 10px auto;
+        text-align: center;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .main-title {
+        font-size: 23px;
+    }
+    .consultation__foto {
+        width: 370px;
+        height: 300px;
+    }
+    .consultation__box-title {
+        font-size: 22px;
+    }
+    .list-title {
+        font-size: 16px;
+    }
+    .list-item {
+        font-size: 16px;
+    }
+    .consultation__box-right {
+       padding-right: 0;
+    }
+}
+@media only screen and (max-width: 420px) {
+    .consultation__foto-bg-right {
+        display: none;
+    }
+    .consultation__foto-bg-left {
+        display: none;
+    }
+    .consultation__box-right {
+        padding: 0;
+    }
+    .consultation__foto {
+        width: 300px;
+        height: 240px;
+    }
+    .consultation__box {
+        padding: 0 5px;
+    }
+    .main-title {
+        font-size: 22px;
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
