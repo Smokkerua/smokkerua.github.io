@@ -1,0 +1,115 @@
+@import 'reset';
+@import 'fonts';
+@import 'header';
+@import 'about';
+
+$color-main: #4b4b4b;
+$color-secondary: #2580b7;
+$bold: "GothamProBold";
+
+html, body {
+    font-family: "GothamProRegular";
+    font-weight: normal;
+    font-size: 16px;
+    color: $color-main;
+    overflow-x: hidden;
+}
+body {
+    background: url(../images/header_bg.png) top center no-repeat;
+    background-size: auto;
+}
+.wrapper {
+    max-width: 1170px;
+    margin: 0 auto;
+}
+.main-title {
+    color: $color-main;
+    max-width: 700px;
+    display: block;
+    margin: auto;
+    font-size: 30px;
+    font-family: $bold;
+    text-align: center;
+    line-height: 40px;
+}
+.button {
+    background: $color-secondary;
+    color: #fff;
+    border-radius: 30px;
+    border: 2px solid $color-secondary;
+    font-size: 14px;
+    font-weight: normal;
+    cursor: pointer;
+    transition: $transishion-main;
+    width: 270px;
+    box-sizing: border-box;
+    height: 50px;
+    line-height: 1;
+    &-header:hover {
+        background: none;
+        color: $color-secondary;
+    }
+    &-cunsult {
+        width: 370px;
+        height: 65px;
+        background: linear-gradient(to top, #ffc906, #ff8304);
+        border: none;
+        text-transform: uppercase;
+        font-size: 14px;
+        font-family: $bold;
+        margin-bottom: 20px;
+    }
+    &:active, &:focus {
+        outline: none;
+    }
+}
+@media only screen and (max-width: 1300px) {
+    body {
+        background-size: auto;
+    }  
+}
+@media only screen and (max-width: 1100px) {
+    body {
+        background: url(../images/header_bg-mini.png) top center no-repeat;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .main-title {
+        font-size: 26px;
+        line-height: 36px;
+    }
+}
+@media only screen and (max-width: 500px) {
+    .main-title {
+        font-size: 22px;
+        line-height: 30px;
+        padding: 0 15px;
+    }
+}
+@media only screen and (max-width: 400px) {
+    .button-cunsult {
+        width: 280px;
+    }   
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
