@@ -549,12 +549,13 @@ table {
 
 .video {
   position: relative;
-  margin-top: 280px; }
+  margin-top: 280px;
+  padding-bottom: 200px; }
   .video:before {
     content: '';
     display: block;
     width: 610px;
-    height: 1000px;
+    height: 900px;
     position: absolute;
     right: 0;
     top: -220px;
