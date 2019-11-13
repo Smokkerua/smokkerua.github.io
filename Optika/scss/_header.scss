@@ -4,6 +4,7 @@ $color-main: #4b4b4b;
 $color-secondary: #2580b7;
 $transishion-main: all 0.2s linear; 
 $bold: "GothamProBold";
+
 .header {
     $color-main: #4b4b4b;
     min-height: 750px;
@@ -44,6 +45,7 @@ $bold: "GothamProBold";
         margin-bottom: 50px;
     }
     &-subtitle {
+        margin-bottom: 18px;
         & li {
             font-size: 18px;
             color: #000;

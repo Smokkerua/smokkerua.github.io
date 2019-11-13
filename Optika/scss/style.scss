@@ -2,6 +2,8 @@
 @import 'fonts';
 @import 'header';
 @import 'about';
+@import 'production';
+@import 'video';
 
 $color-main: #4b4b4b;
 $color-secondary: #2580b7;
@@ -62,7 +64,25 @@ body {
     &:active, &:focus {
         outline: none;
     }
+    &-price {
+        background: linear-gradient(to top, #ffc906, #ff8304);
+        border: none;
+        font-size: 14px;
+        font-family: $bold;
+        width: 270px;
+        height: 65px;
+        border: none;
+        display: block;
+        text-transform: uppercase;
+        margin: auto;
+    }
 }
+.title3 {
+    max-width: none;
+    margin-top: 60px;
+    margin-bottom: 35px;
+}
+
 @media only screen and (max-width: 1300px) {
     body {
         background-size: auto;
@@ -85,6 +105,9 @@ body {
         font-size: 22px;
         line-height: 30px;
         padding: 0 15px;
+    }
+    .button-price {
+        width: 240px;
     }
 }
 @media only screen and (max-width: 400px) {

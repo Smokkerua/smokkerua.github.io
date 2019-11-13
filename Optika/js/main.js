@@ -1,33 +1,87 @@
 $(document).on('ready', function () {
     
+    /* slider */
+    $('.section-1').slick({
+        slidesToShow: 4
+        , slidesToScroll: 1
+        , autoplay: true
+        , autoplaySpeed: 5000
+        , arrows: true
+        , responsive: [
+            {
+                breakpoint: 1200
+                , settings: {
+                    slidesToShow: 3
+                , }
+	    }
+            , {
+                breakpoint: 900
+                , settings: {
+                    slidesToShow: 2
+                , }
+	    }
+            , {
+                breakpoint: 620
+                , settings: {
+                    slidesToShow: 1
+                , }
+	    }
+    ]
+    });
+    $('.section-2').slick({
+        slidesToShow: 4
+        , slidesToScroll: 1
+        , autoplay: true
+        , autoplaySpeed: 5000
+        , arrows: true
+        , responsive: [
+            {
+                breakpoint: 1200
+                , settings: {
+                    slidesToShow: 3
+                , }
+	    }
+            , {
+                breakpoint: 900
+                , settings: {
+                    slidesToShow: 2
+                , }
+	    }
+            , {
+                breakpoint: 620
+                , settings: {
+                    slidesToShow: 1
+                , }
+	    }
+    ]
+    });
+    $('.section-3').slick({
+        slidesToShow: 3
+        , slidesToScroll: 1
+        , autoplay: true
+        , autoplaySpeed: 5000
+        , arrows: true
+        , responsive: [
+            {
+                breakpoint: 1100
+                , settings: {
+                    slidesToShow: 2
+                , }
+	    }
+            , {
+                breakpoint: 768
+                , settings: {
+                    slidesToShow: 1
+                , }
+	    }
+    ]
+    });
+    
+    
+    
+    
     // mask for input phone
     $(".phone-form").mask("+38 (999) 99-99-999");
-    
-    
-    //  modal window 
-    $(function () {
-        var c = {
-            self: $("#modal")
-            , showModal: function (d) {
-                this.self.find("#innerModal").html(d);
-                this.self.fadeIn(200)
-            }
-            , hideModal: function () {
-                this.self.fadeOut(200);
-                this.self.find("#innerModal").html("")
-            }
-        };
-        $(".showModal").on("click", function (f) {
-            var g = $(this).data("id");
-            var d = $("#cont" + g).html();
-            c.showModal(d)
-        });
-        $("#modal").on("click", function (d) {
-            if ($(d.target).attr("id") === "modal" || $(d.target).hasClass("closeModal")) {
-                c.hideModal()
-            }
-        });
-    });
     
     // Smooth scroll 
     $("[data-scroll]").on("click", function (event) {
@@ -50,30 +104,6 @@ $(document).on('ready', function () {
         };
     });
     
-
+    
     
 });
-    // email
-    $(".form_callback, .form").submit(function () {
-        $.ajax({
-            type: "POST"
-            , url: "./mail.php"
-            , data: $(this).serialize()
-        }).done(function () {
-            $(this).find("input").val("");
-            $("#form").trigger("reset");
-            document.getElementById('modalForm1').style.display = 'none';
-            document.getElementById('modalForm2').style.display = 'none';
-            $("#thanks").show('slow'); setTimeout(function() { $("#thanks").hide('slow'); }, 2000);
-            visible = false;
-        });
-        return false;
-    });
-    var showed1 = function (state) {
-        document.getElementById('modalForm1').style.display = state;
-        document.getElementById('filter_modal1').style.display = state;
-    }
-    var showed2 = function (state) {
-        document.getElementById('modalForm2').style.display = state;
-        document.getElementById('filter_modal2').style.display = state;
-    }
