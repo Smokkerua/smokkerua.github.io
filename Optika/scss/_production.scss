@@ -92,7 +92,7 @@ $bold: "GothamProBold";
     display: block;
     padding: 0;
     border-radius: 100%;
-    transition: all 0.2s lineear;
+    transition: all 0.2s linear;
     background: linear-gradient(to top, #095996, #048aec);
     &:hover {
         background: linear-gradient(to top, #003155, #005592);

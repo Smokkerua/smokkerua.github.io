@@ -106,9 +106,15 @@ $bold: "GothamProBold";
         text-align: center;
         padding-top: 10px;
     }
+    .header__top-logo img {
+        margin-right: 0;
+    }
     .our-city{
         margin: 20px 0;
         padding-bottom: 20px;
+    }
+    .header__container {
+        margin-top: 20px;
     }
     .nav {
         float: none;

@@ -196,9 +196,13 @@ table {
     display: block;
     text-align: center;
     padding-top: 10px; }
+  .header__top-logo img {
+    margin-right: 0; }
   .our-city {
     margin: 20px 0;
     padding-bottom: 20px; }
+  .header__container {
+    margin-top: 20px; }
   .nav {
     float: none;
     margin: 20px 5px; }
@@ -269,7 +273,6 @@ table {
       line-height: 26px; }
   .about__foto {
     display: block;
-    width: 100%px;
     height: auto;
     position: relative; }
 
@@ -417,7 +420,7 @@ table {
   display: block;
   padding: 0;
   border-radius: 100%;
-  transition: all 0.2s lineear;
+  transition: all 0.2s linear;
   background: linear-gradient(to top, #095996, #048aec); }
   .slick-prev:hover, .slick-next:hover {
     background: linear-gradient(to top, #003155, #005592); }
@@ -690,7 +693,6 @@ table {
       line-height: 26px; }
   .services__foto {
     display: block;
-    width: 100%px;
     height: auto;
     position: relative; }
     .services__foto:before {
@@ -1077,7 +1079,6 @@ table {
       margin-bottom: 20px; }
     .footer__container-map {
       display: block;
-      width: 100%px;
       height: auto;
       position: relative;
       z-index: 1; }
