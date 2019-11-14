@@ -4,6 +4,11 @@
 @import 'about';
 @import 'production';
 @import 'video';
+@import 'services';
+@import 'certificate';
+@import 'reviews';
+@import 'footer';
+@import 'modalWindows';
 
 $color-main: #4b4b4b;
 $color-secondary: #2580b7;
@@ -34,22 +39,35 @@ body {
     text-align: center;
     line-height: 40px;
 }
+.services-title {
+    max-width: 1000px;
+    padding: 0 20px;
+}
+.title3 {
+    max-width: none;
+    margin-top: 60px;
+    margin-bottom: 35px;
+}
+
 .button {
     background: $color-secondary;
     color: #fff;
     border-radius: 30px;
-    border: 2px solid $color-secondary;
+    border: none;
     font-size: 14px;
     font-weight: normal;
     cursor: pointer;
-    transition: $transishion-main;
     width: 270px;
     box-sizing: border-box;
     height: 50px;
     line-height: 1;
+    display: block;
+    transition: all 0.2s linear;
+    &:active, &:focus {
+        outline: none;
+    }
     &-header:hover {
-        background: none;
-        color: $color-secondary;
+        background: #054870;
     }
     &-cunsult {
         width: 370px;
@@ -57,30 +75,35 @@ body {
         background: linear-gradient(to top, #ffc906, #ff8304);
         border: none;
         text-transform: uppercase;
-        font-size: 14px;
         font-family: $bold;
         margin-bottom: 20px;
-    }
-    &:active, &:focus {
-        outline: none;
-    }
+        &:hover {
+           background: linear-gradient(to top, #bb6900, #ff9c00);
+        }
+    } 
     &-price {
         background: linear-gradient(to top, #ffc906, #ff8304);
         border: none;
-        font-size: 14px;
         font-family: $bold;
-        width: 270px;
         height: 65px;
         border: none;
-        display: block;
         text-transform: uppercase;
         margin: auto;
+        &:hover {
+           background: linear-gradient(to top, #bb6900, #ff9c00);
+        }
     }
-}
-.title3 {
-    max-width: none;
-    margin-top: 60px;
-    margin-bottom: 35px;
+    &-certificate {
+        background: linear-gradient(to top, #ffc906, #ff8304);
+        border: none;
+        font-family: $bold;
+        height: 65px;
+        border: none;
+        text-transform: uppercase;
+        &:hover {
+          background: linear-gradient(to top, #bb6900, #ff9c00);
+        }
+    }
 }
 
 @media only screen and (max-width: 1300px) {
@@ -93,11 +116,23 @@ body {
         background: url(../images/header_bg-mini.png) top center no-repeat;
     }
 }
-
 @media only screen and (max-width: 991px) {
     .main-title {
         font-size: 26px;
         line-height: 36px;
+    }
+    .button-cunsult {
+        margin: 10px auto;
+    }
+    .button-price {
+        width: 240px;
+        height: 50px;
+        font-size: 11px;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .button-certificate {
+        margin: auto;
     }
 }
 @media only screen and (max-width: 500px) {
@@ -106,8 +141,10 @@ body {
         line-height: 30px;
         padding: 0 15px;
     }
-    .button-price {
-        width: 240px;
+    .button-cunsult {
+        width: 270px;
+        height: 50px;
+        font-size: 11px;
     }
 }
 @media only screen and (max-width: 400px) {
@@ -115,24 +152,3 @@ body {
         width: 280px;
     }   
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

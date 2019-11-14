@@ -15,7 +15,7 @@ $bold: "GothamProBold";
         position: absolute;
         left: 0;
         top: -600px;
-        right: -100px;
+        right: -10px;
         bottom: 0px;
         background: url(../images/content_bg.png) no-repeat;
         background-size: cover;
@@ -92,9 +92,10 @@ $bold: "GothamProBold";
     display: block;
     padding: 0;
     border-radius: 100%;
+    transition: all 0.2s lineear;
     background: linear-gradient(to top, #095996, #048aec);
     &:hover {
-        background: linear-gradient(to top, #095996, #048aec);
+        background: linear-gradient(to top, #003155, #005592);
     }
 }
 .slick-prev {

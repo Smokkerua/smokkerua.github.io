@@ -129,19 +129,20 @@ $bold: "GothamProBold";
         font-size: 16px;
         padding-bottom: 30px;
     }
-}
-@media only screen and (max-width: 400px) {
     .navigation {
         flex-wrap: wrap;
     }
     .navigation-item {
         display: block;
-        width: 50%;
+        width: 100%;
     }
     .nav .navigation-item a {
-        font-size: 14px;
+        font-size: 16px;
         text-align: center;
     }
+}
+@media only screen and (max-width: 400px) {
+    
     .titlebox-title {
         font-size: 26px;
         line-height: 30px;
