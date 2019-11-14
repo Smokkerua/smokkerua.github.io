@@ -1351,6 +1351,8 @@ body {
     text-transform: uppercase; }
     .button-certificate:hover {
       background: linear-gradient(to top, #bb6900, #ff9c00); }
+  .button-popap {
+    height: 60px; }
 
 @media only screen and (max-width: 1300px) {
   body {

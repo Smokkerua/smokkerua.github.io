@@ -104,6 +104,9 @@ body {
           background: linear-gradient(to top, #bb6900, #ff9c00);
         }
     }
+    &-popap {
+        height: 60px;
+    }
 }
 
 @media only screen and (max-width: 1300px) {
