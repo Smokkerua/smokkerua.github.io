@@ -12,11 +12,11 @@ $bold: "GothamProBold";
     &:before {
         content: '';
         display: block;
-        width: 610px;
+        width: 680px;
         height: 900px;
         position: absolute;
-        right: 0;
-        top: -220px;
+        right: -65px;
+        top: -236px;
         background: url(../images/video_bg.png) no-repeat;
         z-index: -1;
     }

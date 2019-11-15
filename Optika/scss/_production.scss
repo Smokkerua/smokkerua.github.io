@@ -8,13 +8,13 @@ $bold: "GothamProBold";
 .production {
     display: block;
     position: relative;
-    padding: 120px 0;
+    padding: 120px 0 69px 0;
     &:before {
         content: '';
         display: block;
         position: absolute;
         left: 0;
-        top: -600px;
+        top: -590px;
         right: -10px;
         bottom: 0px;
         background: url(../images/content_bg.png) no-repeat;
@@ -25,10 +25,10 @@ $bold: "GothamProBold";
         content: '';
         display: block;
         position: absolute;
-        left: 0;
-        top: -620px;
+        left: -50px;
+        top: -220px;
         right: 0px;
-        bottom: -620px;
+        bottom: -530px;
         background: url(../images/content_bg-mini.png) no-repeat;
         background-size: cover;
         z-index: -1;
@@ -44,7 +44,7 @@ $bold: "GothamProBold";
     }
 }
 .slider__container {
-    margin-top: 80px;
+    margin-top: 60px;
 }
 .slider__block {
     display: flex;
@@ -58,7 +58,7 @@ $bold: "GothamProBold";
             width: 270px;
             height: 300px;
             border-radius: 5px;
-            margin: auto;
+            margin: 15px auto;
             box-shadow: 0px 7px 27px 0px rgba(5, 129, 220, 0.19);
         }
         & img {
@@ -79,9 +79,10 @@ $bold: "GothamProBold";
 .seticon-2-foto {
     position: absolute;
     top: -20px;
+    box-shadow: 0px 7px 27px 0px rgba(5, 129, 220, 0.19);
 }
 .slider__container .title2 {
-    margin-top: 170px;
+    margin-top: 175px;
     margin-bottom: 40px;
 }
 .slick-prev, .slick-next {
@@ -129,9 +130,8 @@ $bold: "GothamProBold";
 }
 .section-2 {
     display: block;
-    margin-bottom: 110px;
+    margin-bottom: 70px;
     &__container {
-        height: 380px;
         width: 270px;
         &-box {
             display: flex;
@@ -142,6 +142,7 @@ $bold: "GothamProBold";
             background: #fff;
             position: relative;
             margin: 40px auto;
+            box-shadow: 0px 7px 27px 0px rgba(5, 129, 220, 0.19);
             & img {
                 position: absolute;
                 top: -30px;
@@ -156,12 +157,14 @@ $bold: "GothamProBold";
             }   
         }
     }
+    & .slick-prev, .slick-next {
+        top: 104%;
+    }
 }
 
 .section-3 {
     display: block;
     &__container {
-        height: 480px;
         width: 370px;
         &-box {
             display: flex;
@@ -172,6 +175,7 @@ $bold: "GothamProBold";
             background: #fff;
             position: relative;
             margin: 40px auto;
+            box-shadow: 0px 7px 27px 0px rgba(5, 129, 220, 0.19);
             & img {
                 position: absolute;
                 top: -30px;
@@ -186,6 +190,18 @@ $bold: "GothamProBold";
                     margin-bottom: 20px;
                 }
             }   
+        }
+    }
+    & .slick-prev, .slick-next {
+        top: 105%;
+    }
+}
+@media only screen and (max-width: 1500px) {
+    .production {
+        &:before {
+            top: -470px;
+            right: 0px;
+            bottom: 0px;
         }
     }
 }

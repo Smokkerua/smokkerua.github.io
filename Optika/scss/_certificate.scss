@@ -6,7 +6,7 @@ $bold: "GothamProBold";
 
 
 .certificate{
-    padding-top: 175px;
+    padding-top: 70px;
     padding-bottom: 99px;
     &__container {
         min-height: 420px;
@@ -21,8 +21,8 @@ $bold: "GothamProBold";
             content: '';
             display: block;
             position: absolute;
-            top: -138px;
-            right: -102px;
+            top: -120px;
+            right: -110px;
             width: 750px;
             height: 650px;
             background: url(../images/certif_bg-man.png) center no-repeat;

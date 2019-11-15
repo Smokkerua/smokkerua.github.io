@@ -35,7 +35,7 @@ $bold: "GothamProBold";
             font-size: 24px;
             font-family: $bold;
             line-height: 34px;
-            margin-bottom: 30px;
+            margin-bottom: 35px;
         }
         &-content {
             font-size: 16px;
@@ -49,9 +49,13 @@ $bold: "GothamProBold";
         position: relative;
     }
 }
+.about__box-3 .about__box-title {
+    margin-bottom: 15px;
+}
 .list-title {
-    font-size: 18px;
-    line-height: 1.5;
+    font-size: 16px;
+    line-height: 26px;
+    max-width: 472px;
 }
 @media only screen and (max-width: 1300px) {
     .about__container {
@@ -104,10 +108,10 @@ $bold: "GothamProBold";
         text-align: center;
     }
     .list-title {
-        font-size: 16px;
-        font-weight: 900;
-        line-height: 1.5;
         text-align: center;
+        margin: auto;
+        max-width: 700px;
+        padding: 0 20px;
     }
     .about__box-right-image {
         order: -1;

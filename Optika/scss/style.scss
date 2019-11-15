@@ -73,16 +73,26 @@ body {
         width: 370px;
         height: 65px;
         background: linear-gradient(to top, #ffc906, #ff8304);
+        border-radius: 30px;
+        background-image: -moz-linear-gradient( 90deg, rgb(252,125,4) 0%, rgb(255,151,5) 50%, rgb(255,165,5) 51%, rgb(255,199,6) 100%);
+        background-image: -webkit-linear-gradient( 90deg, rgb(252,125,4) 0%, rgb(255,151,5) 50%, rgb(255,165,5) 51%, rgb(255,199,6) 100%);
+        background-image: -ms-linear-gradient( 90deg, rgb(252,125,4) 0%, rgb(255,151,5) 50%, rgb(255,165,5) 51%, rgb(255,199,6) 100%);
+        box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.44),inset 0px 1px 0px 0px rgba(255, 255, 255, 0.31);
         border: none;
         text-transform: uppercase;
         font-family: $bold;
         margin-bottom: 20px;
         &:hover {
-           background: linear-gradient(to top, #bb6900, #ff9c00);
+           background-image: -moz-linear-gradient( 90deg, rgb(185,104,0) 0%, rgb(222,125,0) 50%, rgb(235,133,0) 51%, rgb(255,165,0) 100%);
+           background-image: -webkit-linear-gradient( 90deg, rgb(185,104,0) 0%, rgb(222,125,0) 50%, rgb(235,133,0) 51%, rgb(255,165,0) 100%);
+           background-image: -ms-linear-gradient( 90deg, rgb(185,104,0) 0%, rgb(222,125,0) 50%, rgb(235,133,0) 51%, rgb(255,165,0) 100%);
         }
     } 
     &-price {
-        background: linear-gradient(to top, #ffc906, #ff8304);
+        background-image: -moz-linear-gradient( 90deg, rgb(252,125,4) 0%, rgb(255,151,5) 50%, rgb(255,165,5) 51%, rgb(255,199,6) 100%);
+        background-image: -webkit-linear-gradient( 90deg, rgb(252,125,4) 0%, rgb(255,151,5) 50%, rgb(255,165,5) 51%, rgb(255,199,6) 100%);
+        background-image: -ms-linear-gradient( 90deg, rgb(252,125,4) 0%, rgb(255,151,5) 50%, rgb(255,165,5) 51%, rgb(255,199,6) 100%);
+        box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.44),inset 0px 1px 0px 0px rgba(255, 255, 255, 0.31);
         border: none;
         font-family: $bold;
         height: 65px;
@@ -90,18 +100,25 @@ body {
         text-transform: uppercase;
         margin: auto;
         &:hover {
-           background: linear-gradient(to top, #bb6900, #ff9c00);
+           background-image: -moz-linear-gradient( 90deg, rgb(185,104,0) 0%, rgb(222,125,0) 50%, rgb(235,133,0) 51%, rgb(255,165,0) 100%);
+           background-image: -webkit-linear-gradient( 90deg, rgb(185,104,0) 0%, rgb(222,125,0) 50%, rgb(235,133,0) 51%, rgb(255,165,0) 100%);
+           background-image: -ms-linear-gradient( 90deg, rgb(185,104,0) 0%, rgb(222,125,0) 50%, rgb(235,133,0) 51%, rgb(255,165,0) 100%);
         }
     }
     &-certificate {
-        background: linear-gradient(to top, #ffc906, #ff8304);
+        background-image: -moz-linear-gradient( 90deg, rgb(252,125,4) 0%, rgb(255,151,5) 50%, rgb(255,165,5) 51%, rgb(255,199,6) 100%);
+        background-image: -webkit-linear-gradient( 90deg, rgb(252,125,4) 0%, rgb(255,151,5) 50%, rgb(255,165,5) 51%, rgb(255,199,6) 100%);
+        background-image: -ms-linear-gradient( 90deg, rgb(252,125,4) 0%, rgb(255,151,5) 50%, rgb(255,165,5) 51%, rgb(255,199,6) 100%);
+        box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.44),inset 0px 1px 0px 0px rgba(255, 255, 255, 0.31);
         border: none;
         font-family: $bold;
         height: 65px;
         border: none;
         text-transform: uppercase;
         &:hover {
-          background: linear-gradient(to top, #bb6900, #ff9c00);
+          background-image: -moz-linear-gradient( 90deg, rgb(185,104,0) 0%, rgb(222,125,0) 50%, rgb(235,133,0) 51%, rgb(255,165,0) 100%);
+           background-image: -webkit-linear-gradient( 90deg, rgb(185,104,0) 0%, rgb(222,125,0) 50%, rgb(235,133,0) 51%, rgb(255,165,0) 100%);
+           background-image: -ms-linear-gradient( 90deg, rgb(185,104,0) 0%, rgb(222,125,0) 50%, rgb(235,133,0) 51%, rgb(255,165,0) 100%);
         }
     }
     &-popap {
@@ -121,8 +138,9 @@ body {
 }
 @media only screen and (max-width: 991px) {
     .main-title {
-        font-size: 26px;
+        font-size: 22px;
         line-height: 36px;
+        padding: 0 20px;
     }
     .button-cunsult {
         margin: 10px auto;
@@ -155,3 +173,15 @@ body {
         width: 280px;
     }   
 }
+
+
+
+
+
+
+
+
+
+
+
+
