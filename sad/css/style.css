@@ -1394,7 +1394,7 @@ strong {
 }
 .acardeon__block.active .minus {
     display: block;
-    color: red;
+    color: #FFC312;
 }
 .acardeon__block .minus {
     display: none;
