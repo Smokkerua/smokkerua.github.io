@@ -1842,18 +1842,13 @@ strong {
 
 
 
-  .button {
-
-    font-size: 20px;
-
-    padding: 30px 20px;
-
+.button {
+    font-size: 15px;
+    padding: 20px 35px;
     margin-bottom: 20px;
-
-  }
-
+}
   .min {
-    font-size: 18px;
+    font-size: 14px;
     padding: 18px 20px;
   } 
 
