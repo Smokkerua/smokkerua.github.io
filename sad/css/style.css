@@ -1304,11 +1304,9 @@ p {
     display: block;
 }
 .questions h2 {
-    font-size: 28px;
     text-align: center;
-    color: #333;
-    font-weight: bold;
-    text-transform: uppercase;
+    margin-top: 10px;
+    margin-bottom: 25px;
 }
 .subtitle {
     font-size: 17px;
@@ -1319,10 +1317,12 @@ p {
     justify-content: space-between;
 }  
 .questions__block-left img {
-    width: 400px;
+    width: 450px;
+    border-radius: 8px;
+    margin-top: 40px;
 }
 .questions__block-right {
-    width: 700px;
+    width: 650px;
     margin-top: 40px;
     margin-bottom:  30px;
 }
@@ -1424,20 +1424,20 @@ strong {
         margin-top: 20px;
     }
     .questions h2 {
-        font-size: 24px;
+        font-size: 30px;
         margin-top: 10px;
     }
 }
 @media (max-width: 500px) { 
     .questions h2 {
-        font-size: 18px;
+        font-size: 24px;
         margin-top: 0px;
         margin-bottom: 25px;
     }
 }
 @media (max-width: 340px) { 
     .questions h2 {
-        font-size: 15px;
+        font-size: 18px;
     }
     .acaedeon__block-title h4 {
         font-size: 14px;
