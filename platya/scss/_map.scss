@@ -1,0 +1,208 @@
+// main: ./style.scss
+
+$color-main: #141413;
+$color-secondary: #5f4243;
+$sc: 'Playfair Display SC', serif;
+
+.map {
+    padding-bottom: 60px;
+    margin-top: 170px;
+    & .wrapper {
+        padding: 0;
+        max-width: 1330px;
+    }
+    &__container {
+        min-height: 650px;
+        position: relative;
+        &:after {
+            content: '';
+            background: url(../img/popular.png) no-repeat;
+            width: 350px;
+            height: 50px;
+            position: absolute;
+            right: -50px;
+            bottom: -35px;
+            z-index: -1;
+        }
+    }
+    &__box {
+        display: flex;
+        &-left {
+            display: flex;
+            flex-direction: column;
+            background: #000;
+            color: #fff;
+            width: 450px;
+            height: 650px;
+            padding-left: 80px;
+            padding-right: 100px;
+            &-title {
+                font-family: $sc;
+                font-size: 36px;
+                font-weight: bold;
+                margin-bottom: 20px;
+                margin-top: 80px;
+                letter-spacing: 2.5px;
+            }
+            &-address {
+                font-size: 18px;
+                margin-bottom: 20px;
+            }
+            &-url {
+                font-size: 18px;
+                margin-bottom: 40px;
+            }
+            &-callback {
+                font-size: 18px;
+                margin-bottom: 25px;
+            }
+            &-phone {
+                font-size: 18px;
+                font-weight: bold;
+                color: #fff;
+                margin-bottom: 20px;
+            }
+            &-questions {
+                font-size: 24px;
+                font-weight: normal;
+                margin-bottom: 25px;
+            }
+        }
+        &-right {
+            display: block;
+            min-height: 650px;
+            position: relative;
+            & img {
+                position: absolute;
+                left: -450px;
+                z-index: -1;
+            }
+        }
+    }
+}
+@media only screen and (max-width: 1350px) {
+    .map {
+        margin-top: 120px;
+    }
+    .map .wrapper {
+        padding: 0;
+        max-width: 1170px;
+    }
+}
+@media only screen and (max-width: 991px) {
+    .map__box {
+        flex-direction: column;
+    }
+    .map__box-left {
+        flex-direction: column;
+        height: auto;
+        width: 100%;
+        padding-left: 80px;
+        padding-right: 100px;
+        padding-bottom: 30px;
+    }
+    .map__box-left-title {
+        margin-top: 30px;
+    }
+    .map__box-right img {
+        position: absolute;
+        left: 0px;
+        z-index: -1;
+        max-width: 100%;
+    }
+    .map__box-right {
+        min-height: 500px;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .map__box-right {
+        min-height: 400px;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .map__box-right {
+        min-height: 300px;
+    }
+    .map__box-right img{
+        max-width: 700px;
+        left: -100px;
+    }
+    .map__container:after {
+        display: none;
+    }
+    .map {
+        margin-top: 50px;
+    }
+}
+@media only screen and (max-width: 500px) {
+    .map__box-right img{
+        max-width: 700px;
+        left: -200px;
+    }
+    .map__box-left {
+        padding-left: 30px;
+        padding-right: 10px;
+        padding-bottom: 30px;
+    }
+    .map__box-left-title {
+        font-size: 28px;
+        margin-top: 40px;
+        letter-spacing: 2px;
+    }
+    .map__box-left-address {
+        font-size: 17px;
+        margin-bottom: 15px;
+    }
+    .map__box-left-url {
+        font-size: 17px;
+        margin-bottom: 30px;
+    }
+    .map__box-left-callback {
+        font-size: 17px;
+        margin-bottom: 25px;
+    }
+    .map__box-left-phone {
+        font-size: 17px;
+        margin-bottom: 15px;
+    }
+    .map__box-left-questions {
+        font-size: 22px;
+        margin-bottom: 20px;
+    }
+}
+@media only screen and (max-width: 400px) {
+    .map__box-right img{
+        max-width: 600px;
+        left: -200px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

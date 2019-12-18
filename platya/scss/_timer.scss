@@ -1,0 +1,189 @@
+// main: ./style.scss
+
+$color-main: #141413;
+$color-secondary: #5f4243;
+$sc: 'Playfair Display SC', serif;
+
+.timer {
+    background: url(../img/timer_bg.png) center no-repeat;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    min-height: 650px;
+    color: #fff;
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 100px;
+    }
+    &__box-left {
+        max-width: 345px;
+        display: block;
+        &-title {
+            font-size: 72px;
+            font-weight: 900;
+            font-family: $sc;
+            margin-bottom: 65px;
+            letter-spacing: 4px;
+        }
+        &-subtitle {
+            font-size: 24px;
+            line-height: 34px;
+            margin-bottom: 60px;
+            & span {
+                font-weight: bold;
+            }
+        }
+        &-time {
+            font-size: 18px;
+            line-height: 34px;
+        }
+        & .countdown {
+            display: flex;
+            align-items: center;
+            margin-top: 20px;
+            &-number {
+                border-radius: 3px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 60px;
+                height: 60px;
+                background: #fff;
+                margin-right: 20px;
+                color: #d6b161;
+                &-sec {
+                    background: #5f4243;
+                    color: #fff;
+                }
+            }
+            &-time {
+                font-size: 36px;
+                font-family: $sc;
+                font-weight: 900;
+                position: relative;
+                top: -2px;
+            }
+            &-text {
+                font-size: 14px;
+                text-align: center;
+                position: relative;
+                top: -9px;
+            }
+        }
+    }
+    &__box-right {
+        max-width: 278px;
+        display: block;
+        margin-top: 20px;
+        position: relative;
+        left: 10px;
+        &-title {
+            font-size: 30px;
+            font-weight: bold;
+        }
+        &-subtitle {
+            font-size: 18px;
+            & span {
+                font-weight: bold;
+            }
+        }
+        & .form__timer {
+            margin-top: 30px;
+            &-input {
+                border-radius: 3px;
+                background-color: rgb(241, 238, 233);
+                text-align: center;
+                width: 270px;
+                height: 55px;
+                border: none;
+                outline: none;
+                margin-bottom: 8px;
+                ::placeholder {
+                    color: rgb(20, 20, 19);
+                }
+            }
+        }
+    }
+}
+@media only screen and (max-width: 1200px) {
+    .timer__container {
+        padding: 20px 40px;
+    }
+}
+@media only screen and (max-width: 1100px) {
+   .timer__container {
+        padding: 20px;
+    } 
+}  
+@media only screen and (max-width: 991px) {
+    .timer {
+        background: #000;
+        padding-top: 10px;
+        min-height: 550px;
+    } 
+    .timer__container {
+        padding: 20px 50px;
+    } 
+}
+@media only screen and (max-width: 768px) {
+    .timer__container {
+        padding: 10px;
+        flex-direction: column;
+        align-items: center;
+    }
+    .timer__box-left-title {
+        font-size: 62px;
+        margin-bottom: 5px;
+    }
+    .timer__box-left-subtitle {
+        font-size: 20px;
+        line-height: 34px;
+        margin-bottom: 30px;
+    }
+    .timer__box-right {
+        margin-top: 40px;
+        left: 0px;
+    }
+    .timer__box-right .form__timer-input {
+        margin: auto;
+        display: block;
+        margin-bottom: 8px;
+    }
+    .timer .button-offer {
+        margin: auto;
+    }
+    .timer__box-left .countdown-number {
+        margin: 0 10px;
+    }
+    .timer__box-left .countdown {
+        justify-content: center;
+    }
+    .timer__box-left-time {
+        text-align: center;
+    }
+}    
+@media only screen and (max-width: 500px) {
+    .timer__box-left-subtitle {
+        font-size: 18px;
+        line-height: 34px;
+        padding: 0 10px;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    .timer__box-left-title {
+        font-size: 55px;
+        text-align: center;
+    }
+}  
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    

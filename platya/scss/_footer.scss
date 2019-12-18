@@ -1,0 +1,74 @@
+// main: ./style.scss
+
+$color-main: #141413;
+$color-secondary: #5f4243;
+$sc: 'Playfair Display SC', serif;
+
+.footer {
+    margin-bottom: 50px;
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+        &-private {
+            color: #4b4b4b;
+            font-size: 18px;
+            &-politik {
+                text-decoration: underline;
+                color: #0d93d1;
+            }
+        }
+        &-company {
+            display: flex;
+            & p {
+                max-width: 100px;
+                text-align: right;
+                margin-right: 20px;
+                align-items: flex-end;
+                font-size: 18px;
+                color: #4b4b4b;
+            }
+        }
+    }
+    
+}
+@media only screen and (max-width: 991px) {
+    .footer__container-company {
+        flex-direction: column;
+        & p {
+            margin-right: 0px;
+            font-size: 16px;
+        }
+    }
+    .footer__container img{
+        max-width: 150px;
+    }
+    .footer__container-private {
+        color: #4b4b4b;
+        font-size: 15px;
+        max-width: 300px;
+    }
+}
+@media only screen and (max-width: 650px) {
+    .footer__container {
+        justify-content: center;
+        flex-direction: column;
+        padding: 0 10px;
+        margin-top: 20px;
+    }
+    .footer {
+        margin-bottom: 30px;
+    }
+    .footer__container-private {
+        color: #4b4b4b;
+        font-size: 16px;
+        max-width: 300px;
+        margin: 20px 10px;
+    }
+    .footer__container-company p {
+        font-size: 18px;
+        text-align: center;
+        margin-bottom: 5px;
+    }
+}
