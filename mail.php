@@ -1,37 +1,39 @@
 <?php
-if ( $_SERVER['REQUEST_METHOD'] === 'POST' ) {
-	$txt="";
-	foreach ( $_POST as $key => $value ) { 
-		$txt .= "<b>".strip_tags($key)."</b>: ".strip_tags($value)."%0A";
+
+	if ( $_SERVER['REQUEST_METHOD'] !== 'POST' ) {
+		exit;
 	}
-    
-$phone = $_POST['user_phone'];
-$token = "932362949:AAGLtExhw26y2KUj8dzlATC9gkQJOrG6LN4";
-$chat_id = "-384350654";
-$arr = array(
 
-);
+	$project_name = "«Dress»";
+	$admin_email  = "kynpan3@gmail.com";
+	
+	$form_subject = "Заявка с лендинга";
 
-foreach($arr as $key => $value) {
-  $txt .= "<b>".$key."</b> ".$value."%0A";
-};
+	$c = true;
 
-$sendToTelegram = fopen("https://api.telegram.org/bot{$token}/sendMessage?chat_id={$chat_id}&parse_mode=html&text={$txt}","r");
- if ($sendToTelegram) {
-	?>
-	 <script language="javascript" type="text/javascript">
-        alert('ок');
-        
-    </script>
-    
-	<?php
-     header('Location: thank-you.html');
-} 
-else {
+	function clean($value = "") {
+		$value = trim($value);
+		$value = stripslashes($value);
+		$value = strip_tags($value);
+		$value = htmlspecialchars($value);
+		
+		return $value;
+	}
+
+
+	$message = "<table style='width: 100%;'>$message</table>";
+
+	$message .= '<b>Заявка пришла со страницы:</b> ' . $_SERVER["HTTP_REFERER"] .'<br>';
+
+	function adopt($text) {
+		return '=?UTF-8?B?'.base64_encode($text).'?=';
+	}
+
+	$headers = "MIME-Version: 1.0" . PHP_EOL .
+	"Content-Type: text/html; charset=utf-8" . PHP_EOL .
+	'From: '.adopt($project_name).' <'.$sender_email.'>' . PHP_EOL .
+	'Reply-To: '.$admin_email.'' . PHP_EOL;
+
+	mail($admin_email, adopt($form_subject), $message, $headers );
+	echo '<meta http-equiv="refresh" content="0; url=thanks.html" />';
 ?>
-    <script language="javascript" type="text/javascript">
-        alert('Ошибка');
-    </script>
-<?php
-}
-}
