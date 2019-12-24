@@ -11,6 +11,9 @@
     <link rel="icon" type="image/png" sizes="48x48" href="./favs/fav_48.ico">
     <link rel="icon" type="image/png" sizes="16x16" href="./favs/fav_16.ico">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/slick.css">
+    <link rel="stylesheet" href="./css/slick-theme.css">
     <link rel="stylesheet" href="./css/style.css">
 
 </head>
@@ -33,7 +36,7 @@
                            
                             <nav>
                                 <ul class="navigation">
-                                    <li class="navigation-item"><a href="/">Главная</a></li>
+                                    <li class="navigation-item"><a href="index.html">Главная</a></li>
                                     <li class="navigation-item"><a href="instruction.html">Инструкция по применению</a></li>
                                     <li class="navigation-item"><a href="#">Как заказать</a></li>
                                     <li class="navigation-item"><a href="#">Отзывы</a></li>
@@ -44,7 +47,7 @@
                                 <button class="button button-header">Заказать</button>
                                 <div class="header__top-callback-lang">
                                     <a href="index.html" class="active">Рус</a>
-                                    <a href="#">En</a>
+                                    <a href="index-en.html">En</a>
                                 </div>
                             </div> <!-- /header__top-callback -->  
 
@@ -95,7 +98,7 @@
                    
                    <div class="history__container-left">
                       
-                       <img src="./img/doctor.png" alt="Доктор">
+                       <img src="./img/doctor.png" alt="Доктор" data-aos="fade-right">
                        
                    </div> <!-- /history__container-left -->
                    
@@ -117,23 +120,145 @@
 
        <section class="details">
           
-          <div class="wrapper">
+          <div class="wrapper-details">
               
               <div class="details__container">
                   
+                  <h3>Из чего состоит набор</h3>
+                  <h4>Dr. Krause nail corrector</h4>
                   
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
+                  <img class="box-dc" src="./img/box.png" alt="Набор"  data-aos="fade-left">
+                  <img class="box-mb" src="./img/box-mobile.png" alt="Набор"  data-aos="fade-left">
+
               </div> <!-- /etails__container -->
               
           </div> <!-- /wrapper -->
+           
+       </section>
+       
+       <section class="gallery">
+           
+           <div class="wrapper">
+               
+               <h3>Фотогалерея</h3>
+               
+               <div class="gallery__container gallery-slided slider" data-aos="flip-up">
+                   
+                   <div class="gallery__box">  
+                       <img src="img/gallery/gallery_01.jpg" alt="Коробка">
+                   </div>
+                   
+                   <div class="gallery__box">  
+                       <img src="img/gallery/gallery_01.jpg" alt="Коробка">
+                   </div>
+                   
+                   <div class="gallery__box">  
+                       <img src="img/gallery/gallery_01.jpg" alt="Коробка">
+                   </div>
+                   
+                   <div class="gallery__box">  
+                       <img src="img/gallery/gallery_01.jpg" alt="Коробка">
+                   </div>
+                   
+                   <div class="gallery__box">  
+                       <img src="img/gallery/gallery_01.jpg" alt="Коробка">
+                   </div>
+                   
+                   <div class="gallery__box">  
+                       <img src="img/gallery/gallery_01.jpg" alt="Коробка">
+                   </div>
+                   
+                   <div class="gallery__box">  
+                       <img src="img/gallery/gallery_01.jpg" alt="Коробка">
+                   </div>
+                   
+                   <div class="gallery__box">  
+                       <img src="img/gallery/gallery_01.jpg" alt="Коробка">
+                   </div>
+                   
+                   <div class="gallery__box">  
+                       <img src="img/gallery/gallery_01.jpg" alt="Коробка">
+                   </div>
+  
+               </div> <!-- /etails__container -->
+               
+           </div> <!-- /etails__container -->
+      
+       </section>
+       
+       <section class="reviews">
+           <h3>Что говорят наши клиенты о dr. Krause</h3>
+           <div class="reviews__container rew-slided slider" data-aos="zoom-out-down">
+               
+                <div class="reviews__box">
+                    <div class="reviews__box-author">
+                        <img src="img/reviews/rew_01.jpg" alt="Автор">
+                        <div class="reviews__box-author-name">
+                            <h5>Мария Соколова</h5>
+                            <p>Май 7, 2019</p>
+                        </div>
+                    </div>
+                    <p>Приобрела я ее спонтанно, делая заказ в ОЗОНе, который услужливо высветил "последние заинтересовавшие вас товары. Устоять было невозможно, и сей девайс был вдогонку кинут в корзину.</p>
+                </div>   
+                
+                <div class="reviews__box">
+                    <div class="reviews__box-author">
+                        <img src="img/reviews/rew_02.jpg" alt="Автор">
+                        <div class="reviews__box-author-name">
+                            <h5>Наталья Завьялова</h5>
+                            <p>Май 12, 2019</p>
+                        </div>
+                    </div>
+                    <p>Приобрела я ее спонтанно, делая заказ в ОЗОНе, который услужливо высветил "последние заинтересовавшие вас товары. Устоять было невозможно, и сей девайс был вдогонку кинут в корзину.</p>
+                </div> 
+                
+                <div class="reviews__box">
+                    <div class="reviews__box-author">
+                        <img src="img/reviews/rew_03.jpg" alt="Автор">
+                        <div class="reviews__box-author-name">
+                            <h5>Алексей Калинин</h5>
+                            <p>Май 7, 2019</p>
+                        </div>
+                    </div>
+                    <p>Приобрела я ее спонтанно, делая заказ в ОЗОНе, который услужливо высветил "последние заинтересовавшие вас товары. Устоять было невозможно, и сей девайс был вдогонку кинут в корзину.</p>
+                </div> 
+                
+                <div class="reviews__box">
+                    <div class="reviews__box-author">
+                        <img src="img/reviews/rew_01.jpg" alt="Автор">
+                        <div class="reviews__box-author-name">
+                            <h5>Мария Соколова</h5>
+                            <p>Май 7, 2019</p>
+                        </div>
+                    </div>
+                    <p>Приобрела я ее спонтанно, делая заказ в ОЗОНе, который услужливо высветил "последние заинтересовавшие вас товары. Устоять было невозможно, и сей девайс был вдогонку кинут в корзину.</p>
+                </div> 
+                
+                <div class="reviews__box">
+                    <div class="reviews__box-author">
+                        <img src="img/reviews/rew_01.jpg" alt="Автор">
+                        <div class="reviews__box-author-name">
+                            <h5>Мария Соколова</h5>
+                            <p>Май 7, 2019</p>
+                        </div>
+                    </div>
+                    <p>Приобрела я ее спонтанно, делая заказ в ОЗОНе, который услужливо высветил "последние заинтересовавшие вас товары. Устоять было невозможно, и сей девайс был вдогонку кинут в корзину.</p>
+                </div> 
+
+           </div>
+           
+       </section>
+       
+       <section class="callback">
+          
+          <h3>Оставьте свой отзыв</h3>
+          
+                <form method="POST" action="mail.php" class="form__modal">         
+                    <input type="text" name="name" class="form__modal-input" placeholder="Ваше имя" required oninvalid="setCustomValidity('Введите ваше имя')">
+                    <input type="text" name="email" class="form__modal-input" placeholder="Ваш e-mail" required oninvalid="setCustomValidity('Введите ваше e-mail')">
+                    <textarea name="text" cols="30" rows="10" class="form__modal-input form__modal-textarea" placeholder="Ваше сообщение"></textarea>
+                    <button type="submit" class="button button-header">Отправить</button>    
+                </form>   
            
        </section>
    
@@ -141,7 +266,8 @@
    
    <footer class="footer">
        
-       <div class="social">
+       <div class="social" data-aos="fade-up"
+     data-aos-anchor-placement="bottom-bottom">
            <ul>
                <li><a href="#"><i class="fab fa-telegram-plane"></i></a></li>
                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
@@ -153,6 +279,8 @@
    </footer>
    
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+   <script src="./js/slick.js"></script>
+   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
    <script src="./js/main.js"></script>
     
 </body>

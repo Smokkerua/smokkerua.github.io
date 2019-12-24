@@ -1,0 +1,410 @@
+@import 'fonts';
+@import 'header';
+@import 'training';
+@import 'setting';
+@import 'history';
+@import 'details';
+@import 'gallery';
+@import 'reviews';
+@import 'callback';
+@import 'footer';
+
+$color-main: #fff;
+$color-secondary: #f0bd7f;
+
+
+body, html {
+    overflow-x: hidden;
+}
+*, *:after, *:before {
+    box-sizing: border-box;
+}
+input:active, input:focus {
+    outline: none;
+}
+a {
+    text-decoration: none;
+    color: $color-main;
+    cursor: pointer;
+}
+p, ul, h1, h2, h3, h4, h4, h5, h6, a, button {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+button {
+    margin: 0;
+    padding: 0;
+    border: none;
+    background: none;
+    text-align: center;
+    color: #000;
+}
+button:active, button:focus {
+    outline: none;
+}
+body {
+    font-family: 'Helvetica Neue';
+    font-weight: 400;
+    font-size: 16px;
+    padding: 0;
+    margin: 0;
+    position: relative;
+}
+.wrapper {
+    max-width: 1150px;
+    display: block;
+    margin: 0 auto;
+}
+
+.button {
+    background: #fcc786;
+    display: block;
+    width: 136px;
+    height: 36px;
+    font-size: 13px;
+    font-weight: 500;
+    border-radius: 15px;
+    text-transform: uppercase;
+    line-height: 24px;
+    transition: all 0.2s linear;
+    cursor: pointer;
+    border: 2px solid #fcc786;
+    &:hover {
+        background: #000;
+        color: #fcc786;
+        cursor: pointer;
+    }
+}
+
+
+.slick-prev,
+.slick-next {
+    bottom: 45%;
+    width: 45px;
+    z-index: 100;
+    background: rgba(255,255,255, 0.3);
+    border-radius: 100%;
+    width: 60px;
+    height: 60px;
+    transition: all 0.2s linear;
+}
+.slick-prev {
+    left: 0;
+    transform: translateY(-50%) rotate(-135deg);
+}
+.slick-next {
+    right: 0;
+    transform: translateY(-50%) rotate(45deg);
+
+}
+.slick-next:hover {
+    background: rgba(255,255,255, 0.7);
+}
+.slick-prev:hover {
+    background: rgba(255,255,255, 0.7);
+}
+.slick-prev.slick-disabled:before, .slick-next.slick-disabled:before {
+    opacity: 1;
+    
+}
+.slick-prev.slick-disabled:before {
+}
+.slick-next.slick-disabled:before {
+}
+
+.slick-prev:before {
+    border-top: 3px solid #000;
+    border-right: 3px solid #000;
+    width: 20px;
+    height: 20px;
+    transform: rotate(0deg);
+    position: absolute;
+    top: 23px;
+    left: 18px;
+
+}
+.slick-next:before {
+    border-top: 3px solid #000;
+    border-right: 3px solid #000;
+    width: 20px;
+    height: 20px;
+    transform: rotate(0deg);
+    position: absolute;
+    top: 22px;
+    left: 16px;
+}
+
+.slick-dots {
+    position: absolute;
+    bottom: -76px;
+    display: block;
+    width: 380px;
+    padding: 0;
+    margin: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    list-style: disc;
+    text-align: center;
+    padding-bottom: 15px;
+    border-bottom: 1px solid $color-secondary;
+}
+.slick-dots li {
+    position: relative;
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin: 0 12px;
+    padding: 0;
+    cursor: pointer;
+    transition: all 0.2s linear;
+    &.slick-active {
+        transition: all 0.2s linear;
+        &:after {
+            content: '';
+            display: block;
+            position: absolute;
+            bottom: -28px;
+            width: 20px;
+            height: 20px;
+            border-radius: 100%;
+            background: $color-secondary;
+        }
+        &:before {
+            content: '';
+            display: block;
+            position: absolute;
+            transition: all 0.2s linear;
+            bottom: -29px;
+            left: 45%;
+            transform: translateX(-50%);
+            width: 88px;
+            height: 42px;
+            background: url(../img/before.png) center no-repeat;
+        }
+    }
+    &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 5px;
+        height: 5px;
+        border-radius: 100%;
+        background: $color-secondary;
+    }
+}
+.slick-dots li button {
+    width: 15px;
+    height: 4px;
+    padding: 5px;
+}
+.slick-dots .slick-active {
+}
+.slick-dots .slick-active a{
+    color: #f7c383;
+    background: none;
+    position: relative;
+    top: -17px;
+}
+
+.slick-dots li a {
+    font-size: 13px;
+}
+
+// Отзывы
+
+.reviews .slick-prev:before {
+    border: none;
+    width: 10px;
+    height: 10px;
+    transform: rotate(-90deg);
+    position: absolute;
+    top: 10px;
+    left: 6px;
+    z-index: 101;
+    background: url(../img/arrow-up.png) center no-repeat;
+    background-size: cover;
+}
+.reviews .slick-next:before {
+    border: none;
+    width: 10px;
+    height: 10px;
+    transform: rotate(90deg);
+    position: absolute;
+    top: 10px;
+    left: -1px;
+    background: url(../img/arrow-up.png) center no-repeat;
+    background-size: cover;
+}
+.reviews .slick-prev,
+.reviews .slick-next {
+    bottom: -85px;
+    z-index: 100;
+}
+.reviews .slick-next {
+      left: 50%;
+      width: 15px;
+      height: 30px;
+      border-radius: 0 100% 100% 0 / 0 50% 50% 0;
+      background: #fcc786;
+      transform: translateY(-50%) rotate(0);
+}
+.reviews .slick-prev {
+      left: calc(50% - 15px);
+      width: 15px;
+      height: 30px;
+      border-radius: 100% 0 0 100% / 50% 0 0 50%;
+      background: #fcc786;
+      transform: translateY(-50%) rotate(0);
+
+}
+/* Lazyload iframe YOUtube */
+
+.youtube {
+    background-color: #000;
+    margin-bottom: 30px;
+    position: relative;
+    padding-top: 56.25%;
+    overflow: hidden;
+    cursor: pointer;
+    width: 100%;
+}
+.youtube img {
+    width: 100%; 
+    top: -16.82%; 
+    left: 0; 
+    opacity: 0.7;
+}
+.youtube .play-button {
+    width: 90px;
+    height: 60px;
+    background-color: #333;
+    box-shadow: 0 0 30px rgba( 0,0,0,0.6 );
+    z-index: 1;
+    opacity: 0.8;
+    border-radius: 6px;
+}
+.youtube .play-button:before {
+    content: "";
+    border-style: solid;
+    border-width: 15px 0 15px 26.0px;
+    border-color: transparent transparent transparent #fff;
+}
+.youtube img, .youtube .play-button {
+    cursor: pointer;
+}
+.youtube img, .youtube iframe, .youtube .play-button, .youtube .play-button:before {
+    position: absolute;
+}
+.youtube .play-button, .youtube .play-button:before {
+    top: 50%; 
+    left: 50%; 
+    transform: translate3d( -50%, -50%, 0 );
+}
+
+.youtube iframe {height: 100%; width: 100%; top: 0; left: 0;}
+
+
+@media only screen and (max-width: 1200px) {
+    .slick-prev, .slick-next {
+        bottom: 37%;
+    }
+    .slick-prev {
+        left: 130px;
+    }  
+    .slick-next {
+        right: 130px;
+    }
+}
+@media only screen and (max-width: 991px) {
+    .slick-dots li {
+        &.slick-active {
+            &:before {
+                background: url(../img/before-mobile.png) center no-repeat;
+            }
+        }
+    } 
+    .slick-dots {
+        left: 47%;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .slick-prev {
+        left: 20px;
+    }  
+    .slick-next {
+        right: 20px;
+    }
+    .gallery__box img {
+        max-height: 100%;
+        max-width: 100%;
+    }
+}
+@media only screen and (max-width: 650px) {
+    .gallery h3 {
+        font-size: 28px;
+        line-height: 57px;
+        padding-top: 40px;
+        margin-bottom: 20px;
+    }
+    .slick-prev, .slick-next {
+        bottom: 45%;
+    }
+    .slick-dots {
+        left: 50%;
+        bottom: -20px;
+    }
+    .gallery .wrapper {
+        padding-bottom: 50px;
+    }
+}
+@media only screen and (max-width: 500px) {
+    .slick-prev, .slick-next {
+        bottom: 50%;
+    }
+    .gallery .wrapper {
+        padding-bottom: 0px;
+    }
+    .slick-dots {
+        left: 50%;
+        bottom: 40px;
+    }
+}
+@media only screen and (max-width: 420px) {
+    .slick-prev, .slick-next {
+        bottom: 53%;
+    }
+    .slick-dots {
+        left: 50%;
+        bottom: 50px;
+    }
+    .slick-dots li a {
+        opacity: 0;
+    }
+    .slick-dots li {
+        margin: 0 10px;
+    }
+    .gallery__box {
+        height: 350px;
+    }
+    .slick-prev {
+        left: 5px;
+    }
+    .slick-next {
+        right: 5px;
+    }
+}
+@media only screen and (max-width: 374px) {
+      .gallery__box {
+        height: 300px;
+    }
+    .gallery h3 {
+        font-size: 24px;
+        line-height: 47px;
+        padding-top: 30px;
+        margin-bottom: 15px;
+    }
+}

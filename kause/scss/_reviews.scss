@@ -1,0 +1,136 @@
+// main : style.scss
+
+$color-main: #fff;
+$color-secondary: #f0bd7f;
+
+.reviews {
+    &__container {
+        position: relative;
+        &:after {
+            content: '';
+            display: block;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: -70px;
+            background: url(../img/elips.png) center no-repeat;
+            width: 710px;
+            height: 45px;
+        }
+    }
+    padding: 120px 0;
+    & h3 {
+        text-align: center;
+        text-transform: uppercase;
+        color: #000;
+        font-weight: lighter;
+        font-size: 36px;
+        line-height: 44px;
+        margin-bottom: 50px;
+        position: relative;
+        &:after {
+            content: '';
+            display: block;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: -50px;
+            background: url(../img/star.png) center no-repeat;
+            width: 135px;
+            height: 25px;
+        }
+    }
+    &__box {
+        display: block;
+        width: 480px!important;
+        height: 250px;
+        margin: 10px 15px;
+        padding-left: 30px;
+        padding-top: 25px;
+        box-shadow: 0 0 5px rgba(0,0,0,0.5);
+        &-author {
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px;
+            & img {
+                display: block;
+                border-radius: 100%;
+                width: 43px;
+                height: 43px;
+                margin-right: 20px;
+            }
+            &-name {
+                & h5 {
+                    font-size: 18px;
+                    font-weight: bold;
+                    color: #000;
+                }
+                & p {
+                    color: #939393;
+                    font-weight: 500;
+                    font-size: 14px;
+                }
+            }
+        }
+        & p {
+            display: block;
+            max-width: 395px;
+            font-size: 15px;
+            line-height: 23px;
+        }
+    }
+    &__box:active, &__box:focus {
+        outline: none;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .reviews h3 {
+        font-size: 20px;
+        line-height: 28px;
+        margin-bottom: 30px;
+    }
+    .reviews {
+        padding-top: 70px;
+        padding-bottom: 90px;
+    }
+    .reviews h3:after {
+        top: -40px;
+    }
+}
+@media only screen and (max-width: 500px) {
+    .reviews__box {
+        width: 300px!important;
+        padding-left: 15px;
+    }
+    .reviews__box p {
+        font-size: 13px;
+        max-width: 270px;
+        line-height: 23px;
+    }
+    .reviews__box-author-name h5 {
+        font-size: 16px;
+    }
+    .reviews h3 {
+        padding: 0 30px;
+    }
+    .reviews {
+        padding-top: 50px;
+    }
+    .reviews__container:after {
+        width: calc(100% - 40px);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
