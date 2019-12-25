@@ -367,6 +367,10 @@ nav {
   .header__boxed-bottom {
     margin-bottom: 20px; } }
 
+@media only screen and (max-width: 420px) {
+  .header__boxed-bottom img {
+    max-height: 400px; } }
+
 @media only screen and (max-width: 374px) {
   .header__container-video {
     height: 165px;
@@ -387,6 +391,10 @@ nav {
     font-size: 32px; }
   .header__boxed-top img {
     max-width: 270px; } }
+
+@media only screen and (max-width: 320px) {
+  .header__boxed-bottom img {
+    max-height: 315px; } }
 
 .training {
   color: #fff;
