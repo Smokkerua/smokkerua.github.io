@@ -1687,3 +1687,6 @@ body {
 @media only screen and (max-width: 400px) {
   .button-cunsult {
     width: 280px; } }
+.button-auto {
+    margin: auto;
+}
