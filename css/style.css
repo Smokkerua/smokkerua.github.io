@@ -106,26 +106,44 @@ header:after {
     box-sizing: border-box;
     display: block;
     position: relative;
-    background: linear-gradient(to bottom, #fff, #f9f9f9);
+    background: -webkit-linear-gradient(bottom left, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background: -o-linear-gradient(bottom left, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background: linear-gradient(to top right, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
     padding: 15px;
-
+    border-radius: 10px;
 }
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+    }
 .containerModal .closeModal {
     position: absolute;
     right: 15px;
     top: 25px;
     font-size: 20px;
     color: #b9b8b8;
-    transition: all .2s linear
+    transition: all .5s linear;
+    cursor: pointer;
+    transform: translateY(-10px);
 }
 .closeModal:hover {
-    color: #000
+    color: #000;
+    transform: translateY(-8px);
 }
 .modalContent{
     display: none;
 }
 .modal_content {
-    color: #333;
+    color: #fff;
     font-size: 18px;
     padding: 20px;
     text-align: left;
@@ -137,19 +155,15 @@ header:after {
     text-decoration: none;
     border: 1px solid #fff;
     display: inline-block;
-    color: #333;
     font-size: 17px;
     transition: 0.5s;
-    transform: translateY(-40px);
-    opacity: 0;
-    visibility: hidden;
     z-index: 99999;
+    color: #fff;
     background: transparent;
+    cursor: pointer;
 }
 .my_box:hover .showModal {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
+    
 }
 .my_box .showModal:hover {
     color: #000;
@@ -873,6 +887,8 @@ video {
     text-align: center;
     color: #ddd;
     cursor: pointer;
+    margin-bottom: 30px;
+    width: 400px;
 }
 .service-icon {
     display: inline-block;
@@ -895,12 +911,12 @@ video {
     color: #ddd;
 }
 .service-title {
-    font-size: 18px;
+    font-size: 22px;
     text-transform: uppercase;
     margin-bottom: 10px;
 }
 .service-desc {
-    font-size: 14px;
+    font-size: 16px;
 }
 
 /* my_works
@@ -1035,25 +1051,15 @@ video {
     top: 0;
     left: 0;
     width: 50%;
+    color: #fff;
     height: 100%;
     background: rgba(255, 255, 255, 0.05);
 }
 .modal_header {
     text-align: center;
-    font-size: 22px;
+    font-size: 24px;
+    font-weight: bold;
     margin-top: 15px;
-}
-.header-red {
-    color: #ff0057;
-}
-.header-blue {
-    color: #00bcd4;
-}
-.header-purple {
-    color: #5d02ff;
-}
-.header-yellow {
-    color:  #ffc107;
 }
 .my_box {
     position: relative;

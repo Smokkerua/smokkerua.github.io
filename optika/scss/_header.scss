@@ -1,0 +1,232 @@
+// main: ./sass/style.scss
+
+$color-main: #4b4b4b;
+$color-secondary: #2580b7;
+$transishion-main: all 0.2s linear; 
+$bold: "GothamProBold";
+
+.header {
+    $color-main: #4b4b4b;
+    min-height: 750px;
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &-logo {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 3px;
+            & img {
+                margin-right: 21px;
+            }
+        }
+        &-callback {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            & a {
+                margin-right: 30px;
+                color: $color-secondary;
+            }
+        }
+    }
+    &__container {
+        margin-top: 15px;
+    }
+}
+.titlebox {
+    max-width: 800px;
+    &-title {
+        font-size: 48px;
+        font-family: $bold;
+        color: $color-secondary;
+        line-height: 58px;
+        display: block;
+        max-width: 775px;
+        margin-bottom: 23px;
+    }
+    &-subtitle {
+        margin-bottom: 18px;
+        & li {
+            font-size: 18px;
+            color: #000;
+            padding-bottom: 40px;
+            line-height: 1.3;
+            display: block;
+            max-width: 585px;
+            & img{
+                margin-right: 10px;
+            }  
+        }
+        & li:nth-child(3) {
+            padding-bottom: 20px;
+        }
+    }
+}
+.nav {
+    float: right;
+    text-align: right;
+    & .navigation {
+        &-item a{
+            color: $color-main;
+            font-size: 16px;
+            text-decoration: none;
+            line-height: 30px;
+            display: block;
+            padding-bottom: 2px;
+        }
+
+    }
+}
+
+@media only screen and (max-width: 1300px) {
+    .header__top {
+        padding: 0 20px;
+    }
+    .header__container {
+        padding: 0 20px;
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+    .titlebox {
+        max-width: 600px;
+    }
+    .header__top {
+        display: block;
+    }
+    .header__top-logo {
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+    .button-header {
+        margin: auto;
+    }
+}
+@media only screen and (max-width: 768px) {
+    body {
+        background-size: auto;
+    }
+    .header__top-logo {
+        justify-content: space-around;
+        margin-bottom: 0;
+    }
+    .header__top-logo img {
+        margin-right: 0;
+    }
+    .titlebox-title {
+        font-size: 38px;
+        line-height: 48px;
+    }
+    .our-city {
+        margin: 25px 0 10px;
+        max-width: 250px;
+        text-align: left;
+        padding-bottom: 20px;
+    }
+    .header__container {
+        margin-top: 20px;
+    }
+    .nav {
+        float: none;
+        margin: 20px 5px;
+    }
+    .navigation    {
+        display: flex;
+        justify-content: space-around;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .titlebox-title {
+        font-size: 34px;
+        line-height: 40px;
+        margin-bottom: 40px;
+    }
+    .titlebox-subtitle li {
+        font-size: 16px;
+        padding-bottom: 30px;
+    }
+    .navigation {
+        flex-wrap: wrap;
+    }
+    .navigation-item {
+        display: block;
+        width: 100%;
+    }
+    .nav .navigation-item a {
+        font-size: 16px;
+        text-align: center;
+    }
+}
+@media only screen and (max-width: 500px) {
+    .titlebox-subtitle li {
+        font-size: 16px;
+        padding-bottom: 20px;
+        max-width: 400px;
+    }
+    .titlebox-title {
+        font-size: 28px;
+        line-height: 1.3;
+        margin-bottom: 30px;
+    }
+    .header__top-logo img {
+        margin-right: 20px;
+        max-width: 140px;
+    }
+}
+@media only screen and (max-width: 400px) {
+    
+    .titlebox-title {
+        font-size: 21px;
+        line-height: 30px;
+        margin-bottom: 30px;
+    }
+    .titlebox-subtitle li {
+        font-size: 15px;
+        padding-bottom: 20px;
+    }
+    .our-city {
+        margin: 10px 0;
+        padding-bottom: 10px;
+    }
+    .header__top-logo img {
+        margin-right: 10px;
+        max-width: 100px;
+    }
+    .our-city {
+        font-size: 12px;
+        margin-top: 20px;
+    }
+}
+
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+
+
+
+
+
+

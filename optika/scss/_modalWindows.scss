@@ -1,0 +1,142 @@
+// main: ./sass/style.scss
+$color-main: #4b4b4b;
+$color-secondary: #2580b7;
+$bold: "GothamProBold";
+
+.modalForm {
+    z-index: 150;
+    display: none;
+    &__container {
+        position: fixed;
+        left: 50%;
+        top: 0;
+        transform: translateX(-50%);
+        z-index: 10000;
+        width: 100%;
+        max-width: 1200px;
+        margin: auto;
+    }
+    &__dialog {
+        margin: 10vh auto;
+        width: 370px;
+        box-sizing: border-box;
+        display: block;
+        position: relative;
+        border-radius: 6px;
+        border: 4px solid $color-secondary;
+        background: #fff;
+        &-title {
+            font-size: 24px;
+            font-family: $bold;
+            text-align: center;
+            line-height: 34px;
+            padding-top: 40px;
+        }
+        &-subtitle {
+            font-size: 16px;
+            line-height: 26px;
+            text-align: center;
+            max-width: 230px;
+            margin: auto;
+            padding-bottom: 50px;
+        }
+    }
+}
+.filter_modal {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: auto;
+    background-color: rgba(6,15,49,0.9);
+    z-index: 10000;
+    display: none;
+}
+
+.closeModal {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    width: 12px;
+    height: 12px;
+    transition: all .2s linear;
+    cursor: pointer;
+    transition: 0.6s;
+    &:hover {
+        transform: translateY(3px);
+    }
+}
+.form {
+    display: flex;
+    align-items: center;
+    color: $color-main;
+    &-input {
+        display: block;
+        height: 60px;
+        width: 270px;
+        text-align: center;
+        padding: 20px 25px;
+        color: $color-main;
+        box-sizing: border-box;
+        border-radius: 30px;
+        font-size: 12px;
+        line-height: 72px;
+        border: 1px solid $color-main;
+        font-family: $bold;
+        color: #000;
+        margin-right: 30px;
+        &:focus, &:active {
+            outline: none;
+        }
+        &-callback {
+            display: block;
+            margin: 10px auto;
+        }
+    } 
+    &_callback {
+        padding-bottom: 55px;
+    }
+}
+.thanks {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 50%;
+    top: 50%;
+    transform: translate3d(-50%,-50%,0);
+    z-index: 10000;
+    display: none;
+}
+
+
+@media only screen and (max-width: 991px) {
+    .form-input {
+        height: 50px;
+        width: 240px;
+    }
+}
+@media only screen and (max-width: 400px) {
+    .modalForm__dialog {
+        width: 300px;
+    }  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
