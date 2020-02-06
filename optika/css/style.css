@@ -768,7 +768,8 @@ table {
   .video__container {
     display: flex;
     justify-content: space-between;
-    position: relative; }
+    position: relative;
+    width: 100%; }
     .video__container:before {
       content: '';
       display: block;
@@ -779,6 +780,10 @@ table {
       top: -210px;
       background: url(../images/video_bg-girl.png) no-repeat;
       z-index: -1; }
+    .video__container-block {
+      width: 770px;
+      height: 490px;
+      display: block; }
     .video__container-text {
       font-family: "GothamProBlack";
       font-size: 56px;
@@ -805,9 +810,8 @@ table {
     left: -50px;
     background-size: 40%; }
   .video__container-block {
-    width: 600px; }
-    .video__container-block img {
-      max-width: 100%; }
+    width: 600px;
+    height: 350px; }
   .video__container {
     justify-content: center; }
   .video:before {
@@ -831,11 +835,14 @@ table {
 @media only screen and (max-width: 991px) {
   .video {
     margin-top: 100px;
-    padding-bottom: 50px; } }
+    padding-bottom: 50px; }
+  .video__container-block {
+    width: 550px;
+    height: 300px; } }
 
 @media only screen and (max-width: 768px) {
   .video {
-    margin-top: 150px; }
+    margin-top: 50px; }
   .video__container:before {
     display: none; }
   .video__container-block {
@@ -849,13 +856,15 @@ table {
   .video__container-text span {
     font-size: 27px; }
   .video__container-block {
-    width: 300px; }
+    width: 300px;
+    height: 180px; }
   .video {
     margin-top: 20px; } }
 
 @media only screen and (max-width: 360px) {
   .video__container-block {
-    width: 270px; } }
+    width: 270px;
+    height: 150px; } }
 
 .services {
   padding-top: 40px; }
@@ -1629,6 +1638,9 @@ body {
 .section-3 .slick-prev, .section-3 .slick-next {
   top: 116%; }
 
+.button-auto {
+  margin: auto; }
+
 @media only screen and (max-width: 1300px) {
   body {
     background-size: auto; } }
@@ -1687,6 +1699,3 @@ body {
 @media only screen and (max-width: 400px) {
   .button-cunsult {
     width: 280px; } }
-.button-auto {
-    margin: auto;
-}
