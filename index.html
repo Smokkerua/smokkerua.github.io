@@ -1,432 +1,700 @@
 <!DOCTYPE html>
-<html lang="ru">
-
+<html lang=ru>
 <head>
     <meta charset="UTF-8">
+    <title>Optika</title>
+    <meta name="description" content="This is a test work specifically for KNB Studio" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>_SmoKKeR_</title>
-    <link rel="stylesheet" href="./css/swiper.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/slick.css">
+    <link rel="stylesheet" href="./css/slick-theme.css">
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/adaptive-style.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300i,400,500,700,900|Varela+Round&display=swap" />
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-    <meta name="google" content="notranslate" /> </head>
-
+    <link rel="shortcut icon" href="./favs/fav_114.ico">
+</head>
+    
 <body>
-   
-    <header id="header">
-        <section class="header_wrapper" id="home">
-            <div class="header_top" id="header_top">
-                <div class="wrapper">
-                    <div class="header_container" id="hd_ct">
-                        <div class="social">
-                            <div class="sm-container"> <i class="show-btn fas fa-user"></i>
-                                <div class="sm-menu"> 
-                                    <a href="https://www.facebook.com/profile.php?id=100011194207708&ref=bookmarks" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                                    <a href="#"><i class="fab fa-twitter"></i></a>
-                                    <a href="https://www.instagram.com/smokkerua/" target="_blank"><i class="fab fa-instagram"></i></a>
-                                    <a href="#"><i class="fab fa-youtube"></i></a>
-                                    <a href="#"><i class="fab fa-whatsapp"></i></a> 
-                                </div>
-                            </div>
-                        </div>
-                        <div class="text middle"> 
-                            <span class="hidden blue">_</span> 
-                            <span class="">S</span> 
-                            <span class="hidden">m</span> 
-                            <span class="hidden">o</span> 
-                            <span class="hidden blue">K</span> 
-                            <span class="hidden blue">K</span> 
-                            <span class="hidden">e</span> 
-                            <span class="hidden">R</span> 
-                            <span class="hidden blue">_</span> 
-                            <span>U</span> 
-                            <span class="hidden">A</span> 
-                            <span class="hidden blue">_</span> 
-                        </div>
-                        <nav class="nav_bar" id="nav">
-                            <ul class="ul">
-                                <li><a href="#home" data-scroll="#home" class="nav_link">Главная</a></li>
-                                <li><a href="#skills" data-scroll="#skills" class="nav_link">Навыки</a></li>
-                                <li><a href="#about" data-scroll="#about" class="nav_link">Обо мне</a></li>
-                                <li class="hover-works"> <a href="#work" class="nav_link padding-right">Работы 
-                               <i class="down fas fa-sort-down"></i></a>
-                                    <ul class="sub-menu">
-                                        <li><a class="nav_link works-a" href="http://korolev-gruzoperevozki.ru/" target="_blank">Вывоз мусора МО</a></li>
-                                        <li><a class="nav_link works-a" href="https://musorcom.ru/" target="_blank">Мусорком</a></li>
-                                        <li><a class="nav_link works-a" href="http://gruzchuku.ru/" target="_blank">Грузчики</a></li>
-                                        <li><a class="nav_link works-a" href="Psiholog/index.html" target="_blank">Психолог</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="#gallery" data-scroll="#gallery" class="nav_link">Галерея</a></li>
-                                <li><a href="#contacts" data-scroll="#contacts" class="nav_link">Контакты</a></li>
-                            </ul>
-                        </nav>
-                        <div class="menu-toggle" id="menu"> <a class="nav_toggle" href="#">Menu</a> </div>
-                    </div>
-                </div>
-            </div>
-            <div class="header_bottom" id="banner">
-                <section class="animation_logo" id="section">
-                    <div class="wrapper_video">
-                        <h1>_SmoKKeR_</h1>
-                        <div class="video_my">
-                            <video class="" id="video-id" src="smoke.mp4"></video>
-                        </div>
-                    </div>
-                    <div class="subtitle">
-                        <div class="sb">Я сделаю вам абалденный сайт:) </div>
-                    </div>
-                </section>
-                <button class="btn-animet" id="play"> 
-                    <span class="anim"></span> 
-                    <span class="anim"></span> 
-                    <span class="anim"></span> 
-                    <span class="anim"></span> Нажми:) 
-                </button>
-            </div>
-        </section>
+    
+    <header class="header" id="header">
+      
+       <div class="wrapper">
+           
+           <div class="header__top">
+               <div class="header__top-logo">
+                   <a href="/"><img class="logo" src="./images/ProSvet.png" alt="logo"></a>
+                   <p class="our-city">Мережа магазинів оптики «Файна оптика» у Львові</p>
+               </div>
+               <div class="header__top-callback">
+
+               </div>
+           </div> <!-- /header__top --> 
+           
+           <div class="header__container">
+
+               
+               <div class="titlebox">
+                  
+                   <h1 class="titlebox-title">Виготовлення окулярів для корекції зору за цінами нижче за ринкові</h1>
+                   
+                   <ul class="titlebox-subtitle">
+                       <li><img src="./images/arrow.png" alt="arrow">При замовленні, безкоштовна комп’ютерна діагностика зору та підбір окулярів досвідченими оптометристами</li>
+                       <li><img src="./images/arrow.png" alt="arrow">Великий вибір оправ, окулярів та контактних лінз від світових виробників, регулярне оновлення товару</li>
+                       <li><img src="./images/arrow.png" alt="arrow">Виготовлення окулярів на сучасному обладнанні кваліфікованими майстрами — оптиками в найкоротші терміни</li>
+                       <li><img src="./images/arrow.png" alt="arrow">Програма лояльості для постійних клієнтів: дисконтні картки, індивідуальний підхід до кожного клієнта</li>
+                   </ul>
+
+              
+               </div> <!-- /titlebox --> 
+               
+
+               
+           </div> <!-- /header__container --> 
+           
+           
+           
+       </div> <!-- /wrapper --> 
+        
     </header>
     
     <main>
-       
-        <section class="post">
+            
+        <section  class="about" id="about">
+           
             <div class="wrapper">
-                <div class="title_me">
-                    <h4 class="post_title">Какие языки я использую?</h4>
-                    <p class="subtitle_me">Все просто..</p>
-                </div>
-                <div class="postcards">
-                    <div class="postcards_block">
-                        <div class="imgBox"> <img src="./img/card-html.jpg" alt=""> </div>
-                        <div class="details">
-                            <div class="title_cards html">Язык гипертекстовой разметки</div>
-                            <p>Я использую его для того, чтобы дать браузеру понять, как нужно отображать загруженный сайт и что на нем будет.</p>
+                
+                <h2 class="main-title">За 10 років діяльності понад 100 000 клієнтів обрали мережу салонів «Файна оптика» </h2>
+                  
+                <div class="about__container">
+                   
+                    <div class="about__box about__box-1">
+                        <div class="about__box-left">
+                            <div class="about__foto">
+                                <img class="about__foto-img" data-src="./images/about/about-1.png" alt="О нас" data-aos="fade-right">
+                            </div>
                         </div>
-                    </div>
-                    <div class="postcards_block">
-                        <div class="imgBox"> <img src="./img/card-css.jpg" alt=""> </div>
-                        <div class="details">
-                            <div class="title_cards css">Каскадные таблицы стилей</div>
-                            <p>Я использую его для того, чтобы сделать ваш сайт красивым! </p>
+                        <div class="about__box-right about__box-right-pl">
+                            <h3 class="about__box-title">Ми працюємо на оптичному <br>ринку понад 10 років</h3>
+                            <p class="list-title">Згідно аналізу рейтингів та кількості позитивних відгуків, в соціальних мережах, ми займаємо топові позиції на оптичному ринку Львова.</p>
                         </div>
-                    </div>
-                    <div class="postcards_block">
-                        <div class="imgBox"> <img src="./img/card-js.jpg" alt=""> </div>
-                        <div class="details">
-                            <div class="title_cards java">JavaScript</div>
-                            <p>Нужен чтобы на вашем сайте все кликалось, клацалось и анимировалось:) Создаю слайдеры, карусели, галереи, адаптивное меню и т.д.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="my_skills">
-                <ul class="skills">
-                    <div class="title_skills">My Skills</div>
-                    <li class="skills_list">
-                        <div class="subtitle_skills">HTML5</div><span class="skills_bar"></span><span class="skills_html span_skill"></span> </li>
-                    <li class="skills_list">
-                        <div class="subtitle_skills">CSS3</div><span class="skills_bar"></span><span class="skills_css span_skill"></span> </li>
-                    <li class="skills_list">
-                        <div class="subtitle_skills">JQUERY</div><span class="skills_bar"></span><span class="skills_jquery span_skill"></span> </li>
-                    <li class="skills_list">
-                        <div class="subtitle_skills">JAVASCRIPT</div><span class="skills_bar"></span><span class="skills_java  span_skill"></span> </li>
-                </ul>
-            </div>
-        </section >
-        
-        <section class="services-section" id="skills">
+                    </div> <!-- /about__box --> 
+                     
+                </div> <!-- /about__container --> 
+                
+            </div> <!-- /wrapper --> 
+            
+        </section>
+           
+        <section class="production" id="production">
+           
             <div class="wrapper">
-                <div class="container-animation">
-                    <h3 class="serv_title">Навыки</h3>
-                    <div class="border"></div>
-                    <div class="services-container">
-                        <div class="service-box">
-                            <div class="service-icon"> <i class="fab fa-html5"></i> </div>
-                            <div class="service-title">Адаптивная верстка</div>
-                            <div class="service-desc">Пишу чистый, валидный код. Адаптация под все виды устройств от 320px  до 5к.</div>
+                
+                <h2 class="main-title">Наш асортимент</h2>
+                
+                <div class="main-title title-3">Окулярні лінзи від провідних європейських виробників</div>
+                
+                <div class="slider__container">
+                   
+                      <div class="slider__block-wrappers2" data-aos="flip-down">
+
+                      <div class="slider__block section-2 slider">
+                        
+                        <div class="section-2__container">
+                            <div class="section-2__container-box">
+                                <img data-src="./images/our_product/section-2/sec-2-1.jpg" alt="Наш продукт">
+                                <div class="section-2__container-box-text">Carl Zeiss</div>
+                            </div>
                         </div>
-                        <div class="service-box">
-                            <div class="service-icon"> <i class="fab fa-adobe"></i> </div>
-                            <div class="service-title">Adobe Photoshop</div>
-                            <div class="service-desc"> Верстка с PSD макета, обработка фото, наложение эффектов и т.д. </div>
+                        <div class="section-2__container">
+                            <div class="section-2__container-box">
+                                <img data-src="./images/our_product/section-2/sec-2-2.jpg" alt="Наш продукт">
+                                <div class="section-2__container-box-text">Rodenstock</div>
+                            </div>
                         </div>
-                        <div class="service-box">
-                            <div class="service-icon"> <i class="fab fa-sass"></i> </div>
-                            <div class="service-title">SASS/LESS</div>
-                            <div class="service-desc"> Работа с препроцессорами SASS/LESS для более качественной и быстрой верстки </div>
+                        <div class="section-2__container">
+                            <div class="section-2__container-box">
+                                <img data-src="./images/our_product/section-2/sec-2-3.jpg" alt="Наш продукт">
+                                <div class="section-2__container-box-text">Divel</div>
+                            </div>
                         </div>
-                        <div class="service-box">
-                            <div class="service-icon"> <i class="fab fa-bootstrap"></i> </div>
-                            <div class="service-title">Bootstrap 4</div>
-                            <div class="service-desc"> Работа с фреймфорком Bootstrap. Быстро, адаптивно, качественно! </div>
+                        <div class="section-2__container">
+                            <div class="section-2__container-box">
+                                <img data-src="./images/our_product/section-2/sec-2-4.jpg" alt="Наш продукт">
+                                <div class="section-2__container-box-text">JZO</div>
+                            </div>
                         </div>
-                        <div class="service-box">
-                            <div class="service-icon"> <i class="fab fa-github"></i> </div>
-                            <div class="service-title">Github</div>
-                            <div class="service-desc"> Работа с системой контроля версий Git </div>
+                        <div class="section-2__container">
+                            <div class="section-2__container-box">
+                                <img data-src="./images/our_product/section-2/sec-2-1.jpg" alt="Наш продукт">
+                                <div class="section-2__container-box-text">Carl Zeiss</div>
+                            </div>
                         </div>
-                        <div class="service-box">
-                            <div class="service-icon"> <i class="fab fa-css3-alt"></i> </div>
-                            <div class="service-title">CSS анимации/эффекты</div>
-                            <div class="service-desc"> Если вы хотите сделать на сайте что-то особенное чтобы это цепляло посетителя, то вы обратились по-адрессу:) </div>
+                        <div class="section-2__container">
+                            <div class="section-2__container-box">
+                                <img data-src="./images/our_product/section-2/sec-2-2.jpg" alt="Наш продукт">
+                                <div class="section-2__container-box-text">Rodenstock</div>
+                            </div>
                         </div>
+                        <div class="section-2__container">
+                            <div class="section-2__container-box">
+                                <img data-src="./images/our_product/section-2/sec-2-3.jpg" alt="Наш продукт">
+                                <div class="section-2__container-box-text">Divel</div>
+                            </div>
+                        </div>
+                        <div class="section-2__container">
+                            <div class="section-2__container-box">
+                                <img data-src="./images/our_product/section-2/sec-2-4.jpg" alt="Наш продукт">
+                                <div class="section-2__container-box-text">JZO</div>
+                            </div>
+                        </div>
+
+                    </div> <!-- /section-2 --> 
+                        
+                    </div> 
+                       
+                      <h3 class="main-title">Аксесуари для окулярів</h3>
+                        
+                      <div class="poduc-foto">
+                           <img  data-src="./images/about/ab.jpg" alt="" data-aos="fade-left">
+                      </div>
+                        
+                      <p class="poduction">Футляри та серветки , ланцюжки, спреї</p>
+                        
+                      <h3 class="main-title">Контактні лінзи та засоби догляду</h3>
+                        
+                      <h4 class="main__subtitle"> відомих виробників Johnson&Johnson, Bauch+lomb, Cooper Vision, Alcon</h4>
+                    
+                      <div class="slider__block section-1 slider" data-aos="flip-up">
+                        
+                        <div class="slider__block-box">
+                            <div class="slider__block-box-foto">
+                                <img data-src="./images/our_product/section-1/product-1.png" alt="Наш продукт">
+                            </div>
+                            <div class="slider__block-box-time">На 3 мicяцi</div>
+
+                        </div> 
+                        
+                        <div class="slider__block-box">
+                            <div class="slider__block-box-foto">
+                                <img data-src="./images/our_product/section-1/product-2.png" alt="Наш продукт">
+                            </div>
+                            <div class="slider__block-box-time">На 30 днів</div>
+
+                        </div> 
+                        
+                        <div class="slider__block-box">
+                            <div class="slider__block-box-foto">
+                                <img data-src="./images/our_product/section-1/product-3.png" alt="Наш продукт">
+                            </div>
+                            <div class="slider__block-box-time">На 14 днів</div>
+
+                        </div> 
+                        
+                        <div class="slider__block-box">
+                            <div class="slider__block-box-foto">
+                                <img data-src="./images/our_product/section-1/product-4.png" alt="Наши продукт">
+                            </div>
+                            <div class="slider__block-box-time">Одноденні</div>
+
+                        </div> 
+                        
+                         <div class="slider__block-box">
+                            <div class="slider__block-box-foto">
+                                <img data-src="./images/our_product/section-1/product-1.png" alt="Наши продукт">
+                            </div>
+                            <div class="slider__block-box-time">На 3 мicяцi</div>
+
+                        </div> 
+                        
+                        <div class="slider__block-box">
+                            <div class="slider__block-box-foto">
+                                <img data-src="./images/our_product/section-1/product-2.png" alt="Наш продукт">
+                            </div>
+                            <div class="slider__block-box-time">На 30 днів</div>
+
+                        </div> 
+                        
+                        <div class="slider__block-box">
+                            <div class="slider__block-box-foto">
+                                <img data-src="./images/our_product/section-1/product-3.png" alt="Наш продукт">
+                            </div>
+                            <div class="slider__block-box-time">На 14 днів</div>
+
+                        </div> 
+                        
+                        <div class="slider__block-box">
+                            <div class="slider__block-box-foto">
+                                <img data-src="./images/our_product/section-1/product-4.png" alt="Наш продукт">
+                            </div>
+                            <div class="slider__block-box-time">Одноденні</div>
+                        </div> 
+                        
+                    </div> <!-- /section-1 -->
+                    
+                      <h3 class="main-title section-3-block">Розчини для догляду за контактними лінзами</h3>
+                      
+                      <div class="slider__block section-3 slider" data-aos="flip-up">
+                        
+                        <div class="slider__block-box">
+                            <div class="slider__block-box-foto">
+                                <img data-src="./images/our_product/section-3/sec-3-1.jpg" alt="Наш продукт">
+                            </div>
+                            <div class="slider__block-box-time">Biotrue</div>
+
+                        </div> 
+                        
+                        <div class="slider__block-box">
+                            <div class="slider__block-box-foto">
+                                <img data-src="./images/our_product/section-3/sec-3-2.jpg" alt="Наш продукт">
+                            </div>
+                            <div class="slider__block-box-time">ReNu</div>
+
+                        </div> 
+                        
+                        <div class="slider__block-box">
+                            <div class="slider__block-box-foto">
+                                <img data-src="./images/our_product/section-3/sec-3-3.jpg" alt="Наш продукт">
+                            </div>
+                            <div class="slider__block-box-time">Опті-Фрі</div>
+
+                        </div> 
+                        
+                        <div class="slider__block-box">
+                            <div class="slider__block-box-foto">
+                                <img data-src="./images/our_product/section-3/sec-3-4.jpg" alt="Наши продукт">
+                            </div>
+                            <div class="slider__block-box-time">Релізі</div>
+
+                        </div> 
+                        
+                         <div class="slider__block-box">
+                            <div class="slider__block-box-foto">
+                                <img data-src="./images/our_product/section-3/sec-3-1.jpg" alt="Наши продукт">
+                            </div>
+                            <div class="slider__block-box-time">Biotrue</div>
+
+                        </div> 
+                        
+                        <div class="slider__block-box">
+                            <div class="slider__block-box-foto">
+                                <img data-src="./images/our_product/section-3/sec-3-2.jpg" alt="Наш продукт">
+                            </div>
+                            <div class="slider__block-box-time">ReNu</div>
+
+                        </div> 
+                        
+                        <div class="slider__block-box">
+                            <div class="slider__block-box-foto">
+                                <img data-src="./images/our_product/section-3/sec-3-3.jpg" alt="Наш продукт">
+                            </div>
+                            <div class="slider__block-box-time">Опті-Фрі</div>
+
+                        </div> 
+                        
+                        <div class="slider__block-box">
+                            <div class="slider__block-box-foto">
+                                <img data-src="./images/our_product/section-3/sec-3-4.jpg" alt="Наш продукт">
+                            </div>
+                            <div class="slider__block-box-time">Релізі</div>
+                        </div> 
+                        
+                    </div> <!-- /section-1 -->
+                    
+                      <h3 class="main-title section-4-block">Аксесуари для догляду за контактними лінзами</h3>
+                    
+                      <div class="section-4__container">
+                        <div class="section-4__block">
+                            <div class="section-4__block-foto">
+                                <img src="./images/our_product/section-4/sec-4-1.jpg" alt="">
+                            </div>
+                            <p>Пінцети</p>
+                        </div>
+                        <div class="section-4__block">
+                            <div class="section-4__block-foto">
+                                <img src="./images/our_product/section-4/sec-4-2.jpg" alt="">
+                            </div>
+                            <p>Контейнери</p>
+                        </div>
+                        <div class="section-4__block">
+                            <div class="section-4__block-foto">
+                                <img src="./images/our_product/section-4/sec-4-3.jpg" alt="">
+                            </div>
+                            <p>Дорожні набори</p>
+                        </div>
+                        
                     </div>
-                </div>
-            </div>
+
+                </div> <!-- /slider__container --> 
+                
+                <div class="serv">
+                     <div class="serv-left">
+                         <img src="./images/about/ad.jpg" alt="">
+                      </div>
+                      <div class="serv-right">
+                         <h4>Виготовлення окулярів <br>будь-якої складності</h4>
+                         <p>У разі потреби ви завжди зможете <br>зробити ремонт своїх окулярів</p>
+                      </div>
+                </div>  
+            
+            </div> <!-- /wrapper --> 
+            
+        </section>   
+              
+        <section class="certificate" id="certificate">
+            
+            <div class="wrapper">
+                
+                <div class="certificate__container" data-aos="fade-up"
+                                                    data-aos-duration="3000">
+                    
+                    <div class="certificate__container-suptitle">Пропонуємо подарункові</div>
+                    
+                    <h3 class="certificate__container-title">Cертифікати</h3>
+                    
+                    <div class="certificate__container-text">номіналом 1000 грн, 1500 грн та 2000 грн, на покупку окулярів та аксесуарів <br> нашої компанії</div>
+
+                    
+                </div> <!-- /certificate__container --> 
+                
+                
+            </div> <!-- /wrapper --> 
+            
+        </section>  
+           
+        <section class="video" id="video">
+           
+            <div class="wrapper">
+               
+                <div class="video__container">
+                    <div class="video__container-text">
+                        <h4>Побач світ <br><span>У деталях!</span></h4>
+                    </div>
+                    <div class="video__container-block" data-aos="zoom-in-up" id="video-on">
+                        
+                    </div>
+                </div> <!-- /video__container --> 
+                
+            </div> <!-- /wrapper --> 
+            
         </section>
-        
-        <section class="qualities" id="about">
-            <h3 class="serv_title">Обо мне</h3>
-            <div class="border serv_border"></div>
-            <div class="my_blocks">
-                <div class="my_box">
-                    <div class="content">
-                        <h2>01</h2>
-                        <h3>Моя работа - мое хобби</h3>
-                        <p>Мне искренне нравиться верстать, создавать что-то полезное для людей и делать это хорошо.</p> <button class="showModal" data-id="1">Читать больше</button> </div>
-                </div>
-                <div class="my_box">
-                    <div class="content">
-                        <h2>02</h2>
-                        <h3>Ответственный</h3>
-                        <p>Я не предлагаю услуги, если не могу это сделать. А если предложил - то сделаю в указаные строки и это будет качественно.</p>
-                        <button href="#" class="showModal" data-id="2">Читать больше</button>
-                    </div>
-                </div>
-                <div class="my_box">
-                    <div class="content">
-                        <h2>03</h2>
-                        <h3>Гибкий</h3>
-                        <p>Могу подстроиться под любую из ситуаций, работать со всеми людьми и находить общий язык.</p>
-                        <button href="#" class="showModal" data-id="3">Читать больше</button>
-                    </div>
-                </div>
-                <div class="my_box">
-                    <div class="content">
-                        <h2>04</h2>
-                        <h3>24/7 на связи</h3>
-                        <p>Если вы обнаружили какой-либо баг в моей работе или что-то требуется откорректировать - я внеочереди исправлю это бесплатно.</p>
-                        <button href="#" class="showModal" data-id="4">Читать больше</button>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <section class="my_works" id="work">
-            <div class="bg_work">
-                <div class="wrapper">
-                    <div class="container-animation">
-                        <h3 class="serv_title">Мои работы</h3>
-                        <div class="border serv_border"></div>
-                        <div class="works_container">
-                            <div class="works_container__box">
-                                <a href="http://korolev-gruzoperevozki.ru/">
-                                   <img src="./img/vyvoz-musora-mo.jpg" alt="Вывоз мусора МО">
-                                </a>   
-                                   <div class="works_container__title">
-                                       <h5 class="">Вывоз мусора МО</h5>
-                                       <a href="#">Подробнее...</a>
-                                   </div>  
-                            </div>
-                            <div class="works_container__box musorcom">
-                                <a href="https://tara-klop.ru/">
-                                    <img src="./img/klop.jpg" alt="Тара-клоп">
-                                </a>
-                                <div class="works_container__title">
-                                    <h5 class="">Вывоз мусора МО</h5>
-                                    <a href="#">Подробнее...</a>
-                                </div>  
-                            </div>
-                            <div class="works_container__box">
-                                <a href="https://gruzchuku.ru/">
-                                    <img src="./img/gruzchuku.jpg" alt="Грузчики">
-                                </a>
-                                <div class="works_container__title">
-                                    <h5 class="">Грузчики</h5>
-                                    <a href="#">Подробнее...</a>
-                                </div>  
-                            </div>
-                            <div class="works_container__box">
-                                <a href="http://gruzchikii.ru/">
-                                    <img src="./img/gruz.jpg" alt="Грузчики МО">
-                                </a>
-                                <div class="works_container__title">
-                                    <h5 class="">Грузчики МО</h5>
-                                    <a href="#">Подробнее...</a>
-                                </div>  
-                            </div>
-                            <div class="works_container__box">
-                                <a href="https://musorcom.ru/">
-                                    <img src="./img/muscor-com.jpg" alt="Мусорком">
-                                </a>
-                                <div class="works_container__title">
-                                    <h5 class="">Мусорком</h5>
-                                    <a href="#">Подробнее...</a>
-                                </div>  
-                            </div>  
-                            <div class="works_container__box">
-                                <a href="https://chpu-rezka.ru/">
-                                    <img src="./img/chpu.jpg" alt="ЧПУ Резка">
-                                </a>
-                                <div class="works_container__title">
-                                    <h5 class="">ЧПУ Резка</h5>
-                                    <a href="#">Подробнее...</a>
-                                </div>  
-                            </div>
-                            
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <section class="swiper-container" id="gallery">
-            <h3 class="serv_title">Галерея</h3>
-            <div class="border serv_border"></div>
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <div class="imgBx"> <img class="i-am" src="./img/gallery/i-am.jpg" alt=""> </div>
-                    <div class="details_slider">
-                        <h5 class="slider_h5">Кунпан Денис<br>
-                  <span class="slider_span">Ваш верстальщик</span></h5> </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="imgBx"> <img src="./img/gallery/work.jpg" alt=""> </div>
-                    <div class="details_slider">
-                        <h5 class="slider_h5">Рабочее место<br>
-                  <span class="slider_span">Работа с комфортом)</span></h5> </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="imgBx"> <img src="./img/gallery/ato-sasha.jpg" alt=""> </div>
-                    <div class="details_slider">
-                        <h5 class="slider_h5">Путешествия<br>
-                  <span class="slider_span">С другом</span></h5> </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="imgBx"> <img src="./img/gallery/forma.jpg" alt=""> </div>
-                    <div class="details_slider">
-                        <h5 class="slider_h5">В форме<br>
-                  <span class="slider_span">Старые-добрые времена</span></h5> </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="imgBx"> <img src="./img/gallery/girl.jpg" alt=""> </div>
-                    <div class="details_slider">
-                        <h5 class="slider_h5">С Викой<br>
-                  <span class="slider_span">Случайное знакомство</span></h5> </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="imgBx"> <img src="./img/gallery/tenis.jpg" alt=""> </div>
-                    <div class="details_slider">
-                        <h5 class="slider_h5">Пин-понг<br>
-                  <span class="slider_span">Мое хобби</span></h5> </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="imgBx"> <img src="./img/gallery/ato.jpg" alt=""> </div>
-                    <div class="details_slider">
-                        <h5 class="slider_h5">АТО<br>
-                  <span class="slider_span">Донецкая область</span></h5> </div>
-                </div>
-            </div>
-            <div class="swiper-pagination"></div>
-        </section>
-        
+           
+        <section class="reviews" id="reviews" data-aos="flip-right">
+            
+            <div class="wrapper">
+               
+                <h2 class="main-title">Відгуки клієнтів, котрі користуються <br>нашими окулярами</h2>
+                 
+                <div class="reviews__container reviews-slider" >
+                    
+                    <div class="reviews__block">
+                        <img class="reviews__block-foto" data-src="./images/reviews.png" alt="Клиент">
+                        <div class="reviews__block-text">На улице Кавалеридзе работают очень красивые, добрые, опытные девочки! Спасибо большое за обслуживание! Уже много лет я являюсь клиентом "Файной оптики" у кого есть проблемы со зрением, компьютерная диагностика, подбор контактных линз, очков... все есть, обращайтесь!!! Все на высшем уровне!!! Огромное спасибо!!!</div>
+                        <p class="reviews__block-author">Татьяна Енилеева</p>
+                    </div> <!-- /reviews__block --> 
+                    
+                    <div class="reviews__block">
+                        <img class="reviews__block-foto" data-src="./images/reviews.png" alt="Клиент">
+                        <div class="reviews__block-text">На улице Кавалеридзе работают очень красивые, добрые, опытные девочки! Спасибо большое за обслуживание! Уже много лет я являюсь клиентом "Файной оптики" у кого есть проблемы со зрением, компьютерная диагностика, подбор контактных линз, очков... все есть, обращайтесь!!! Все на высшем уровне!!! Огромное спасибо!!!</div>
+                        <p class="reviews__block-author">Татьяна Енилеева</p>
+                    </div> <!-- /reviews__block -->
+                    
+                    <div class="reviews__block">
+                        <img class="reviews__block-foto" data-src="./images/reviews.png" alt="Клиент">
+                        <div class="reviews__block-text">На улице Кавалеридзе работают очень красивые, добрые, опытные девочки! Спасибо большое за обслуживание! Уже много лет я являюсь клиентом "Файной оптики" у кого есть проблемы со зрением, компьютерная диагностика, подбор контактных линз, очков... все есть, обращайтесь!!! Все на высшем уровне!!! Огромное спасибо!!!</div>
+                        <p class="reviews__block-author">Татьяна Енилеева</p>
+                    </div> <!-- /reviews__block -->
+                    
+                    <div class="reviews__block">
+                        <img class="reviews__block-foto" data-src="./images/reviews.png" alt="Клиент">
+                        <div class="reviews__block-text">На улице Кавалеридзе работают очень красивые, добрые, опытные девочки! Спасибо большое за обслуживание! Уже много лет я являюсь клиентом "Файной оптики" у кого есть проблемы со зрением, компьютерная диагностика, подбор контактных линз, очков... все есть, обращайтесь!!! Все на высшем уровне!!! Огромное спасибо!!!</div>
+                        <p class="reviews__block-author">Татьяна Енилеева</p>
+                    </div> <!-- /reviews__block -->
+                    
+                    <div class="reviews__block">
+                        <img class="reviews__block-foto" data-src="./images/reviews.png" alt="Клиент">
+                        <div class="reviews__block-text">На улице Кавалеридзе работают очень красивые, добрые, опытные девочки! Спасибо большое за обслуживание! Уже много лет я являюсь клиентом "Файной оптики" у кого есть проблемы со зрением, компьютерная диагностика, подбор контактных линз, очков... все есть, обращайтесь!!! Все на высшем уровне!!! Огромное спасибо!!!</div>
+                        <p class="reviews__block-author">Татьяна Енилеева</p>
+                    </div> <!-- /reviews__block -->
+                    
+                    <div class="reviews__block">
+                        <img class="reviews__block-foto" data-src="./images/reviews.png" alt="Клиент">
+                        <div class="reviews__block-text">На улице Кавалеридзе работают очень красивые, добрые, опытные девочки! Спасибо большое за обслуживание! Уже много лет я являюсь клиентом "Файной оптики" у кого есть проблемы со зрением, компьютерная диагностика, подбор контактных линз, очков... все есть, обращайтесь!!! Все на высшем уровне!!! Огромное спасибо!!!</div>
+                        <p class="reviews__block-author">Татьяна Енилеева</p>
+                    </div> <!-- /reviews__block -->
+                    
+                </div>  <!-- /reviews__container --> 
+                    
+            </div> <!-- /wrapper --> 
+            
+        </section>                                                                          
     </main>
     
-    <footer id="footer">
-        <div class="my_footer">
-            <div class="wrapper footer_wrap">
-                <section class="title_contact" id="contacts">
-                    <h6 class="about__title">Свяжитесь со мной</h6>
-                    <div class="border footer_border"></div>
-                </section>
-                <div class="my_contacts">
-                    <div class="my_address my_contacts_block">
-                        <div class="circle"> <i class="fas fa-map-marker-alt"></i> </div>
-                        <p>Украина
-                            <br>г. Умань</p>
-                    </div>
-                    <div class="my_phone my_contacts_block">
-                        <div class="circle"> <i class="fas fa-phone fa-rotate-90"></i> </div>
-                        <p>+380931601029</p>
-                    </div>
-                    <div class="my_email my_contacts_block">
-                        <div class="circle"> <i class="fas fa-envelope"></i> </div>
-                        <p>kynpan3@gmai.com
-                            <br>kunpansmokk@gmail.com
-                            <p>
-                    </div>
-                </div>
-                <form method="post" id="form">
-                    <input name="name" type="text" class="input_name" placeholder="Ваше имя">
-                    <input name="email" type="email" class="input_email" placeholder="Ваша почта">
-                    <textarea class="my_message" name="sub" cols="30" rows="13" placeholder="Напишите сообщение"></textarea>
-                    <button type="submit" class="my_btn contact-form__button"
-                    id="buttom_alert">Отправить</button>
-                </form>
-            </div>
-            <div class="bottom_line">_SmoKKeR_Ua_ - ваш верстальщик!</div>
-        </div>
+    <footer class="footer" id="footer">
         
-                <div id="cities">
-            <div id="wrapper-cities-head">
-                <!-- кнопка вызова-->
-                <!-- модуль с содержимым-->
-                <div class="modalContent" id="cont1">
-                    <div class="containerModal"> <i class="fas fa-times closeModal"></i>
-                        <div class="modal_header header-red">Моя работа - моё хобби!</div>
-                        <div class="modal_content">
-                            <p>Думаю, что работа должна быть в радость, и это настоящая пытка, когда так не происходит. Ты делаешь потрясающие вещи только тогда искренне любишь свое дело.</p>
-                            <p>Как все начиналось? С самого детства я любил проводить время за компьютером, мне нравилось знать больше, чем мои друзья в пользовании пк. Ну знаете, в 7 лет уметь переустановить виндовс или скопировать кряк для запуска любимой игры:) И со временем это переросло в настоящую любовь к тому, что я делаю и непрерывно развиваюсь.</p>
-                        </div>
-                    </div>
+        <div class="wrapper">
+            
+            <div class="footer__container">
+                
+                <div class="footer__container-wrapper">
+                    
+                    <div class="footer__container-address">
+
+                        <p class="footer__container-subtitle">Адреси магазинів у м. Львів:</p>
+                        <ul class="address-list">
+                            <li class="address-list-item">
+                                <a href="#"><img data-src="./images/arrow.png" alt="arrow"> вул. Городоцька, 35</a>
+                                <p>+38 050 49-69-444</p>
+                            </li>
+                            <li class="address-list-item">
+                                <a href="#"><img data-src="./images/arrow.png" alt="arrow"> вул. Городоцька, 77</a>
+                                <p>+38 050 489-54-89</p>
+                            </li>
+                            <li class="address-list-item">
+                                <a href="#"><img data-src="./images/arrow.png" alt="arrow"> вул. Джерельна, 2</a>
+                                <p>+38 050 74-61-444</p>
+                            </li>
+                            <li class="address-list-item">
+                                <a href="#"><img data-src="./images/arrow.png" alt="arrow"> вул. І.Кавалерідзе, 1</a>
+                                <p>+38 050 47-69-444</p>
+                            </li>
+                            <li class="address-list-item">
+                                <a href="#"><img data-src="./images/arrow.png" alt="arrow"> вул. П.Куліша, 43</a>
+                                <p>+38 050 430-68-444</p>
+                            </li>
+                            <li class="address-list-item">
+                                <a href="#"><img data-src="./images/arrow.png" alt="arrow"> вул. І.Мазепи, 25А</a>
+                                <p>+38 050 47-68-444</p>
+                            </li>
+                            <li class="address-list-item">
+                                <a href="#"><img data-src="./images/arrow.png" alt="arrow"> вул. С.Петлюри, 2</a>
+                                <p>+38 050 07-31-444</p>
+                            </li>
+                            <li class="address-list-item">
+                                <a href="#"><img data-src="./images/arrow.png" alt="arrow"> проспект Червоної Калини, 94</a>
+                                <p>+38 050 39-33-444</p>
+                            </li>
+                        </ul>       
+                    </div> <!-- /footer__container-address -->   
+                    
+                    <div class="footer__container-callback">
+                        <p><a class="callback-mail" href="mailto:fineoptica@gmail.com">fineoptica@gmail.com</a></p>
+                        <p class="callback-time"><span>Виникли запитання?</span> Наш спеціаліст <br>відповість на них впродовж 15 хв</p>
+                        <button class="button button-price" onclick="showed5('block')">Ваше запитання</button>
+                    </div> <!-- /footer__container-callback --> 
+                
+                </div> <!-- /footer__container-wrapper -->   
+                
+                <div class="footer__container-map" data-aos="zoom-in-left">
+                    <img src="./images/location.jpg" alt="Карта">
+                </div> <!-- /footer__container-map --> 
+                
+
+            </div> <!-- /footer__container --> 
+            
+            <div class="footer__bottom">
+                <img src="./images/ProSvet.png" alt="Лого">
+                <div class="footer__bottom-private">
+                    <p class="footer__bottom-private-politik">Політика конфіденційності</p>
+                    <p class="footer__bottom-private-defense">© 2020 «Файна оптика» Всі права захищені.</p>
                 </div>
-                <div class="modalContent" id="cont2">
-                    <div class="containerModal"> <i class="fas fa-times closeModal"></i>
-                        <div class="modal_header header-blue">Ответственный</div>
-                        <div class="modal_content">
-                            <p>«Каждый человек несет ответственность перед всеми людьми за всех людей и за все.» Достоевский Ф.</p>
-                            <p>Я не предлагаю свои услуги, если не могу сделать - а если предложил, то обязательно сделаю в указаные сроки. Как-то раз при выполнении заказа сгорел мой единственный компьтер.</p>
-                            <p>Ждать времени пока в сервисном центре его починят у меня не было. Сроки поджимали, а работа стояла на месте. Что сгорело неизвестно и покупать новый совершенно не было денег. Но... за 600 гривен я в своем городе нашел покрытый пылью системник который еле запускался, но для работы в блокноте самый раз. В общем спустя пару безсонных ночей я сдал работу в сроки.</p>
-                        </div>
-                    </div>
+                <div class="footer__bottom-company">
+                    <p>Проект <br>разроблено:</p>
+                    <img data-src="./images/knb.png" alt="КНБ Студия">
                 </div>
-                <div class="modalContent" id="cont3">
-                    <div class="containerModal"> <i class="fas fa-times closeModal"></i>
-                        <div class="modal_header header-purple">Гибкий</div>
-                        <div class="modal_content">
-                            <p>Во всех смыслах. Могу подстроиться к любой ситуации, любому типу людей и да, я умею садиться на шпагат=)</p>
-                            <p>Еще когда служил в армии, мне доводилось по пожарному расчету тушить пожар ломом. Да, да, именно ломом!) Сказано - сделано, по-другому в армии не бывает. Я это к чему, что могу адаптироваться под любые условия и эффективно применять данные средства для достижения цели, где другие бы опустили руки.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="modalContent" id="cont4">
-                    <div class="containerModal"> <i class="fas fa-times closeModal"></i>
-                        <div class="modal_header header-yellow">24/7 на связи</div>
-                        <div class="modal_content">
-                            <p>Вы всегда можете мне написать, позвонить, приехать. Даже ночью, если не сплю - я вам помогу.</p>
-                            <p>Так же, если вдруг вы нашли какую-либо неисправность в моей работе, не корректное отображение чего-либо и т.д. - я впервоочередном плане исправлю её совершенно бесплатно и в кратчайшие сроки.</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- модальное окно-->
-                <div id="modal">
-                    <div id="innerModal"> </div>
-                </div>
-            </div>
-        </div>
+            </div> <!-- /footer__bottom -->
+            
+        </div> <!-- /wrapper --> 
         
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
-        </script>
-        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-        <script src="./js/swiper.min.js"></script>
-        <script src="./js/script.js"></script>
-    </footer>
+    </footer> 
     
     
-    
+    <div class="modalForm" id="modalForm1">
+       
+        <div class="filter_modal" id="filter_modal1" onclick="showed1('none')"></div>
+        
+        <div class="modalForm__container">
+           
+            <div class="modalForm__dialog" >
+                <img data-src="./images/close.png" class="closeModal" alt="close" onclick="showed1('none')">
+       
+                <h4 class="modalForm__dialog-title">Заповніть форму</h4>
+                <p class="modalForm__dialog-subtitle">і наш менеджер зв'яжеться з вами протягом 15 хвилин</p>
+
+                <form method="POST" class="form_callback" >         
+                    <input type="name" name="name" class="form-input form-input-callback" placeholder="Ваше ім'я" required>
+                    <input type="tel" name="phone" class="form-input form-input-callback phone-form" placeholder="Ваш телефон" required>
+                    <input type="email" name="email" class="form-input form-input-callback" placeholder="Ваш email" required>
+                    <button type="submit" class="button button-price button-popap">Отримати консультацію</button> 
+                    <input type="hidden" name="Window" value="Отримати консультацію">     
+                </form>   
+                         
+            </div> <!-- /modalForm__dialog -->
+            
+        </div> <!-- /modalForm__container -->
+        
+     </div> <!-- /modalForm1 -->
+     
+    <div class="modalForm" id="modalForm2">
+       
+        <div class="filter_modal" id="filter_modal2" onclick="showed2('none')"></div>
+        
+        <div class="modalForm__container">
+           
+            <div class="modalForm__dialog" >
+                <img data-src="./images/close.png" class="closeModal" alt="close" onclick="showed2('none')">
+       
+                <h4 class="modalForm__dialog-title">Заповніть форму</h4>
+                <p class="modalForm__dialog-subtitle">і наш менеджер зв'яжеться з вами протягом 15 хвилин</p>
+
+                <form method="POST" class="form_callback" >         
+                    <input type="name" name="name" class="form-input form-input-callback" placeholder="Ваше ім'я" required>
+                    <input type="tel" name="phone" class="form-input form-input-callback phone-form" placeholder="Ваш телефон" required>
+                    <input type="email" name="email" class="form-input form-input-callback" placeholder="Ваш email" required>
+                    <button type="submit" class="button button-price button-popap">Ми перетелефонуємо</button> 
+                    <input type="hidden" name="Window" value="Ми перетелефонуємо">     
+                </form>    
+                         
+            </div> <!-- /modalForm__dialog -->
+            
+        </div> <!-- /modalForm__container -->
+        
+     </div> <!-- /modalForm2 --> 
+     
+    <div class="modalForm" id="modalForm3">
+       
+        <div class="filter_modal" id="filter_modal3" onclick="showed3('none')"></div>
+        
+        <div class="modalForm__container">
+           
+            <div class="modalForm__dialog" >
+                <img data-src="./images/close.png" class="closeModal" alt="close" onclick="showed3('none')">
+       
+                <h4 class="modalForm__dialog-title">Заповніть форму</h4>
+                <p class="modalForm__dialog-subtitle">і наш менеджер зв'яжеться з вами протягом 15 хвилин</p>
+
+                <form method="POST" class="form_callback" >         
+                    <input type="name" name="name" class="form-input form-input-callback" placeholder="Ваше ім'я" required>
+                    <input type="tel" name="phone" class="form-input form-input-callback phone-form" placeholder="Ваш телефон" required>
+                    <input type="email" name="email" class="form-input form-input-callback" placeholder="Ваш email" required>
+                    <button type="submit" class="button button-price button-popap">Дізнатись докладніше</button> 
+                    <input type="hidden" name="Window" value="Дізнатись докладніше">     
+                </form>    
+                         
+            </div> <!-- /modalForm__dialog -->
+            
+        </div> <!-- /modalForm__container -->
+        
+     </div> <!-- /modalForm3 --> 
+     
+    <div class="modalForm" id="modalForm4">
+       
+        <div class="filter_modal" id="filter_modal4" onclick="showed4('none')"></div>
+        
+        <div class="modalForm__container">
+           
+            <div class="modalForm__dialog" >
+                <img data-src="./images/close.png" class="closeModal" alt="close" onclick="showed4('none')">
+       
+                <h4 class="modalForm__dialog-title">Заповніть форму</h4>
+                <p class="modalForm__dialog-subtitle">і наш менеджер зв'яжеться з вами протягом 15 хвилин</p>
+
+                <form method="POST" class="form_callback" >         
+                    <input type="name" name="name" class="form-input form-input-callback" placeholder="Ваше ім'я" required>
+                    <input type="tel" name="phone" class="form-input form-input-callback phone-form" placeholder="Ваш телефон" required>
+                    <input type="email" name="email" class="form-input form-input-callback" placeholder="Ваш email" required>
+                    <button type="submit" class="button button-price button-popap">Отримати картку</button> 
+                    <input type="hidden" name="Window" value="Отримати картку">     
+                </form>    
+                         
+            </div> <!-- /modalForm__dialog -->
+            
+        </div> <!-- /modalForm__container -->
+        
+     </div> <!-- /modalForm4 --> 
+     
+    <div class="modalForm" id="modalForm5">
+       
+        <div class="filter_modal" id="filter_modal5" onclick="showed5('none')"></div>
+        
+        <div class="modalForm__container">
+           
+            <div class="modalForm__dialog" >
+                <img data-src="./images/close.png" class="closeModal" alt="close" onclick="showed5('none')">
+       
+                <h4 class="modalForm__dialog-title">Заповніть форму</h4>
+                <p class="modalForm__dialog-subtitle">і наш менеджер зв'яжеться з вами протягом 15 хвилин</p>
+
+                <form method="POST" class="form_callback" >         
+                    <input type="name" name="name" class="form-input form-input-callback" placeholder="Ваше ім'я" required>
+                    <input type="tel" name="phone" class="form-input form-input-callback phone-form" placeholder="Ваш телефон" required>
+                    <input type="email" name="email" class="form-input form-input-callback" placeholder="Ваш email" required>
+                    <button type="submit" class="button button-price button-popap button-auto">Ваше запитання</button> 
+                    <input type="hidden" name="Window" value="Ваше запитання">     
+                </form>    
+                         
+            </div> <!-- /modalForm__dialog -->
+            
+        </div> <!-- /modalForm__container -->
+        
+     </div> <!-- /modalForm5 --> 
+     
+    <div class="modalForm" id="modalForm6">
+       
+        <div class="filter_modal" id="filter_modal6" onclick="showed6('none')"></div>
+        
+        <div class="modalForm__container">
+           
+            <div class="modalForm__dialog" >
+                <img data-src="./images/close.png" class="closeModal" alt="close" onclick="showed6('none')">
+       
+                <h4 class="modalForm__dialog-title">Заповніть форму</h4>
+                <p class="modalForm__dialog-subtitle">і наш менеджер зв'яжеться з вами протягом 15 хвилин</p>
+
+                <form method="POST" class="form_callback" >         
+                    <input type="name" name="name" class="form-input form-input-callback" placeholder="Ваше ім'я" required>
+                    <input type="tel" name="phone" class="form-input form-input-callback phone-form" placeholder="Ваш телефон" required>
+                    <input type="email" name="email" class="form-input form-input-callback" placeholder="Ваш email" required>
+                    <button type="submit" class="button button-price button-popap">Записатися на діагностику</button> 
+                    <input type="hidden" name="Window" value="Записатися на діагностику">     
+                </form>    
+                         
+            </div> <!-- /modalForm__dialog -->
+            
+        </div> <!-- /modalForm__container -->
+        
+     </div> <!-- /modalForm6 --> 
+     
+    <div class="modalForm" id="modalForm7">
+       
+        <div class="filter_modal" id="filter_modal7" onclick="showed7('none')"></div>
+        
+        <div class="modalForm__container">
+           
+            <div class="modalForm__dialog" >
+                <img data-src="./images/close.png" class="closeModal" alt="close" onclick="showed7('none')">
+       
+                <h4 class="modalForm__dialog-title">Заповніть форму</h4>
+                <p class="modalForm__dialog-subtitle">і наш менеджер зв'яжеться з вами протягом 15 хвилин</p>
+
+                <form method="POST" class="form_callback" >         
+                    <input type="name" name="name" class="form-input form-input-callback" placeholder="Ваше ім'я" required>
+                    <input type="tel" name="phone" class="form-input form-input-callback phone-form" placeholder="Ваш телефон" required>
+                    <input type="email" name="email" class="form-input form-input-callback" placeholder="Ваш email" required>
+                    <button type="submit" class="button button-price button-popap">Дізнатися вартість</button> 
+                    <input type="hidden" name="Window" value="Дізнатися вартість">     
+                </form>    
+                         
+            </div> <!-- /modalForm__dialog -->
+            
+        </div> <!-- /modalForm__container -->
+        
+     </div> <!-- /modalForm4 -->    
+     
+    <img class="thanks" id="thanks" src="./images/thanks.jpg" alt="thanks">
+     
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="js/jquery.maskedinput.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/slick.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
