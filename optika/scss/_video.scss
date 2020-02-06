@@ -24,6 +24,7 @@ $bold: "GothamProBold";
         display: flex;
         justify-content: space-between;
         position: relative;
+        width: 100%;
         &:before {
             content: '';
             display: block;
@@ -34,6 +35,11 @@ $bold: "GothamProBold";
             top: -210px;
             background: url(../images/video_bg-girl.png) no-repeat;
             z-index: -1;
+        }
+        &-block {
+            width: 770px;
+            height: 490px;
+            display: block;
         }
         &-text {
             font-family: "GothamProBlack";
@@ -68,9 +74,7 @@ $bold: "GothamProBold";
     }
     .video__container-block {
         width: 600px;
-        & img {
-            max-width: 100%;
-        }
+        height: 350px;
     }
     .video__container {
         justify-content: center;
@@ -105,10 +109,14 @@ $bold: "GothamProBold";
         margin-top: 100px;
         padding-bottom: 50px;
     } 
+    .video__container-block {
+        width: 550px;
+        height: 300px;
+    }
 }
 @media only screen and (max-width: 768px) {
     .video {
-        margin-top: 150px;
+        margin-top: 50px;
     }
     .video__container:before {
         display: none;
@@ -129,6 +137,7 @@ $bold: "GothamProBold";
     }
     .video__container-block {
         width: 300px;
+        height: 180px;
     }
     .video {
         margin-top: 20px;
@@ -137,6 +146,7 @@ $bold: "GothamProBold";
 @media only screen and (max-width: 360px) {
     .video__container-block {
         width: 270px;
+        height: 150px;
     }
 }
 

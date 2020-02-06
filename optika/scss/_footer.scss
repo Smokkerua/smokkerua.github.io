@@ -121,6 +121,12 @@ $bold: "GothamProBold";
         }
     }
 }
+.map {
+    display: none;
+}
+.active-map {
+    display: block;
+}
 @media only screen and (max-width: 1300px) {
     .footer__container {
         padding: 0 20px;

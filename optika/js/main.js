@@ -98,7 +98,49 @@ $(document).on('ready', function () {
     });
     
     
+        
+        	//validation
+	var locale = document.documentElement.getAttribute('lang');
+
+    var validationName = "Обов'язково для заповнення";
+    //var validationAlpha = "Введіть вірне ім'я";
+    var validationNameMax = "Від 2 до 16 літер";
+    var validationPhone = "Введіть вірний номер";
+    var validationEmail = "Введіть вірний E-mail";
+	
+
+	$('#service1Form').validate({
+		rules: {
+			nameUserField: {
+				required: true,
+				minlength: 2,
+				maxlength: 16
+			},
+			emailUserField: {
+				required: true,
+				email: true
+			},
+			phoneUserField: {
+				required: true
+			}
+		},
+		messages: {
+			nameUserField: {
+				required: validationName,
+				minlength: validationNameMax,
+				maxlength: validationNameMax
+			},
+			emailUserField: {
+				required: validationName,
+				email: validationEmail
+			},
+			phoneUserField: {
+				required: validationPhone
+			}
+		}
+	});
     
+
     
     // mask for input phone
     $(".phone-form").mask("+38 (999) 99-99-999");
@@ -213,5 +255,42 @@ $(document).on('ready', function () {
         $(".map").removeClass("active-map");
         $("#map-8").addClass("active-map");
     });
+    
+
+    /* модальное окно */
+    $(function () {
+        var c = {
+            self: $("#modal")
+            , showModal: function (d) {
+                this.self.find("#innerModal").html(d);
+                this.self.fadeIn(200)
+            }
+            , hideModal: function () {
+                this.self.fadeOut(200);
+                this.self.find("#innerModal").html("")
+            }
+        };
+        $(".showModal").on("click", function (f) {
+            var g = $(this).data("id");
+            var d = $("#cont" + g).html();
+            c.showModal(d)
+        });
+        $("#modal").on("click", function (d) {
+            if ($(d.target).attr("id") === "modal" || $(d.target).hasClass("closeModal")) {
+                c.hideModal()
+            }
+        });
+    });
+
+
+        	//validation
+
+		var validationName = "Обов'язково для заповнення";
+		var validationAlpha = "Введіть вірне ім'я";
+		var validationNameMax = "Від 2 до 16 літер";
+		var validationPhone = "Введіть вірний номер";
+		var validationEmail = "Введіть вірний E-mail";
+
+
     
 

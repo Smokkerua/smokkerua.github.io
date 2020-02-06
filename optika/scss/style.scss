@@ -71,7 +71,15 @@ body {
     margin-top: 60px;
     margin-bottom: 35px;
 }
-
+.error {
+    vertical-align: top;
+    left: 50%;
+    width: 10;
+    display: block;
+    text-align: center;
+    color: red;
+    margin-bottom: 5px;
+}
 .button {
     background: $color-secondary;
     color: #fff;
@@ -153,6 +161,9 @@ body {
 }
 .section-3 .slick-prev, .section-3 .slick-next {
     top: 116%;
+}
+.button-auto {
+    margin: auto;
 }
 @media only screen and (max-width: 1300px) {
     body {

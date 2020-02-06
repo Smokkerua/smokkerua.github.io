@@ -493,7 +493,7 @@
             <div class="footer__bottom">
                 <img src="./images/ProSvet.png" alt="Лого">
                 <div class="footer__bottom-private">
-                    <p class="footer__bottom-private-politik">Політика конфіденційності</p>
+                    <p class="footer__bottom-private-politik"><a class="conf-but showModal" data-id="1">Політика конфіденційності</a></p>
                     <p class="footer__bottom-private-defense">© 2020 «Файна оптика» Всі права захищені.</p>
                 </div>
                 <div class="footer__bottom-company">
@@ -506,7 +506,7 @@
         
     </footer> 
     
-    
+
     <div class="modalForm" id="modalForm1">
        
         <div class="filter_modal" id="filter_modal1" onclick="showed1('none')"></div>
@@ -618,16 +618,16 @@
         <div class="modalForm__container">
            
             <div class="modalForm__dialog" >
-                <img src="./images/close.png" class="closeModal" alt="close" onclick="showed5('none')">
+                <img src="./images/close.png" class="closes closeModal" alt="close" onclick="showed5('none')">
        
                 <h4 class="modalForm__dialog-title">Заповніть форму</h4>
                 <p class="modalForm__dialog-subtitle">і наш менеджер зв'яжеться з вами протягом 15 хвилин</p>
 
-                <form method="POST" class="form_callback" >         
-                    <input type="name" name="name" class="form-input form-input-callback" placeholder="Ваше ім'я" required>
-                    <input type="tel" name="phone" class="form-input form-input-callback phone-form" placeholder="Ваш телефон" required>
-                    <input type="email" name="email" class="form-input form-input-callback" placeholder="Ваш email" required>
-                    <button type="submit" class="button button-price button-popap button-auto">Ваше запитання</button> 
+                <form method="POST" class="form_callback" id="service1Form">         
+                    <input type="name" name="nameUserField" class="form-input form-input-callback" placeholder="Ваше ім'я" >
+                    <input type="tel" name="phoneUserField" class="form-input form-input-callback phone-form" placeholder="Ваш телефон">
+                    <input type="email" name="nameUserField" class="form-input form-input-callback " placeholder="Ваш email" required>
+                    <button type="submit" class="button button-price button-popap button-auto ">Ваше запитання</button> 
                     <input type="hidden" name="Window" value="Ваше запитання">     
                 </form>    
                          
@@ -687,14 +687,57 @@
             
         </div> <!-- /modalForm__container -->
         
-     </div> <!-- /modalForm4 -->    
+     </div> <!-- /modalForm4 --> 
+     
+    <div class="modalContent" id="cont1"> 
+                  <div class="containerModal"> <div class="close"><img  class="closeModal" src="./images/close.png" alt="close"></div>
+                          <div class="sity-block">
+        <div class="conf">
+        
+        <div class="conf__text">Ваша конфіденційність дуже важлива для нас. Ми хочемо, щоб Ваша робота в Інтернет по можливості була максимально приємною і корисною, і Ви абсолютно спокійно використовували найширший спектр інформації, інструментів і можливостей, які пропонує Інтернет.</div>
+
+        <div class="conf__text">Особиста інформація Членів, зібрана при реєстрації (або в будь-який інший час) переважно використовується для підготовки Продуктів або Послуг відповідно до Ваших потреб. Ваша інформація не буде передана або продана третім сторонам. Однак ми можемо частково розкривати особисту інформацію в особливих випадках, описаних в «Згоду з розсилкою»</div>
+
+        <div class="conf__text"><span>Які дані збираються на сайті</span><br> При добровільної реєстрації на отримання розсилки «Інсайдер інтернет підприємця» ви відправляєте своє Ім'я та E-mail через форму реєстрації.</div>
+
+        <div class="conf__text"><span>З якою метою збираються ці дані</span><br> Ім'я використовується для звернення особисто до вас, а ваш e-mail для відправки вам листів розсилок, новин тренінгу, корисних матеріалів, комерційних пропозицій. Ваші ім'я та e-mail не передаються третім особам, ні за яких умов крім випадків, пов'язаних з виконанням вимог законодавства. Ваше ім'я і e-mail на захищених серверах сервісу getresponse.com і використовуються відповідно до його політикою конфіденційності.</div>
+
+        <div class="conf__text">Вы можете отказаться от получения писем рассылки и удалить из базы данных свои контактные данные в любой момент, кликнув на ссылку для отписки, присутствующую в каждом письме.</div>
+
+        <div class="conf__text"><span>Як ці дані використовуються</span><br> На сайті використовуються куки (Cookies) і дані про відвідувачів сервісу Google Analytics.</div>
+
+        <div class="conf__text">За допомогою цих даних збирається інформація про дії відвідувачів на сайті з метою поліпшення його змісту, поліпшення функціональних можливостей сайту і, як наслідок, створення якісного контенту і сервісів для відвідувачів.</div>
+
+        <div class="conf__text">Ви можете в будь-який момент змінити налаштування свого браузера так, щоб браузер блокував всі файли cookie або оповіщає про відправку цих файлів. Врахуйте при цьому, що деякі функції і сервіси не зможуть працювати належним чином.</div>
+
+        <div class="conf__text"><span>Як ці дані захищаються</span> <br>Для захисту Вашої особистої інформації ми використовуємо різноманітні адміністративні, управлінські та технічні заходи безпеки. Наша Компанія дотримується різних міжнародних стандартів контролю, спрямованих на операції з особистою інформацією, які включають певні заходи контролю щодо захисту інформації, зібраної в Інтернет.</div>
+
+        <div class="conf__text">Наших співробітників навчають розуміти і виконувати ці заходи контролю, вони ознайомлені з нашим Повідомленням про конфіденційність, норм та інструкцій.</div>
+
+        <div class="conf__text">Проте, не дивлячись на те, що ми прагнемо убезпечити Вашу особисту інформацію, Ви теж повинні вживати заходів, щоб захистити її.</div>
+
+        <div class="conf__text">Ми настійно рекомендуємо Вам вживати всіх можливих заходів обережності під час перебування в Інтернеті. Організовані нами послуги і веб-сайти передбачають заходи щодо захисту від витоку, несанкціонованого використання і зміни інформації, яку ми контролюємо. Незважаючи на те, що ми робимо все можливе, щоб забезпечити цілісність і безпеку своєї мережі і систем, ми не можемо гарантувати, що наші заходи безпеки допоможуть запобігти незаконний доступ до цієї інформації хакерів сторонніх організацій.</div>
+
+        <div class="conf__text">У разі зміни цієї політики конфіденційності ви зможете прочитати про ці зміни на цій сторінці або, в особливих випадках, отримати повідомлення на свій e-mail.</div>
+
+        <div class="conf__text">Для зв'язку з адміністратором сайту з будь-яких питань ви можете написати лист на e-mail: fineoptica@gmail.com</div>
+        
+      </div>
+                    </div>
+                </div>       
+            </div>
+    <div id="modal">         
+        <div id="innerModal"></div>
+    </div>       
      
     <img class="thanks" id="thanks" src="./images/thanks.jpg" alt="thanks">
      
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script src="js/jquery.maskedinput.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
     <script src="js/slick.js"></script>
     <script src="js/main.js"></script>
+
 </body>
 
 </html>

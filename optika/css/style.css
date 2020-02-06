@@ -1457,7 +1457,7 @@ table {
   z-index: 10000;
   display: none; }
 
-.closeModal {
+.closes {
   position: absolute;
   right: 15px;
   top: 15px;
@@ -1466,7 +1466,19 @@ table {
   transition: all .2s linear;
   cursor: pointer;
   transition: 0.6s; }
-  .closeModal:hover {
+  .closes:hover {
+    transform: translateY(3px); }
+
+.close {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  width: 12px;
+  height: 12px;
+  transition: all .2s linear;
+  cursor: pointer;
+  transition: 0.6s; }
+  .close:hover {
     transform: translateY(3px); }
 
 .form {
@@ -1506,6 +1518,94 @@ table {
   z-index: 10000;
   display: none; }
 
+#modal {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow: auto;
+  background-color: rgba(6, 15, 49, 0.9);
+  z-index: 10000;
+  display: none; }
+
+.showModal {
+  cursor: pointer;
+  background: none;
+  border: none;
+  outline: none; }
+
+.containerModal {
+  margin: 50px auto;
+  width: calc(100% - 40px);
+  box-sizing: border-box;
+  display: block;
+  position: relative;
+  padding: 15px;
+  border-radius: 10px;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite; }
+
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%; }
+  50% {
+    background-position: 100% 50%; }
+  100% {
+    background-position: 0% 50%; } }
+
+.sity-block {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  color: #fff; }
+
+.containerModal .close {
+  position: absolute;
+  right: 15px;
+  top: 25px;
+  font-size: 20px;
+  color: #b9b8b8;
+  transition: all .2s linear; }
+
+.close {
+  width: 30px;
+  height: 30px;
+  transition: all 0.2s linear;
+  cursor: pointer;
+  background: #fff;
+  border-radius: 100%;
+  position: relative; }
+
+.close img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate3d(-50%, -50%, 0); }
+
+.close:hover {
+  transform: translateY(3px); }
+
+.modalContent {
+  display: none; }
+
+.conf {
+  padding: 40px 50px 60px; }
+  .conf__container {
+    overflow-y: auto;
+    max-width: none;
+    background: #fdfcf4;
+    width: calc(100% - 40px);
+    margin-top: 50px; }
+  .conf__text {
+    font-size: 18px;
+    margin-bottom: 50px; }
+    .conf__text span {
+      font-size: 30px;
+      font-weight: bold;
+      line-height: 1.5; }
+
 @media only screen and (max-width: 991px) {
   .form-input {
     height: 50px;
@@ -1514,6 +1614,17 @@ table {
 @media only screen and (max-width: 400px) {
   .modalForm__dialog {
     width: 300px; } }
+
+@media only screen and (max-width: 769px) {
+  .conf {
+    padding: 30px 40px 50px; }
+  .conf__text {
+    font-size: 16px;
+    margin-bottom: 40px; }
+  .conf__text span {
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 1.5; } }
 
 html, body {
   font-family: "GothamProRegular";
@@ -1571,6 +1682,15 @@ body {
   max-width: none;
   margin-top: 60px;
   margin-bottom: 35px; }
+
+.error {
+  vertical-align: top;
+  left: 50%;
+  width: 10;
+  display: block;
+  text-align: center;
+  color: red;
+  margin-bottom: 5px; }
 
 .button {
   background: #2580b7;

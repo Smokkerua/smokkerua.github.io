@@ -67,7 +67,7 @@ $bold: "GothamProBold";
         right: 25px;
     }
     & .slick-dots {
-        bottom: 115px;
+        bottom: 85px;
         & li {
             background: #fff;
             border-radius: 100%;
@@ -109,7 +109,7 @@ $bold: "GothamProBold";
         padding-top: 200px;
     }
     .reviews .slick-dots {
-        bottom: 135px;
+        bottom: 105px;
     }
 }
 @media only screen and (max-width: 991px) {
@@ -127,7 +127,7 @@ $bold: "GothamProBold";
         max-width: 170px;
     }
     .reviews .slick-dots {
-        bottom: 150px;
+        bottom: 120px;
     }
     .reviews {
         margin-bottom: 0;
@@ -157,7 +157,7 @@ $bold: "GothamProBold";
         padding: 130px 20px 0 20px;
     }
     .reviews .slick-dots {
-        bottom: 190px;
+        bottom: 160px;
     }
     .reviews__container:before {
         display: none;
@@ -165,12 +165,12 @@ $bold: "GothamProBold";
 }
 @media only screen and (max-width: 600px) {
     .reviews .slick-dots {
-        bottom: 160px;
+        bottom: 130px;
     }
 }
 @media only screen and (max-width: 500px) {
     .reviews .slick-dots {
-        bottom: 160px;
+        bottom: 130px;
     }
     .reviews__block-foto {
         max-width: 110px;
@@ -190,7 +190,7 @@ $bold: "GothamProBold";
         font-size: 13px;
     }
     .reviews .slick-dots {
-        bottom: 170px;
+        bottom: 140px;
     }
 }
 @media only screen and (max-width: 320px) {
@@ -199,6 +199,6 @@ $bold: "GothamProBold";
         padding: 87px 20px 0 20px;
     }
     .reviews .slick-dots {
-        bottom: 150px;
+        bottom: 120px;
     }
 }
