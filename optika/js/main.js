@@ -1,5 +1,18 @@
 $(document).on('ready', function () {
     
+    
+    var reviews = $("#about");
+    var reviewsTop = reviews.offset().top;
+    $(window).bind("scroll", function () {
+        var a = $(this).scrollTop();
+        if (a > reviewsTop) {
+            $("#video-on").html('<iframe width="100%" height="100%" src="https://www.youtube.com/embed/x5hyW10Qij0" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>')
+            $(window).unbind("scroll")
+        }
+    });
+    
+    
+    
     /* slider */
     $('.section-1').slick({
         slidesToShow: 4
@@ -100,8 +113,6 @@ $(document).on('ready', function () {
         }, 700);
     });
     
-    // scroll lazy load block
-    AOS.init();
     
     //  lazy load
     [].forEach.call(document.querySelectorAll("img[data-src]"), function (a) {
@@ -161,3 +172,46 @@ $(document).on('ready', function () {
         document.getElementById('modalForm7').style.display = state;
         document.getElementById('filter_modal7').style.display = state;
     }
+    
+    $(".map-button-1").on("click", function (event) {
+        event.preventDefault();
+        $(".map").removeClass("active-map");
+        $("#map-1").addClass("active-map");
+    });
+    $(".map-button-2").on("click", function (event) {
+        event.preventDefault();
+        $(".map").removeClass("active-map");
+        $("#map-2").addClass("active-map");
+    });
+    $(".map-button-3").on("click", function (event) {
+        event.preventDefault();
+        $(".map").removeClass("active-map");
+        $("#map-3").addClass("active-map");
+    });
+    $(".map-button-4").on("click", function (event) {
+        event.preventDefault();
+        $(".map").removeClass("active-map");
+        $("#map-4").addClass("active-map");
+    });
+    $(".map-button-5").on("click", function (event) {
+        event.preventDefault();
+        $(".map").removeClass("active-map");
+        $("#map-5").addClass("active-map");
+    });
+    $(".map-button-6").on("click", function (event) {
+        event.preventDefault();
+        $(".map").removeClass("active-map");
+        $("#map-6").addClass("active-map");
+    });
+    $(".map-button-7").on("click", function (event) {
+        event.preventDefault();
+        $(".map").removeClass("active-map");
+        $("#map-7").addClass("active-map");
+    });
+    $(".map-button-8").on("click", function (event) {
+        event.preventDefault();
+        $(".map").removeClass("active-map");
+        $("#map-8").addClass("active-map");
+    });
+    
+
