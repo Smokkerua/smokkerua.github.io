@@ -1,18 +1,5 @@
 $(document).on('ready', function () {
     
-    
-    var reviews = $("#about");
-    var reviewsTop = reviews.offset().top;
-    $(window).bind("scroll", function () {
-        var a = $(this).scrollTop();
-        if (a > reviewsTop) {
-            $("#video-on").html('<iframe width="100%" height="100%" src="https://www.youtube.com/embed/x5hyW10Qij0" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>')
-            $(window).unbind("scroll")
-        }
-    });
-    
-    
-    
     /* slider */
     $('.section-1').slick({
         slidesToShow: 4
