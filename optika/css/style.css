@@ -132,7 +132,9 @@ table {
       align-items: center;
       padding-top: 3px; }
       .header__top-logo img {
-        margin-right: 21px; }
+        margin-right: 26px;
+        transform: scale(1.1);
+        margin-top: 10px; }
     .header__top-callback {
       display: flex;
       justify-content: space-between;
@@ -142,6 +144,9 @@ table {
         color: #2580b7; }
   .header__container {
     margin-top: 15px; }
+
+.our-city {
+  margin-top: 3px; }
 
 .titlebox {
   max-width: 800px; }
