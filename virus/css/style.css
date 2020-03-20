@@ -129,7 +129,7 @@ h1 {
 
 .main__container img {
     display: block;
-    margin: 20px auto;
+    margin: 0px auto;
     border-radius: 8px;
     cursor: pointer;
     transition: all 0.2s linear;
@@ -149,8 +149,12 @@ h2 {
     line-height: 36px;
     margin-top: 40px;
 }
-
-a.bot1 {
+.form-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bot1 {
     background: linear-gradient(to bottom, #FFFFFF, #E6E6E6) #F5F5F5 repeat-x;
     border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) #B3B3B3;
     border-radius: 8px;
@@ -163,7 +167,7 @@ a.bot1 {
     font-size: 16px;
     width: 300px;
     line-height: 20px;
-    margin: 40px auto;
+    margin: 20px auto;
     padding: 10px 20px;
     text-align: center;
     text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
@@ -180,7 +184,7 @@ a.bot1 {
     box-shadow: 0 0 1px rgba(0, 0, 0, 0);
 }
 
-a.bot1:before {
+.bot1:before {
     pointer-events: none;
     position: absolute;
     z-index: -1;
@@ -198,13 +202,13 @@ a.bot1:before {
     transition-property: transform, opacity;
 }
 
-a.bot1:hover {
+.bot1:hover {
     -webkit-transform: translateY(-5px);
     -ms-transform: translateY(-5px);
     transform: translateY(-5px);
 }
 
-a.bot1:hover:before {
+.bot1:hover:before {
     opacity: 1;
     -webkit-transform: translateY(5px);
     -ms-transform: translateY(5px);
@@ -408,3 +412,151 @@ footer ul li a {
 .footer__bottom-block p span {
     font-weight: bold;
 }
+
+.form__container {
+    width: 343px;
+    margin: 20px;
+    background: rgb(255, 255, 255);
+    border-width: 4px;
+    border-style: solid;
+    position: relative;
+    border-color: rgb(245, 212, 0);
+    border-image: initial;
+    border-radius: 12px;
+    padding: 24px 34px 50px;
+
+}
+.form_name {
+    font-size: 16px;
+    line-height: 1.2;
+    margin: auto;
+    display: block;
+    margin-bottom: 30px;
+    text-align: center;
+}
+.form_input {
+    box-sizing: border-box;
+    width: 300px;
+    background: #fff;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(216, 216, 216);
+    border-image: initial;
+    border-radius: 4px;
+    padding: 15px 20px;
+    margin: 10px auto;
+    margin-bottom: 30px;
+    display: block;
+}
+.rest {
+    text-align: center;
+    margin: auto;
+    display: block;
+}
+.rest {
+    font-weight: 500;
+}
+.warning {
+    text-align: center;
+    margin: 0 30px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.our-comments {
+    width: 765px;
+    display: block;
+    margin: auto;
+    padding: 0 20px;
+}
+.our-comments-block {
+    display: block;
+    border-top: 1px solid #e5e5ea;
+    padding-top: 10px;
+    margin-top: 25px;
+}
+
+.top-line {
+    display: flex;
+    position: relative;
+    margin-bottom: 20px;
+}
+.top-line img {
+    max-width: 40px;
+    border-radius: 100%;
+    align-items: center;
+    margin-right: 20px;
+}
+.my-com {
+    position: relative;
+    top: 10px;
+}
+.like-me {
+    position: absolute;
+    top: 35%;
+    transform: translateY(-50%);
+    right: 10px;
+    font-size: 12px;
+}
+.likes:hover {
+    color: red;
+}
+.likes {
+    color: #8d96b2;
+    font-size: 12px;
+    margin: 0 3px;
+    transition: all 0.2s linear;
+    cursor: pointer;
+}
+.diz {
+    transform: rotate(180deg);
+}
+.my-com {
+    font-size: 14px;
+}
+.my-com span {
+    color: #a4a9b8;
+    font-size: 13px;
+    margin-left: 20px;
+}
+.center-line p {
+    margin: 5px 0 0;
+    overflow: hidden;
+    font-size: 14px;
+    word-wrap: break-word;
+    text-overflow: ellipsis;
+    line-height: 20px;
+    margin-bottom: 10px;
+}
+.bottom-line {
+    list-style: none;
+    display: flex;
+    color: #8d96b2;
+    font-size: 11px;
+    margin: 0 3px;
+    transition: all 0.2s linear;
+    cursor: pointer;
+    padding: 0;
+    font-weight: 500;
+}
+.bottom-line li {
+    display: block;
+    margin-top: 5px;
+    margin-right: 6px;
+}
+.bottom-line li:hover {
+    color: #315efb;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
