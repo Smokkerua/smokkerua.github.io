@@ -90,7 +90,8 @@ p {
 }
 
 .mini-img {
-    max-width: 500px;
+    max-width: 300px;
+    margin: 0 30px;
 }
 
 .button {
@@ -153,6 +154,7 @@ h2 {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-top: 30px;
 }
 .bot1 {
     background: linear-gradient(to bottom, #FFFFFF, #E6E6E6) #F5F5F5 repeat-x;

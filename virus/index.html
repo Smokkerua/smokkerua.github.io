@@ -3,10 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <title>В Москве госпитализировали еще 116 человек</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700&display=swap&subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/adaptyv.css">
 </head>
 <body>
  
@@ -163,9 +165,20 @@
                 </span>
                 вы можете забронировать респиратор от коронавируса за 1700 руб.
             </p>
+            
+            
            
+
            <div class="form-wrap">
                 <img class="mini-img" src="./img/img3.jpg" alt="">
+                <div class="frame-container">
+                    <iframe id="ourframe1" src="./form/index.php?subid={subid}&campaign={sub_id_1}&banner={sub_id_2}&age={sub_id_3}&geo={sub_id_4}&ip={ip}&country={country}" width="100%" height="550px" frameborder="0" scrolling="no">Ваш браузер не поддерживает плавающие фреймы!</iframe>
+                    <style>@media only screen and (max-width : 900px) {#ourframe1 {height: 570px!important;}}</style>
+                </div>
+                
+                
+                
+<!--
                 <div class="form__container">
                     <p class="form_name">
                         <strong>Первые 99 упаковок</strong> средства по специальной цене
@@ -179,6 +192,7 @@
                     </form>
                     <span class="rest">*при заказе набора <br> Осталось <span class="left-pack">45</span> штук!</span>
                 </div>
+-->
            </div> 
             
            <div class="our-comments">
