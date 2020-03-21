@@ -129,8 +129,8 @@ h1 {
 
 .main__container img {
     display: block;
-    margin: 0px auto;
-    border-radius: 8px;
+    margin: 20px auto;
+    border-radius: 10px;
     cursor: pointer;
     transition: all 0.2s linear;
     position: relative;
@@ -460,7 +460,7 @@ footer ul li a {
     text-align: center;
     margin: 0 30px;
     font-weight: bold;
-    font-size: 14px;
+    font-size: 18px;
 }
 
 .our-comments {
@@ -482,10 +482,11 @@ footer ul li a {
     margin-bottom: 20px;
 }
 .top-line img {
-    max-width: 40px;
+    width: 40px;
     border-radius: 100%;
     align-items: center;
     margin-right: 20px;
+    height: 40px;
 }
 .my-com {
     position: relative;
@@ -513,6 +514,10 @@ footer ul li a {
 }
 .my-com {
     font-size: 14px;
+}
+img {
+    max-width: 100%;
+    display: block;
 }
 .my-com span {
     color: #a4a9b8;
