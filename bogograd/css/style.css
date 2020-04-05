@@ -1,0 +1,706 @@
+/*  
+Theme Name: Огород: Модерн
+Theme URI:
+Description: Тема для vogorodah.ru
+Version: 3.0
+Author: Maxim Balovnev
+Author URI: 
+*/
+
+
+@charset "utf-8";
+/* CSS Document */
+
+*{padding:0; margin:0;}
+
+
+body{ font-family: 'Open Sans', sans-serif; background:#f0f0f0; font-size:1em; overflow-x: hidden;}
+
+.main{margin:0 auto; min-width:200px; max-width:1150px; background:#f0f0f0;}
+
+.clearfix:after {content: ""; display: table; clear: both;}
+
+
+.headering div{ text-align:center;}
+.headering div img{ border: none; margin-top:10px;}
+
+/*меню*/
+ul.menu, ul.submenu{ background-color:#45B845;list-style: outside none none; text-align:center;font-size:1em; padding:15px; text-transform:uppercase; max-width:1150px;}
+ul.submenu{ background-color:#fff;margin-top:0px;text-transform: none;}
+
+
+
+
+
+ul.menu li, ul.submenu li{ display:inline; }
+ul.menu li a,ul.submenu li a{color:#fff; padding:15px 1.5%; white-space:nowrap; text-decoration:none;}
+ul.submenu li a{color:#666;}
+ul.menu li a:hover{ background-color:#66CC66;}
+ul.submenu li a:hover{color:/*#248630*/#000;}
+.menu li:first-child a:hover{ background-color:#45B845;}
+
+.hompages-menu{ background:url(./images/logo.png) no-repeat; width:218px; height:22px; float: left;}
+
+/* ЦЕНТРАЛЬНАЯ ЧАСТЬ */
+.content-main{ background-color:#F0F0F0;padding-top:15px; padding-right:15px; padding-left:15px; /*padding-bottom:60px;*/}
+
+.content-main div.white-fon{ width:100%;background-color:#Fff; position:relative; }
+
+
+.content{ margin-right:330px; background-color: #FFFFFF; padding-right:15px;}
+
+div.indax div.blocking{ margin-bottom:85px; border-bottom: 1px solid #999;}
+
+div.result{margin-left: 6%;font-size: 1.5em;font-weight: bold;color: #090;}
+
+/*фото-заголовок на внутренней странице*/
+div.foto-first{ position:relative ;text-align:center; width:100%; max-height:400px; overflow:hidden; margin:0 auto;}
+div.indax div.foto-first{width:90%;}
+
+div.centr-news div.foto-first{}
+div.centr-news div.foto-first.news1{width:100%;}
+div.centr-news div.foto-first.news2{width:48%; float:left; margin:3% 3% 0 0; height:230px;}
+div.centr-news div.foto-first.news3{width:48%; margin:3% 0 0 auto; }
+
+
+div.foto-first img{ width:100%; height:auto;opacity:0.7;display: block;}
+
+div.centr-news div.foto-first.news2 div.shadoww img,div.centr-news div.foto-first.news3 div.shadoww img{height:230px;}
+
+
+div.shadoww{background:black; /*z-index:-111;*/}
+
+
+/*надписи на фото-заголовке*/
+div.foto-first ul, div.indax ul{ position:absolute;top:50%;list-style: outside none none; margin-left:4%; }
+
+div.indax{ margin-top: 50px;}
+div.indax ul{ position:static;margin-top: 30px;}
+
+div.foto-first ul li, div.indax ul li{display:inline;color:#FFF;}
+div.indax ul li{color:#000;}
+
+div.foto-first ul li a,div.indax ul li a{color:#FFF; font-size:0.8em; text-decoration:none; border-bottom: 1px solid #FFF;}
+div.indax ul li a{color:#000; border-color:#000;}
+
+div.foto-first ul li a:hover{color: #CCC;}
+div.indax ul li a:hover{color: #45B845;}
+
+div.foto-first ul li.how-view, div.indax ul li.how-view{ background:url(images/view.png) left center no-repeat; padding: 0 0 0 35px; margin: 0 5px 0 10px;font-size:1.1em;font-weight: unset;}
+
+.ajax_views {font-size:1.1em;font-weight: unset;}
+
+div.indax ul li.how-view{ background-image:url(images/view-black.png);}
+div.centr-news div.news2 ul li.how-view,div.centr-news div.news3 ul li.how-view{ background-image:url(images/view-white-small.png);font-size:0.9em;padding-left: 27px;}
+
+div.foto-first ul li.how-comments, div.indax ul li.how-comments { background:url(images/comments.png) left center no-repeat; padding: 0 0 0 30px; margin: 0 10px 0 5px;}
+
+div.indax ul li.how-comments{ background-image:url(images/comments-black.png);}
+div.centr-news div.news2 ul li.how-comments,div.centr-news div.news3 ul li.how-comments{ background-image:url(images/comments-white-small.png);padding-left: 24px;}
+
+div.foto-first ul li.how-comments a, div.indax ul li.how-comments a,div.centr-news ul li.how-comments a{font-size:1.1em;font-weight: unset;}
+div.centr-news div.news2 ul li.how-comments a,div.centr-news div.news3 ul li.how-comments a{font-size:0.9em;}
+
+div.foto-first ul li.tagss a, div.indax ul li.tagss a,div.centr-news ul li.tagss a{ text-transform:uppercase; border:#FFF 1px solid; border-radius:2px; padding: 3px; margin:3px;white-space: nowrap;}
+div.indax ul li.tagss a{ border-color:#000; }
+div.centr-news div.news2 ul li.tagss a, div.centr-news div.news3 ul li.tagss a{ font-size: 0.7em;padding: 2px; margin: 2px;}
+
+
+div.foto-first ul li.tagss a:hover{border:#CCC 1px solid;}
+div.indax ul li.tagss a:hover{border:#45B845 1px solid;}
+
+/*название статьи*/
+div.foto-first h1, div.centr-news a h2 { position:absolute; top:65%; font-size:2.1em; color: #FFF; text-align: left; margin-left:3%; font-weight:bold;}
+div.indax h2{ font-size:2.3em; color: #000; text-align: left; margin-left:5%; font-weight:bold;margin-top: 5px;}
+
+div.foto-first.news2 a h2 , div.foto-first.news3 a h2 { font-size:1.3em;}
+
+
+
+
+/*кнопка на главной*/
+div.indax p.bottons a{background-color: #45B845;color: #FFF;border: none;padding: 5px 30px; font-size: 0.9em; text-decoration: underline;}
+div.indax p.bottons a:hover{background-color:#fff; border:1px solid #000;color: #000; }
+
+
+/*пагинация*/
+div.paging{margin-bottom: 60px;}
+div.paging ul.page-numbers li span.page-numbers.current{color:#FFF; background-color:#45B845;border:1px solid #45B845; padding:4px 12px; font-size:1em;}
+div.paging ul.page-numbers li span.page-numbers.dots{padding:4px 12px;font-size:1em;}
+div.paging ul.page-numbers li a{ border:1px solid #000; padding:4px 12px;; font-size:1em;}
+div.paging ul.page-numbers li a:hover{ border:1px solid #45B845;color:#45B845;}
+
+
+/*зеленка*/
+div.zelen{border-bottom: 3px solid #45b845; width:100%;margin: 50px 5% 20px 5%;}
+div.zelen.tagiii{padding-top: 30px;}
+div.zelen span{ color:#FFF; background-color:#45b845; padding: 5px 8% 0 8%;}
+
+/*популярное в центральной части на главной вверху*/
+
+div.centr-popularnoe{ margin-left:5%; }
+
+div.thebestcenter{ width:100%; padding:30px 0;}
+div.thebestcenter div a{ text-decoration:none; border:none;}
+div.thebestcenter div:first-of-type{ float:left; margin-right:3%;}
+div.thebestcenter div.thebestcenter-img a img{ width:300px; height: 150px; border:1px solid #CCC;}
+div.thebestcenter div.thebestcenter-title a{font-size:1.2em; font-weight:bold;}
+div.thebestcenter div.thebestcenter-text{ margin:10px 0;}
+div.thebestcenter div.thebestcenter-text a{font-size:0.85em;line-height:1.5em;}
+div.thebestcenter ul{ margin:0;}
+
+div.thebestcenter ul li.how-view, div.thebestcenter ul li.how-comments{ display:inline;}
+
+div.thebestcenter ul li.how-view { background:url(images/view-small.png) left center no-repeat; padding: 0 0 0 35px;}
+
+div.thebestcenter ul li.how-comments { background:url(images/comments-small.png) left center no-repeat; padding: 0 0 0 30px; margin: 0 10px 0 5px;}
+
+div.thebestcenter ul li.how-view, div.thebestcenter ul li.how-comments a{font-size:1em; font-weight: unset; color:#666;}
+div.thebestcenter ul li.how-comments a:hover{color:#45B845; text-decoration:underline;}
+
+
+
+
+
+
+/*текст*/
+h2 {font-size:1.6em; padding-top:10px; margin-left:40px;}
+h3 {font-size:1.4em; padding-top:10px; margin-left:40px;}
+
+.content p{ margin:30px 20px 30px 40px; line-height:1.6em; font-size:1.1em;}
+.content p:first-of-type{padding-top:0;}
+
+.content div.indax div.blocking p{ margin-top:15px;}
+
+.content a{border-bottom: 1px solid #45B845; color:#000; text-decoration:none; }
+.content a:hover{color:#45B845;}
+
+.content ul{ font-size:1.1em;  margin:5px 10px 5px 80px;line-height:1.8em;}
+.content ul li{ margin:30px 0;}
+
+
+
+
+.content ol{ font-size:1.1em; padding:5px 10px 5px 80px;line-height:1.8em;}
+.content ol li{margin:30px 0;}
+
+/*.content ol+ul{ padding-left:40px;}
+.content ol+ul > li:nth-child(1){margin-top:0;} 
+.content ol+ul > li:nth-last-child(1){margin-bottom:0;}*/
+
+
+/*карта сайта*/
+.content ul.sitemaps_ul li ul li{ margin:5px 0;}
+.content.sitemap ul.sitemaps_ul li a span.sitemaps_cat{ font-weight:bold;}
+.content.sitemap ul.sitemaps_ul li ul li span.time{ color:#666; font-style:italic;}
+div.content.sitemap h1{ padding:50px 0 10px 10%;}
+
+
+/*комментарии в начале поста*/
+.helpme{ width:80%; margin:3% auto;}
+.helpme p{font-style:italic; color:#414141;}
+.helpme span{ color:#0060c0; font-weight:bold;}
+.helpme p a{color:#0060c0; text-decoration:underline; font-weight:bold;}
+
+
+/*блок содержания*/
+.soder{background: none repeat scroll 0 0 #f9f9f9; border: 1px solid #aaa; font-size: 95%; margin:20px 10px 15px 40px; padding: 10px; width: auto;}
+.soder p{font-weight: bold;}
+
+.kc__wrap{background: none repeat scroll 0 0 #f9f9f9; border: 2px solid #aaa; font-size: 95%; margin: 20px 12% 15px; padding: 10px; width: auto;}
+#kcmenu{font-weight: bold; font-size:1.1em;color:#FFFFFF; padding: 4px 0px 9px 50px;background:url(images/soder.png) no-repeat; margin-left:5%;}
+
+.kc__wrap ul.contents{ list-style: url(images/sodermetka.png); padding:5px 10px 5px 0px; margin-left:40px;}
+.kc__wrap ul.contents li{ margin:5px;}
+
+.kc__wrap ul.contents li a{text-decoration: none; border-bottom:none; color:#2fb13e;}
+.kc__wrap ul.contents li a:hover{text-decoration: underline;}
+
+.kc__wrap ul.contents li.top { /*font-weight:bold;*/ }
+
+
+/* ФУТЕР */
+div.footer{ background-color:#45b845; height:50px; padding:10px 2%}
+div.footer p{ font-size:0.9em;}
+div.footer p a{ font-size:0.9em;}
+
+
+
+/*Страница контактов*/
+.okprofile { color:#eb722e !important; border-bottom: 1px solid #eb722e !important; font-weight:bold;}
+.instaprofile { color:#231f20 !important; border-bottom: 1px solid #231f20 !important; font-weight:bold;}
+
+/*блок описание*/
+
+.att{ border: 1px solid #CCCCCC; margin-left: 10%; margin-right: 10%; padding: 2%; border-left: 3px solid #00E32E; margin-top:3%; margin-bottom:3%; overflow:hidden;}
+.att h2 {font-size: 1.5em; font-weight: lighter; margin: 0; padding: 0 0 0 5%; font-style:italic;}
+.att ul{list-style:none; margin-left:5px; font-style:italic;}
+.att ul li em{ color:#33CC33; font-style:normal; font-weight:bold;}
+
+table.horiz{margin:0 auto;}
+
+
+/*блок обратите внимание*/
+.warning {
+  background: url("./images/warning_bg2.png") no-repeat scroll 6px 10px, url("./images/warning_bg1.png") repeat-y scroll left center #f4f4f4 !important;
+  
+  margin: 30px auto;
+  padding: 5px 10px 10px 60px;
+  width: 80%;
+}
+
+.warning p{color: #666666; margin: 8px 0;}  
+p.zags{color: #d32929;font-size: 1.2em;}
+
+
+/*блок цитата*/
+p.quoteblock:before {
+  color: #6e92cb;
+  content: ",,";
+  font: 80px Arial,"Helvetica CY","Nimbus Sans L",sans-serif;
+  left: 1px;
+  letter-spacing: -8px;
+  position: absolute;
+  top: -55px;
+}
+
+
+p.quoteblock {
+  background: none repeat scroll 0 0 #edf7ff;
+  border-radius: 5px;
+  display: block;
+  margin: 20px auto;
+  padding: 15px 15px 15px 45px !important;
+  position: relative;
+  width: 80%;
+}
+
+table.horiz{margin:0 auto;}
+
+.tab{width: 100%; margin-bottom:30px; text-align:center;}
+.ta{ margin-top:30px; text-align: center; vertical-align: top; display: -moz-inline-stack; display:inline-block; overflow:hidden; _overflow:hidden; zoom: 1; *display: inline;}
+.no3{width: 230px;}
+.no2{width: 340px;}
+
+/*вывод видео*/
+.video-responsive { 
+  position: relative; 
+  padding-bottom: 56.25%; 
+  height: 0; 
+  overflow:hidden;
+  left:5%;   
+} 
+.video-responsive iframe, 
+.video-responsive object, 
+.video-responsive embed {
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  width: 90%;
+  height: 90%; 
+}
+
+/*изображения в тексте*/
+.wp-caption{ background-color:#F2F2F2; border:#C8C8C8 1px solid; text-align:center; width:90%; margin:20px auto;} 
+.wp-caption p{ font-size:0.7em;}
+p.wp-caption-text{ padding-left:5%; padding-right:5%; font-size: 0.9em; margin-bottom:10px; margin-top:5px; font-style:italic; color:#184e18;}
+
+
+.post img{border:#82AE8C 1px solid;}
+img.alignright{/* width:45%; height:auto;*/ float: right; margin-left:10px;border:1px solid #e3e2e7;}
+.wp-caption img, img.aligncenter{ /*width:90%;*/ height:auto; float: none; margin-top:10px; margin-bottom:10px;}
+img.aligncenter{ max-width:90%; border:1px solid #e3e2e7;}
+
+img.alignleft{/*width:45%; height:auto;*/ float: left; margin-right:10px;border:1px solid #e3e2e7;}
+.wp-caption img, img.alignnone{ border:#82ae8c 1px solid; margin:5px 3px;}
+.wp-caption img{ border-color:#A1A1A1; max-width:90%;
+-webkit-box-shadow: 4px 4px 5px rgba(50, 50, 50, 0.75);
+-moz-box-shadow:    4px 4px 5px rgba(50, 50, 50, 0.75);
+box-shadow:         4px 4px 5px rgba(50, 50, 50, 0.75);}
+
+
+/*галереи*/
+.gallery{ width:100%; margin:20px auto; text-align:center;}
+.gallery-item{background-color:#ECECEC; border:#A1A1A1 1px solid; margin:0px 2px 20px 2px; padding:3px; text-align: center; vertical-align: top; display: -moz-inline-stack; display:inline-block; overflow:hidden; _overflow:hidden; zoom: 1; *display: inline;}
+dd.gallery-caption{font-size:0.8em;text-align:center;}
+div.gallery br{ clear:none !important;}
+
+
+
+
+/*читайте также*/
+div.another h4{margin: 60px 0 15px 6%; font-size: 1.8em; font-weight:lighter;}
+div.another p{ font-weight:bold; margin:50px 7%;}
+div.another p:first-of-type{ margin-top:0;}
+div.another p:last-of-type{ margin-bottom:4%;}
+div.another span{ font-weight:normal; color:#666;}
+div.another p a i{color:#45B845;}
+div.another p a span:hover{color:#45B845;}
+
+/*дата*/
+div.data{ float:right; color:#666; margin-right: 10%; font-size: 0.9em;}
+
+/*социалки*/
+div.ya-share2{ margin-top:50px; margin-bottom:30px;}
+div.ya-share2 a{ border:none;}
+.ya-share2.firstiki{ margin-top:20px; margin-bottom:0px;}
+
+
+/* сейчас читают */
+div.reade-now{ margin-left:4%; margin-top:4%;}
+div.reade-now h4{margin: 50px 20px 10px 20px; font-size: 1.5em;}
+div.reade-now div{float:left; width:230px; margin:15px 1% 15px 1%; min-height:198px; }
+div.reade-now div a{border:none;}
+div.reade-now div a p{ margin:0; font-size:1em; font-weight:bold;}
+div.reade-now div img{ width:230px; height:115px;}
+
+/* реклама adv1 - вверху в сайтбаре*/
+div.adv1{ min-height:600px; margin-top:20px;}
+div.adv1 div.admit{ margin-top:30px; margin-bottom:30px;}
+
+
+/* реклама adv4*/
+div.adv4 {margin-left:4%; margin-top:4%;}
+div.adv4 div{ float:left; margin: 30px 10px 30px 10px; }
+
+/* реклама adv5*/
+div.adv5{ text-align:center; padding:5px; background-color:#FFF;}
+
+/* реклама внутри текста YAND*/
+div.yandex-adaptive{ margin:50px 20px; outline:#999 solid 3px;}
+
+/* реклама внутри текста GOOGL*/
+.ada-first{ margin:50px 20px; outline:#999 solid 3px;}
+
+/* КОММЕНТАРИИ */
+div.itscomments, div.formsss{margin-left: 8%; border-top:#999999 1px solid; margin-bottom:80px;}
+div.formsss{margin-left: 4%;}
+div.itscomments h3#comments, div#respond.comment-respond h3, div.formsss h3.mail{margin: 30px 0; font-size: 1.5em;}
+
+div.comment{ border-top:#999999 1px solid; padding:35px 15px;}
+div.comment.byuser, div.comment.odd,div.itscomments div.commentlist div.comment.even.parent,div.itscomments div.commentlist div.comment.even.thread-even,div.commentlist div.comment.even.thread-odd.thread-alt{margin-top: 35px;padding-bottom: 0; }
+div.comment > div.comment{ padding-left: 0;}
+div.comment.byuser.comment-author-maximchik79ab.bypostauthor.odd.alt{ padding-left:0;}
+
+
+
+
+div.comment-author{float: left; margin-top: 2%;}
+.avatar{border-radius: 50px; /* Радиус скругления */ box-shadow: 0 0 0 1px #68A861, 0 0 13px #999; /* Параметры теней */
+   }
+div.commentlist p, div.itscomments p{margin-left: 16%; margin-top:20px; font-size:1em;}
+div.commentlist p br{ display:block; margin-top:10px;}
+
+div.itscomments div.fn{margin-left:5.5%; font-size:1.2em; font-weight:bold; float:left; margin-right:3%;}
+div.itscomments div.commentmetadata{margin-top: 3px;}
+div.itscomments div.commentmetadata a{ border:none; color:#999;font-size:1em;}
+
+div.itscomments div.reply a,form#commentform.comment-form p input#submit.submit, div.formsss form p input.submit{ background-color:#68A861; color:#FFF; border:none;padding: 10px;margin-left: 16%;}
+
+div.itscomments div#respond.comment-respond{ margin-top:40px;}
+
+div.itscomments div.commentlist p img { width:90%; height:auto;}
+
+/*форма отправки комментария*/
+div#respond.comment-respond{border-top:#999999 1px solid;}
+div#respond.comment-respond p{margin-left: 1%;}
+form#commentform.comment-form p span.required, div.formsss p.comment-notes span.required, div.formsss form p span{ color:#F00;}
+.comment-respond p.comment-notes, .comment-respond p.comment-notes-sub, div.formsss p.comment-notes{ font-size:0.8em; color:#666; margin:0 auto;}
+textarea#comment, div.formsss form p textarea{ width:100%; border:#999999 1px solid;}
+form#commentform.comment-form p.comment-form-author,form#commentform.comment-form p.comment-form-email,form#commentform.comment-form p.comment-form-comment {margin-top:10px;margin-bottom:10px;}
+form#commentform.comment-form p label, div.formsss form p{text-transform:uppercase; font-weight:bold; font-size:0.8em;}
+div.formsss form p{margin: 5px 20px 5px 40px;}
+
+form#commentform.comment-form p input, div.formsss form p input.input{ width:100%; height:30px;border:#999999 1px solid;}
+div.formsss form p input.input{margin-bottom: 20px;}
+form#commentform.comment-form p input#submit.submit, div.formsss form p input.submit{ width:140px; margin-left: 0; font-size:1em; padding-bottom: 30px;}
+div.formsss form p input.submit{padding-bottom:10px;font-size:1.3em;}
+div.formsss form p input.input{ /*color:#CCC;*/ font-size:1.3em; padding-left:2%;}
+div.formsss p.comment-notes{margin: 3% 0 3% 5%;}
+
+form#commentform.comment-form div.termsofuse{font-size: 0.9em;}
+form#commentform.comment-form div.termsofuse input{ width:20px; height:20px; margin-right: 1%; display: block; float: left;}
+
+
+/* САЙТБАР */
+.right{ float:right; width:330px; background-color: #FFFFFF;padding-top:15px; }
+div.right h4{margin: 60px 20px 10px 20px; font-size: 1.5em;}
+
+/* реклама*/
+div.right div.adv1, div.right div.adv2, div.content div.adv3{ text-align:center;}
+
+div.right div.adv2{ margin:0px 0 45px 0;}
+
+
+
+/* сайтбар популярное */
+div.popular-stat ul{list-style: outside none none; border-bottom:1px solid #999; padding-bottom: 35px;padding-top: 35px;margin-left: 15px;margin-right: 15px;}
+
+div.popular-stat ul:last-child{ margin-bottom:45px;}
+
+div.popular-stat ul li:first-child{ font-size:2.3em; font-weight:bold; background-color:#45B845; text-align:center; float:left; padding: 5px 15px; border-radius: 3px; color:#FFF; margin-right: 4%;margin-bottom: 10px;}
+
+div.popular-stat ul li.text{ margin-bottom:20px;}
+div.popular-stat ul li a{ color:#000; text-decoration:none; }
+div.popular-stat ul li a:hover{color:#45B845;}
+
+div.popular-stat ul li.how-view, div.popular-stat ul li.how-comments{ display:inline;}
+
+div.popular-stat ul li.how-view { background:url(images/view-small.png) left center no-repeat; padding: 0 0 0 35px;}
+
+div.popular-stat ul li.how-comments { background:url(images/comments-small.png) left center no-repeat; padding: 0 0 0 30px; margin: 0 10px 0 5px;}
+
+div.popular-stat ul li.how-view, div.popular-stat ul li.how-comments a{font-size:1em; font-weight: unset; color:#666;}
+div.popular-stat ul li.how-comments a:hover{color:#45B845; text-decoration:underline;}
+
+/* сайтбар лучшее за неделю */
+div.thebest div{text-align:center;}
+div.thebest div a{ text-decoration:none; font-size:1.1em; font-weight:bold;line-height:1.6em; color:#000;}
+div.thebest div:last-of-type{text-align:left; margin:2% 6% 5% 6%;}
+div.thebest div a img{ width:300px; height:150px;}
+
+
+/*сайтбар автор*/
+div.autor{ text-align:center; margin-top:60px;}
+div.autor a{ text-decoration:none;}
+div.autor a p{ font-size:1.2em; color:#45B845; margin-left:10%;}
+div.autor a p:last-of-type{ font-size:1.8em; color:#000;margin-left:0;}
+
+/*сайтбар ОК*/
+div#ok_group_widget{margin:40px 5px auto; text-align:center; height:230px;}
+
+/*поиск по сайту*/
+.sitebar-poisk {width:90%; background:none; margin: 30px 0 15px 15px; height:42px;}
+.ya-site-form__input-text{ height:30px; padding-left:10px; z-index:20;}
+
+
+/* ПЛАВАЮЩЕЕ */
+.floating { width: 330px; /*указываем ширину*/}
+
+.fixed { position: fixed; top: 10px; /*здесь указываем отступ сверху*/ z-index: 9999; /*устанавливаем блок поверх всех элементов на странице*/ }
+
+.container {height: 1000px; /*высота блока + отступы*/}
+
+
+/*WooCommerce*/
+div.woocom{ margin-left:4%; margin-top:4%;}
+div.woocom h4{margin: 50px 20px; font-size: 1.5em;}
+
+div.woocommerce{ text-align:center;}
+div.woocommerce ul.products{ margin-left:4%;}
+div.woocommerce ul.products li.product{ border:1px solid #808080; width:29%!important;}
+div.woocommerce h2.woocommerce-loop-product__title{ height:85px;line-height: 1.3em;}
+.woocommerce ul.products li.product .button { margin-bottom:15px;}
+.woocommerce a.button{background-color: #d43a13; color: #fff; font-weight:lighter;}
+
+
+.woocommerce ul.products li.product .price { position:relative;}
+.woocommerce ul.products li.product .price del { position:absolute; bottom: 35px;color: #000;font-size: 1.1em;  line-height: 1px;	border-bottom: 2px solid #ea1c25;	display: inline-block;text-decoration: none;}
+.woocommerce ul.products li.product .price ins { color: #ea1c25;font-size: 1.5em; text-decoration: none;}
+.woocommerce-Price-currencySymbol{font-size: 0.8em; margin-right: 5px;}
+
+.woocommerce span.onsale {background-color: #ea1c25;}
+
+/*.woocommerce-Price-currencySymbol {	line-height: 5px;	border-bottom: 1px solid #000;	display: inline-block;}*/
+
+
+
+
+
+
+
+
+@media screen and (min-width:1150px) and (max-width:3000px){
+	
+ul.menu, ul.submenu{position:relative;}	
+	
+/*на всю длину!*/
+ul.menu:before, ul.menu:after, ul.submenu:before, ul.submenu:after {
+content: "";
+position: absolute;
+background-color:#45B845;
+top: 0;
+bottom: 0;
+width: 9999px;   /* Очень большая ширина */
+}
+
+ul.submenu:before, ul.submenu:after {background-color:#fff;}
+
+ul.menu:before,ul.submenu:before {right: 100%;}
+ul.menu:after, ul.submenu:after  {left: 100%;}
+/*на всю длину!*/
+}
+
+@media screen and (min-width:1030px) and (max-width:1130px){
+ul.menu li a{padding:15px 0.5%;}
+div.reade-now div{margin-left:0.5%; margin-right:0.5%;}	
+}
+
+@media all and (max-width:1116px){
+div.reade-now div{margin-left:5%; margin-right:5%;}
+
+div.adv4 { text-align:center;}
+div.adv4 div{ float: none; margin: 30px 10px 30px 10px; }
+	
+div.reade-now div.readering7,
+div.reade-now div.readering8,
+div.reade-now div.readering9{ display:none;}
+
+}
+
+
+@media all and (max-width:1030px) {
+.hompages-menu{ width:218px; height:22px; float: none; margin:0 auto 15px auto;}
+
+.ta{text-align: center; width: 70%;}
+
+table.horiz, tbody.horiz, thead.horiz, th.horiz, tr.horiz, td.horiz {display: block; float: none; height: auto !important; margin: 0 0 6px !important; padding: 0; position: relative; text-align: center; width: auto !important;}
+table.horiz, tbody.horiz, thead.horiz, th.horiz, tr.horiz, td.horiz {height: auto !important; width: auto !important;}
+
+img.alignright, img.alignleft{float: none; text-align:center; display:block; margin:10px auto;}
+.wp-caption img, img.aligncenter, img.alignnone, { width:90%; height:auto;}
+
+div.content div.foto-first,
+div.foto-first.news2,
+div.foto-first.news3{text-align: left;}
+
+div.content div.foto-first ul li.tagss,
+div.centr-news div.foto-first.news2 ul li.tagss,
+div.centr-news div.foto-first.news3 ul li.tagss{display: block;margin-top: 10px;}
+
+
+div.content div.foto-first ul,
+div.centr-news div.foto-first.news2 ul,
+div.centr-news div.foto-first.news3 ul{top:35%;}
+
+div.content div.foto-first h1,
+div.centr-news div.foto-first.news2 a h2,
+div.centr-news div.foto-first.news3 a h2{top:60%;}
+
+div.woocommerce ul.products li:nth-child(3n+3){ display:none;}
+div.woocommerce ul.products li.product{width:40%!important;}
+
+}
+
+
+
+@media all and (max-width:970px) {
+div.reade-now{ text-align:center;}
+div.reade-now div{float:none; width:90%; margin:15px auto; min-height:230px; }
+div.reade-now div img{ width:80%; height:auto;}	
+div.reade-now div.readering4,div.reade-now div.readering5,div.reade-now div.readering6{ display:none;}
+div.thebestcenter div.thebestcenter-img a img{ width:200px; height: 100px;}
+
+div.content div.foto-first h1{ font-size:1.5em;}
+div.content div.foto-first ul{ top:20%;}
+
+div.content div.foto-first ul li.tagss a{ line-height:1.6em;}
+
+}
+
+
+@media all and (max-width:800px) {
+div.content div.foto-first h1{ font-size:1.3em;}
+div.content div.foto-first ul li.how-view{background-image:url(images/view-white-small.png);font-size:0.9em;padding-left: 27px;}
+div.content div.foto-first ul li.how-comments{ background-image:url(images/comments-white-small.png);padding-left: 24px;}
+div.content div.foto-first ul li.how-comments a{font-size:0.9em;}
+div.content div.foto-first ul li.tagss a{ font-size: 0.7em;padding: 2px; margin: 2px;}
+div.content div.foto-first ul{ top:10%;}
+
+div.woocommerce ul.products li:nth-child(2n+2){ display:none;}
+div.woocommerce ul.products li.product{width:70%!important;}
+
+
+}
+
+@media screen and (min-width:700px) and (max-width:750px){
+div.content div.foto-first ul{top:0;}
+div.content div.foto-first h1{top:65%;}
+
+
+
+}
+
+
+@media all and (max-width:700px) {
+.right{display:none;}
+.content{ margin-right:0; padding-right:0px;}
+
+div.centr-news div.foto-first.news2,div.centr-news div.foto-first.news3{width:100%; float: none; margin:3% 0 3% 0; height: auto;}
+
+div.content div.foto-first h1{font-size: 1.8em;}
+
+div.foto-first.news2,div.foto-first.news1{text-align: left;}
+div.centr-news div.foto-first.news1 ul li.tagss{display: block;margin-top: 10px;}
+div.centr-news div.foto-first ul{top:35%;}
+div.centr-news a h2{top:60%;}
+
+div.foto-first.news1 a h2{ font-size:1.3em;}
+
+div.centr-news div.news1 ul li.how-view{background-image:url(images/view-white-small.png);font-size:0.9em;padding-left: 27px;}
+
+div.centr-news div.news1 ul li.how-comments{ background-image:url(images/comments-white-small.png);padding-left: 24px;}
+div.centr-news div.news1 ul li.how-comments a{font-size:0.9em;}
+
+div.centr-news div.news1 ul li.tagss a{ font-size: 0.7em;padding: 2px; margin: 2px;}
+
+div.woocommerce ul.products li:nth-child(3n+2){ display: inline;clear:none!important;}
+div.woocommerce ul.products li:nth-child(4){ display: inline; }
+div.woocommerce ul.products li.product{width:45%!important;}
+}
+
+
+@media all and (max-width:600px) {	
+ul.menu, ul.submenu{ padding:0;}
+ul.menu li{ display: block; padding:5px; }
+ul.menu li:last-child { padding-bottom:20px; }
+.hompages-menu{ width:218px; height:22px; float: none; margin:0 auto;}
+ul.menu li a{ padding:3px;}
+ul.submenu li a{padding:8px; }
+
+.ta{width: 80%;}
+
+img.alignright, img.alignleft{width:90%; float: none; /*margin-left:10px;*/ text-align:center; display:block; margin:10px auto;}
+.wp-caption img, img.aligncenter, img.alignnone, .imgstart, .imgsecont { width:90%; height:auto;}
+
+h2 { text-align:center;}
+
+}
+
+
+@media all and (max-width:500px) {
+div.thebestcenter div:first-of-type{ float: none;}
+div.thebestcenter div.thebestcenter-img a img{ width:90%; height: auto;}
+div.content div.foto-first h1{font-size: 1.5em;}
+div.white-fon.clearfix div.content h2 {margin-left: 10px;}
+div.white-fon.clearfix div.content p{margin-left:20px; margin-right:10px;}
+
+div.woocommerce ul.products li:nth-child(2n+3){ display:none; }
+div.woocommerce ul.products li:nth-child(2){ display:none;clear:both;}
+div.woocommerce ul.products li.product{width:45%!important;}
+
+}
+
+@media all and (max-width:400px) {
+div.reade-now div img{ width:90%;}
+
+.content ul{ margin-left:50px;}
+
+div.content div.foto-first h1{font-size: 1.3em;}
+
+div.content div.foto-first ul li.tagss{ display:none;}
+div.content div.foto-first h1{top:40%;}
+
+div.centr-news div.foto-first.news1 ul,
+div.centr-news div.foto-first.news2 ul,
+div.centr-news div.foto-first.news3 ul{top:10%;}
+
+
+div.centr-news div.foto-first.news1 a h2,
+div.centr-news div.foto-first.news2 a h2,
+div.centr-news div.foto-first.news3 a h2{top:50%;}
+
+
+.kc__wrap{margin-left:5px; margin-right:5px;}
+.kc__wrap ul.contents{margin-left:2%;}
+}
