@@ -73,7 +73,7 @@ html, body {
     -webkit-text-fill-color: transparent;
 
     opacity: 0;
-
+    padding-right: 15px;
     color: #121212;
     font-size: 30px;
     text-align: right;
