@@ -2,7 +2,9 @@
     color: black;
     font-size: 37px;
 }
-
+body, html {
+    overflow-x: hidden;
+}
 @media only screen and (max-width: 991px) {
     .col-md-3 {
         display: none;
