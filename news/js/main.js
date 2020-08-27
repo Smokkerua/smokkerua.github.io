@@ -1,4 +1,6 @@
-    //    поиск
+$(document).on('ready', function () {
+
+//    поиск
     $(".click_search").on("click", function (event) {
         event.preventDefault();
         $(".search").toggleClass("show-search");
@@ -36,6 +38,18 @@
         $(".table-of-contents").toggleClass("open");
     });
 
+    //   бургер меню
+    $(".burger-menu").on("click", function (event) {
+        $(".header").toggleClass("active-menu");
+    });
+
+    $(".burger-menu").on("click", function (event) {
+        $(".nav").toggleClass("active-n");
+    });
+    $(".burger-menu").on("click", function (event) {
+        $("html").toggleClass("scroll-hidden");
+    });
+
 
     /* Smooth scroll */
     $("[data-scroll]").on("click", function (event) {
@@ -60,6 +74,8 @@
           });
         });
 
+    
+});
         //      скролл вверх
 
         function up() {

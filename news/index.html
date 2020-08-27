@@ -3,12 +3,13 @@
 <head>
    
     <meta charset="UTF-8">
-    <title>BicluxHint</title>
+    <title>Mt-news</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="./img/favicon.ico">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
     <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./style/adaptyv.css">
     
 </head>
 <body>
@@ -19,7 +20,7 @@
           
            <div class="header__container">
                
-                <h1 class="logo"><a href="index.html">BicluxHint</a></h1>
+                <h1 class="logo"><a href="index.html">Mt-news</a></h1>
                 
                 <nav class="nav">
                     <ul>
@@ -28,6 +29,10 @@
                         <li><a href="article.html">Занимательное</a></li>
                     </ul>  
                 </nav>
+                
+                <div class="burger-menu">
+                    <a class="nav_toggle" href="#">Menu</a>
+                </div>
                 
                 <i class="loupe fas fa-search click_search"></i>
                 
@@ -41,7 +46,6 @@
               
                <form role="search" method="get" class="search-form" action="#">
                     <label>
-                        <span class="screen-reader-text">Поиск...</span>
                         <input type="search" class="search-field" placeholder="Поиск..." value="" name="s">
                     </label>
                     <button type="submit" class="search-submit">
