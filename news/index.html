@@ -65,11 +65,8 @@
        
        <div class="wrapper">
           
-           <div class="main__container container">
-               
-               <div class="left__block"> 
-                     
-                   <div class="main_article">
+           <div class="main_article-container">
+                    <div class="main_article">
                        <div class="main-theme__header">
                           <div class="main-theme__mark">Тема дня</div>
                           <a class="main-theme__title" href="#">Кризис в Белоруссии</a>
@@ -77,6 +74,24 @@
                        <img src="./img/main_article/main-01.jpg" alt="">
                        <div class="main_article-content">Таймлайн кризиса в Белоруссии: от президентских выборов к протестам</div>
                    </div> 
+                    <div class="meta">
+                        <div class="date">
+                            <i class="far fa-calendar-alt"></i>
+                            <time>25.08.2020</time>
+                        </div>
+                        <div class="vievs">
+                            <i class="far fa-eye"></i>
+                            10
+                        </div>
+                    </div>
+                    <div class="decription">
+                        Дом в гараже, возможно, одна из главных мечт у мужчины. Я мужчина, и я присоединяюсь к этому. Сейчас расскажу, почему многие мужчины так любят эту идею.
+                    </div>
+           </div> <!-- /main_article-container -->
+           
+           <div class="main__container container">
+               
+               <div class="left__block"> 
                       
                    <div class="article">
                         <a href="article.html">
@@ -84,6 +99,7 @@
                             <div class="article__foto">
                                 <div class="article__foto-block">
                                     <img class="article-img" src="./img/article/article-01.jpg" alt="">
+                                    <div class="article__foto-block-content">MS NEWS</div>
                                 </div>
                                 <div class="heading">Без рубрики</div>
                             </div>
@@ -108,6 +124,7 @@
                             <h2 class="headline">Необычный коллекционер или псих? Самый странный ангар с 900 автомобилями!!!</h2>
                             <div class="article__foto">
                                 <div class="article__foto-block">
+                                    <div class="article__foto-block-content">MS NEWS</div>
                                     <img class="article-img" src="./img/article/article-03.jpg" alt="">
                                 </div>
                                 <div class="heading">Без рубрики</div>
@@ -134,6 +151,7 @@
                             <div class="article__foto">
                                 <div class="article__foto-block">
                                     <img class="article-img" src="./img/article/article-02.jpg" alt="">
+                                    <div class="article__foto-block-content">MS NEWS</div>
                                 </div>
                                 <div class="heading">Без рубрики</div>
                             </div>
@@ -223,6 +241,20 @@
                         </div>
                     </a>
                     
+                    <a href="#" class="news__block">
+                        <div class="news__block-foto">
+                            <img src="./img/right-block/news-03.jpg" alt="">  
+                        </div>
+                        <div class="about__news">
+                            <h3>Занимательное</h3>
+                            <p class="about__news-content">Вот как на самом деле выглядели наложницы в гаремах.</p>
+                            <div class="news__block-comment">
+                                <i class="far fa-comment-dots"></i>
+                                <p class="comment__counter">0</p>
+                            </div>
+                        </div>
+                    </a>
+                    
                   </div> <!-- /floating -->
                   
                </div>  <!-- /right__block -->
@@ -236,7 +268,9 @@
    <footer class="footer">
         <div class="wrapper">
             © 2020 BetlaReply
+            <p class="footer-p">Копирование информации только с разрешения администрации сайта MT-NEWS! При использовании материалов и картинок для публикации на других ресурсах ссылка на источник строго обязательна. Все права защищены.</p>
         </div>
+        
    </footer>
      
    <div class="clear"></div> 

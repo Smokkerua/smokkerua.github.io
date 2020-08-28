@@ -20,7 +20,7 @@
     }
     .bottom-title {
         font-size: 28px;
-        margin-top: 52px;
+        margin-top: 22px;
         margin-bottom: 26px;
     }
     .post-card__title a {
@@ -34,9 +34,9 @@
         display: none;
     }
     .left__block {
-        padding-right: 0;
         width: 100%;
         max-width: 100%;
+        margin-right: 0;
     }
     .wrapper {
         padding: 0 30px;
@@ -84,11 +84,9 @@
         margin: 26px 0px 22px 0px;
     }
     .scrolltop {
-        right: 50px;
+        right: 20px;
     }
     .header__container {
-        margin-bottom: 15px;
-        padding: 15px 0;
     }
     .entry-meta {
         padding-bottom: 15px;
@@ -119,8 +117,7 @@
         line-height: 1.7;
     }
     .footer {
-        padding-top: 25px;
-        padding-bottom: 25px;
+        padding: 25px 20px;
         margin-top: 10px;
     }
     .headline {
@@ -128,8 +125,8 @@
         line-height: 1.4;
         margin-bottom: 20px;
     }
-    .main {
-        padding-top: 30px;
+    .left__block {
+        padding: 20px;
     }
 }
 @media only screen and (max-width : 670px) {
@@ -152,7 +149,7 @@
         font-size: .9em;
     }
     .wrapper {
-        padding: 0 20px;
+        padding: 0;
     }
     .entry-content p, .home-text p, .taxonomy-description p {
         margin-bottom: 15px;
@@ -197,8 +194,8 @@
     }
     .header__container .loupe{
         position: absolute;
-        right: 0px;
-        top: 23px;
+        right: 15px;
+        top: 33px;
     }
     .logo {
         font-size: 24px;
@@ -301,9 +298,6 @@
     .headline {
         font-size: 24px;
     }
-    .main {
-        padding-top: 20px;
-    }
     .decription {
         font-size: 16px;
     }
@@ -333,7 +327,7 @@
     }
     .bottom-title {
         font-size: 26px;
-        margin-top: 32px;
+        margin-top: 12px;
         margin-bottom: 18px;
     }
     .burger-menu {
@@ -342,33 +336,37 @@
     .header__container .loupe {
         top: 25px;
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+    .main__container {
+        padding-top: 10px;
+    }
+   .main_article-container {
+        padding: 20px 10px;
+        margin-top: 10px;
+    }
+    .decription {
+        font-size: 14px;
+    }
+    .main_article-content {
+        display: none;
+    }
+    .main-theme__title {
+        font-size: 22px;
+        line-height: 30px;
+    }
+    .main-theme__header {
+        left: 10px;
+        top: 10px;
+    }
+    .footer-p {
+        font-size: 10px;
+    }
 }
 @media only screen and (max-width : 360px) {
     .headline {
         font-size: 20px;
     }
-    .decription {
-        font-size: 15px;
-    }
-    .main {
-        padding-top: 15px;
+    .left__block {
+        padding: 20px 15px;
     }
     .logo a {
         font-size: 28px;
@@ -381,6 +379,10 @@
     }
     .entry-title {
         font-size: 26px;
+    }
+    .main-theme__title {
+        font-size: 18px;
+        line-height: 30px;
     }
 }      
 @media only screen and (max-width : 320px) {
