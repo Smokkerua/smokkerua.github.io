@@ -1508,7 +1508,6 @@ body {
     font-weight: 300;
     font-size: 0.88rem;
     line-height: 1.3;
-    background-color: #18202a;
     color: #fff;
 }
 
@@ -3083,18 +3082,203 @@ p  {
     max-width: 84%;
     margin: 0 auto;
 }
+#footer #footer-1 {
+     margin-bottom: 0rem; 
+     padding-bottom: 0rem; 
+    padding-top: 20px;
+    border-bottom: 1px solid rgba(216, 216, 216, 0.2);
+}
+#footer-2 {
+    margin-bottom: 1.25rem;
+    height: 150px;
+    padding-top: 15px;
+    background-color: white;
+}
+.navigation {
+    opacity: 0;;
+}
+#footer {
+    padding: 0;
+    font-weight: 300;
+    max-height: 320px;
+    overflow: hidden;
+    font-size: 0.88rem;
+    line-height: 1.3;
+    color: #fff;
+}
+.comment-form {
+    padding-bottom: 30px;
+}
+.post-meta-tabs {
+    background: #f1f1f1;
+}
+.bb {
+    display: none;
+}
+.topss {
+    width: 100%;
+}
+.author {
+    display: flex;
+    flex-direction: column;
+}
+.about_author {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.comment_block-person img{
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+}
+.author {
+    padding-left: 20px;
+    width: 100%;
+}
+.content {
+    margin: 0;
+    padding: 0;
+}
+.comment_block {
+    display: flex;
+    margin-bottom: 20px;
+    width: 100%;
+    background: #fff;
+    padding: 25px 15px;
+    border-radius: 8px;
+    position: relative;
+}
+.name-com {
+    margin: 0;
+    padding: 0;
+}
+.bottom-back {
+    width: 740px;
+    margin: auto;
+}
+.comment_date {
+    display: block;
+    margin-top: 5px;
+}
+.container-fluid-bottom {
+    margin: auto;
+    padding-top: 40px;
+    background: #fff;
+    display: block;
+}
+.title-com {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+.block-comments {
+    background: #f1f1f1;
+    max-width: 1140px;
+    margin: auto;
+    padding-top: 40px;
+}
+.container-fluid-comment {
+    
+}
+@media (max-width: 768px){
+    #header #header-2 {
+        margin-bottom: 0rem;
+        padding: 10px 0;
+        background: #fff;
+    }
+    #header #header-1 {
+        display: none;
+    }
+
+    .wrapper-my {
+        width: 100%;
+        max-width: 90%;
+        margin: 0 auto;
+    }
+    #block-search-xs {
+        flex-basis: 3rem;
+        display: none;
+    }
+    .d-flex {
+        justify-content: center;
+    }
+    .node--view-mode-full.node--type-article .node-info-xs .info-indent {
+        margin-left: 0;
+    }
+    .node--view-mode-full.node--type-article .node-info-xs {
+        margin-bottom: 7px;
+    }
+.bottom-back {
+    width: auto;
+    padding: 0 30px;
+}
+    .comment_block-person img{
+        width: 50px;
+        height: 50px;
+    }
+    .block-comments {
+        padding-top: 20px;
+        margin-bottom: 5px;
+    }
+    #footer {
+        max-height: 420px;
+    }
+    .comment_block {
+        display: flex;
+        width: 95%;
+        margin: auto;
+        margin-bottom: 20px;
+        background: #fff;
+        padding: 20px 10px;
+    }
+    .block-comments {
+        padding-top: 20px;
+    }
+    .author {
+        padding-left: 12px;
+    }
+}
 @media (max-width: 500px){
     p {
         margin-top: 0;
-        margin-bottom: 1.1em;
-        line-height: 150%;
+        margin-bottom: 1.2em;
+        line-height: 180%;
+    }
+    body {
+        overflow-x: hidden;
+    }
+    .node--view-mode-full.node--type-article .node-title {
+        margin-bottom: 1.5rem;
+        font-size: 1.5rem;
     }
     .block-system, .d-flex {
         width: 100%;
-        max-width: 84%;
+        max-width:100%;
         margin: 0 auto;
     }
-    body {
+    b {
+        font-size: 20px;
+        line-height: 1.4;
+        margin-bottom: 10px;
+    }
+    body, html {
         font-size: 16px;
+        overflow-x: hidden;
+    }
+    #block-main-page-content {
+        width: 96%;
+        margin: auto;
+        margin-top: 2px;
+        padding-top: 10px;
+        background: #fff;
+    }
+    .content {
+        line-height: 1.4;
+    }
+    .wrapper-my {
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
     }
 }
