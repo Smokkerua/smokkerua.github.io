@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1 Basic//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11-basic.dtd">
+<svg version="1.1" baseProfile="basic" id="Layer_1"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="34px" height="34px"
+	 viewBox="0 0 34 34" xml:space="preserve">
+<path opacity="0.5" fill-rule="evenodd" clip-rule="evenodd" fill="#2C2C2C" d="M2.101,0h29.8C33.06,0,34,0.941,34,2.101v29.797
+	C34,33.059,33.06,34,31.9,34h-29.8C0.94,34,0,33.059,0,31.898V2.101C0,0.941,0.94,0,2.101,0z"/>
+<g opacity="0.75">
+	<path fill="#FFFFFF" d="M31.9,1C32.507,1,33,1.494,33,2.101v29.797C33,32.506,32.507,33,31.9,33h-29.8C1.494,33,1,32.506,1,31.898
+		V2.101C1,1.494,1.494,1,2.101,1H31.9 M31.9,0h-29.8C0.94,0,0,0.941,0,2.101v29.797C0,33.059,0.94,34,2.101,34h29.8
+		c1.159,0,2.1-0.941,2.1-2.102V2.101C34,0.941,33.06,0,31.9,0L31.9,0z"/>
+</g>
+<path fill="#FFFFFF" d="M24.968,17L12,24.502V9.497L24.968,17z"/>
+</svg>

@@ -1,0 +1,38 @@
+@media only screen and (max-width : 991px) {
+        .title-img {
+        background-size: contain;
+    }
+}
+@media only screen and (max-width : 768px) {
+    .img_content {
+        width: 100%;
+        display: block;
+    }
+}
+
+@media only screen and (max-width : 730px) {
+    .article {
+        position: relative;
+        padding: 20px 0px 0px;
+    }
+}
+
+@media only screen and (max-width : 430px) {
+    .header-public .main-title {
+        font-size: 26px;
+        line-height: 30px;
+    }
+    .article-inner-heading {
+        font-size: 18px;
+        line-height: 23px;
+    }
+    body {
+        font-size: 15px;
+    }
+}
+@media only screen and (max-width : 37px) {
+    .header-public .main-title {
+        font-size: 24px;
+        line-height: 28px;
+    }
+}
