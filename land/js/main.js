@@ -101,26 +101,10 @@ flow = [
     },
     {
         type: "text1",
-        content: "",
-        afterMount: function () {
-            setTimeout(() => autoscroll.disable(), 150)
-        }
+        content: ""
     }
-    // { type: "form", templateId: "orderForm", afterMount: function() { setTimeout(() => autoscroll.disable(), 150) } }
 
 ];
-
-
-setInterval(function () {
-    let user_mass = $('.active');
-    var user_full_info = '';
-    user_mass.map((e) => {
-        let full_info = user_mass[e].innerText + '/';
-        user_full_info += full_info;
-    })
-    $('input[name=comments]').val('' + user_full_info + '');
-}, 500)
-
 
 
 function createSingleChoiceForm(t) {
@@ -171,11 +155,12 @@ flow.reduce(function (t, e) {
                         $(".inp").val(++i);
 
                 }
-   if(document.getElementById('res').value == "0") {
-        $("#scroll_id").addClass("aba");
-    } else {
-        $("#scroll_id").removeClass("aba");
-    }
+                
+//                   if(document.getElementById('res').value == "0") {
+//                        $("#scroll_id").addClass("aba");
+//                    } else {
+//                        $("#scroll_id").removeClass("aba");
+//                    }
 
                 switch ($(".container2").append(o), e.type) {
                     case "single_choice":
@@ -228,18 +213,6 @@ flow.reduce(function (t, e) {
     })
 }, Promise.resolve());
 
-//    $(function() {
-//        
-//          $('#scroll_id').click(function(e) {
-//            e.preventDefault();
-//            var $win = $(window);
-//            var scrollTarget = $win.height() + $win.scrollTop() >= $(document).height() ? 0 : $win.scrollTop() + $win.height()
-//            $("html, body").animate({
-//              scrollTop: scrollTarget
-//            }, 600);
-//          });
-//        });
-
 var hiddenElement = document.getElementById("hide-box");
 var btn = document.querySelector('.btn');
 
@@ -247,7 +220,7 @@ function handleButtonClick() {
    hiddenElement.scrollIntoView({block: "center", behavior: "smooth"});
 }
 
-btn.addEventListener('click', handleButtonClick);
+btn.addEventListener('tap', handleButtonClick);
  $(window).scroll(function() {
    if($(window).scrollTop() + $(window).height() == $(document).height()) {
        $("#scroll_id").addClass("hide-scr");
