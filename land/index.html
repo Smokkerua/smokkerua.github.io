@@ -8,7 +8,6 @@
     <title>Рекомендации для здоровых суставов</title>
     <link rel="stylesheet" href="css/style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-    
 
 </head>
 
@@ -42,12 +41,13 @@
             
       </div>
 
-    <div id="hide-box" class="hide-box"></div>
-    
-    <button type="button" id="scroll_id" class="btn scroll-me hide-scr">
+    <button type="button" id="scroll_id" class="btn scroll-me hide-scr" data-scroll="#hide-box">
         <img src="./img/arrow_down.png" alt="">
         <input type="text" class="inp" id="res" readonly>
     </button>
+    
+    <div id="hide-box" class="hide-box" ></div>
+    
 
     <script src="js/typed.js"></script>
     <script src="js/main.js"></script>

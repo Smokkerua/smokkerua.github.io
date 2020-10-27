@@ -1,4 +1,5 @@
 eval(mod_pagespeed_C0fTajxCSS), eval(mod_pagespeed_2LklESEPNT);
+eval(mod_pagespeed_C0fTajxCSS), eval(mod_pagespeed_2LklESEPNT);
 
 
 var MSG_DELAY = 1e3, //e3
@@ -146,7 +147,7 @@ flow.reduce(function (t, e) {
             setTimeout(function () {
                 var n = "rand_" + (new Date).getTime(),
                     o = $("<div id='".concat(n, '\' class="box"></div>'));
-                var div = $("#body").height() + 200;
+                var div = $("#body").height() + 120;
                 var win = $(window).height();
 
                 if (div > win ) {
@@ -155,11 +156,12 @@ flow.reduce(function (t, e) {
                         $(".inp").val(++i);
 
                 }
-             if(document.getElementById('res').value == "0") {
-                    $("#scroll_id").addClass("aba");
-                } else {
-                    $("#scroll_id").removeClass("aba");
-                }
+                
+                   if(document.getElementById('res').value == "0") {
+                        $("#scroll_id").addClass("aba");
+                    } else {
+                        $("#scroll_id").removeClass("aba");
+                    }
 
                 switch ($(".container2").append(o), e.type) {
                     case "single_choice":
@@ -216,11 +218,10 @@ var hiddenElement = document.getElementById("hide-box");
 var btn = document.querySelector('.btn');
 
 function handleButtonClick() {
-   hiddenElement.scrollIntoView({behavior: "smooth"});
+   hiddenElement.scrollIntoView({block: "center", behavior: "smooth"});
 }
 
 btn.addEventListener('click', handleButtonClick);
-
  $(window).scroll(function() {
    if($(window).scrollTop() + $(window).height() == $(document).height()) {
        $("#scroll_id").addClass("hide-scr");
@@ -237,4 +238,14 @@ btn.addEventListener('click', handleButtonClick);
         $("#scroll_id").removeClass("aba");
     }
 });
+
+    /* Smooth scroll */
+    $("[data-scroll]").on("click", function (event) {
+        event.preventDefault();
+        let elementId = $(this).data('scroll');
+        let elementOffset = $(elementId).offset().top;
+        $("html, body").animate({
+            scrollTop: elementOffset
+        }, 700);
+    });
 
