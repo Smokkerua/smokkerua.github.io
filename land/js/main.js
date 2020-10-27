@@ -146,7 +146,7 @@ flow.reduce(function (t, e) {
             setTimeout(function () {
                 var n = "rand_" + (new Date).getTime(),
                     o = $("<div id='".concat(n, '\' class="box"></div>'));
-                var div = $("#body").height() - 100;
+                var div = $("#body").height() + 200;
                 var win = $(window).height();
 
                 if (div > win ) {
@@ -216,10 +216,11 @@ var hiddenElement = document.getElementById("hide-box");
 var btn = document.querySelector('.btn');
 
 function handleButtonClick() {
-   hiddenElement.scrollIntoView({block: "center", behavior: "smooth"});
+   hiddenElement.scrollIntoView({behavior: "smooth"});
 }
 
 btn.addEventListener('click', handleButtonClick);
+
  $(window).scroll(function() {
    if($(window).scrollTop() + $(window).height() == $(document).height()) {
        $("#scroll_id").addClass("hide-scr");
