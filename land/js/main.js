@@ -155,12 +155,11 @@ flow.reduce(function (t, e) {
                         $(".inp").val(++i);
 
                 }
-                
-//                   if(document.getElementById('res').value == "0") {
-//                        $("#scroll_id").addClass("aba");
-//                    } else {
-//                        $("#scroll_id").removeClass("aba");
-//                    }
+/*   if(document.getElementById('res').value == "0") {
+        $("#scroll_id").addClass("aba");
+    } else {
+        $("#scroll_id").removeClass("aba");
+    }*/
 
                 switch ($(".container2").append(o), e.type) {
                     case "single_choice":
