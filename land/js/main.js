@@ -146,7 +146,7 @@ flow.reduce(function (t, e) {
             setTimeout(function () {
                 var n = "rand_" + (new Date).getTime(),
                     o = $("<div id='".concat(n, '\' class="box"></div>'));
-                var div = $("#body").height() + 120;
+                var div = $("#body").height();
                 var win = $(window).height();
 
                 if (div > win ) {
