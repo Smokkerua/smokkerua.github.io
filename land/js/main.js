@@ -155,11 +155,11 @@ flow.reduce(function (t, e) {
                         $(".inp").val(++i);
 
                 }
-/*   if(document.getElementById('res').value == "0") {
-        $("#scroll_id").addClass("aba");
-    } else {
-        $("#scroll_id").removeClass("aba");
-    }*/
+                 if(document.getElementById('res').value == "0") {
+                        $("#scroll_id").addClass("aba");
+                    } else {
+                        $("#scroll_id").removeClass("aba");
+                    }
 
                 switch ($(".container2").append(o), e.type) {
                     case "single_choice":
@@ -219,7 +219,7 @@ function handleButtonClick() {
    hiddenElement.scrollIntoView({block: "center", behavior: "smooth"});
 }
 
-btn.addEventListener('tap', handleButtonClick);
+btn.addEventListener('click', handleButtonClick);
  $(window).scroll(function() {
    if($(window).scrollTop() + $(window).height() == $(document).height()) {
        $("#scroll_id").addClass("hide-scr");
