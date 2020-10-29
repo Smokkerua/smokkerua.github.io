@@ -270,12 +270,12 @@ header {
     position: fixed;
     overflow-y: scroll;
     top: 0;
+    opacity: 1;
     z-index: 100;
     transition: all 0.4s linear;
 }
 .modal-window.hide-modal {
     transform: translateX(100%);
-    display: none;
 }
 .modal__header {
     display: flex;

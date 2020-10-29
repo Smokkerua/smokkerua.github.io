@@ -15,6 +15,11 @@ $(document).on('ready', function () {
     }, 5000)
 
      
+//    $(".author-info").on("click", function (event) {
+//        event.preventDefault();
+//        $(".modal-window").removeClass("hide-modal");
+//    });
+    
     $(".author-info").on("click", function (event) {
         event.preventDefault();
         $(".modal-window").removeClass("hide-modal");
@@ -24,6 +29,8 @@ $(document).on('ready', function () {
         event.preventDefault();
         $(".modal-window").addClass("hide-modal");
     });
+    
+    
     
     
 //        /* Fixed Header */
