@@ -1,7 +1,7 @@
 $(document).on('ready', function () {
 
     
-    
+    //  подключение доктора
     setTimeout(function() {
         
        $(".header__loader").addClass("hide");
@@ -9,17 +9,17 @@ $(document).on('ready', function () {
        $(".keyboard").addClass("hide");
        $(".author").removeClass("hide");
        $(".chat__foreword-load").removeClass("hide"); 
-       $(".social__input").removeClass("hide");
-       $(".chat__container").removeClass("hide");
-        
+
     }, 5000)
+    
+    //   загрузка чата
+    setTimeout(function() {
+        $(".chat__container").removeClass("hide");
+        $(".social__input").removeClass("hide");
+    }, 8000)
 
      
-//    $(".author-info").on("click", function (event) {
-//        event.preventDefault();
-//        $(".modal-window").removeClass("hide-modal");
-//    });
-    
+    //    Модальное окно
     $(".author-info").on("click", function (event) {
         event.preventDefault();
         $(".modal-window").removeClass("hide-modal");
@@ -31,16 +31,5 @@ $(document).on('ready', function () {
     });
     
     
-    
-    
-//        /* Fixed Header */
-//        $(window).scroll(function() {
-//        if ($(this).scrollTop() > 1){
-//        $('header').addClass("sticky");
-//        }
-//        else{
-//        $('header').removeClass("sticky");
-//        }
-//        });
 
 });

@@ -208,7 +208,29 @@ header {
     bottom: 5px;
     right: 10px;
 }
-
+.message-user {
+    background: #EAEAEA;
+    border-radius: 4px;
+    margin: 0px;
+    width: 100%;
+    padding: 3px 5px;
+    color: #818181;
+    font-size: 12px;
+    display: block;
+    padding-left: 7px;
+    border-left: 3px solid #A83FD7;
+    margin-bottom: 7px;
+    padding-bottom: 7px;
+}
+.message-user span {
+    width: 100%;
+    display: block;
+    color: #A83FD7;
+    font-weight: bold;
+    font-size: 13px;
+    margin-bottom: 5px;
+    margin-top: 2px;
+}
 .social__input {
     background: #fff;
     display: block;
@@ -456,7 +478,6 @@ header {
         color: #3651bc;
     }
 }
-
 
 
 
