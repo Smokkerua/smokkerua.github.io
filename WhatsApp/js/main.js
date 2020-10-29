@@ -57,8 +57,8 @@ $(document).on('ready', function () {
     
 
 butt.onclick = function() {
-    var val = document.getElementById('elem1').value;
-
+    
+var val = document.getElementById('elem1').value;
 var $messagesContainer = $('.chat__container')   
 var $answerContainer = $(`<div class="message user-message">
     <p class="message-content">${val}</p>
@@ -70,12 +70,17 @@ var $answer = $(`<div class="message">
     <p class="message-content">Подождите, отвечу на все вопросы после косультации</p>
     <p class="message-time">16:09</p></div> `);
         
-    
-    
 $messagesContainer.append($answerContainer);
     
+ $(".online").addClass("hide");
+$(".write").removeClass("hide");   
+    
 setTimeout(() => $messagesContainer.append($answer), 4000); 
-
+                
+setTimeout(function() {                                                             
+    $(".online").removeClass("hide");
+    $(".write").addClass("hide");   
+}, 4000)
   
 };
     
