@@ -11,7 +11,7 @@ $(document).on('ready', function () {
        $(".chat__foreword-load").removeClass("hide"); 
         
 
-            //   загрузка чата
+         //   загрузка чата
             setTimeout(function() { 
                 $(".online").addClass("hide");
                 $(".write").removeClass("hide");
@@ -36,6 +36,10 @@ $(document).on('ready', function () {
 
 
     }, 2000)
+    
+    
+    
+
     
     //    Модальное окно
     $(".author-info").on("click", function (event) {
@@ -76,7 +80,7 @@ $messagesContainer.append($answerContainer);
 $(".write").removeClass("hide");   
     
 setTimeout(() => $messagesContainer.append($answer), 4000); 
-                
+document.getElementById("elem1").value = "";          
 setTimeout(function() {                                                             
     $(".online").removeClass("hide");
     $(".write").addClass("hide");   
@@ -84,33 +88,30 @@ setTimeout(function() {
   
 };
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
     
 });
 
 
+    /* Smooth scroll */
+$("[data-scroll]").on("click", function (event) {
+    event.preventDefault();
+    let elementId = $(this).data('scroll');
+    let elementOffset = $(elementId).offset().top;
+    $("html, body").animate({
+        scrollTop: elementOffset
+    }, 700);
+});
 
 
-
-
-
+ $(window).scroll(function() {
+   if($(window).scrollTop() + $(window).height() == $(document).height()) {
+       $("#scroll_id").addClass("hide");
+    }  else {
+        $("#scroll_id").removeClass("hide");
+    }
+});  
+    
 
 
 
