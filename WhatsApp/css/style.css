@@ -424,8 +424,9 @@ header {
     font-weight: bold;
     font-size: 9px;
     transform: translateY(-50%);
-    animation: shadow-1 6s ease-in-out;
+    animation: shadow-1 3s ease-in-out;
     color: #3651bc;
+    opacity: 1
 }
 .user-message .message-time:before {
     content: '✓';
@@ -436,20 +437,13 @@ header {
     font-weight: bold;
     font-size: 9px;
     transform: translateY(-50%);
-    animation: shadow-2 6s;
+    animation: shadow-2 3s;
     color: #3651bc;
 }
 
 @keyframes shadow-1 {
     from {
         color: #818181;
-        opacity: 0
-    }
-    32% {
-        opacity: 0;
-    }
-    33% {
-        opacity: 1;
     }
     99% {
         color: #818181;
@@ -479,8 +473,10 @@ header {
     }
 }
 
-
-
+.keyboard-button, .keyboard-button:active, .keyboard-button:focus {
+    cursor: pointer;
+    outline: none;
+}
 .hide {
     display: none!important;
 }
