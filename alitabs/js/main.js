@@ -103,7 +103,6 @@ flow = [
             setTimeout(() => autoscroll.disable(), 150)
         }
     }
-    // { type: "form", templateId: "orderForm", afterMount: function() { setTimeout(() => autoscroll.disable(), 150) } }
 
 ];
 
@@ -162,7 +161,7 @@ flow.reduce(function (t, e) {
                 
                 
                 
-                 var div = $("#body").height() + 120;
+                var div = $("#body").height() + 120;
                 var win = $(window).height();
 
                 if (div > win ) {
@@ -178,10 +177,7 @@ flow.reduce(function (t, e) {
                         $("#scroll_id").removeClass("aba");
                     }
 
-                
-                
-                
-                
+
                 
                 switch ($(".container2").append(o), e.type) {
                     case "single_choice":

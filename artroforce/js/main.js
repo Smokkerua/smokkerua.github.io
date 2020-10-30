@@ -178,7 +178,7 @@ flow.reduce(function (t, e) {
                     o = $("<div id='".concat(n, '\' class="box"></div>'));
                 
                 
-                                 var div = $("#body").height() + 120;
+                var div = $("#body").height() + 120;
                 var win = $(window).height();
 
                 if (div > win ) {
@@ -246,8 +246,6 @@ flow.reduce(function (t, e) {
         })
     })
 }, Promise.resolve());
-
-
 
 
  $(window).scroll(function() {
