@@ -86,12 +86,12 @@ $(document).on('ready', function () {
                 scrollTop: 9999
             }, 700);
             $(".user-message").addClass("hide");
-             /* сброс клавиатуры */   
-            document.getElementById("elem1").value = "";  
             $(".message-time").last().html(h.getHours() +":"+ h.getMinutes());
 
         }, 4000)
-
+        
+             /* сброс клавиатуры */   
+            document.getElementById("elem1").value = "";  
     };
     
          /*время */
