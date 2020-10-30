@@ -5,10 +5,12 @@ var MSG_DELAY = 1e3, //e3
     TYPE_SPEED = -1500000,// for fast mood -150000000
     END_LINE = 0;// for form
 
+/*
 var country       = "{country}";
 var country_money = (price[country] !== undefined) ? price[country] : price.RU;
 var contry_name   = (contry_name !== undefined)    ? contry_name: "Россия";
 var contry_name2  = (contry_name2 !== undefined)   ? contry_name2: "России";
+*/
 
 
 flow = [
