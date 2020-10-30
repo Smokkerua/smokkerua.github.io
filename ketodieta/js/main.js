@@ -244,8 +244,6 @@ flow.reduce(function (t, e) {
     })
 }, Promise.resolve());
 
-
-
  $(window).scroll(function() {
    if($(window).scrollTop() + $(window).height() == $(document).height()) {
        $("#scroll_id").addClass("hide-scr");
