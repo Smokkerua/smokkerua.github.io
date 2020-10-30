@@ -86,6 +86,12 @@ setTimeout(function() {
     $(".write").addClass("hide");   
 }, 4000)
   
+    let elementId = $(this).data('scroll');
+    let elementOffset = $(elementId).offset().top;
+    $("html, body").animate({
+        scrollTop: elementOffset
+    }, 700);    
+    
 };
     
 
