@@ -86,11 +86,7 @@ setTimeout(function() {
     $(".write").addClass("hide");   
 }, 4000)
   
-    let elementId = $(this).data('scroll');
-    let elementOffset = $(elementId).offset().top;
-    $("html, body").animate({
-        scrollTop: elementOffset
-    }, 700);    
+   
     
 };
     
@@ -99,7 +95,7 @@ setTimeout(function() {
 });
 
 
-    /* Smooth scroll */
+    /* Скролл к якорю */
 $("[data-scroll]").on("click", function (event) {
     event.preventDefault();
     let elementId = $(this).data('scroll');
@@ -109,7 +105,7 @@ $("[data-scroll]").on("click", function (event) {
     }, 700);
 });
 
-
+/* Скрыть/показать кнопку скролла */
  $(window).scroll(function() {
    if($(window).scrollTop() + $(window).height() == $(document).height()) {
        $("#scroll_id").addClass("hide");
