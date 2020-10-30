@@ -1,6 +1,6 @@
 $(document).on('ready', function () {
-
     
+
     //  подключение доктора
     setTimeout(function() {
         
@@ -9,7 +9,6 @@ $(document).on('ready', function () {
        $(".keyboard").addClass("hide");
        $(".author").removeClass("hide");
        $(".chat__foreword-load").removeClass("hide"); 
-        
 
          //   загрузка чата
             setTimeout(function() { 
@@ -32,15 +31,8 @@ $(document).on('ready', function () {
                 
             }, 1000)
 
-        
-
-
     }, 2000)
-    
-    
-    
 
-    
     //    Модальное окно
     $(".author-info").on("click", function (event) {
         event.preventDefault();
@@ -52,48 +44,61 @@ $(document).on('ready', function () {
         $(".modal-window").addClass("hide-modal");
     });
     
-    //   подключиться к соц. сети
+    //   подключиться к соц. сети - показать клавиатуру
     $(".soc-but").on("click", function (event) {
         event.preventDefault();
         $(".social__input").addClass("hide");
         $(".keyboard").removeClass("hide");
     });
     
+    /* создать блок сообщения пользователя */ 
+    butt.onclick = function() {
 
-butt.onclick = function() {
-    
-var val = document.getElementById('elem1').value;
-var $messagesContainer = $('.chat__container')   
-var $answerContainer = $(`<div class="message user-message">
-    <p class="message-content">${val}</p>
-    <p class="message-time">16:07</p></div>`);
-    
-var $answer = $(`<div class="message">
-    <p class="message-user"><span>Вы</span>
-    ${val}</p>
-    <p class="message-content">Подождите, отвечу на все вопросы после косультации</p>
-    <p class="message-time">16:09</p></div> `);
+        var val = document.getElementById('elem1').value;
+        var $messagesContainer = $('.chat__container')   
+        var $answerContainer = $(`<div class="user-message">
+            <p class="message-content">${val}</p>
+            <p class="message-time"></p></div>`);
+
+        var $answer = $(`<div class="message">
+        <p class="message-user"><span>Вы</span>
+        ${val}</p>
+        <p class="message-content">Подождите, отвечу на все вопросы после косультации</p>
+        <p class="message-time"></p></div> `);
+
+        $messagesContainer.append($answerContainer);
         
-$messagesContainer.append($answerContainer);
-    
- $(".online").addClass("hide");
-$(".write").removeClass("hide");   
-    
-setTimeout(() => $messagesContainer.append($answer), 4000); 
-document.getElementById("elem1").value = "";          
-setTimeout(function() {                                                             
-    $(".online").removeClass("hide");
-    $(".write").addClass("hide");   
-}, 4000)
-  
-   
-    
-};
-    
+        var h = new Date();
+        $(".message-time").last().html(h.getHours() +":"+ h.getMinutes());
+        
+        $(".online").addClass("hide");
+        $(".write").removeClass("hide");
 
+        /* ответ */       
+        setTimeout(() => $messagesContainer.append($answer), 4000); 
+
+        setTimeout(function() {   
+
+            $(".online").removeClass("hide");
+            $(".write").addClass("hide");  
+            /* Скролл в самый низ после ответа */
+            $("html, body").animate({
+                scrollTop: 9999
+            }, 700);
+            $(".user-message").addClass("hide");
+             /* сброс клавиатуры */   
+            document.getElementById("elem1").value = "";  
+            $(".message-time").last().html(h.getHours() +":"+ h.getMinutes());
+
+        }, 4000)
+
+    };
+    
+         /*время */
+        var h = new Date();
+        $(".message-time").html(h.getHours() +":"+ h.getMinutes());
     
 });
-
 
     /* Скролл к якорю */
 $("[data-scroll]").on("click", function (event) {

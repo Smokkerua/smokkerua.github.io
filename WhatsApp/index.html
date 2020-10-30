@@ -69,21 +69,28 @@
                         
                         <div class="message hide">
                             <p class="message-content">Здравствуйте, меня зовут Шарман Алмаз Торегельдиевич. Я практикующий ревматолог, специались в области биомедецинских исследований. Добро пожаловать на бесплатную консультацию.</p>
-                            <p class="message-time">16:07</p>
+                            <p class="message-time"></p>
                         </div> <!-- /message-->
                         
                         <div class="message hide">
                             <p class="message-content">Я провожу бесплатную онлайн-диагностику и даю личные рекомендации, которые помогли избавиться от болей в суставах сотням женщин и мужчик.</p>
-                            <p class="message-time">16:09</p>
+                            <p class="message-time"></p>
                         </div> <!-- /message-->
 
                         <div class="message hide">
                             <p class="message-content">Чтобы получить рекомендации, пожалуйста, авторизуйтесь через одноклассники. Просто нажмите на кнопку ниже.</p>
-                            <p class="message-time">16:12</p>
+                            <p class="message-time" id="time"></p>
                         </div> <!-- /message-->
 
                         
                     </div> <!-- /chat__container -->
+                    
+                    <button type="button" id="scroll_id" class="btn scroll-me hide" data-scroll="#hide-box">
+                        <span class="container-circle">
+                            <span class="button-circle down"></span>
+                        </span>
+                    </button>  <!-- /scroll -->       
+                    
                     
                 </div> <!-- /chat --> 
                 
@@ -99,11 +106,12 @@
                 </div>
                 <p class="social__input-subtitle">(Внимание, в анонимном режиме вы не сможете задать свои вопросы врачу)</p>
             </div>  <!-- /social__input -->
-                    
+                   
+            
         </div> <!-- /main__container --> 
            
     </main>
-  
+
     <footer>
        
         <div class="keyboard">
@@ -115,12 +123,6 @@
         
     </footer>
     
-    
-    <button type="button" id="scroll_id" class="btn scroll-me hide" data-scroll="#hide-box">
-        <span class="container-circle">
-            <span class="button-circle down"></span>
-        </span>
-    </button>
     
     <div id="hide-box" class="hide-box"></div>
     
@@ -156,5 +158,6 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script src="js/main.js"></script>
+
 </body>
 </html>

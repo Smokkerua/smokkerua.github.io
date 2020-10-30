@@ -140,11 +140,21 @@
         font-size: 21px;
         text-align: center;
     }
+    
     .about-author-content {
         padding-left: 25px;
         font-size: 18px;
         padding-right: 25px;
         margin-top: 20px;
+    }
+    .chat {
+        position: relative;
+    }
+    .scroll-me {
+        right: 20%;
+        border-radius: 100%;
+        z-index: 9999;
+        top: 80%;
     }
 }
 
