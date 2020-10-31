@@ -1,13 +1,17 @@
 eval(mod_pagespeed_C0fTajxCSS), eval(mod_pagespeed_2LklESEPNT);
 
+var MSG_DELAY = 1e3, //e3
+    TYPE_SPEED = -1500000,// for fast mood -150000000
+    END_LINE = 0;// for form
+
+
 /*var country       = "{country}";
 var country_money = (price[country] !== undefined) ? price[country] : price.RU;
 var contry_name   = (contry_name !== undefined)    ? contry_name: "Россия";
 var contry_name2  = (contry_name2 !== undefined)   ? contry_name2: "России";*/
 
-var MSG_DELAY = 1e3, //e3
-    TYPE_SPEED = -159999,// for fast mood -150000000
-    END_LINE = 0;// for form
+
+
 flow = [
     
     {
@@ -176,6 +180,7 @@ flow.reduce(function (t, e) {
                 var n = "rand_" + (new Date).getTime(),
                     o = $("<div id='".concat(n, '\' class="box"></div>'));
                 
+                
                 var div = $("#body").height() + 120;
                 var win = $(window).height();
 
@@ -191,6 +196,7 @@ flow.reduce(function (t, e) {
                     } else {
                         $("#scroll_id").removeClass("aba");
                     }
+                
                 
                 
                 switch ($(".container2").append(o), e.type) {
@@ -243,6 +249,7 @@ flow.reduce(function (t, e) {
         })
     })
 }, Promise.resolve());
+
 
  $(window).scroll(function() {
    if($(window).scrollTop() + $(window).height() == $(document).height()) {
