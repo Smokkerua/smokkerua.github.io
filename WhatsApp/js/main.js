@@ -85,7 +85,6 @@ $(document).on('ready', function () {
             $("html, body").animate({
                 scrollTop: 9999
             }, 700);
-            $(".user-message").addClass("hide");
             $(".message-time").last().html(h.getHours() +":"+ h.getMinutes());
 
         }, 4000)
