@@ -432,6 +432,7 @@ input:active, input:focus {
         top: 9px;
         font-size: 13px;
         outline: none;
+        background: #FFF;
     }
     .email-l input {
         padding-right: 135px!important;
