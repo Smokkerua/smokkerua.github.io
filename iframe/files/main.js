@@ -13,19 +13,23 @@ $(document).ready(function () {
     $('.showPassword').click(function () {
         var inputPsw = $('#password');
         if (inputPsw.attr('type') == 'password') {
+            event.preventDefault()
             document.getElementById('password').setAttribute('type', 'text');
         } else {
+            event.preventDefault()
             document.getElementById('password').setAttribute('type', 'password');
         }
     });
     $('.generatePassword img').click(function () {
+        event.preventDefault()
         document.getElementById('password').setAttribute('type', 'text');
         $('#password').attr('value', str_rand());
+
     });
     $('#buttom-form').click(function () {
-            if (document.getElementById('password').value == '') {
-                document.getElementById('password').setAttribute('type', 'text');
-                 $('#password').attr('value', str_rand());
+        if (document.getElementById('password').value == '') {
+            document.getElementById('password').setAttribute('type', 'text');
+            $('#password').attr('value', str_rand());
         }
     });
 });

@@ -434,6 +434,10 @@ input:active, input:focus {
         outline: none;
         background: #FFF;
     }
+    .pass p {
+        margin: 0;
+    }
+    
     .email-l input {
         padding-right: 135px!important;
     }
