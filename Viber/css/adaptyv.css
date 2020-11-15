@@ -1,0 +1,161 @@
+@media only screen and (min-width : 500px) {
+    body {
+        max-width: 100%;
+    }
+    .message {
+        width: fit-content;
+        max-width: 85%;
+        margin-bottom: 13px;
+        padding: 5px 12px;
+        padding-bottom: 7px;
+        padding-top: 9px;
+    }
+    .buttonts__container {
+        justify-content: center;
+    }
+    .anonim {
+        max-width: 200px;
+    }
+    .author__about-name {
+        font-size: 18px;
+    }
+    .foto-author img {
+        border-radius: 100%;
+        margin: 0px auto;
+        max-width: 230px;    
+    }
+    .cloud {
+        width: 40px;
+        height: 40px;
+    }
+    .cloud-i {
+        font-size: 15px;
+    }
+    .phone-author {
+        font-size: 16px;
+        margin-top: 7px;
+    }
+    .modal-window {
+        width: 100%;
+        max-width: 850px;
+        min-height: 100%;
+        overflow-y: auto;
+        opacity: 1;
+    }
+    .modal-window.hide-modal {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}
+@media only screen and (min-width : 700px) {
+    body {
+        font-size: 18px;
+        padding-top: 70px;
+    }
+    .author__about-online span {
+        font-size: 16px;
+    }
+    .author {
+        height: 60px;
+    }
+    .wrapper {
+        max-width: 850px;
+        padding: 0 30px;
+    }
+    .author-info {;
+        width: 27px;
+        height: 27px;
+        font-size: 13px;
+    }
+    .header__loader {
+        height: 60px;
+    }
+    .author__about-name {
+        margin-bottom: 2px;
+    }
+    .author__img {
+        width: 50px;
+    }
+    .chat-date {
+        font-size: 16px;
+    }
+    .chat__foreword-loader {
+        font-size: 16px;
+    }
+    .load {
+        max-width: 35px;
+        margin: 10px 0;
+    }
+    .chat__foreword-loader, .chat__foreword-load {
+        font-size: 16px;
+    }
+    .social__input-subtitle {
+        font-size: 15px;
+    }
+    .message-content {
+        line-height: 1.4;
+    }
+    .social__input {
+        padding: 15px 20px;
+        margin-top: 25px;
+    }
+    .buttonts__container {
+        margin-bottom: 16px;
+    }
+    .odnokl {
+        border-radius: 6px;
+        font-size: 18px;
+        padding: 7px 12px;
+        width: 220px;
+        min-width: 220px;
+        line-height: 1;
+        margin-right: 20px;
+    }
+    .anonim {
+        border-radius: 6px;
+        font-size: 15px;
+    }
+    .message-time {
+        font-size: 12px;
+    }
+    .user-message .message-time:before, .user-message .message-time:after {
+        font-size: 11px;
+        color: #7360F2;
+    }
+}
+@media only screen and (min-width : 850px) {
+    html {
+        max-width: 850px;
+        margin: auto;
+        background: url(../img/background28.jpg);
+        background-size: cover;
+    }
+    body {
+        min-height: 100vh;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, .2);
+    }
+    .sticky, .keyboard {
+        max-width: 850px;
+    }
+    .about-author-title {
+        font-size: 21px;
+        text-align: center;
+    }
+    
+    .about-author-content {
+        padding-left: 25px;
+        font-size: 18px;
+        padding-right: 25px;
+        margin-top: 20px;
+    }
+    .chat {
+        position: relative;
+    }
+    .scroll-me {
+        right: 20%;
+        border-radius: 100%;
+        z-index: 9999;
+        top: 80%;
+    }
+}
+

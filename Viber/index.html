@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Viber</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="shortcut icon" href="./img/favicon.ico">
+    <script defer src="https://use.fontawesome.com/releases/v5.8.1/js/all.js" data-auto-replace-svg></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/adaptyv.css" media="(min-width: 500px)">
+</head>
+<body>
+    
+    <header class="sticky">
+      
+       <div class="header__container">
+         
+          <div class="wrapper">
+              
+              <div class="header__loader">
+                  <img class="load" src="./img/2.gif" alt="">
+                  <h3 class="load-title">Подключение к анонимному чату с ревматологом</h3>
+              </div> <!-- /header__loader -->
+              
+              <div class="header__content author hide">
+                 
+                  <div class="author__img">
+                      <img src="./img/avatar-full.png" alt="Ревматолог">
+                  </div>
+                  
+                  <div class="author__about">
+                      <p class="author__about-name">Шарман Алмаз - Ревматолог</p>
+                      <div class="author__about-online">
+                          <span class="online">в сети</span>
+                          <span class="write hide">печатает...</span>
+                      </div>
+                  </div>
+                  
+                  <div class="author-info"><i class="fas fa-info info"></i></div>
+                  
+              </div> <!-- /header__content -->
+              
+          </div>  <!-- /wrapper --> 
+          
+       </div> <!-- /header__container --> 
+        
+    </header>
+    
+    <main>
+        
+        <div class="main__container">
+           
+            <div class="wrapper">
+                
+                <div class="chat">
+                    
+                    <div class="chat__foreword">
+                        <p class="chat__foreword-loader">Ожидайте, врач медцентра готовится к онлайн консультации.</p>
+                        <div class="chat__foreword-load hide">
+                            <i class="fas fa-lock lock"></i>
+                            <p>Сообщения, которые вы отправляете в этот чат, защищены сквозным шифрованием Viber.</p>
+                        </div>           
+                    </div> <!-- /chat__foreword -->
+                    
+                    <p class="chat-date">Сегодня</p>
+                    
+                    <div class="chat__container" id="demo">
+                        
+                        <div class="message hide">
+                            <p class="message-content" id="demo">Здравствуйте, меня зовут Шарман Алмаз Торегельдиевич. Я практикующий ревматолог, специались в области биомедецинских исследований. Добро пожаловать на бесплатную консультацию.</p>
+                            <p class="message-time"></p>
+                        </div> <!-- /message-->
+                        
+                        <div class="message hide">
+                            <p class="message-content">Я провожу бесплатную онлайн-диагностику и даю личные рекомендации, которые помогли избавиться от болей в суставах сотням женщин и мужчик.</p>
+                            <p class="message-time"></p>
+                        </div> <!-- /message-->
+
+                        <div class="message hide">
+                            <p class="message-content">Чтобы получить рекомендации, пожалуйста, авторизуйтесь через одноклассники. Просто нажмите на кнопку ниже.</p>
+                            <p class="message-time" id="time"></p>
+                        </div> <!-- /message-->
+                        
+
+                        
+                    </div> <!-- /chat__container -->
+                    
+                    <button type="button" id="scroll_id" class="btn scroll-me hide" data-scroll="#hide-box">
+                        <span class="container-circle">
+                            <span class="button-circle down"><i class="fas fa-arrow-down down-n"></i></span>
+                        </span>
+                    </button>  <!-- /scroll -->       
+                    
+                    
+                </div> <!-- /chat --> 
+                
+            </div> <!-- /wrapper --> 
+            
+            <div class="social__input hide">
+                <div class="buttonts__container">
+                    <button type="button" class="odnokl soc-but">
+                        <i class="fab fa-odnoklassniki soc-o"></i>
+                        Войти через одноклассники
+                    </button>
+                    <button type="button" class="anonim soc-but">Получить анонимную консультацию*</button>
+                </div>
+                <p class="social__input-subtitle">(Внимание, в анонимном режиме вы не сможете задать свои вопросы врачу)</p>
+            </div>  <!-- /social__input -->
+                   
+            
+        </div> <!-- /main__container --> 
+           
+    </main>
+
+    <footer>
+       
+        <div class="keyboard">
+            <input type="text" placeholder="Напишите сообщение..." class="keyboard-input" id="elem1">
+            <button type="button" class="keyboard-button" id="butt" data-scroll="#hide-box">
+                <i class="far fa-paper-plane telegram"></i>
+            </button>
+        </div>  <!-- /keyboard --> 
+        
+    </footer>
+    
+    
+    <div id="hide-box" class="hide-box"></div>
+    
+    <div class="modal-window hide-modal">
+       
+        <div class="modal__header">
+            <button class="back"><i class="fas fa-chevron-left left"></i></button>
+                              <div class="author__about">
+                      <p class="author__about-name">Шарман Алмаз - Ревматолог</p>
+                      <div class="author__about-online">
+                          <span class="online">в сети</span>
+                          <span class="write hide">печатает...</span>
+                      </div>
+                  </div>
+        </div>
+        
+        <div class="foto-author">
+            <img src="./img/avatar-full.png" alt="">
+        </div>
+        
+        <div class="bacground">
+            
+            <div class="phone">
+                <a class="phone-number" href="#">+7 963 337-XX-XX</a>
+                <p class="phone-author">~Шарман Алмаз Торегельдиевич - Ревматолог</p>
+                <div class="cloud">
+                    <i class="fas fa-comment cloud-i"></i>
+                </div>
+            </div>
+            <div class="shifr">
+
+                            <i class="fas fa-lock lock-f"></i>
+                            <p>Ипользуется сквозное шифрование.</p>
+
+                
+            </div>
+            <div class="about-author">
+                <h4 class="about-author-title">Бизнес аккаунт</h4>
+                <p class="about-author-content">Американский учёный-медик казахского происхождения, специалист в области биомедицинских и медико-демографических исследований, международного здавоохранения и больничного управления, член Американской Ассоциации Здравоохранения.</p>
+            </div>
+            
+        </div>
+        
+    </div> <!-- /modal-window -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+    
+    
+    
+
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+
+</body>
+</html>
