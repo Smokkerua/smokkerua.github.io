@@ -1,0 +1,198 @@
+html {
+    font-size: 16px;
+}
+body {
+    font-family: open sans, sans-serif;
+    font-size: 1em;
+    line-height: 1.2;
+    font-weight: 400;
+}
+
+
+.videoWrap {
+    width: 650px;
+    display: block;
+    padding: 0;
+}
+section.video .registerForm .formHeader {
+    font-size: 1.8em;
+}
+.form_wrapper {
+    position: relative;
+    display: block;
+    padding: 0 17px;
+}
+input {
+    position: relative;
+    z-index: 5;
+    margin: 0;
+    padding: .5em .75em;
+    background-color: #fff;
+    color: #333;
+    border: 1px solid #ccc;
+    border-radius: .15rem;
+    font-size: 12px;
+    width: 200px;
+    height: 35px;
+    transition: 100ms border-color linear,100ms background-color linear;
+}
+.wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+* {
+    box-sizing: border-box;
+}
+
+.surname,.email-l, .phone, .pass, .name{
+    position: relative;
+}
+.bottom-wrap {
+    margin-top: 15px;
+}
+.right-col {
+    margin-left: 10px;
+}
+
+.my-button {
+    width: 100%;
+    font-size: 1.5em;
+    color: #fff;
+    background-color: #52bce6;
+    padding: .75em 1.25em;
+    border: 1px solid #25abe0;
+    border-radius: .15rem;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0,0,0,.15);
+    transition: 100ms background-color linear;
+}
+
+.my-button:hover {
+    opacity: .9;
+}
+
+.email-l, .email-l input {
+    width: 100%;
+}
+.choise {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 12px;
+    background: none;
+    border: none;
+    color: #000;
+    z-index: 10;
+}
+.choise, .choise:active, .choise:hover, .choise:active, .my-button:active, .my-button:focus {
+    outline: none;
+}
+
+
+
+.form__check-field{
+    font-size: 9px;
+    letter-spacing: .025em;
+    color: #fff;
+    transition: 50ms linear opacity;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translateY(50%);
+    z-index: 20;
+    background: #f0482a;
+    width: 100%;
+    opacity: 0;
+    padding: .1em .5em;
+    white-space: nowrap;
+    border-radius: .15rem;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+
+
+
+
+
+input:valid:not(:placeholder-shown) {
+    border-color: #8cd32f;
+    background-color: rgba(140,211,47,.05);
+}
+input:invalid:not(:placeholder-shown) {
+    border-color: red;
+}
+input:invalid:not(:placeholder-shown) ~ .form__check-field {
+    opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+input:hover, input:active, input:focus {
+    background-color: rgba(82,188,230,.05);
+    border: 1px solid rgba(82,188,230,.5);
+    outline: none;
+}
+label {
+    font-size: 12px;
+    color: #999;
+    position: absolute;
+    z-index: 40;
+    top: 1.5em;
+    transform: translateY(-50%);
+    left: 10px;
+    transform-origin: center left;
+    transition: all 0.1s linear;
+    padding: .1em .2em;
+    pointer-events: none;
+    font-weight: 400;
+    opacity: 0;
+}
+
+
+input:focus ~ label, label:focus {
+    transform: translateY(calc(-50% - 1.5em)) scale(0.9);
+    background: #fff;
+    color: #999;
+    opacity: 1;
+}
+
+
+
+
+
+
+.form-fields-group {
+  position: relative;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
