@@ -18,15 +18,15 @@
             <div class="row">
 
                 <div class="col col-md-auto input-box">
-                    <input type="text" class="input-top">
+                    <input type="text" class="input-top input-first"  value="! Женя потенция Потенциалекс">
                     <i class="fas fa-clipboard-list list-icon"></i>
                 </div>
                 <div class="col col-md-auto input-box">
-                    <input type="text" class="input-top">
+                    <input type="text" class="input-top input-second" value="siangoonedna@mail.ru">
                     <i class="fas fa-clipboard-list list-icon"></i>
                 </div>
                 <div class="col col-md-auto input-box">
-                    <input type="text" class="input-top">
+                    <input type="text" class="input-top" value="26208083">
                     <i class="fas fa-clipboard-list list-icon"></i>
                 </div>
 
@@ -49,7 +49,11 @@
                <div class="col d-flex button-right">
                    <button type="button" class="btn-flow">Создать поток</button>
                    <div class="d-flex">
-                       <button type="button" class="btn btn-main btn-burger"><i class="fas fa-bars"></i></button>
+                       <button type="button" class="btn btn-main btn-burger burger-icon">
+                           <i class="fas fa-bars icon icon-burger show"></i>
+                           <p class="icon icon-lp">LP</p>
+                           <i class="fas fa-filter icon icon-filter"></i>
+                        </button>
                        <button type="button" class="btn btn-main btn-check"><i class="fas fa-check-double"></i></button>
                        <button type="button" class="btn btn-main btn-share"><i class="fas fa-code-branch"></i></button>
                    </div>
@@ -62,50 +66,78 @@
     </header> 
     
     <main>
-       
-       
-       <table class="table table-hover main-table">
-          <tbody>
-            <tr>
-              <th><span class="circle active-circle "></span></th>
-              <td>Модерация</td>
-              <td>1 лендинг</td>
-              <td></td>
-            </tr>
-            <tr>
-              <th><span class="circle active-circle "></span></th>
-              <td>Россия</td>
-              <td>1 лендинг</td>
-              <td>1 оффер</td>
-            </tr>
-            <tr>
-              <th><span class="circle active-circle "></span></th>
-              <td>Казахстан</td>
-              <td>3 лендинг</td>
-              <td>1 оффер</td>
-            </tr>
-            <tr>
-              <th><span class="circle active-circle "></span></th>
-              <td>Украина</td>
-              <td>4 лендинг</td>
-              <td>2 оффер</td>
-            </tr>
-            <tr>
-              <th><span class="circle"></span></th>
-              <td>Европа</td>
-              <td>4 лендинг</td>
-              <td>2 оффер</td>
-            </tr>
-            <tr>
-              <th><span class="circle active-circle "></span></th>
-              <td>Без меток</td>
-              <td>3 лендинг</td>
-              <td></td>
-            </tr>
-          </tbody>
-        </table>
-       
-
+            
+        <div class="container-fluid main-table third-screen">
+            
+            <div class="row row-table">
+                <div class="col-main"><span class="circle active-circle "></span> Модерация</div>
+                <div class="col col-lend">1 лендинг</div>
+                <div class="col col-order"></div>
+                
+                <!--   3 экран    -->
+                
+                <div class="col col-code">
+                [S1]" {{age}}", "{{campaign_id}}" <span>или</span> Бот <span>или</span> IPv6 <span>или</span> [S2] "{{geo}}", "{{adset_id}}" <span>или</span> [S3] "{{gender}}", "{{ad_id}}" <span>или</span> [S4] "{fb_pixel}", "{{subid}}" <span>или</span> IP(+55) <span>или</span> Страны "Неизвестно", "Нидерланды", "Япония"
+                </div>
+                
+            </div>
+            
+            <div class="row row-table">
+                <div class="col-main"><span class="circle active-circle "></span> Россия</div>
+                <div class="col col-lend">1 лендинг</div>
+                <div class="col col-order">1 оффер</div>
+                
+                <!--   3 экран    -->
+                
+                <div class="col col-code">
+                Страны "Россия" <span>и</span> [S1] "26208083"
+                </div>
+                
+                
+            </div>
+            
+            <div class="row row-table">
+                <div class="col-main"><span class="circle active-circle "></span> Казахстан</div>
+                <div class="col col-lend">3 лендинг</div>
+                <div class="col col-order">1 оффер</div>
+                
+                <!--   3 экран    -->
+                
+                <div class="col col-code">
+                Страны "Казахстан" <span>и</span> [S1] "26208083"
+                </div>
+                
+            </div>
+            
+            <div class="row row-table">
+                <div class="col-main"><span class="circle active-circle "></span> Украина</div>
+                <div class="col col-lend">1 лендинг</div>
+                <div class="col col-order">2 оффер</div>
+                
+                <!--   3 экран    -->
+                
+                <div class="col col-code">
+                Страны "Украина" <span>и</span> [S1] "26208083"
+                </div>
+                
+            </div>
+            
+            
+            <div class="row row-table">
+                <div class="col-main"><span class="circle"></span> Европа</div>
+                <div class="col col-lend">4 лендинг</div>
+                <div class="col col-order">2 оффер</div>
+            </div>
+            
+            <div class="row row-table">
+                <div class="col-main"><span class="circle active-circle "></span> Без меток</div>
+                <div class="col col-lend">3 лендинг</div>
+                <div class="col col-order"></div>
+            </div>
+            
+            
+            
+        </div>
        
        
        
@@ -115,7 +147,6 @@
     </main>
    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     
     
