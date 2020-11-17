@@ -12,6 +12,7 @@
             if(this.classList.contains('burger-icon')){
                 this.classList.remove('burger-icon');
                 this.classList.add('lp-icon');
+                $('.btn-hide-lp').addClass('show');
                 $('.icon-burger').removeClass('show');
                 $('.icon-lp').addClass('show');  
                 $('.main-table').removeClass('first-screen'); 
@@ -20,6 +21,7 @@
             else if(this.classList.contains('lp-icon')){
                 this.classList.remove('lp-icon');
                 this.classList.add('filer-icon');
+                $('.btn-hide-lp').removeClass('show');
                 $('.icon-filter').addClass('show');
                 $('.icon-lp').removeClass('show'); 
                 $('.main-table').removeClass('second-screen'); 
@@ -37,5 +39,23 @@
 
         });
 
+        
+        
+         $(function () {
+        $('.switch-btn').click(function () {
+            $(this).toggleClass('switch-on');
+            if ($(this).hasClass('switch-on')) {
+                $(this).trigger('on.switch');
+            } else {
+                $(this).trigger('off.switch');
+            }
+        });
+        $('.switch-btn').on('on.switch', function () {
+            
+        });
+        $('.switch-btn').on('off.switch', function () {
+            
+        });
+    });
 
     });

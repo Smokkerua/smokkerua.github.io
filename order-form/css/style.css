@@ -96,8 +96,7 @@ input, input:active, input:focus {
     border: none;
     color: #fff;
     padding: 2px 10px;
-    margin: 0 10px;
-    margin-right: 25px;
+    margin-left: 10px;
     line-height: 40px;
     display: block;
     transition: all 0.2s linear;
@@ -116,6 +115,7 @@ input, input:active, input:focus {
 }
 .btn-burger {
     border-radius: 8px 0px 0px 8px;
+    margin-left: 10px;
 }
 
 .btn-share {
@@ -170,9 +170,14 @@ input, input:active, input:focus {
     min-width: calc(100% - 270px);
     position: relative;
     padding: 0 15px;
+    font-size: 18px;
+    font-weight: 500;
 }
-
-.col-lend, .col-order, .col-code {
+.settings {
+    display: flex;
+    align-items: center;
+}
+.col-lend, .col-order, .col-code, .settings, .lendings__container, .moderation {
     display: none;
 }
 .first-screen .col-lend, .first-screen .col-order {
@@ -195,12 +200,150 @@ input, input:active, input:focus {
     color: #4888ba;
     display: block;
 }
+.second-screen .lendings__container {
+    display: block;
+    width: 100%;
+}
+.second-screen .moderation  {
+    display: block;
+}
+.second-screen .settings {
+    display: flex;
+    margin-bottom: 10px;
+}
+.second-screen .col-main {
+    min-width: auto;
+    width: auto;
+    display: flex;
+    align-items: center;
+    color: #4888ba;
+    margin-bottom: 10px;
+}
 .row-table {
     display: flex;
     justify-content: flex-start;
 }
+.second-screen .row-table {
+    border-top: 2px solid #000;
+    padding-bottom: 0;
+}
+.second-screen .row-table:first-of-type {
+    border-top: none;
+}
+
+.lendings__box {
+    display: flex;
+    align-items: center;
+    padding: 10px 0px;
+    border-top: 1px solid #D1D1D1;
+}
+.settings-title {
+    font-size: 24px;
+    margin: 0 20px;
+}
 
 
+.btn-addlend {
+    display: block;
+    background: #F3F3F3;
+    border-radius: 4px;
+    border: 1px solid #D1D1D1;
+    margin: 0 15px;
+    transition: all 0.2s linear;
+    cursor: pointer;
+}
+.btn-addlend:hover {
+    background: #D1D1D1;
+    box-shadow: 0 0 3px rgba(0,0,0,0.3);
+}
+.btn-setting {
+    display: block;
+    background: #E0E0E0;
+    border-radius: 4px;
+    border: 1px solid #D1D1D1;
+    transition: all 0.2s linear;
+    cursor: pointer;
+}
+.btn-setting:hover {
+    background: #F3F3F3;
+    box-shadow: 0 0 3px rgba(0,0,0,0.3);
+}
+.lendings__box-settings {
+    margin-left: 150px;
+}
+.btn-hide-lp {
+    margin: 0;
+    margin-left: 10px;
+    padding: 0 10px;
+    display: none;
+}
+
+
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 20px;
+    margin: 0;
+    margin-right: 10px;
+}
+
+.switch input {display:none;}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+.percent {
+/*     color: #7EB077; */
+    font-weight: 500;
+    display: block;
+    width: 40px;
+    text-align: right;
+    margin-right: 10px;
+}
+input:checked + .slider {
+  background-color: #7EB077
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #7EB077
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(10px);
+  -ms-transform: translateX(10px);
+  transform: translateX(10px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 20px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
 
 
 
