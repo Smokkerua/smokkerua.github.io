@@ -63,10 +63,11 @@ p, a, h1, h2, h3, h4, h5, h6 {
     padding-right: 35px;
 }
 .input-first {
-    min-width: 400px;
+    min-width: 300px;
+    width: auto;
 }
 .input-second {
-    min-width: 300px;
+    min-width: 200px;
 }
 .list-icon {
    position: absolute;
@@ -90,7 +91,9 @@ input, input:active, input:focus {
     align-items: center;
 }
 
-
+.low-opaciti {
+    opacity: 0.5;
+}
 .btn-flow {
     background: #7EB077;
     border: none;
@@ -356,7 +359,6 @@ input:checked + .slider:before {
 .slider.round:before {
   border-radius: 50%;
 }
-
 
 
 

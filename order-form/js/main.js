@@ -1,12 +1,37 @@
-    $(document).ready(function(){
+$(document).ready(function(){
         
    /*     $('tr').click(function(){
             $('tr').removeClass();
             $(this).addClass('selected');
         });*/
         $('.circle').click(function(){
+            
+            
+            var parents = document.querySelectorAll('.row-table');
+                for (var i = 0, parent; parent = parents[i]; i++)
+                parent.onclick = function(e) {
+                  $(this).toggleClass('low-opaciti');
+                };
+            
             $(this).toggleClass('active-circle');
+            
         });
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
         
         $('.btn-burger').click(function(){
             if(this.classList.contains('burger-icon')){
@@ -38,9 +63,7 @@
             } 
 
         });
-
-        
-        
+ 
          $(function () {
         $('.switch-btn').click(function () {
             $(this).toggleClass('switch-on');
@@ -57,5 +80,16 @@
             
         });
     });
+        
+        
+        function resizeInput() {
+    $(this).attr('size', $(this).val().length);
+}
 
-    });
+$('input[type="text"]')
+    // event handler
+    .keyup(resizeInput)
+    // resize on page load
+    .each(resizeInput);
+
+});
