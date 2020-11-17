@@ -215,7 +215,7 @@ input, input:active, input:focus {
 }
 
 .second-screen .col-main {
-    min-width: auto;
+    min-width: 130px;
     width: auto;
     display: flex;
     align-items: center;
@@ -281,7 +281,7 @@ input, input:active, input:focus {
     box-shadow: 0 0 3px rgba(0,0,0,0.3);
 }
 .lendings__box-settings {
-    margin-left: 150px;
+    margin-left: 130px;
 }
 .btn-hide-lp {
     margin: 0;
