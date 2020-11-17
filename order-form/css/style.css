@@ -1,7 +1,7 @@
 body {
     background: #FAFAFA;
     padding: 30px 40px;
-    font-size: 16px;
+    font-size: 15px;
     color: #000;
 }
 p, a, h1, h2, h3, h4, h5, h6 {
@@ -157,20 +157,19 @@ input, input:active, input:focus {
     display: none!important;
 }
 .row-table {
-    padding: .75rem 10px;
+    padding: .7rem 10px;
     vertical-align: top;
     border-top: 1px solid #dee2e6;
     
 }
 .row-table:hover {
-    color: #212529;
-    background-color: rgba(0,0,0,.075);
+    background-color: #F3FBF6;
 }
 .col-main {
     min-width: calc(100% - 270px);
     position: relative;
     padding: 0 15px;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 500;
 }
 .settings {
@@ -211,6 +210,10 @@ input, input:active, input:focus {
     display: flex;
     margin-bottom: 10px;
 }
+.second-screen .lendings__box .settings {
+    margin-bottom: 0px;
+}
+
 .second-screen .col-main {
     min-width: auto;
     width: auto;
@@ -234,12 +237,21 @@ input, input:active, input:focus {
 .lendings__box {
     display: flex;
     align-items: center;
-    padding: 10px 0px;
+    padding: 8px 0px;
     border-top: 1px solid #D1D1D1;
 }
 .settings-title {
-    font-size: 24px;
-    margin: 0 20px;
+    font-size: 20px;
+    margin: 0 15px;
+}
+.second-screen .row-table:hover {
+    color: #000;
+    background-color: #fff;
+}
+.lendings__box {
+}
+.second-screen .lendings__box:hover {
+    background-color: #F3FBF6
 }
 
 
