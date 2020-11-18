@@ -359,19 +359,95 @@ input:checked + .slider:before {
 .slider.round:before {
   border-radius: 50%;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
+.date-select {
+    padding: 0 10px;
+    margin-left: 10px;
+    outline: none;
+}
+.date-select:active, .date-select:focus {
+    outline: none;
+}
+.statistics__container {
+    display: none;
+    background: #FAFAFA;
+    padding: 5px 10px;
+    padding-right: 0;
+    justify-content: space-between;
+}
+.col-statistics {
+    display: none;
+    margin-left: auto;
+}
+.statistics-screen .statistics__container, .statistics-screen .col-statistics{
+    display: flex;
+}
+.statistics-screen .col-main {
+    color: #4888ba;
+}
+.statistics-screen  .row-table {
+    padding: 0;
+    border-top: 3px solid #FAFAFA;
+}
+.statistics-screen .col-main {
+    min-width: auto;
+    display: block;
+    padding: 10px;
+    padding-left: 30px;
+}
+.statistics-title {
+    font-size: 20px;
+}
+.statistics-screen .circle {
+    left: 10px;
+}
+.metrika {
+    margin: 0;
+    display: flex;
+    align-items: flex-end;
+}
+.metrika-col {
+    width: 150px;
+    cursor: pointer;
+    border-right: 3px solid #FAFAFA;
+}
+.metrika-title {
+    background: #fff;
+    display: block;
+    padding: 5px;
+    text-align: center;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+.metrika-subtitle {
+    background: #fff;
+    display: block;
+    padding: 5px;
+    text-align: center;
+    margin: 1px;
+    font-weight: bold; 
+    color: #4888ba;
+}
+.input-third {
+    min-width: 135px;
+}
+.active-metrika .metrika-title{
+    border-top: 6px solid #679960;
+}
+.statistics__box {
+    display: block;
+    width: 150px;
+    color: #4888ba;
+    text-align: center;
+    border-right: 3px solid #FAFAFA;
+}
+.statistics__box p{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    color: #4888ba;
+}
 
 
 

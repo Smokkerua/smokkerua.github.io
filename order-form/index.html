@@ -26,7 +26,7 @@
                     <i class="fas fa-clipboard-list list-icon"></i>
                 </div>
                 <div class="col col-md-auto input-box">
-                    <input type="text" class="input-top" value="26208083">
+                    <input type="text" class="input-top input-third" value="26208083">
                     <i class="fas fa-clipboard-list list-icon"></i>
                 </div>
 
@@ -48,18 +48,34 @@
                
                <div class="col d-flex button-right">
                    <button type="button" class="btn-flow">Создать поток</button>
+                   
+                   <select class="btn-setting date-select">
+                        <option>Сегодня</option>
+                        <option>Вчера</option>
+                        <option>За неделю</option>
+                        <option>За месяц</option>
+                    </select>
+                   
                    <button type="button" class="btn-addlend btn-hide-lp">Скрыть неактивные LP</button>
+                   
                    <div class="d-flex">
+                      
                        <button type="button" class="btn btn-main btn-burger burger-icon">
                            <i class="fas fa-bars icon icon-burger show"></i>
                            <p class="icon icon-lp">LP</p>
                            <i class="fas fa-filter icon icon-filter"></i>
                         </button>
-<!--                        <button type="button" class="btn btn-main btn-check"><i class="fas fa-columns"></i></button> -->
-                       <button type="button" class="btn btn-main btn-check"><i class="fas fa-signal"></i></button>
-                       <button type="button" class="btn btn-main btn-check"><i class="fas fa-check-double"></i></button>
+                        
+                       <button type="button" class="btn btn-main btn-window hide"><i class="fas fa-columns"></i></button>
+                       
+                       <button type="button" class="btn btn-main btn-stat"><i class="fas fa-signal"></i></button>
+                       
+                       <button type="button" class="btn btn-main btn-dable"><i class="fas fa-check-double"></i></button>
+                       
                        <button type="button" class="btn btn-main btn-share"><i class="fas fa-code-branch"></i></button>
+                       
                    </div>
+                   
                </div>  <!-- /col d-flex button-right -->
 
            </div> <!-- /row button-group -->
@@ -70,7 +86,40 @@
     
     <main>
             
-        <div class="container-fluid main-table first-screen">
+        <div class="container-fluid main-table statistics-screen">
+           
+            <div class="row statistics__container">
+                
+                <h3 class="statistics-title">Статистика</h3>
+                
+                <div class="row metrika">
+                    <div class="metrika-col active-metrika">
+                        <p class="metrika-title">Метрика 1</p>
+                        <p class="metrika-subtitle">сумм1</p>
+                    </div>
+                    <div class="metrika-col">
+                        <p class="metrika-title">Метрика 2</p>
+                        <p class="metrika-subtitle">сумм2</p>
+                    </div>
+                    <div class="metrika-col">
+                        <p class="metrika-title">Метрика 3</p>
+                        <p class="metrika-subtitle">сумм3</p>
+                    </div>
+                    <div class="metrika-col">
+                        <p class="metrika-title">Уник</p>
+                        <p class="metrika-subtitle">сумм4</p>
+                    </div>
+                    <div class="metrika-col">
+                        <p class="metrika-title">Метрика 1</p>
+                        <p class="metrika-subtitle">сумм5</p>
+                    </div>
+                    <div class="metrika-col">
+                        <p class="metrika-title">Метрика 1</p>
+                        <p class="metrika-subtitle">сумм6</p>
+                    </div>
+                </div>
+                    
+            </div> <!-- /row statistics__container -->
             
             <div class="row row-table">
                 <div class="col-main"><span class="circle active-circle "></span> Модерация</div>
@@ -87,6 +136,29 @@
                 [S1]" {{age}}", "{{campaign_id}}" <span>или</span> Бот <span>или</span> IPv6 <span>или</span> [S2] "{{geo}}", "{{adset_id}}" <span>или</span> [S3] "{{gender}}", "{{ad_id}}" <span>или</span> [S4] "{fb_pixel}", "{{subid}}" <span>или</span> IP(+55) <span>или</span> Страны "Неизвестно", "Нидерланды", "Япония"
                 </div>
                 
+                <!--   4 экран - статистики   -->
+                
+                <div class="col-statistics">
+                    <div class="statistics__box">
+                        <p>0</p>
+                    </div>
+                    <div class="statistics__box">
+                        <p>0</p>
+                    </div>
+                    <div class="statistics__box">
+                        <p>0</p>
+                    </div>
+                    <div class="statistics__box">
+                        <p>0</p>
+                    </div>
+                    <div class="statistics__box">
+                        <p>0</p>
+                    </div>
+                    <div class="statistics__box">
+                        <p>0</p>
+                    </div>
+                </div>
+                  
             </div>
             
             <div class="row row-table">
@@ -180,6 +252,29 @@
                 <!--   3 экран    -->
                 <div class="col col-code">
                 Страны "Россия" <span>и</span> [S1] "26208083"
+                </div>
+                
+                <!--   4 экран - статистики   -->
+                
+                <div class="col-statistics">
+                    <div class="statistics__box">
+                        <p>3 785</p>
+                    </div>
+                    <div class="statistics__box">
+                        <p>3 785</p>
+                    </div>
+                    <div class="statistics__box">
+                        <p>3 785</p>
+                    </div>
+                    <div class="statistics__box">
+                        <p>3 785</p>
+                    </div>
+                    <div class="statistics__box">
+                        <p>3 785</p>
+                    </div>
+                    <div class="statistics__box">
+                        <p>3 785</p>
+                    </div>
                 </div>
                 
             </div> <!-- /row row-table -->
@@ -276,6 +371,29 @@
                 Страны "Казахстан" <span>и</span> [S1] "26208083"
                 </div>
                 
+                <!--   4 экран - статистики   -->
+                
+                <div class="col-statistics">
+                    <div class="statistics__box">
+                        <p>160</p>
+                    </div>
+                    <div class="statistics__box">
+                        <p>160</p>
+                    </div>
+                    <div class="statistics__box">
+                        <p>160</p>
+                    </div>
+                    <div class="statistics__box">
+                        <p>160</p>
+                    </div>
+                    <div class="statistics__box">
+                        <p>160</p>
+                    </div>
+                    <div class="statistics__box">
+                        <p>160</p>
+                    </div>
+                </div>
+                
             </div> <!-- /row row-table -->
             
             <div class="row row-table">
@@ -370,6 +488,29 @@
                 Страны "Украина" <span>и</span> [S1] "26208083"
                 </div>
                 
+                <!--   4 экран - статистики   -->
+                
+                <div class="col-statistics">
+                    <div class="statistics__box">
+                        <p>18</p>
+                    </div>
+                    <div class="statistics__box">
+                        <p>18</p>
+                    </div>
+                    <div class="statistics__box">
+                        <p>18</p>
+                    </div>
+                    <div class="statistics__box">
+                        <p>18</p>
+                    </div>
+                    <div class="statistics__box">
+                        <p>18</p>
+                    </div>
+                    <div class="statistics__box">
+                        <p>18</p>
+                    </div>
+                </div>
+                
             </div> <!-- /row row-table -->
             
             <div class="row row-table low-opaciti">
@@ -459,6 +600,29 @@
                       
                 </div>
                 
+                <!--   4 экран - статистики   -->
+                
+                <div class="col-statistics">
+                    <div class="statistics__box">
+                        <p>160</p>
+                    </div>
+                    <div class="statistics__box">
+                        <p>160</p>
+                    </div>
+                    <div class="statistics__box">
+                        <p>160</p>
+                    </div>
+                    <div class="statistics__box">
+                        <p>160</p>
+                    </div>
+                    <div class="statistics__box">
+                        <p>160</p>
+                    </div>
+                    <div class="statistics__box">
+                        <p>160</p>
+                    </div>
+                </div>
+                
             </div> <!-- /row row-table -->
             
             <div class="row row-table">
@@ -469,6 +633,29 @@
                 <!--   2 экран    -->
                 <div class="moderation">
                     <span>100% </span> Потенция Потенциалекс модерация
+                </div>
+                
+                <!--   4 экран - статистики   -->
+                
+                <div class="col-statistics">
+                    <div class="statistics__box">
+                        <p>18</p>
+                    </div>
+                    <div class="statistics__box">
+                        <p>18</p>
+                    </div>
+                    <div class="statistics__box">
+                        <p>18</p>
+                    </div>
+                    <div class="statistics__box">
+                        <p>18</p>
+                    </div>
+                    <div class="statistics__box">
+                        <p>18</p>
+                    </div>
+                    <div class="statistics__box">
+                        <p>18</p>
+                    </div>
                 </div>
                 
             </div> <!-- /row row-table -->
