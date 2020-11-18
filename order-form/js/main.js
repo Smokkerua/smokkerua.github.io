@@ -14,7 +14,7 @@ $(document).ready(function(){
                 this.classList.add('lp-icon');
                 $('.btn-hide-lp').addClass('show');
                 $('.icon-burger').removeClass('show');
-                $('.main-table').removeClass('statistics-screen');
+                $('.main-table').removeClass('statistick-first-on');
                 $('.icon-lp').addClass('show');  
                 $('.main-table').removeClass('first-screen'); 
                 $('.main-table').addClass('second-screen'); 
@@ -23,7 +23,7 @@ $(document).ready(function(){
                 this.classList.remove('lp-icon');
                 this.classList.add('filer-icon');
                 $('.btn-hide-lp').removeClass('show');
-                $('.main-table').removeClass('statistics-screen');
+                $('.main-table').removeClass('statistick-first-on');
                 $('.icon-filter').addClass('show');
                 $('.icon-lp').removeClass('show'); 
                 $('.main-table').removeClass('second-screen'); 
@@ -32,7 +32,7 @@ $(document).ready(function(){
             else if(this.classList.contains('filer-icon')){
                 this.classList.remove('filer-icon');
                 this.classList.add('burger-icon');
-                $('.main-table').removeClass('statistics-screen');
+                $('.main-table').removeClass('statistick-first-on');
                 $('.icon-burger').addClass('show');
                 $('.icon-filter').removeClass('show');
                 $('.main-table').removeClass('third-screen'); 
@@ -46,33 +46,33 @@ $(document).ready(function(){
         $('.btn-stat').click(function(){
             
             // проверка, если кнопка статистики включена
-            if($('.main-table').hasClass('statistics-screen')){
-                
-                // возвращаем инокнку первого экрана
-                $('.btn-burger').removeClass('lp-icon');
-                $('.btn-burger').removeClass('filer-icon');
-                $('.btn-burger').addClass('burger-icon');
-                $('.icon').removeClass('show');
-                $('.icon-burger').addClass('show');
-                
-                // прячем кнопку дет.статистики и возвращаем на первый экран
-                $('.main-table').removeClass('statistics-screen');
-                $('.btn-window').addClass('hide');
-                $('.date-select').addClass('hide');
-                $('.main-table').addClass('first-screen');
-  
-            } else {
-                
-                // выводим экран статистки и показываем кнопку дет. статистики
-                $('.main-table').removeClass('first-screen'); 
-                $('.main-table').removeClass('second-screen'); 
-                $('.main-table').removeClass('third-screen');
-                $('.main-table').addClass('statistics-screen');
-                $('.btn-window').removeClass('hide');
-                $('.date-select').removeClass('hide');
+            if($('.main-table').hasClass('first-screen')){
+                    
+            
+                if($('.main-table').hasClass('statistick-on')){
 
+                    // возвращаем инокнку первого экрана
+                    $('.btn-burger').removeClass('lp-icon');
+                    $('.btn-burger').removeClass('filer-icon');
+                    $('.btn-burger').addClass('burger-icon');
+                    $('.icon').removeClass('show');
+                    $('.icon-burger').addClass('show');
+
+                    // прячем кнопку дет.статистики и возвращаем на первый экран
+                    $('.main-table').removeClass('statistick-on');
+                    $('.btn-window').addClass('hide');
+                    $('.date-select').addClass('hide');
+                    $('.main-table').addClass('first-screen');
+
+                } else {
+
+                    // выводим экран статистки и показываем кнопку дет. статистики
+                    $('.main-table').addClass('statistick-on');
+                    $('.btn-window').removeClass('hide');
+                    $('.date-select').removeClass('hide');
+
+                }
             }
-
         });
     
     // вкл/выкл радио кнопка
