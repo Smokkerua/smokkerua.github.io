@@ -47,7 +47,7 @@
                </div> <!-- /col d-flex selected-group -->
                
                <div class="col d-flex button-right">
-                   <button type="button" class="btn-flow">Создать поток</button>
+                   <button type="button" class="btn-flow open-modal" data-modal="#modal1">Создать поток</button>
                    
                    <select class="btn-setting date-select hide">
                         <option>Сегодня</option>
@@ -657,6 +657,187 @@
         </div> <!-- /container-fluid main-table -->
          
     </main>
+    
+
+    <div class='modal' id='modal1'>
+        <div class='content'>
+            
+            <div class="content__topline">
+                <h3 class="content__topline-title">Создание потока</h3>
+                <h3 class="content__topline-title">Тематика ХХХ</h3>
+                <a class='btn-close close-modal' data-modal="#modal1" href="#"><i class="fas fa-times"></i></a>
+            </div>
+            
+            <div class="content__mainline mainline">
+                
+                <div class="mainline__settings">
+                    <h4 class="mainline__settings-title">Настройки</h4>
+                </div>
+                <div class="mainline__name">
+                    <h4 class="mainline-title">Название</h4>
+                    <div class="block__flags">
+                        <div class="flag flag-active">
+                            <img src="./img/flags/russia.webp" alt="">
+                        </div>
+                        <div class="flag">
+                            <img src="./img/flags/kazakhstan.jpg" alt="">
+                        </div>
+                        <div class="flag">
+                            <img src="./img/flags/belarus.jpg" alt="">
+                        </div>
+                        <div class="flag">
+                            <img src="./img/flags/Ukraine.webp" alt="">
+                        </div>
+                        <div class="flag">
+                            <img src="./img/flags/evro.jpg" alt="">
+                        </div>
+                        <div class="flag">
+                            <img src="./img/flags/usa.jpg" alt="">
+                        </div>
+                        <div class="flag">
+                            <img src="./img/flags/izrail.png" alt="">
+                        </div>
+                        Прочее
+                    </div>
+                </div>
+                <div class="mainline__type">
+                    <h4 class="mainline-title">Тип потока</h4>
+                    <div class="block__type">
+                        <div class="typed typed-active">
+                            <p>Боевой</p>
+                        </div>
+                        <div class="typed">
+                            <p>Модерация</p>
+                        </div>
+                        <div class="typed">
+                            <p>Бет меток</p>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="mainline__position d-flex">
+                    <h4 class="mainline-title">Позиция</h4>
+                    <input type="number" class="pyat" id="pyat" value="6">
+                    
+                </div>
+                
+                <div class="mainline__lengings">
+                    <h4 class="mainline-title">Лендинги</h4>
+                    
+                    <div class="mainline__lengings-lends">
+                    
+                       
+                        <div class="top__box">
+                            <p class="top__box-summ">в сумме 221%</p>
+                            <button class="btn-equalize">Уравнять</button>
+                            <button type="button" class="btn btn-addlend">Добавить лендинги</button>
+                        </div>
+                        
+                        <div class="lendings__box" style="border-top: none;">
+                            <label class="switch">
+                              <input type="checkbox" checked>
+                              <span class="slider round"></span>
+                            </label>
+                            <p class="percent">100%</p>
+                            <p class="lendings__box-name">Суставы Здоров Artraid модерация <span class='btn-delet'><i class="fas fa-times"></i></span></p>
+                        </div> <!-- /lendings__box  -->
+
+                        <div class="lendings__box">
+                            <label class="switch">
+                              <input type="checkbox">
+                              <span class="slider round"></span>
+                            </label>
+                            <p class="percent">0%</p>
+                            <p class="lendings__box-name">Choco-burn-kma-malisheva  <span class='btn-delet'><i class="fas fa-times"></i></span></p>
+                        </div> <!-- /lendings__box  -->
+
+                        <div class="lendings__box">
+                            <label class="switch">
+                              <input type="checkbox">
+                              <span class="slider round"></span>
+                            </label>
+                            <p class="percent">0%</p>
+                            <p class="lendings__box-name">Потенция-Apollon-модерация-files <span class='btn-delet'><i class="fas fa-times"></i></span></p>  
+                        </div> <!-- /lendings__box  -->
+
+                        <div class="lendings__box">
+                            <label class="switch">
+                              <input type="checkbox">
+                              <span class="slider round"></span>
+                            </label>
+                            <p class="percent">0%</p>
+                            <p class="lendings__box-name">Суставы-попап-ооо-теск <span class='btn-delet'><i class="fas fa-times"></i></span></p>
+                        </div> <!-- /lendings__box  -->
+
+                        <div class="lendings__box">
+                            <label class="switch">
+                              <input type="checkbox">
+                              <span class="slider round"></span>
+                            </label>
+                            <p class="percent">0%</p>
+                            <p class="lendings__box-name">Папилон-LS-institut <span class='btn-delet'><i class="fas fa-times"></i></span></p>
+                        </div> <!-- /lendings__box  -->
+
+                        <div class="lendings__box">
+                            <label class="switch">
+                              <input type="checkbox">
+                              <span class="slider round"></span>
+                            </label>
+                            <p class="percent">0%</p>
+                            <p class="lendings__box-name">Антивер-Гетаклиник-v42 <span class='btn-delet'><i class="fas fa-times"></i></span></p> 
+                        </div> <!-- /lendings__box  -->
+     
+                    </div>
+                </div>
+                
+                <div class="mainline__offers">
+                    <h4 class="mainline-title">Офферы</h4>
+                    
+                    <div class="mainline__lengings-lends">
+                    
+                        <div class="top__box">
+                            <p class="top__box-summ">в сумме 221%</p>
+                            <button class="btn-equalize">Уравнять</button>
+                            <button type="button" class="btn btn-setting">Добавить офферы</button>
+                        </div>
+                       
+                        <div class="lendings__box">
+                            <label class="switch">
+                              <input type="checkbox" checked>
+                              <span class="slider round"></span>
+                            </label>
+                            <p class="percent">100%</p>
+                            <p class="lendings__box-name">Суставы-everad-Артропант-lp-1 <span class='btn-delet'><i class="fas fa-times"></i></span></p>
+                        </div> <!-- /lendings__box  -->
+
+                        <div class="lendings__box">
+                            <label class="switch">
+                              <input type="checkbox">
+                              <span class="slider round"></span>
+                            </label>
+                            <p class="percent">0%</p>
+                            <p class="lendings__box-name">Курение-Smoke-Out-РБ-lp-1 <span class='btn-delet'><i class="fas fa-times"></i></span></p>
+                        </div> <!-- /lendings__box  -->
+
+                    </div>
+                    
+                </div>
+                
+                
+                
+                
+                
+                
+                
+            </div>
+            
+            <div class="content__bottomline">
+                <a class='btn-bottom close-modal btn-censel' data-modal="#modal1" href="#">Отмена</a>
+                <a class='btn-bottom close-modal btn-send' data-modal="#modal1" href="#">Применить</a>
+            </div>
+
+        </div>	 
+    </div> <!-- /modal -->
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
