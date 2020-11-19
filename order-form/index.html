@@ -1373,16 +1373,16 @@
                     <h4 class="mainline-title">Название</h4>
                     <div class="block__flags">
                         <div class="flag flag-active">
-                            <img src="./img/flags/russia.webp" alt="">
+                            <img src="./img/flags/Russia.png" alt="">
                         </div>
                         <div class="flag">
                             <img src="./img/flags/kazakhstan.jpg" alt="">
                         </div>
                         <div class="flag">
-                            <img src="./img/flags/belarus.jpg" alt="">
+                            <img src="./img/flags/belarus.png" alt="">
                         </div>
                         <div class="flag">
-                            <img src="./img/flags/Ukraine.webp" alt="">
+                            <img src="./img/flags/ukraine.jpg" alt="">
                         </div>
                         <div class="flag">
                             <img src="./img/flags/evro.jpg" alt="">
@@ -1525,12 +1525,76 @@
             
             <div class="content__bottomline">
                 <a class='btn-bottom close-modal btn-censel' data-modal="#modal1" href="#">Отмена</a>
-                <a class='btn-bottom close-modal btn-send' data-modal="#modal1" href="#">Применить</a>
+                <a class='btn-bottom open-new-modal btn-send' data-modal="#modal1" data-modall="#modal2" href="#">Применить</a>
             </div> <!-- /content__bottomline  -->
 
         </div> <!-- /content -->
         	 
     </div> <!-- /modal -->
+
+<!--     style="display: block; opacity: 1;"-->
+    <div class='modal modal-offer' id='modal2'>
+       
+        <div class='content'>
+            <div class="content__topline">
+                <h3 class="content__topline-title">Выберите оффер</h3>
+                <a class='btn-close close-modal' data-modal="#modal2" href="#"><i class="fas fa-times"></i></a>
+            </div> <!-- /content__topline  -->
+            
+            <div class="selected__container">
+                
+                <div class="selected__box">        
+               
+                   <div class="select">
+                        <input class="select__input" type="hidden" name="">
+                        <div class="select__head">Выбрать ПП</div>
+                        <ul class="select__list" style="display: none;">
+                            <li class="select__item">Luckyshop</li>
+                            <li class="select__item">Luckyshop-EU</li>
+                            <li class="select__item">Luckyshop-UA</li>
+                            <li class="select__item">Cpagetti</li>
+                            <li class="select__item">Беларусь</li>
+                            <li class="select__item">Топ-Беларусь</li>
+                            <li class="select__item">Amazon</li>
+                            <li class="select__item">Ebay</li>
+                        </ul>
+                    </div>
+                    
+                </div> <!-- /selected__box -->
+                
+                <div class="selected__box">
+
+                    <div class="select">
+                        <input class="select__input" type="hidden" name="">
+                        <div class="select__head">Выбрать оффер</div>
+                        <ul class="select__list" style="display: none;">
+                            <li class="select__item">Артрофорс</li>
+                            <li class="select__item">Крем Невесты</li>
+                            <li class="select__item">Алитабс</li>
+                            <li class="select__item">Клинистил</li>
+                            <li class="select__item">КетоДиета</li>
+                            <li class="select__item">Уринастоп</li>
+                            <li class="select__item">Дианулин</li>
+                            <li class="select__item">Модерация</li>
+                            <li class="select__item">Амулет</li>
+                            <li class="select__item">Алкозерокс</li>
+                            <li class="select__item">Окунорм</li>
+                            <li class="select__item">Никостоп</li>
+                            <li class="select__item">Потенциалекс</li>
+                            <li class="select__item">Псорисил</li>
+                            <li class="select__item">Ортофикс</li>
+                            <li class="select__item">КетоДиета</li>
+                        </ul>
+                    </div>
+                    
+                </div>  <!-- /selected__box -->
+                
+            </div>   <!-- /selected__container -->
+            
+        </div> <!-- /content -->
+        	 
+    </div> <!-- /modal -->
+    
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>

@@ -28,6 +28,7 @@ $(document).ready(function(){
                 $('.icon-lp').addClass('show');  
                 $('.main-table').removeClass('first-screen'); 
                 $('.main-table').addClass('second-screen'); 
+                $('.date-select').addClass('hide');
             }
             else if(this.classList.contains('lp-icon')){
                 this.classList.remove('lp-icon');
@@ -38,6 +39,7 @@ $(document).ready(function(){
                 $('.icon-lp').removeClass('show'); 
                 $('.main-table').removeClass('second-screen'); 
                 $('.main-table').addClass('third-screen'); 
+                $('.date-select').addClass('hide');
             }
             else if(this.classList.contains('filer-icon')){
                 this.classList.remove('filer-icon');
@@ -47,7 +49,7 @@ $(document).ready(function(){
                 $('.icon-filter').removeClass('show');
                 $('.main-table').removeClass('third-screen'); 
                 $('.main-table').addClass('first-screen'); 
-
+                $('.date-select').addClass('hide');
             } 
 
         });
@@ -190,4 +192,74 @@ $(document).ready(function(){
 
     });
     
+    $(".open-new-modal").on('click', function(e){
+        e.preventDefault();
+        e.stopImmediatePropagation;
+
+        var $this = $(this),
+                modal = $($this).data("modal");
+        
+        $(modal).removeClass("open");
+
+        $(modal).parents(".overlay").removeClass("open");
+        
+        var $this = $(this),
+                modal = $($this).data("modall");
+
+        $(modal).parents(".overlay").addClass("open");
+        setTimeout( function(){
+            $(modal).addClass("open");
+        }, 350);
+
+
+
+
+    });
+    
+    
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+jQuery(($) => {
+    $('.select').on('click', '.select__head', function () {
+        if ($(this).hasClass('open')) {
+            $(this).removeClass('open');
+            $(this).next().fadeOut();
+        } else {
+            $('.select__head').removeClass('open');
+            $('.select__list').fadeOut();
+            $(this).addClass('open');
+            $(this).next().fadeIn();
+        }
+    });
+
+    $('.select').on('click', '.select__item', function () {
+        $('.select__head').removeClass('open');
+        $(this).parent().fadeOut();
+        $(this).parent().prev().text($(this).text());
+        $(this).parent().prev().prev().val($(this).text());
+    });
+
+    $(document).click(function (e) {
+        if (!$(e.target).closest('.select').length) {
+            $('.select__head').removeClass('open');
+            $('.select__list').fadeOut();
+        }
+    });
 });

@@ -5,4 +5,7 @@
     .statistics__box {
         width: 110px;
     }
+    .btn-hide-lp {
+        min-width: 180px;
+    }
 }
