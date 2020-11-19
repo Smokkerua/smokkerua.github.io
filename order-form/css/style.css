@@ -580,7 +580,7 @@ input:checked + .slider:before {
     text-align: center;
     opacity: 0;
     transition: 0.35s ease-in-out;
-/*    max-height: 100vh;*/
+    max-height: 100vh;
     overflow-y: auto;
     width: 800px;
     height: auto;
