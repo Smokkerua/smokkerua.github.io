@@ -45,15 +45,15 @@ $(document).ready(function(){
         $(".offer-popap").click(function(){
             $("#modal2").addClass("modal-offer");
             $("#modal2").removeClass("modal-lendind");
+            $("#modal2").removeClass("open");
+            $("#modal2").parents(".overlay").removeClass("open");
+            $("#modal1").addClass("open");
+            $("#modal1").parents(".overlay").addClass("open");
           });
     
     
         // закрыть попап - оффер при выборе эллемента во 2-м списке
         $(".item-offer").click(function(){
-            $("#modal2").removeClass("open");
-            $("#modal2").parents(".overlay").removeClass("open");
-            $("#modal1").addClass("open");
-            $("#modal1").parents(".overlay").addClass("open");
             $("#modal2").removeClass("modal-offer");
             $("#modal2").addClass("modal-lendind");
           });
