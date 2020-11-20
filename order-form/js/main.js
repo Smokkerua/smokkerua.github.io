@@ -25,24 +25,31 @@ $(document).ready(function(){
           });
     
           $(".sm-menu-link").click(function(){
+            $("#modal2").removeClass("open");
+            $("#modal2").parents(".overlay").removeClass("open");
+            $("#modal1").addClass("open");
+            $("#modal1").parents(".overlay").addClass("open");
+          });
+    
+        $(".item-pp").click(function(){
+            $("#two").removeClass("select__head-off");
+          });
+    
+        $(".offer-popap").click(function(){
             $("#modal2").addClass("modal-offer");
             $("#modal2").removeClass("modal-lendind");
           });
     
-        $(".item-pp").click(function(){
-             $("#two").removeClass("select__head-off");
-          });
     
         $(".item-offer").click(function(){
-            $("#modal2").removeClass("modal-offer");
-            $("#modal2").addClass("modal-lendind");
 
             $("#modal2").removeClass("open");
             $("#modal2").parents(".overlay").removeClass("open");
-            
             $("#modal1").addClass("open");
             $("#modal1").parents(".overlay").addClass("open");
             
+            $("#modal2").removeClass("modal-offer");
+            $("#modal2").addClass("modal-lendind");
           });
 
 
