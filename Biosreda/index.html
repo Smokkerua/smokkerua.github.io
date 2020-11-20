@@ -1,0 +1,898 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>КардиНЕО</title>
+    <!--[if lt IE 9]>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.8/es5-shim.min.js"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="build/css/timeTo.css">
+    <link rel="stylesheet" href="build/css/slick.css">
+    <link rel="stylesheet" href="build/css/slick-theme.css">
+    <link rel="stylesheet" href="build/css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <script src="../counter.js"></script>
+    <div class="info">
+        <div class="info__body">
+            <div class="info__logo">
+                <h1>Карди<span>НЕО</span></h1>
+            </div>
+            <div class="info__title">
+                <h2>Бесперебойная работа вашего сердца</h2>
+            </div>
+            <div class="info__content">
+                <div class="info__left">
+                    <div class="info__prefer">
+                        <ul>
+                            <li>
+                                <span>КАРДИ</span>нальная победа над гипертонией
+                            </li>
+                            <li>
+                                <span>НЕО</span>быкновенная защита ваших сосудов
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="info__action">
+                        <p>*При заказе КардиНЕО до <script type="text/javascript">
+                                var appendNull = function(num) {
+                                    return num < 10 ? 0 + num.toString() : num;
+                                };
+                                d = new Date();
+                                p = new Date(d.getTime() - 0 * 86400000);
+                                monthb = '01,02,03,04,05,06,07,08,09,10,11,12'.split(',');
+                                document.write(appendNull(p.getDate()) + '.' + monthb[p.getMonth()] + '.' + p.getFullYear());
+
+                            </script> — уникальный Дневник здоровья <span>В ПОДАРОК!</span></p>
+                    </div>
+                </div>
+                <div class="info__right">
+                    <div class="info__present">
+                        <p>ПОДАРОК!*</p>
+                    </div>
+                    <div class="info__pack dec">
+                        <img src="build/images/info-pack.png" alt="" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="popup show-popap">
+        <div class="popup__price">
+            <p>Специальная цена<span><span class="new_price_val">149</span> <span class="new_price_cur">руб</span></span></p>
+        </div>
+        <div class="popup__form">
+            <form class="landing__form">
+
+                <input name="name" placeholder="Введите Имя" type="text">
+                <input name="phone" placeholder="Введите Телефон" type="tel">
+                <button type="submit">Заказать</button>
+            </form>
+        </div>
+    </div>
+    <div class="problem">
+        <div class="problem__body">
+            <div class="problem__formula">
+                <p>Инновационная формула тройного действия <span>КардиНЕО</span></p>
+            </div>
+            <div class="problem__title">
+                <h2>Риск поражения сосудов и сердца В 10 РАЗ ВЫШЕ:</h2>
+            </div>
+            <div class="problem__list dec">
+                <ul>
+                    <li>
+                        <div class="problem__img">
+                            <img src="build/images/problem-img1.png" alt="" />
+                        </div>
+                        <div class="problem__desc">
+                            <p>Мужчины в возрасте 35-50 лет<br />
+                                Женщины в возрасте 45-65 лет</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="problem__img">
+                            <img src="build/images/problem-img2.png" alt="" />
+                        </div>
+                        <div class="problem__desc">
+                            <p>Сахарный диабет, ожирение и избыток холестерина</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="problem__img">
+                            <img src="build/images/problem-img3.png" alt="" />
+                        </div>
+                        <div class="problem__desc">
+                            <p>Курение и употребление алкоголя</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="problem__img">
+                            <img src="build/images/problem-img4.png" alt="" />
+                        </div>
+                        <div class="problem__desc">
+                            <p>Наследственные факторы</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="problem__img">
+                            <img src="build/images/problem-img5.png" alt="" />
+                        </div>
+                        <div class="problem__desc">
+                            <p>Стрессы и гиподинамия</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="problem__slider mob">
+                <section class="regular">
+                    <div>
+                        <div class="problem__img">
+                            <img src="build/images/problem-img1.png" alt="" />
+                        </div>
+                        <div class="problem__desc">
+                            <p>Мужчины в возрасте 35-50 лет<br />
+                                Женщины в возрасте 45-65 лет</p>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="problem__img">
+                            <img src="build/images/problem-img2.png" alt="" />
+                        </div>
+                        <div class="problem__desc">
+                            <p>Сахарный диабет, ожирение и избыток холестерина</p>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="problem__img">
+                            <img src="build/images/problem-img3.png" alt="" />
+                        </div>
+                        <div class="problem__desc">
+                            <p>Курение и употребление алкоголя</p>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="problem__img">
+                            <img src="build/images/problem-img4.png" alt="" />
+                        </div>
+                        <div class="problem__desc">
+                            <p>Наследственные факторы</p>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="problem__img">
+                            <img src="build/images/problem-img5.png" alt="" />
+                        </div>
+                        <div class="problem__desc">
+                            <p>Стрессы и гиподинамия</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+    <div class="weak">
+        <div class="symptom">
+            <div class="symptom__title">
+                <h2>Симптомы и признаки гипертонии</h2>
+            </div>
+            <div class="symptom__content">
+                <div class="symptom__list">
+                    <ul>
+                        <li>
+                            Систематические головные боли
+                        </li>
+                        <li>
+                            Тошнота и головокружение
+                        </li>
+                        <li>
+                            Скачки артериального давления
+                        </li>
+                        <li>
+                            Шум в ушах и нарушение памяти
+                        </li>
+                        <li>
+                            Раздражительность и вялость
+                        </li>
+                        <li>
+                            Повышенное потоотделение
+                        </li>
+                        <li>
+                            Отеки по утрам
+                        </li>
+                    </ul>
+                </div>
+                <div class="symptom__info">
+                    <div class="symptom__img">
+                        <img src="build/images/symptom-img.png" alt="" />
+                    </div>
+                    <div class="symptom__atten">
+                        <p>Бессимптомное течение болезни не говорит о том,
+                            что вы в безопасности! Организм лишь пытается
+                            заглушить очаги поражения.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="wrong">
+            <div class="wrong__title">
+                <h2>Неправильное лечение неизбежно приводит к этим последствиям</h2>
+            </div>
+            <div class="wrong__content">
+                <div class="wrong__list">
+                    <ul>
+                        <li>
+                            Инфаркт и инсульт
+                        </li>
+                        <li>
+                            Гипертонический криз
+                        </li>
+                        <li>
+                            Ишемическая болезнь сердца
+                        </li>
+                        <li>
+                            Эректильная дисфункция
+                        </li>
+                        <li>
+                            Поражение коры головного мозга
+                        </li>
+                    </ul>
+                </div>
+                <div class="wrong__info">
+                    <div class="wrong__img">
+                        <img src="build/images/wrong-img.png" alt="" />
+                    </div>
+                    <div class="wrong__atten">
+                        <p>Сбивать давление может быть очень опасно! Также
+                            не пытайтесь перенести заболевание «на ногах»
+                            или заниматься самолечением.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="order">
+        <div class="order__body">
+            <div class="order__title">
+                <h2>КардиНЕО нормализует артериальное давление
+                    и надежно защищает ваше сердце от перегрузок</h2>
+            </div>
+            <div class="order__content">
+                <div class="order__prefer">
+                    <ul>
+                        <li>
+                            ЛЕГКО ЗАКАЗАТЬ
+                        </li>
+                        <li>
+                            БЕЗОПАСНО ПРИМЕНЯТЬ
+                        </li>
+                    </ul>
+                </div>
+                <div class="order__pack">
+                    <img src="build/images/order-pack.png" alt="" />
+                </div>
+                <div class="order__info">
+                    <div class="order__price">
+                        <p><span class="new_price_val">149</span> <span class="new_price_cur">pуб</span></p>
+                    </div>
+                    <div class="order__note">
+                        <p>*Регулярное курсовое применение обеспечит максимальный эффект при лечении гипертонии</p>
+                    </div>
+                </div>
+            </div>
+        <div class="popup show-popap mt-pop">
+                <div class="popup__price">
+                    <p>Специальная цена<span><span class="new_price_val">149</span> <span class="new_price_cur">руб</span></span></p>
+                </div>
+                <div class="popup__form">
+                    <form class="landing__form">
+
+                        <input name="name" placeholder="Введите Имя" type="text">
+                        <input name="phone" placeholder="Введите Телефон" type="tel">
+                        <button type="submit">Заказать</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="about">
+        <div class="about__body">
+            <div class="about__prefer">
+                <div class="about__prefer-title">
+                    <h2><span>ГИПЕРТОНИЯ</span> — это не «бумажная» статистика, а 450 000 реальных смертей в год!</h2>
+                </div>
+                <div class="about__prefer-list">
+                    <ul>
+                        <li>
+                            <p>Укрепление сосудов</p>
+                        </li>
+                        <li>
+                            <p>Нормализация давления</p>
+                        </li>
+                        <li>
+                            <p>Активация кислородоснабжения</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="about__consist">
+                <div class="about__consist-pack dec">
+                    <img src="build/images/about-pack.png" alt="" />
+                </div>
+                <div class="about__consist-list dec">
+                    <ul>
+                        <li>
+                            <div class="about__consist-img">
+                                <img src="build/images/about-consist1.png" alt="" />
+                            </div>
+                            <div class="about__consist-desc">
+                                <p>Экстракт листьев оливы</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="about__consist-img">
+                                <img src="build/images/about-consist2.png" alt="" />
+                            </div>
+                            <div class="about__consist-desc">
+                                <p>Порошок жемчуга</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="about__consist-img">
+                                <img src="build/images/about-consist3.png" alt="" />
+                            </div>
+                            <div class="about__consist-desc">
+                                <p>Красный дрожжевой рис</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="about__consist-img">
+                                <img src="build/images/about-consist4.png" alt="" />
+                            </div>
+                            <div class="about__consist-desc">
+                                <p>Экстракт томатов</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="about__consist-img">
+                                <img src="build/images/about-consist5.png" alt="" />
+                            </div>
+                            <div class="about__consist-desc">
+                                <p>Коэнзим Q10</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="about__consist-slider mob">
+                    <section class="regular">
+                        <div>
+                            <div class="about__consist-img">
+                                <img src="build/images/about-consist1.png" alt="" />
+                            </div>
+                            <div class="about__consist-desc">
+                                <p>Экстракт листьев оливы</p>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="about__consist-img">
+                                <img src="build/images/about-consist2.png" alt="" />
+                            </div>
+                            <div class="about__consist-desc">
+                                <p>Порошок жемчуга</p>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="about__consist-img">
+                                <img src="build/images/about-consist3.png" alt="" />
+                            </div>
+                            <div class="about__consist-desc">
+                                <p>Красный дрожжевой рис</p>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="about__consist-img">
+                                <img src="build/images/about-consist4.png" alt="" />
+                            </div>
+                            <div class="about__consist-desc">
+                                <p>Экстракт томатов</p>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="about__consist-img">
+                                <img src="build/images/about-consist5.png" alt="" />
+                            </div>
+                            <div class="about__consist-desc">
+                                <p>Коэнзим Q10</p>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+            <div class="about__arr">
+                <img src="build/images/about-arr.png" class="dec" alt="" />
+                <img src="build/images/mob/consist-arr.png" class="mob" alt="" />
+            </div>
+            <div class="about__use dec">
+                <ul>
+                    <li>
+                        <div class="about__use-day">
+                            <p>1-3 день применения</p>
+                        </div>
+                        <div class="about__use-rezult">
+                            <p>Снятие головных болей, головокружения, тошноты</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="about__use-day">
+                            <p>5-7 день применения</p>
+                        </div>
+                        <div class="about__use-rezult">
+                            <p> Выведение токсинов, очищение сосудов от холестериновых бляшек</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="about__use-day">
+                            <p>12-15 день применения</p>
+                        </div>
+                        <div class="about__use-rezult">
+                            <p>Насыщение крови кислородом, восстановление естественных сердечных ритмов</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="about__use-day">
+                            <p>29-35 день применения</p>
+                        </div>
+                        <div class="about__use-rezult">
+                            <p>Приведение артериального давления в норму, закрепление результата</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="about__use-slider mob">
+                <section class="regular">
+                    <div>
+                        <div class="about__use-day">
+                            <p>1-3 день применения</p>
+                        </div>
+                        <div class="about__use-rezult">
+                            <p>Снятие головных болей, головокружения, тошноты</p>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="about__use-day">
+                            <p>5-7 день применения</p>
+                        </div>
+                        <div class="about__use-rezult">
+                            <p> Выведение токсинов, очищение сосудов от холестериновых бляшек</p>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="about__use-day">
+                            <p>12-15 день применения</p>
+                        </div>
+                        <div class="about__use-rezult">
+                            <p>Насыщение крови кислородом, восстановление естественных сердечных ритмов</p>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="about__use-day">
+                            <p>29-35 день применения</p>
+                        </div>
+                        <div class="about__use-rezult">
+                            <p>Приведение артериального давления в норму, закрепление результата</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+    <div class="feed">
+        <div class="feed__body">
+            <div class="feed__title">
+                <h2>КардиНЕО — выбор врачей и пациентов</h2>
+            </div>
+            <div class="feed__list dec">
+                <ul>
+                    <li>
+                        <div class="feed__img">
+                            <img src="build/images/feed-img1.png" alt="" />
+                        </div>
+                        <div class="feed__info">
+                            <div class="feed__name">
+                                <p>Андрей Игнатов, Врач-кардиолог, стаж 16 лет</p>
+                            </div>
+                            <div class="feed__desc">
+                                <p>За годы моей практики я видел сколь серьезными могут
+                                    быть последствия гипертонии, которую стараются не
+                                    замечать. Больший вред приносит только лечение
+                                    аптечными таблетками-пустышками.</p>
+                                ﻿<p>На сегодняшний день <span>КардиНЕО</span> единственный препарат,
+                                    гарантированно избавляющий от проблем с сосудами и
+                                    нормализующий артериальное давление в считанные недели
+                                    и даже дни. Я настоятельно рекомендую его всем свои
+                                    пациентам. Не экономьте на своем здоровье!</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="feed__info">
+                            <div class="feed__name">
+                                <p>Софья Потапенко, пенсионерка, 63 года</p>
+                            </div>
+                            <div class="feed__desc">
+                                <p>Впервые узнала о <span>КардиНЕО</span> из интернета. Внимательно
+                                    ознакомилась со всеми отзывами о его применении и тоже
+                                    решила попробовать. Ожидала чего угодно, но препарат
+                                    подействовал сразу! Прошли бесконечные головокружения,
+                                    тошнота и отеки из-за повышенного давления. Да и о самом
+                                    давлении я забыла к концу недели. Невероятно хороший
+                                    препарат этот КардиНЕО. Я соседкам своим тоже про него
+                                    рассказала, теперь все вместе следим за своим здоровьем.</p>
+                            </div>
+                        </div>
+                        <div class="feed__img">
+                            <img src="build/images/feed-img2.png" alt="" />
+                        </div>
+                    </li>
+                    <li>
+                        <div class="feed__img">
+                            <img src="build/images/feed-img3.png" alt="" />
+                        </div>
+                        <div class="feed__info">
+                            <div class="feed__name">
+                                <p>Ангелина Малинникова, Сосудистый хирург, к.м.н.</p>
+                            </div>
+                            <div class="feed__desc">
+                                <p>Большинство современных препаратов от гипертонии лишь частично
+                                    снимают симптомы, не затрагивая при этом саму причину заболевания.
+                                    Человек теряет бдительность, думает, что его сердцу ничто не угрожает.
+                                    А в итоге оказывается у меня на операционном столе. К сожалению,
+                                    многие операции на сердце и сосудах приводят к инвалидности --
+                                    настолько запущенными являются эти истории болезни.
+                                    <span>КардиНЕО</span> решает целый комплекс проблем, а главное -- он полностью
+                                    восстанавливает сосуды, запускает правильную работу сердечных ритмов,
+                                    нормализует артериальное давление. Эффективен в любом возрасте и на
+                                    любой стадии гипертонии.
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="feed__info">
+                            <div class="feed__name">
+                                <p>Виталий Шестопалов, водитель, 41 год</p>
+                            </div>
+                            <div class="feed__desc">
+                                <p>Работа у меня сидячая, лишний вес стал набирать еще по молодости.
+                                    Ну и питание не отличается правильностью, по большей части жирные
+                                    перекусы. Сердце начало барахлить лет 5 назад, давление скакало.
+                                    Не мог понять причину. Врачи разводили руками, мол, конституция у
+                                    вас такая, предрасположенность к гипертонии. Надоело их слушать,
+                                    взял ситуацию в свои руки. Заказал <span>КардиНЕО</span>, принимал регулярно
+                                    по схеме. Давление привел в норму, даже уровень холестерина снизился.
+                                    А что, препарат сплошь на натуральных компонентах! Понятное дело, в
+                                    аптеке такой не купить, заказывал через сайт. Отличный препарат для
+                                    восстановления сосудов.</p>
+                            </div>
+                        </div>
+                        <div class="feed__img">
+                            <img src="build/images/feed-img4.png" alt="" />
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="feed__slider mob">
+                <section class="regular">
+                    <div>
+                        <div class="feed__info">
+                            <div class="feed__img">
+                                <img src="build/images/feed-img1.png" alt="" />
+                            </div>
+                            <div class="feed__name">
+                                <p><span>Андрей Игнатов</span> Врач-кардиолог, стаж 16 лет</p>
+                            </div>
+                        </div>
+                        <div class="feed__desc">
+                            <p>За годы моей практики я видел сколь серьезными могут
+                                быть последствия гипертонии, которую стараются не
+                                замечать. Больший вред приносит только лечение
+                                аптечными таблетками-пустышками.</p>
+                            ﻿<p>На сегодняшний день <span>КардиНЕО</span> единственный препарат,
+                                гарантированно избавляющий от проблем с сосудами и
+                                нормализующий артериальное давление в считанные недели
+                                и даже дни. Я настоятельно рекомендую его всем свои
+                                пациентам. Не экономьте на своем здоровье!</p>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="feed__info">
+                            <div class="feed__img">
+                                <img src="build/images/feed-img2.png" alt="" />
+                            </div>
+                            <div class="feed__name">
+                                <p><span>Софья Потапенко</span> пенсионерка, 63 года</p>
+                            </div>
+                        </div>
+                        <div class="feed__desc">
+                            <p>Впервые узнала о <span>КардиНЕО</span> из интернета. Внимательно
+                                ознакомилась со всеми отзывами о его применении и тоже
+                                решила попробовать. Ожидала чего угодно, но препарат
+                                подействовал сразу! Прошли бесконечные головокружения,
+                                тошнота и отеки из-за повышенного давления. Да и о самом
+                                давлении я забыла к концу недели. Невероятно хороший
+                                препарат этот КардиНЕО. Я соседкам своим тоже про него
+                                рассказала, теперь все вместе следим за своим здоровьем.</p>
+                        </div>
+
+                    </div>
+                    <div>
+                        <div class="feed__info">
+                            <div class="feed__img">
+                                <img src="build/images/feed-img3.png" alt="" />
+                            </div>
+                            <div class="feed__name">
+                                <p><span>Ангелина Малинникова</span> Сосудистый хирург, к.м.н.</p>
+                            </div>
+                        </div>
+                        <div class="feed__desc">
+                            <p>Большинство современных препаратов от гипертонии лишь частично
+                                снимают симптомы, не затрагивая при этом саму причину заболевания.
+                                Человек теряет бдительность, думает, что его сердцу ничто не угрожает.
+                                А в итоге оказывается у меня на операционном столе. К сожалению,
+                                многие операции на сердце и сосудах приводят к инвалидности --
+                                настолько запущенными являются эти истории болезни.
+                                <span>КардиНЕО</span> решает целый комплекс проблем, а главное -- он полностью
+                                восстанавливает сосуды, запускает правильную работу сердечных ритмов,
+                                нормализует артериальное давление. Эффективен в любом возрасте и на
+                                любой стадии гипертонии.
+                            </p>
+                        </div>
+
+                    </div>
+                    <div>
+                        <div class="feed__info">
+                            <div class="feed__img">
+                                <img src="build/images/feed-img4.png" alt="" />
+                            </div>
+                            <div class="feed__name">
+                                <p><span>Виталий Шестопалов</span> водитель, 41 год</p>
+                            </div>
+                        </div>
+                        <div class="feed__desc">
+                            <p>Работа у меня сидячая, лишний вес стал набирать еще по молодости.
+                                Ну и питание не отличается правильностью, по большей части жирные
+                                перекусы. Сердце начало барахлить лет 5 назад, давление скакало.
+                                Не мог понять причину. Врачи разводили руками, мол, конституция у
+                                вас такая, предрасположенность к гипертонии. Надоело их слушать,
+                                взял ситуацию в свои руки. Заказал <span>КардиНЕО</span>, принимал регулярно
+                                по схеме. Давление привел в норму, даже уровень холестерина снизился.
+                                А что, препарат сплошь на натуральных компонентах! Понятное дело, в
+                                аптеке такой не купить, заказывал через сайт. Отличный препарат для
+                                восстановления сосудов.</p>
+                        </div>
+
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+    <div class="action">
+        <div class="action__body">
+            <div class="action__title">
+                <h2>Доверьте ваше сердце и сосуды формуле</h2>
+            </div>
+            <div class="action__logo">
+                <p>Карди<span>НЕО</span></p>
+            </div>
+            <div class="action__content ">
+                <div class="action__media dec">
+                    <div class="action__present">
+                        <p>ПОДАРОК!</p>
+                    </div>
+                    <div class="popup show-popap">
+                <div class="popup__price">
+                    <p>Специальная цена<span><span class="new_price_val">149</span> <span class="new_price_cur">руб</span></span></p>
+                </div>
+                <div class="popup__form">
+                    <form class="landing__form">
+
+                        <input name="name" placeholder="Введите Имя" type="text">
+                        <input name="phone" placeholder="Введите Телефон" type="tel">
+                        <button type="submit">Заказать</button>
+                    </form>
+                </div>
+            </div>
+                </div>
+                <div class="action__info">
+                    <div class="action__list">
+                        <ul>
+                            <li>
+                                Отмечайте результат в Дневнике здоровья и следите за прогрессом
+                            </li>
+                            <li>
+                                Живите полноценной жизнью!﻿
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+            <img  class="img-new" src="./build/images/01-a.png" alt="">
+        </div>
+        
+    </div>
+    <div class="book">
+        <div class="book__body">
+            <div class="book__title">
+                <h2>Получить КардиНЕО в три шага</h2>
+            </div>
+            <div class="book__list">
+                <ul>
+                    <li>
+                        <div class="book__img">
+                            <img src="build/images/book-img1.png" alt="" />
+                        </div>
+                        <div class="book__number">
+                            <p>1</p>
+                        </div>
+                        <div class="book__desc">
+                            <p>Заполните форму заказа ниже</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="book__img">
+                            <img src="build/images/book-img2.png" alt="" />
+                        </div>
+                        <div class="book__number">
+                            <p>2</p>
+                        </div>
+                        <div class="book__desc">
+                            <p>Сообщите оператору удобный адрес доставки</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="book__img">
+                            <img src="build/images/book-img3.png" alt="" />
+                        </div>
+                        <div class="book__number">
+                            <p>3</p>
+                        </div>
+                        <div class="book__desc">
+                            <p>Оплатите КардиНЕО уже при получении на почте или курьером</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="info">
+        <div class="info__body">
+            <div class="info__logo">
+                <h1>Карди<span>НЕО</span></h1>
+            </div>
+            <div class="info__title">
+                <h2>Бесперебойная работа вашего сердца</h2>
+            </div>
+            <div class="info__content">
+                <div class="info__left">
+                    <div class="info__prefer">
+                        <ul>
+                            <li>
+                                <span>КАРДИ</span>нальная победа над гипертонией
+                            </li>
+                            <li>
+                                <span>НЕО</span>быкновенная защита ваших сосудов
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="info__action">
+                        <p>*При заказе КардиНЕО до <script type="text/javascript">
+                                var appendNull = function(num) {
+                                    return num < 10 ? 0 + num.toString() : num;
+                                };
+                                d = new Date();
+                                p = new Date(d.getTime() - 0 * 86400000);
+                                monthb = '01,02,03,04,05,06,07,08,09,10,11,12'.split(',');
+                                document.write(appendNull(p.getDate()) + '.' + monthb[p.getMonth()] + '.' + p.getFullYear());
+
+                            </script> — уникальный Дневник здоровья <span>В ПОДАРОК!</span></p>
+                    </div>
+                    <div class="popup show-popap mt-pop">
+                <div class="popup__price">
+                    <p>Специальная цена<span><span class="new_price_val">149</span> <span class="new_price_cur">руб</span></span></p>
+                </div>
+                <div class="popup__form">
+                    <form class="landing__form">
+
+                        <input name="name" placeholder="Введите Имя" type="text">
+                        <input name="phone" placeholder="Введите Телефон" type="tel">
+                        <button type="submit">Заказать</button>
+                    </form>
+                </div>
+            </div>
+                </div>
+                <div class="info__right">
+                    <div class="info__present">
+                        <p>ПОДАРОК!*</p>
+                    </div>
+                    <div class="info__pack dec">
+                        <img src="build/images/info-pack.png" alt="" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer__body">
+            <div class="footer__content">
+                <div class="footer__info">
+                    <p>Продукт сертифицирован. Состав, способ и показания к применению указаны на упаковке</p>
+                    <p>Результаты применения зависят от индивидуальных особенностей организма и могут отличаться</p>
+                </div>
+                <div class="footer__adress">
+                    <p><span>ООО "ФармаСтандарт", 171881</span>
+                        Россия, г. Москва, улица Промышленная, д. 18, корп 3, офис 24.
+                        <span>ИНН 7712487173; ОГРН 114775785174</span>
+                    </p>
+                </div>
+            </div>
+            <div class="footer__link">
+                <a href="../../../politic.html">Политика конфиденциальности</a>
+                <a href="../../../oferta.html">Публичная оферта</a>
+            </div>
+        </div>
+    </footer>
+    <div class="blackout"></div>
+    <div class="popup">
+        <div class="popup__price">
+            <p>Специальная цена<span><span class="new_price_val">149</span> <span class="new_price_cur">руб</span></span></p>
+        </div>
+        <div class="popup__form">
+            <form class="landing__form">
+
+                <input name="name" placeholder="Введите Имя" type="text">
+                <input name="phone" placeholder="Введите Телефон" type="tel">
+                <button type="submit">Заказать</button>
+            </form>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.countdown/2.2.0/jquery.countdown.min.js"></script>
+    <script src="build/js/slick.min.js"></script>
+    <script src="build/js/main.js"></script>
+
+    <!-- Подключение к гиту -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-url-parser/2.3.1/purl.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/3.3.4/jquery.inputmask.bundle.min.js"></script>
+    <!-- leadprofit.js - скрипт подключения к пп -->
+    <script src="https://click.lucky.online/js/leadprofit.js"></script>
+    <!-- скрипт для передачи лида в пп -->
+    <script>
+        jQuery(document).ready(function() {
+
+            $("form").leadprofit({
+                hash: "4535f85c-dbb8-4949-95f2-9e6ea80bc713"
+            }).leadprofitSubmit({
+                confirmUrl: '../../../confirm.html', // при необходимости удалить слеши и точки перед confirm.html (../../) и скачать файл confirm.html -->
+                counterParams: {
+                    country: "{country}",
+                    version: document.location.pathname.replace(/\/+/g, '').replace('landings', '').replace('index.html', '').replace('index2.html', '').replace('confirm.html', '')
+                }
+            });
+
+        });
+
+    </script>
+    <!-- price.js- скрипт подключения цены,  при необходимости скачайте его и удалите слеши и точки перед price.js (../../) -->
+    <script src="../price.js"></script>
+</body>
+
+</html>
