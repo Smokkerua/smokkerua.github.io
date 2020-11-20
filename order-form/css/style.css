@@ -1382,3 +1382,21 @@ a:hover {
     pointer-events: none; 
     opacity: 0.5;
 }
+.percent {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-weight: 500;
+}
+.percent-input {
+    border: none;
+    max-width: 27px;
+    text-align: right;
+    font-weight: 500;
+}
+.percent-input::-webkit-outer-spin-button,
+.percent-input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}

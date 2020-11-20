@@ -6,24 +6,29 @@ $(document).ready(function(){
             $(this).parents('.row-table').toggleClass('low-opaciti');  // обращение к родителю родителя - смена прозрачности
         });
     
+        // подчеркивание флага зеленой полоской в 1-м попап окне
         $('.flag').click(function(){
             $('.flag').removeClass('flag-active');
             $(this).addClass('flag-active');
         });
     
+        // подчеркивание типа потока зеленой полоской в 1-м попап окне
         $('.typed').click(function(){
             $('.typed').removeClass('typed-active');
             $(this).addClass('typed-active');
         });
     
+        // Попап лендинг - смена фона при выборе лендинга
         $('.lendind__box').click(function(){
             $(this).toggleClass('lendind__box-active');
         });
     
+        // Попап лендинг - выпадающее окно - добавить лендинг
           $(".show-btn").click(function(){
             $(".sm-menu").fadeToggle("fast");
           });
     
+        // Попап лендинг - добавить лендинг(закрыть)
           $(".sm-menu-link").click(function(){
             $("#modal2").removeClass("open");
             $("#modal2").parents(".overlay").removeClass("open");
@@ -31,23 +36,24 @@ $(document).ready(function(){
             $("#modal1").parents(".overlay").addClass("open");
           });
     
+        // Попап оффер - после выбора 1-го списка - активировать 2й
         $(".item-pp").click(function(){
             $("#two").removeClass("select__head-off");
           });
     
+        // Открыть попап оффер
         $(".offer-popap").click(function(){
             $("#modal2").addClass("modal-offer");
             $("#modal2").removeClass("modal-lendind");
           });
     
     
+        // закрыть попап - оффер при выборе эллемента во 2-м списке
         $(".item-offer").click(function(){
-
             $("#modal2").removeClass("open");
             $("#modal2").parents(".overlay").removeClass("open");
             $("#modal1").addClass("open");
             $("#modal1").parents(".overlay").addClass("open");
-            
             $("#modal2").removeClass("modal-offer");
             $("#modal2").addClass("modal-lendind");
           });
@@ -130,11 +136,11 @@ $(document).ready(function(){
                 if($('.main-table').hasClass('statistick-on')){
 
                     // возвращаем инокнку первого экрана
-                    $('.btn-burger').removeClass('lp-icon');
+                    $('.btn-burger').addClass('lp-icon');
                     $('.btn-burger').removeClass('filer-icon');
-                    $('.btn-burger').addClass('burger-icon');
+                    $('.btn-burger').removeClass('burger-icon');
                     $('.icon').removeClass('show');
-                    $('.icon-burger').addClass('show');
+                    $('.icon-lp').addClass('show');
 
                     // прячем кнопку дет.статистики и возвращаем на первый экран
                     $('.main-table').removeClass('statistick-on');
@@ -214,7 +220,7 @@ $(document).ready(function(){
         });
 
     });
-
+    // попап окно - закрыть
     $(".close-modal").on('click', function(e){
         e.preventDefault();
         e.stopImmediatePropagation;
@@ -228,7 +234,8 @@ $(document).ready(function(){
         }, 350);
 
     });
-    
+   
+     // открыть 2-е попап окно(лендинг/оффер)
     $(".open-new-modal").on('click', function(e){
         e.preventDefault();
         e.stopImmediatePropagation;
@@ -247,43 +254,25 @@ $(document).ready(function(){
         setTimeout( function(){
             $(modal).addClass("open");
         }, 350);
-
-
-
-
     });
-    
-    
+
 });
 
-
-
-
-
-
+// смена флагов в попап окне
 $(document).ready(function(){
 	$("#current_page").click(function(){
 		$("#current_menu").slideDown(100);
 	});
 
 	$("#current_menu a").click(function(event){
-	  event.preventDefault(); //prevent synchronous loading
+	  event.preventDefault(); 
 	  $("#current_menu").slideUp(100);
 	  $("#current_page").html($(this).html());
 	});
 });
 
 
-
-
-
-
-
-
-
-
-
-
+// кастомный выпадающий список в попап окне - добавить оффер
 jQuery(($) => {
     $('.select').on('click', '.select__head', function () {
         if ($(this).hasClass('open')) {
