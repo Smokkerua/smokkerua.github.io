@@ -224,6 +224,17 @@ $(document).ready(function(){
 
 
 
+$(document).ready(function(){
+	$("#current_page").click(function(){
+		$("#current_menu").slideDown(100);
+	});
+
+	$("#current_menu a").click(function(event){
+	  event.preventDefault(); //prevent synchronous loading
+	  $("#current_menu").slideUp(100);
+	  $("#current_page").html($(this).html());
+	});
+});
 
 
 
