@@ -42,9 +42,25 @@ body, htlm {
     margin: 15px 5px;
 }
 
-
-
-
+.bot-pop {
+    width: 400px;
+}
+.bot-pop .popup__form input {
+    width: 320px;
+    margin: 8px 0;
+    height: 55px;
+}
+.bot-pop .popup__price p {
+    font: 700 26px/31px Inter,sans-serif;
+    color: rgba(0,0,0,.95);
+}
+.bot-pop  .popup__form button {
+    width: 320px;
+    height: 55px;
+}
+.bot-inf .info__right {
+    margin: -63px 0 0 44px;
+}
 
 
 
