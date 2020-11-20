@@ -1427,7 +1427,7 @@
                         <div class="top__box">
                             <p class="top__box-summ">в сумме 221%</p>
                             <button class="btn-equalize">Уравнять</button>
-                            <button type="button" class="btn btn-addlend">Добавить лендинги</button>
+                            <button type="button" class="btn btn-addlend open-new-modal" data-modal="#modal1" data-modall="#modal2">Добавить лендинги</button>
                         </div> <!-- /top__box  -->
                         
                         <div class="lendings__box" style="border-top: none;">
@@ -1496,7 +1496,7 @@
                         <div class="top__box">
                             <p class="top__box-summ">в сумме 221%</p>
                             <button class="btn-equalize">Уравнять</button>
-                            <button type="button" class="btn btn-setting">Добавить офферы</button>
+                            <button type="button" class="btn btn-setting open-new-modal" data-modal="#modal1" data-modall="#modal2">Добавить офферы</button>
                         </div> <!-- /top__box  -->
                        
                         <div class="lendings__box">
@@ -1525,17 +1525,17 @@
             
             <div class="content__bottomline">
                 <a class='btn-bottom close-modal btn-censel' data-modal="#modal1" href="#">Отмена</a>
-                <a class='btn-bottom open-new-modal btn-send' data-modal="#modal1" data-modall="#modal2" href="#">Применить</a>
+                <a class='btn-bottom close-modal btn-send' data-modal="#modal1" href="#">Применить</a>
             </div> <!-- /content__bottomline  -->
 
         </div> <!-- /content -->
         	 
     </div> <!-- /modal -->
-
-
-    <div class='modal modal-offer modal-lendind' id='modal2' style="display: block; opacity: 1;">
+<!-- close-modal" data-modal="#modal2" -->
+    <!--  style="display: block; opacity: 1;" -->
+    <div class='modal modal-lendind' id='modal2'>
       
-        <div class='content content-lendind' style="display: block; opacity: 1;">
+        <div class='content content-first'>
            
              <div class="content__topline">
                  <h3 class="content__topline-title">Выбрано 2 лендинга</h3>
@@ -1569,7 +1569,13 @@
                                    </div>    
                                 </button>
 
-                               <button type="button" class="btn btn-main btn-share"><i class="fas fa-code-branch"></i></button>
+                               <button type="button" class="btn btn-main btn-share show-btn"><i class="fas fa-code-branch"></i>
+
+                                <div class="sm-menu">
+                                  <a href="#"  class="sm-menu-link">Добавить лендинг</a>
+                                </div>
+                               
+                               </button>
 
                            </div>
 
@@ -1677,7 +1683,7 @@
                         </div>
                     </div> <!-- /lendind__box -->
                     
-                    <div class="lendind__box lendind__box-active">
+                    <div class="lendind__box">
                         <p class="lendind__box-title">Артрофорс-LS-99-Сообщество</p>
                         <div class="lendind__metrika">
                             <div class="lendind__metrika-col">
@@ -1797,7 +1803,7 @@
                         </div>
                     </div> <!-- /lendind__box -->
                     
-                    <div class="lendind__box lendind__box-active">
+                    <div class="lendind__box">
                         <p class="lendind__box-title">Артрофорс-LS-99-Сообщество 2</p>
                         <div class="lendind__metrika">
                             <div class="lendind__metrika-col">
@@ -1967,7 +1973,7 @@
 
         </div>
        
-        <div class='content content-offer'>
+        <div class='content content-second'>
             <div class="content__topline">
                 <h3 class="content__topline-title">Выберите оффер</h3>
                 <a class='btn-close close-modal' data-modal="#modal2" href="#"><i class="fas fa-times"></i></a>
@@ -1979,16 +1985,16 @@
                
                    <div class="select">
                         <input class="select__input" type="hidden" name="">
-                        <div class="select__head">Выбрать ПП</div>
+                        <div class="select__head" id="one">Выбрать ПП</div>
                         <ul class="select__list" style="display: none;">
-                            <li class="select__item">Luckyshop</li>
-                            <li class="select__item">Luckyshop-EU</li>
-                            <li class="select__item">Luckyshop-UA</li>
-                            <li class="select__item">Cpagetti</li>
-                            <li class="select__item">Беларусь</li>
-                            <li class="select__item">Топ-Беларусь</li>
-                            <li class="select__item">Amazon</li>
-                            <li class="select__item">Ebay</li>
+                            <li class="select__item item-pp">Luckyshop</li>
+                            <li class="select__item item-pp">Luckyshop-EU</li>
+                            <li class="select__item item-pp">Luckyshop-UA</li>
+                            <li class="select__item item-pp">Cpagetti</li>
+                            <li class="select__item item-pp">Беларусь</li>
+                            <li class="select__item item-pp">Топ-Беларусь</li>
+                            <li class="select__item item-pp">Amazon</li>
+                            <li class="select__item item-pp">Ebay</li>
                         </ul>
                     </div>
                     
@@ -1998,24 +2004,24 @@
 
                     <div class="select">
                         <input class="select__input" type="hidden" name="">
-                        <div class="select__head">Выбрать оффер</div>
+                        <div class="select__head select__head-off" id="two">Выбрать оффер</div>
                         <ul class="select__list" style="display: none;">
-                            <li class="select__item">Артрофорс</li>
-                            <li class="select__item">Крем Невесты</li>
-                            <li class="select__item">Алитабс</li>
-                            <li class="select__item">Клинистил</li>
-                            <li class="select__item">КетоДиета</li>
-                            <li class="select__item">Уринастоп</li>
-                            <li class="select__item">Дианулин</li>
-                            <li class="select__item">Модерация</li>
-                            <li class="select__item">Амулет</li>
-                            <li class="select__item">Алкозерокс</li>
-                            <li class="select__item">Окунорм</li>
-                            <li class="select__item">Никостоп</li>
-                            <li class="select__item">Потенциалекс</li>
-                            <li class="select__item">Псорисил</li>
-                            <li class="select__item">Ортофикс</li>
-                            <li class="select__item">КетоДиета</li>
+                            <li class="select__item item-offer">Артрофорс</li>
+                            <li class="select__item item-offer">Крем Невесты</li>
+                            <li class="select__item item-offer">Алитабс</li>
+                            <li class="select__item item-offer">Клинистил</li>
+                            <li class="select__item item-offer">КетоДиета</li>
+                            <li class="select__item item-offer">Уринастоп</li>
+                            <li class="select__item item-offer">Дианулин</li>
+                            <li class="select__item item-offer">Модерация</li>
+                            <li class="select__item item-offer">Амулет</li>
+                            <li class="select__item item-offer">Алкозерокс</li>
+                            <li class="select__item item-offer">Окунорм</li>
+                            <li class="select__item item-offer">Никостоп</li>
+                            <li class="select__item item-offer">Потенциалекс</li>
+                            <li class="select__item item-offer">Псорисил</li>
+                            <li class="select__item item-offer">Ортофикс</li>
+                            <li class="select__item item-offer">КетоДиета</li>
                         </ul>
                     </div>
                     

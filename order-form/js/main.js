@@ -15,6 +15,36 @@ $(document).ready(function(){
             $('.typed').removeClass('typed-active');
             $(this).addClass('typed-active');
         });
+    
+        $('.lendind__box').click(function(){
+            $(this).toggleClass('lendind__box-active');
+        });
+    
+          $(".show-btn").click(function(){
+            $(".sm-menu").fadeToggle("fast");
+          });
+    
+          $(".sm-menu-link").click(function(){
+            $("#modal2").addClass("modal-offer");
+            $("#modal2").removeClass("modal-lendind");
+          });
+    
+        $(".item-pp").click(function(){
+             $("#two").removeClass("select__head-off");
+          });
+    
+        $(".item-offer").click(function(){
+            $("#modal2").removeClass("modal-offer");
+            $("#modal2").addClass("modal-lendind");
+
+            $("#modal2").removeClass("open");
+            $("#modal2").parents(".overlay").removeClass("open");
+            
+            $("#modal1").addClass("open");
+            $("#modal1").parents(".overlay").addClass("open");
+            
+          });
+
 
         // переключение трёх экранов
         $('.btn-burger').click(function(){
