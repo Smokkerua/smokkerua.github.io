@@ -34,11 +34,28 @@ $(document).ready(function(){
             $("#modal2").parents(".overlay").removeClass("open");
             $("#modal1").addClass("open");
             $("#modal1").parents(".overlay").addClass("open");
+            $("#modal2").addClass("modal-offer");
+            $("#modal2").removeClass("modal-lendind");
           });
     
         // Попап оффер - после выбора 1-го списка - активировать 2й
         $(".item-pp").click(function(){
             $("#two").removeClass("select__head-off");
+          });
+    
+    
+        // кнопка назад в главный попап
+         $(".back-first").click(function(){
+            $("#modal2").removeClass("open");
+            $("#modal2").parents(".overlay").removeClass("open");
+            $("#modal1").addClass("open");
+            $("#modal1").parents(".overlay").addClass("open");
+          });
+    
+        // кнопка назад в выбор оффера
+         $(".back-second").click(function(){
+            $("#modal2").addClass("modal-offer");
+            $("#modal2").removeClass("modal-lendind");
           });
     
         // Открыть попап оффер
