@@ -48,6 +48,13 @@
     .btn-addlend {
         margin: 0 5px;
     }
+    .overlay .modal-lendind {
+        width: 900px;
+    }
+    .lendind__box {
+        padding-left: 7px;
+        text-align: left;
+    }
 }
 @media only screen and (max-width : 1050px) {
     body {
@@ -74,6 +81,11 @@
         padding: 3px 6px;
         font-size: 13px;
         font-weight: 500;     
+    }
+    .top__box .btn-setting {
+        padding: 3px 6px;
+        font-size: 13px;
+        font-weight: 500; 
     }
     
 }
@@ -126,6 +138,29 @@
     }
     .no-wrap {
         flex-wrap: nowrap;
+    }
+    .overlay .modal-lendind {
+        width: 750px;
+    }
+    .main-popap .metrika-col {
+        width: 80px;
+    }
+    .lendind__metrika-col {
+        width: 80px;
+        padding: 3px 2px;
+    }
+    .overlay  .modal {
+        width: 750px;
+    }
+    .overlay .modal-offer {
+        width: 400px;
+    }
+    .mainline {
+        padding: 5px 10px;
+        padding-left: 5px;
+    }
+    .selected__container {
+        min-height: 500px;
     }
 }
 
