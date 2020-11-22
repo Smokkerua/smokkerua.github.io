@@ -187,6 +187,7 @@
     .overlay .modal {
         top: 10px;
         transform: translateX(-50%);
+        -webkit-overflow-scrolling: touch;
     }
 
     .input-top{
@@ -198,7 +199,6 @@
     html {
         width: 768px;
         overflow-x: auto;
-        -webkit-overflow-scrolling:touch;
     }
     .overlay {
         display: none;
