@@ -64,10 +64,11 @@ $(document).ready(function(){
           });
     
         // далее, на попап лендинга
-         $(".next-first").click(function(){
+         $(".item-offer").click(function(){
             $("#modal2").removeClass("modal-offer");
             $("#modal2").addClass("modal-lendind");
           });
+
     
             // если открытие попап 2-го экрана, то не показывать главный попап
             $('.open-modal').click(function(){

@@ -163,7 +163,31 @@
         min-height: 500px;
     }
 }
-
+@media only screen and (max-width : 768px) {
+/*
+    .input-box {
+        position: relative;
+        width: auto;
+    }
+    .input__container {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    .input-top {
+        margin-bottom: 7px;
+    }
+    .list-icon {
+        top: 40%;
+    }
+*/
+    body {
+        width: 768px;
+        overflow-x: auto;
+    }
+}
 
 
 
