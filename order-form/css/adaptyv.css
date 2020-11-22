@@ -202,6 +202,7 @@
     .overlay {
         display: none;
         padding: 0;
+        height: 100%;
     }
     .overlay.open {
         opacity: 1;
