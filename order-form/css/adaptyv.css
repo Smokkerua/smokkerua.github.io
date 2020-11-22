@@ -183,9 +183,7 @@
         top: 40%;
     }
 */
-     body {
-        overflow-x: hidden;
-    }
+
     .overlay .modal {
         top: 10px;
         transform: translateX(-50%);
