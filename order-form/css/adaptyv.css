@@ -183,16 +183,27 @@
         top: 40%;
     }
 */
+    
+    .overlay .modal {
+        top: 2px;
+        transform: translateX(-50%);
+    }
+
     .input-top{
         width: 100%;
     }
     .input-box {
         padding: 0 7px;
     }
-    body {
+    html {
         width: 768px;
         overflow-x: auto;
     }
+    .overlay {
+        display: none;
+        padding: 0;
+    }
+
 }
 
 
