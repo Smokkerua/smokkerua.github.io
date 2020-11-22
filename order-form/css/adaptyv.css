@@ -210,12 +210,10 @@
         height: 100%;
         min-height: 100%;
     }
-    .btn-main {
+    .btn-main, .button-right, .btn-flow {
         height: 44px;
     }
-    .ov-x {
-        overflow-x: hidden;
-    }
+
 }
 
 
