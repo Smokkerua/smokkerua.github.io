@@ -196,8 +196,10 @@
     .input-box {
         padding: 0 7px;
     }
-    html {
+    main {
         width: 768px;
+        overflow-x: auto;
+        -webkit-overflow-scrolling:touch;
     }
     .overlay {
         display: none;
@@ -227,7 +229,7 @@
         margin-right: 10px;
     }
     
-    html.modal-open {
+    html, body {
         overflow: hidden;
     }
     
