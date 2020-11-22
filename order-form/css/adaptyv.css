@@ -221,7 +221,10 @@
     .percent-input {
         min-width: 28px;
     }
-
+    .button-right {
+        margin-left: auto;
+        margin-right: 10px;
+    }
 }
 
 
