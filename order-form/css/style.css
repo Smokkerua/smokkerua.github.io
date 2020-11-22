@@ -655,11 +655,11 @@ input:checked + .slider:before {
 .block__flags {
     display: flex;
     align-items: center;
-    padding: 6px 10px;
+    padding: 3px 10px;
     background: #fff;
     border: 2px solid #E1E1E1;
     border-radius: 4px;
-    height: 50px;
+    height: 40px;
     cursor: pointer;
 }
 
@@ -672,11 +672,11 @@ input:checked + .slider:before {
 .block__type {
     display: flex;
     align-items: center;
-    padding: 6px 10px;
+    padding: 3px 10px;
     background: #fff;
     border: 2px solid #E1E1E1;
     border-radius: 4px;
-    height: 50px;
+    height: 40px;
     min-width: auto;
     justify-content: center;
     cursor: pointer;
@@ -685,9 +685,9 @@ input:checked + .slider:before {
 
 .flag {
     display: block;
-    width: 35px;
-    height: 35px;
-    margin: 2px 5px;
+    width: 25px;
+    height: 25px;
+    margin: 0px 5px;
     height: auto;
     cursor: pointer;
     transition: all 0.2s linear;
@@ -718,13 +718,13 @@ input:checked + .slider:before {
 
     content: '';
     display: block;
-    width: 47px;
+    width: 33px;
     background: #7EB077;
     height: 2px;
     position: absolute;
     left: 50%;
     transform: translatex(-50%);
-    bottom: -5px;
+    bottom: -3px;
 }
 
 .typed-active:after {
@@ -737,23 +737,23 @@ input:checked + .slider:before {
     position: absolute;
     left: 50%;
     transform: translatex(-50%);
-    bottom: -7px;
+    bottom: -3px;
 }
 
 .flag img {
     display: block;
-    width: 35px;
-    height: 35px;
+    width: 25px;
+    height: 25px;
 }
 
 .mainline__lengings-lends {
     width: 100%;
-    padding: 5px 10px;
+    padding: 0px;
 }
 
 .modal .lendings__box {
     background: #fff;
-    padding: 10px;
+    padding: 4px 10px;
 }
 
 
@@ -834,7 +834,7 @@ input:checked + .slider:before {
 }
 
 .mainline {
-    padding: 10px 15px;
+    padding: 5px 15px;
 }
 
 .mainline__settings-title {
@@ -843,7 +843,7 @@ input:checked + .slider:before {
     padding-bottom: 10px;
     position: relative;
     margin-left: 20px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     color: #444444;
     width: fit-content;
 }
@@ -867,6 +867,7 @@ input:checked + .slider:before {
     margin: 10px 0;
     margin-left: 20px;
     width: 130px;
+    min-width: 130px;
 }
 
 .mainline__offers,
@@ -875,8 +876,8 @@ input:checked + .slider:before {
 }
 
 .mainline__lengings {
-    margin-bottom: 10px;
-    margin-top: 10px;
+    margin-bottom: 5px;
+    margin-top: 5px;
 }
 
 .mainline__offers .lendings__box:first-of-type {
@@ -1411,6 +1412,20 @@ a:hover {
     cursor: pointer;
 }
 .back:hover {
+    color: #000;
+    transform: translateY(-50%), scale(1.05);
+}
+.next {
+    position: absolute;
+    left: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #BCBCBC;
+    font-size: 22px;
+    transition: all 0.2s linear;
+    cursor: pointer;
+}
+.next:hover {
     color: #000;
     transform: translateY(-50%), scale(1.05);
 }

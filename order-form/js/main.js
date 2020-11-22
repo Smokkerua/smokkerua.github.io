@@ -36,6 +36,11 @@ $(document).ready(function(){
             $("#modal1").parents(".overlay").addClass("open");
             $("#modal2").addClass("modal-offer");
             $("#modal2").removeClass("modal-lendind");
+            if($("#modal2").hasClass('without-main')){
+                $("#modal1").removeClass("open");
+                $("#modal1").parents(".overlay").removeClass("open");
+                $("#modal2").removeClass("without-main");
+            }
           });
     
         // Попап оффер - после выбора 1-го списка - активировать 2й
@@ -58,6 +63,19 @@ $(document).ready(function(){
             $("#modal2").removeClass("modal-lendind");
           });
     
+        // далее, на попап лендинга
+         $(".next-first").click(function(){
+            $("#modal2").removeClass("modal-offer");
+            $("#modal2").addClass("modal-lendind");
+          });
+    
+            // если открытие попап 2-го экрана, то не показывать главный попап
+            $('.open-modal').click(function(){
+                if(this.classList.contains('btn-addlend')){
+                    $("#modal2").addClass("without-main");
+                }
+            });
+    
         // Открыть попап оффер
         $(".offer-popap").click(function(){
             $("#modal2").addClass("modal-offer");
@@ -68,14 +86,6 @@ $(document).ready(function(){
             $("#modal1").parents(".overlay").addClass("open");
           });
     
-    
-        // закрыть попап - оффер при выборе эллемента во 2-м списке
-        $(".item-offer").click(function(){
-            $("#modal2").removeClass("modal-offer");
-            $("#modal2").addClass("modal-lendind");
-          });
-
-
         // переключение трёх экранов
         $('.btn-burger').click(function(){
             // проверка какой экран активный
@@ -100,6 +110,7 @@ $(document).ready(function(){
                 $('.main-table').removeClass('second-screen'); 
                 $('.main-table').addClass('third-screen'); 
                 $('.date-select').addClass('hide');
+                $('.btn-stat').addClass('hide');
             }
             else if(this.classList.contains('filer-icon')){
                 this.classList.remove('filer-icon');
@@ -110,6 +121,7 @@ $(document).ready(function(){
                 $('.main-table').removeClass('third-screen'); 
                 $('.main-table').addClass('first-screen'); 
                 $('.date-select').addClass('hide');
+                $('.btn-stat').removeClass('hide');
             } 
 
         });
@@ -207,7 +219,7 @@ $(document).ready(function(){
 
     // попап окно
     $(".modal").each( function(){
-        $(this).wrap('<div class="overlay"></div>')
+        $(this).wrap('<div class="overlay"></div>');
     });
 
     $(".open-modal").on('click', function(e){
@@ -228,6 +240,10 @@ $(document).ready(function(){
             if ($(target).hasClass("overlay")){
                 $(target).find(".modal").each( function(){
                     $(this).removeClass("open");
+                    $("#modal2").addClass("modal-offer");
+                    $("#modal2").removeClass("modal-lendind");
+                    
+                    
                 });
                 setTimeout( function(){
                     $(target).removeClass("open");
