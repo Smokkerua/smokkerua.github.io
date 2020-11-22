@@ -187,7 +187,6 @@
     .overlay .modal {
         top: 10px;
         transform: translateX(-50%);
-        -webkit-overflow-scrolling: touch;
     }
 
     .input-top{
