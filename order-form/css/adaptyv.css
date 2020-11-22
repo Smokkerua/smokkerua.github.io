@@ -183,14 +183,19 @@
         top: 40%;
     }
 */
-    
+     body {
+        overflow-x: hidden;
+    }
     .overlay .modal {
         top: 10px;
         transform: translateX(-50%);
         overflow-x: scroll;
         -webkit-overflow-scrolling:touch;
     }
-
+    .overlay {
+        overflow-x: scroll;
+        -webkit-overflow-scrolling:touch;
+    }
     .input-top{
         width: 100%;
     }
@@ -228,9 +233,7 @@
         margin-right: 10px;
     }
     
-    body {
-        overflow: hidden;
-    }
+   
     
     
     
