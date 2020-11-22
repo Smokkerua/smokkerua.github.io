@@ -210,6 +210,9 @@
         height: 100%;
         min-height: 100%;
     }
+    .btn-main {
+        height: 44px;
+    }
 }
 
 
