@@ -187,6 +187,7 @@
     .overlay .modal {
         top: 10px;
         transform: translateX(-50%);
+        overflow-x: scroll;
         -webkit-overflow-scrolling:touch;
     }
 
@@ -196,10 +197,8 @@
     .input-box {
         padding: 0 7px;
     }
-    main {
+    body {
         width: 768px;
-        overflow-x: auto;
-        -webkit-overflow-scrolling:touch;
     }
     .overlay {
         display: none;
@@ -229,7 +228,7 @@
         margin-right: 10px;
     }
     
-    html, body {
+    body {
         overflow: hidden;
     }
     
