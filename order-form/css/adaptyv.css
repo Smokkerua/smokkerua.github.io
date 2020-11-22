@@ -213,6 +213,9 @@
     .btn-main {
         height: 44px;
     }
+    .ov-x {
+        overflow-x: hidden;
+    }
 }
 
 
