@@ -1031,6 +1031,9 @@ input:checked + .slider:before {
     max-width: 220px;
     margin-bottom: 20px;
 }
+.selected-group .select {
+    margin-bottom: 0px;
+}
 
 .select__head {
     width: 100%;
@@ -1391,7 +1394,7 @@ a:hover {
 }
 .percent-input {
     border: none;
-    max-width: 27px;
+    max-width: 28px;
     text-align: right;
     font-weight: 500;
 }
