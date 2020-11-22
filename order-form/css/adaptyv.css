@@ -215,6 +215,8 @@
     }
     .selected-group {
         height: 40px;
+        margin-left: auto;
+        margin-right: 10px;
     }
     .percent-input {
         min-width: 28px;
