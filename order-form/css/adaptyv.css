@@ -213,7 +213,12 @@
     .btn-main, .button-right, .btn-flow {
         height: 44px;
     }
-
+    .selected-group {
+        height: 40px;
+    }
+    .percent-input {
+        min-width: 28px;
+    }
 }
 
 
