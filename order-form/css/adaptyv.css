@@ -183,6 +183,12 @@
         top: 40%;
     }
 */
+    .input-top{
+        width: 100%;
+    }
+    .input-box {
+        padding: 0 7px;
+    }
     body {
         width: 768px;
         overflow-x: auto;
