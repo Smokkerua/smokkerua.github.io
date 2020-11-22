@@ -226,6 +226,13 @@
         margin-left: auto;
         margin-right: 10px;
     }
+    
+    html.modal-open {
+        overflow: hidden;
+    }
+    
+    
+    
 }
 
 
