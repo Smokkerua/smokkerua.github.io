@@ -1446,5 +1446,7 @@ a:hover {
 
 
 
-
-
+    .button-right {
+        margin-left: 0;
+        margin-right: 10px;
+    }
