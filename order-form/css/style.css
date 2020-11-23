@@ -3,7 +3,6 @@ body {
     padding: 30px 40px;
     font-size: 15px;
     color: #000;
-    overflow-x: hidden;
 }
 
 p,
@@ -596,6 +595,7 @@ input:checked + .slider:before {
     top: 50%;
     z-index: 10000;
     transform: translate3d(-50%, -50%, 0);
+ -webkit-overflow-scrolling: touch
 }
 
 
@@ -1358,6 +1358,7 @@ a:hover {
     top: 50%;
     z-index: 10000;
     transform: translate3d(-50%, -50%, 0);
+ -webkit-overflow-scrolling: touch
 }
 .date-select-modal {
     margin-right: 10px;
