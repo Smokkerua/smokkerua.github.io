@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="ru" class="modal-open">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <title>Трекер</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <script defer src="https://use.fontawesome.com/releases/v5.8.1/js/all.js" data-auto-replace-svg></script>
     <link rel="stylesheet" href="./css/style.css">
@@ -12,7 +12,7 @@
 <body>
     
     <header>
-
+       
         <div class="container-fluid">
         
             <div class="row input__container">
@@ -34,7 +34,7 @@
            
            <div class="row button-group">
                
-               <div class="d-flex selected-group">
+               <div class="col d-flex selected-group">
                   
                    <p class="selected-title">Группа</p>
                    <select class="select">
@@ -46,7 +46,7 @@
                     
                </div> <!-- /col d-flex selected-group -->
                
-               <div class="d-flex button-right">
+               <div class="col d-flex button-right">
                    <button type="button" class="btn-flow open-modal" data-modal="#modal1">Создать поток</button>
                    
                    <select class="btn-setting date-select hide">
@@ -1351,7 +1351,7 @@
          
     </main>
 
-    <div class='modal disable-scrolling' id='modal1'>
+    <div class='modal' id='modal1'>
        
         <div class='content'>
             

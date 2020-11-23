@@ -183,7 +183,7 @@
         top: 40%;
     }
 */
-
+    
     .overlay .modal {
         top: 10px;
         transform: translateX(-50%);
@@ -195,8 +195,9 @@
     .input-box {
         padding: 0 7px;
     }
-    body {
+    html {
         width: 768px;
+        overflow-x: auto;
     }
     .overlay {
         display: none;
@@ -209,27 +210,6 @@
         height: 100%;
         min-height: 100%;
     }
-    .btn-main, .button-right, .btn-flow {
-        height: 44px;
-    }
-    .selected-group {
-        height: 40px;
-        margin-left: auto;
-        margin-right: 10px;
-    }
-    .percent-input {
-        min-width: 40px;
-        width: 40px;
-    }
-    .button-right {
-        margin-left: auto;
-        margin-right: 10px;
-    }
-    
-   
-    
-    
-    
 }
 
 
