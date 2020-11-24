@@ -41,7 +41,7 @@
         margin: 1px;
         font-weight: 500;
     }
-    body {
+    .body {
         padding: 10px 15px;
         font-size: 14px;
     }
@@ -87,7 +87,15 @@
         font-size: 13px;
         font-weight: 500; 
     }
-    
+    .button-group {
+        align-items: flex-end;
+    }
+    .btn-main, .btn-flow, .button-right  {
+        height: 44px;
+    }
+    .selected-group {
+        height: 37px;
+    }
 }
 
 @media only screen and (max-width : 991px) {
@@ -140,7 +148,7 @@
         flex-wrap: nowrap;
     }
     .overlay .modal-lendind {
-        width: 96%;
+        width: 750px;
     }
     .main-popap .metrika-col {
         width: 80px;
@@ -153,7 +161,7 @@
         width: 750px;
     }
     .overlay .modal-offer {
-        width: 96%;
+        width: 400px;
     }
     .mainline {
         padding: 5px 10px;
@@ -163,27 +171,7 @@
         min-height: 500px;
     }
 }
-@media only screen and (max-width : 768px) {
-/*
-    .input-box {
-        position: relative;
-        width: auto;
-    }
-    .input__container {
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-start;
-    }
-    .input-top {
-        margin-bottom: 7px;
-    }
-    .list-icon {
-        top: 40%;
-    }
-*/
-    
+@media only screen and (max-width : 768px) { 
     .overlay .modal {
         top: 10px;
         transform: translateX(-50%);
@@ -195,9 +183,8 @@
     .input-box {
         padding: 0 7px;
     }
-    html {
+    .body {
         width: 768px;
-        overflow-x: auto;
     }
     .overlay {
         display: none;

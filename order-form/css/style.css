@@ -1,35 +1,12 @@
-body {
+.body {
     background: #FAFAFA;
     padding: 30px 40px;
     font-size: 15px;
     color: #000;
 }
 
-p,
-a,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    margin: 0;
-    padding: 0;
-    text-decoration: none;
-    color: #000;
-}
-
-* {
-    box-sizing: border-box;
-}
-
 .selected {
     background: silver;
-}
-
-.table td,
-.table th {
-    position: relative;
 }
 
 .circle {
@@ -64,10 +41,13 @@ h6 {
     margin-top: 10px;
     align-items: center;
     padding: 10px 0;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .selected-group {
     align-items: center;
+    margin: 0 10px;
 }
 
 .input-box {
@@ -163,10 +143,12 @@ input:focus {
 
 .button-right {
     justify-content: flex-end;
+    margin-right: 10px;
 }
 
 .selected-title {
     margin-right: 10px;
+    margin-bottom: 0;
 }
 
 .select {
@@ -320,8 +302,15 @@ input:focus {
 
 .settings-title h3 {
     font-size: 16px;
+    margin-bottom: 0;
 }
-
+.load {
+    width: 100%;
+    display: block;
+    height: 300px;
+    background: url(../img/load.gif) center no-repeat;
+    background-size: cover;
+}
 .settings-title p {
     font-size: 14px;
     color: #4888ba;
@@ -420,15 +409,15 @@ input:focus {
     margin-right: 10px;
 }
 
-input:checked + .slider {
+.switch input:checked + .slider {
     background-color: #7EB077
 }
 
-input:focus + .slider {
+.switch input:focus + .slider {
     box-shadow: 0 0 1px #7EB077
 }
 
-input:checked + .slider:before {
+.switch input:checked + .slider:before {
     -webkit-transform: translateX(10px);
     -ms-transform: translateX(10px);
     transform: translateX(10px);
@@ -495,8 +484,6 @@ input:checked + .slider:before {
 .statistics-title {
     font-size: 20px;
 }
-
-
 
 .metrika {
     margin: 0;
@@ -587,6 +574,7 @@ input:checked + .slider:before {
     text-align: center;
     opacity: 0;
     transition: 0.35s ease-in-out;
+    max-height: 100vh;
     overflow-y: auto;
     width: 800px;
     height: auto;
@@ -595,10 +583,7 @@ input:checked + .slider:before {
     top: 50%;
     z-index: 10000;
     transform: translate3d(-50%, -50%, 0);
- -webkit-overflow-scrolling: touch
 }
-
-
 
 .selected__container {
     display: flex;
@@ -1009,6 +994,7 @@ input:checked + .slider:before {
 
 .country {
     position: relative;
+    margin-bottom: 0;
 }
 
 .second-screen .summ-cuntry-offer {
@@ -1112,8 +1098,6 @@ input:checked + .slider:before {
 .select__list .select__item:hover {
     background-color: #F3FBF6;
 }
-
-
 
 .content-lendind {
     height: 800px;
@@ -1265,7 +1249,6 @@ input:checked + .slider:before {
     color: #fff;
 }
 
-
 .btn-share {
     position: relative;
 }
@@ -1358,7 +1341,6 @@ a:hover {
     top: 50%;
     z-index: 10000;
     transform: translate3d(-50%, -50%, 0);
- -webkit-overflow-scrolling: touch
 }
 .date-select-modal {
     margin-right: 10px;
@@ -1377,22 +1359,43 @@ a:hover {
     border-bottom: 2px solid #E1E1E1;
     margin-bottom: 0;
 }
-
+.top__box-summ {
+    margin-bottom: 0;
+}
 .modal-lendind .content-second {
     display: none;
 }
 .modal-offer .content-first {
     display: none;
 }
+.lendind__metrika-title {
+    margin-bottom: 0;
+}
+.lendind__box-title {
+   margin-bottom: 0px; 
+}
+.typed p {
+    margin-bottom: 0;
+}
 .select__head-off {
     pointer-events: none; 
     opacity: 0.5;
+}
+.settings p {
+    margin-bottom: 0;
+}
+.icon {
+    margin-bottom: 0;
+}
+.lendings__box p {
+    margin-bottom: 0;
 }
 .percent {
     display: flex;
     align-items: center;
     justify-content: flex-end;
     font-weight: 500;
+    margin-bottom: 0;
 }
 .percent-input {
     border: none;
@@ -1444,8 +1447,3 @@ a:hover {
     padding-left: 50px;
     font-size: 18px;
 }
-
-
-
-
-

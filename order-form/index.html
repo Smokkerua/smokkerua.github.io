@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/adaptyv.css">
 </head>
-<body>
+<body class="body">
     
     <header>
        
@@ -34,7 +34,7 @@
            
            <div class="row button-group">
                
-               <div class="col d-flex selected-group">
+               <div class="d-flex selected-group">
                   
                    <p class="selected-title">Группа</p>
                    <select class="select">
@@ -46,7 +46,7 @@
                     
                </div> <!-- /col d-flex selected-group -->
                
-               <div class="col d-flex button-right">
+               <div class="d-flex button-right">
                    <button type="button" class="btn-flow open-modal" data-modal="#modal1">Создать поток</button>
                    
                    <select class="btn-setting date-select hide">
@@ -56,7 +56,7 @@
                         <option>За месяц</option>
                     </select>
                    
-                   <button type="button" class="btn-addlend btn-hide-lp">Скрыть неактивные LP</button>
+                   <button type="button" class="btn-addlend btn-hide-lp">Скрыть неактивные</button>
                    
                    <div class="d-flex">
                       
@@ -1349,6 +1349,7 @@
 
         </div> <!-- /container-fluid main-table -->
          
+        <div class="load hide"></div> 
     </main>
 
     <div class='modal' id='modal1'>
