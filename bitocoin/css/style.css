@@ -233,14 +233,29 @@ input:focus {
 
 
 
+.videoWrap {
+    min-height: 350px;
+}
 
+.top-wrap input {
+    width: 206px;
+    justify-content: center;
+}
 
+.name input{
+   border-right: none;
+    border-radius: 4px 0px 0px 4px;
+}
+.surname input{
+    border-radius: 0px 4px 4px 0px;
+}
 
-
-
-
-
-
+section.video .registerForm .formHeader {
+    position: inherit;
+    transform: none;
+    font-size: 1.4em;
+    margin-bottom: 20px;
+}
 
 
 
@@ -267,6 +282,15 @@ input:focus {
         width: 100%;
         margin-bottom: 10px;
     }
+    .name input{
+       border-right: none;
+        border-radius: 4px 4px 4px 4px;
+        border: 1px solid #ccc;
+    }
+    .surname input{
+        border-radius: 4px 4px 4px 4px;
+        border: 1px solid #ccc;
+    }
     .pass, .intl-tel-input {
         width:  100%;
     }
@@ -279,6 +303,17 @@ input:focus {
     .my-button {
         font-size: 1.2em
     }
+    section.video .registerForm .formHeader {
+        position: inherit;
+        transform: none;
+        font-size: 1.4em;
+        margin-bottom: 0px;
+        margin-top: 15px;
+    }
+    .registerForm {
+        padding-bottom: 20px;
+    }
+
 }
 @media only screen and (max-width : 991px) {
     .videoWrap {
@@ -294,6 +329,9 @@ input:focus {
         padding: 0;
         margin: auto;
     }  
+    .videoWrap iframe {
+        height: 400px;
+    }
 }
 
 @media only screen and (max-width : 768px) {
@@ -307,7 +345,12 @@ input:focus {
         width: 100%;
         padding: 0 20px;
     }
-    
+    .videoWrap iframe {
+        height: 340px;
+    }
+    .videoWrap {
+        min-height: 1px;
+    }
 }
 
 @media only screen and (max-width : 500px) {
@@ -317,14 +360,34 @@ input:focus {
     .form_wrapper {
         padding: 0 5px;
     }
+    .videoWrap iframe {
+        height: 280px;
+    }
+    .right-col {
+        padding: 0 0px;
+    }
+    .videoWrap {
+       padding: 0 0px;
+    }
+}
+@media only screen and (max-width : 412px) {
+    .videoWrap iframe {
+        height: 220px;
+    }
 }
 @media only screen and (max-width : 375px) {
     section.video .registerForm .formHeader {
         font-size: 1.2em;
     }
-    
+    .videoWrap iframe {
+        height: 200px;
+    }
 }
-
+@media only screen and (max-width : 360px) {
+    .videoWrap iframe {
+        height: 180px;
+    }
+}
 
 
 
