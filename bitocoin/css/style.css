@@ -1,6 +1,7 @@
 html {
     font-size: 16px;
 }
+
 body {
     font-family: open sans, sans-serif;
     font-size: 1em;
@@ -14,14 +15,17 @@ body {
     display: block;
     padding: 0;
 }
+
 section.video .registerForm .formHeader {
     font-size: 1.8em;
 }
+
 .form_wrapper {
     position: relative;
     display: block;
     padding: 0 17px;
 }
+
 input {
     position: relative;
     z-index: 5;
@@ -34,24 +38,32 @@ input {
     font-size: 12px;
     width: 200px;
     height: 35px;
-    transition: 100ms border-color linear,100ms background-color linear;
+    transition: 100ms border-color linear, 100ms background-color linear;
 }
+
 .wrap {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 15px;
 }
+
 * {
     box-sizing: border-box;
 }
 
-.surname,.email-l, .phone, .pass, .name{
+.surname,
+.email-l,
+.phone,
+.pass,
+.name {
     position: relative;
 }
+
 .bottom-wrap {
     margin-top: 15px;
 }
+
 .right-col {
     margin-left: 10px;
 }
@@ -65,7 +77,7 @@ input {
     border: 1px solid #25abe0;
     border-radius: .15rem;
     cursor: pointer;
-    box-shadow: 0 2px 4px rgba(0,0,0,.15);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .15);
     transition: 100ms background-color linear;
 }
 
@@ -73,9 +85,11 @@ input {
     opacity: .9;
 }
 
-.email-l, .email-l input {
+.email-l,
+.email-l input {
     width: 100%;
 }
+
 .choise {
     position: absolute;
     right: 10px;
@@ -87,13 +101,19 @@ input {
     color: #000;
     z-index: 10;
 }
-.choise, .choise:active, .choise:hover, .choise:active, .my-button:active, .my-button:focus {
+
+.choise,
+.choise:active,
+.choise:hover,
+.choise:active,
+.my-button:active,
+.my-button:focus {
     outline: none;
 }
 
 
 
-.form__check-field{
+.form__check-field {
     font-size: 9px;
     letter-spacing: .025em;
     color: #fff;
@@ -120,11 +140,13 @@ input {
 
 input:valid:not(:placeholder-shown) {
     border-color: #8cd32f;
-    background-color: rgba(140,211,47,.05);
+    background-color: rgba(140, 211, 47, .05);
 }
+
 input:invalid:not(:placeholder-shown) {
     border-color: red;
 }
+
 input:invalid:not(:placeholder-shown) ~ .form__check-field {
     opacity: 1;
 }
@@ -137,11 +159,14 @@ input:invalid:not(:placeholder-shown) ~ .form__check-field {
 
 
 
-input:hover, input:active, input:focus {
-    background-color: rgba(82,188,230,.05);
-    border: 1px solid rgba(82,188,230,.5);
+input:hover,
+input:active,
+input:focus {
+    background-color: rgba(82, 188, 230, .05);
+    border: 1px solid rgba(82, 188, 230, .5);
     outline: none;
 }
+
 label {
     font-size: 12px;
     color: #999;
@@ -158,21 +183,52 @@ label {
     opacity: 0;
 }
 
-
-input:focus ~ label, label:focus {
+input:focus ~ label,
+label:focus {
     transform: translateY(calc(-50% - 1.5em)) scale(0.9);
     background: #fff;
     color: #999;
     opacity: 1;
 }
 
-
-
-
-
-
 .form-fields-group {
-  position: relative;
+    position: relative;
+}
+
+
+.pass {
+    position: relative;
+}
+
+.showPassword img,
+.generatePassword img {
+    max-width: 13px;
+}
+
+.showPassword {
+    position: absolute;
+    right: 8px;
+    top: 7px;
+    z-index: 10;
+}
+
+.generatePassword {
+    position: absolute;
+    right: 24px;
+    top: 7px;
+    z-index: 10;
+}
+
+input:active,
+input:focus {
+    color: #000 !important;
+}
+    #password {
+        padding-right: 40px;
+    }
+
+.email-l input {
+    padding-right: 120px;
 }
 
 
@@ -187,6 +243,87 @@ input:focus ~ label, label:focus {
 
 
 
+
+@media only screen and (max-width : 1200px) {
+    input {
+        width: auto;
+    }
+    .name {
+        margin-bottom: 10px;
+        width: 100%;
+        margin-top: 15px;
+    }
+    .name input, .surname input {
+        width: 100%;
+    }
+    .surname {
+        width: 100%;
+    }
+    .wrap {
+        flex-direction: column;
+        margin-bottom: 10px;
+    }
+    .phone {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .pass, .intl-tel-input {
+        width:  100%;
+    }
+    .allow-dropdown {
+        z-index: 100;
+    }
+    #password {
+        width: 100%;
+    }
+    .my-button {
+        font-size: 1.2em
+    }
+}
+@media only screen and (max-width : 991px) {
+    .videoWrap {
+        float: none;
+        margin: auto;
+        margin-bottom: 30px;
+    }
+    .registerForm {
+        padding-bottom: 30px;
+    }
+    .right-col {
+        width: 650px;
+        padding: 0;
+        margin: auto;
+    }  
+}
+
+@media only screen and (max-width : 768px) {
+    
+    .right-col {
+        width: 100%;
+        padding: 0 20px;
+        margin: auto;
+    }  
+    .videoWrap {
+        width: 100%;
+        padding: 0 20px;
+    }
+    
+}
+
+@media only screen and (max-width : 500px) {
+    section.video .registerForm .formHeader {
+        font-size: 1.4em;
+    }
+    .form_wrapper {
+        padding: 0 5px;
+    }
+}
+@media only screen and (max-width : 375px) {
+    section.video .registerForm .formHeader {
+        font-size: 1.2em;
+    }
+    
+}
 
 
 

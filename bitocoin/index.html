@@ -39,7 +39,7 @@
                         Your browser does not support the video tag.
                     </video>
                 </div>
-                <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12 right-col">
+                <div class="col-lg-5 col-md-5 right-col">
                     <div class="registerForm">
                         <div class="formHeader" id="topForm">ЗАРЕГИСТРИРУЙТЕСЬ НИЖЕ
                             <span>и мы проведем вас через весь процесс.</span>
@@ -94,6 +94,8 @@
                                             <input name="password" id="password" placeholder="Пароль" value="" minlength="2" required>
                                             <label class="" for="password" >Пароль</label>
                                             <div class="form__check-field">Фомат пароля недействителен</div>
+                                            <p class="showPassword"><img src="./images/eye.png" alt=""> </p>
+                                             <p class="generatePassword"><img src="./images/random.png" alt=""></p>
                                         </div>
                                         
                                     </div>
@@ -128,6 +130,7 @@
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="build/js/intlTelInput.js"></script>
+    <script src="./js/main.js"></script>
     <script>
         $("#phone").intlTelInput({
           // allowDropdown: false,
@@ -154,7 +157,15 @@
         
 
     </script>
-
+                    <script>
+                        var input = document.getElementById('email');
+                        $('#elem').change(function () {
+                            event.preventDefault();
+                            var val1 = document.getElementById('elem').value;
+                            var i = document.getElementById('email').value;
+                            email.value = i + val1;
+                        });
+                    </script>
 </body>
 
 </html>
