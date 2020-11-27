@@ -369,6 +369,25 @@ section.video .registerForm .formHeader {
     .videoWrap {
        padding: 0 0px;
     }
+    input {
+        font-size: 14px;
+        height: 55px;
+    }
+    .bottom-wrap {
+        margin-top: 10px;
+    }
+    .generatePassword, .showPassword {
+        top: 17px;
+    }
+    .generatePassword {
+        right: 30px;
+    }
+    .showPassword img, .generatePassword img {
+        max-width: 16px;
+    }
+    #password {
+        padding-right: 50px;
+    }
 }
 @media only screen and (max-width : 412px) {
     .videoWrap iframe {
