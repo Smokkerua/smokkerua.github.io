@@ -190,13 +190,17 @@ input:focus {
     padding: 5px 10px;
     vertical-align: top;
     border-top: 1px solid #dee2e6;
-
+    cursor: pointer;
 }
 
+/*
 .row-table:hover {
     background-color: #F3FBF6;
 }
-
+*/
+.row-table.active {
+    background-color: #F3FBF6;
+}
 .col-main {
     min-width: calc(100% - 270px);
     position: relative;
@@ -316,15 +320,19 @@ input:focus {
     color: #4888ba;
 }
 
+/*
 .second-screen .row-table:hover {
     color: #000;
     background-color: #fff;
 }
+*/
 
 .second-screen .lendings__box:hover {
     background-color: #F3FBF6
 }
-
+.second-screen .lendings__box.active-box {
+    background-color: #F3FBF6
+}
 
 .btn-addlend {
     display: block;
@@ -492,9 +500,9 @@ input:focus {
 }
 
 .metrika-col {
-    width: 150px;
+    width: 90px;
     cursor: pointer;
-    border-right: 3px solid #FAFAFA;
+    border-right: 1px solid #FAFAFA;
 }
 
 .metrika-title {
@@ -526,7 +534,7 @@ input:focus {
 
 .statistics__box {
     display: block;
-    width: 150px;
+    width: 90px;
     color: #4888ba;
     text-align: center;
     border-right: 3px solid #FAFAFA;
@@ -538,6 +546,7 @@ input:focus {
     align-items: center;
     justify-content: center;
     font-weight: 500;
+    margin-bottom: 0;
     color: #4888ba;
 }
 

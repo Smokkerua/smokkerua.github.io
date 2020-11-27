@@ -1,21 +1,9 @@
 @media only screen and (max-width : 1500px) {
-    .metrika-col {
-        width: 110px;
-    }  
-    .statistics__box {
-        width: 110px;
-    }
     .btn-hide-lp {
         min-width: 180px;
     }
 }
 @media only screen and (max-width : 1250px) {
-    .metrika-col {
-        width: 90px;
-    }
-    .statistics__box {
-        width: 90px;
-    }
     .second-screen.statistick-on .settings {
         margin: 3px 0;
     }

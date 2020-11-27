@@ -335,7 +335,7 @@ jQuery(($) => {
     });
 });
 
- //filter select
+        // load
         $('.date-select').on('change', function () {
             $('.main-table').addClass('hide');
             $('.load').removeClass('hide');
@@ -346,8 +346,15 @@ jQuery(($) => {
             
         });
 
+        // выбор потока
+         $(".row-table").click(function(){
+                 $(this).toggleClass("active");
+          });
+        
 
-
+//         $(".lendings__box").click(function(){
+//            $(this).toggleClass("active-box");
+//          });
 
 
 
