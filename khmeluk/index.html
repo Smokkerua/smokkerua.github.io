@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Олег Хмелюк - Юридичні послуги</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/adaptyve.css">
 </head>
 
 <body>
@@ -168,23 +169,8 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
-<script>
-    // 1. Знаходимо нашу кнопку
-    const menuToggle = document.querySelector('.menu-toggle');
-    
-    // 2. Знаходимо наше меню (список ul)
-    const navMenu = document.querySelector('nav ul');
+    <script src="./js/script.js"></script>
 
-    // 3. "Вішаємо" подію: "Коли хтось натисне на кнопку..."
-    menuToggle.addEventListener('click', function() {
-        // 4. ...перемикай клас 'menu-open' на нашому меню.
-        navMenu.classList.toggle('menu-open');
-        
-        // 5. ДОДАЙТЕ ЦЕЙ РЯДОК: Перемикаємо клас 'active' на самій кнопці
-        menuToggle.classList.toggle('active');
-    });
-</script>
 </body>
 
 </html>
