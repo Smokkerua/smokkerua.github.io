@@ -11,7 +11,7 @@
 <body>
 
     <header>
-        <h1><a href="index.html">Хмелюк Віктор</a></h1>
+        <h1><a href="index.html">Хмелюк Олег</a></h1>
         <nav>
             <ul>
                 <li><a href="#about">Про мене</a></li>
@@ -19,7 +19,11 @@
                 <li><a href="#contacts">Контакти</a></li>
             </ul>
         </nav>
-        <button class="menu-toggle">☰</button>
+        <button class="menu-toggle" aria-label="Відкрити меню">
+    <span class="hamburger-bar"></span>
+    <span class="hamburger-bar"></span>
+    <span class="hamburger-bar"></span>
+</button>
     </header>
 
     <section id="home" class="hero">
@@ -165,20 +169,22 @@
     </footer>
 
     <script src="script.js"></script>
-    <script>
-        // 1. Знаходимо нашу кнопку
-        const menuToggle = document.querySelector('.menu-toggle');
-        
-        // 2. Знаходимо наше меню (список ul)
-        const navMenu = document.querySelector('nav ul');
+<script>
+    // 1. Знаходимо нашу кнопку
+    const menuToggle = document.querySelector('.menu-toggle');
+    
+    // 2. Знаходимо наше меню (список ul)
+    const navMenu = document.querySelector('nav ul');
 
-        // 3. "Вішаємо" подію: "Коли хтось натисне на кнопку..."
-        menuToggle.addEventListener('click', function() {
-            // 4. ...перемикай клас 'menu-open' на нашому меню.
-            // (тобто: якщо класу немає - додай, якщо є - прибери)
-            navMenu.classList.toggle('menu-open');
-        });
-    </script>
+    // 3. "Вішаємо" подію: "Коли хтось натисне на кнопку..."
+    menuToggle.addEventListener('click', function() {
+        // 4. ...перемикай клас 'menu-open' на нашому меню.
+        navMenu.classList.toggle('menu-open');
+        
+        // 5. ДОДАЙТЕ ЦЕЙ РЯДОК: Перемикаємо клас 'active' на самій кнопці
+        menuToggle.classList.toggle('active');
+    });
+</script>
 </body>
 
 </html>

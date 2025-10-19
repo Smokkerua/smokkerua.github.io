@@ -1,3 +1,53 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+   background: linear-gradient(45deg, #292929 25%, transparent 25%, transparent 75%, #292929 75%), linear-gradient(45deg, #292929 25%, transparent 25%, transparent 75%, #292929 75%) 0.1875em 0.1875em, radial-gradient(at 50% 0, #484847, #090909);
+    background-size: 0.375em 0.375em, 0.375em 0.375em, 100% 100%;
+    overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+}
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+}
+.show {
+    visibility: visible !important;
+}
+video {
+    visibility: hidden;
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+}
+.animation_logo{
+    position: relative;
+    height: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
 /* Базові стилі */
 body {
     font-family: Arial, sans-serif;
@@ -356,3 +406,238 @@ footer h3 {
     font-size: 14px;
     color: #aaa;
 }
+
+
+/* Ховаємо кнопку "гамбургер" на комп'ютерах */
+.menu-toggle {
+    display: none;
+    background-color: transparent;
+    border: 2px solid #fff; /* Колір рамки, можете змінити */
+    color: #fff; /* Колір символу "гамбургера" */
+    font-size: 24px; /* Розмір іконки */
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+/*
+=====================================================
+== СТИЛІ ДЛЯ МОБІЛЬНИХ ПРИСТРОЇВ (АДАПТАЦІЯ) ==
+=====================================================
+Ми будемо використовувати "breakpoint" (точку зламу) 768px.
+Це означає, що всі стилі всередині цього блоку
+застосуються до екранів шириною 768px або менше (тобто до планшетів і телефонів).
+*/
+
+@media (max-width: 768px) {
+
+    /* --- Адаптація Шапки (Header) і Меню (Nav) --- */
+
+    /* На вашому сайті меню (nav) і логотип (h1) розташовані в один рядок.
+     На мобільному ми зробимо так, щоб вони стали один під одним.
+    */
+    header {
+        flex-direction: column; /* Змінюємо напрямок flex-контейнера на вертикальний */
+        padding: 15px; /* Трохи зменшимо відступи */
+    }
+
+    /* Ваші пункти меню (список ul) зараз розташовані горизонтально.
+     Зробимо їх вертикальними.
+    */
+    nav ul {
+        flex-direction: column; /* Ставимо пункти меню в стовпчик */
+        width: 100%; /* Меню займає всю ширину */
+        margin-top: 15px; /* Додамо відступ зверху від логотипу */
+    }
+
+    nav ul li {
+        width: 100%; /* Кожен пункт меню тепер на всю ширину */
+        text-align: center; /* Вирівнюємо текст по центру */
+        margin: 5px 0; /* Додамо невеликі вертикальні відступи */
+    }
+
+    nav ul li a {
+        padding: 10px; /* Збільшимо область натискання для пальців */
+        display: block; /* Робимо посилання блоковим, щоб воно займало всю ширину li */
+    }
+
+    /* --- Адаптація секції "Про мене" --- */
+
+    /* У вас фото і текст розташовані поруч. 
+     На мобільному ми поставимо їх один під одним.
+    */
+    .about-section {
+        flex-direction: column; /* Ставимо елементи в стовпчик */
+        padding: 20px; /* Зменшуємо відступи */
+    }
+
+    .about-section img {
+        width: 70%; /* Зробимо фото трохи меншим, щоб воно не прилипало до країв */
+        max-width: 300px; /* Обмежимо максимальний розмір */
+        margin-bottom: 20px; /* Додамо відступ знизу */
+    }
+
+    .about-text {
+        width: 100%; /* Текстовий блок тепер займає всю ширину */
+        padding: 0; /* Прибираємо зайві відступи, якщо вони були */
+    }
+
+    /* --- Адаптація секції "Портфоліо" (з проектами) --- */
+    
+    .portfolio-container {
+        /* Якщо ваші проекти розташовані в ряд, 
+           можна також змусити їх стати в стовпчик */
+        flex-direction: column;
+        align-items: center; /* Центруємо їх */
+    }
+
+    .project-card {
+        /* Припускаю, що у вас є картки проектів. 
+           Зробимо їх 100% ширини з відступами */
+        width: 90%; 
+        margin-bottom: 20px; /* Додамо відступ між картками */
+    }
+
+
+    /* --- Загальні покращення --- */
+
+    /* Можна трохи зменшити заголовки на мобільних */
+    h1 {
+        font-size: 2.5rem; /* Приклад */
+    }
+
+    h2 {
+        font-size: 2rem; /* Приклад */
+    }
+
+    /* Якщо у вас є елементи з великими відступами (padding або margin), 
+     тут їх можна зменшити, щоб заощадити місце 
+    */
+    section {
+        padding: 30px 15px; /* Наприклад, зменшуємо горизонтальні відступи */
+    }
+
+}
+
+/*
+=====================================================
+== СТИЛІ ДЛЯ МОБІЛЬНИХ ПРИСТРОЇВ (АДАПТАЦІЯ) ==
+=====================================================
+*/
+@media (max-width: 768px) {
+
+    /* --- Адаптація Шапки (Header) --- */
+
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px;
+        position: relative; /* Додано, щоб меню не перекривало шапку */
+        z-index: 100; /* Шапка має бути вище за контент */
+    }
+
+    /* Показуємо кнопку-гамбургер */
+    .menu-toggle {
+        display: block;
+    }
+
+    /* --- СТИЛІ ПАНЕЛІ МЕНЮ, ЩО ВИЇЖДЖАЄ --- */
+
+    /* Старий 'nav ul' (просто з'являвся під шапкою) - ЗАМІНЕНО */
+    nav ul {
+        /* Створюємо панель на весь екран, що виїжджає справа */
+        position: fixed; /* Фіксуємо на екрані */
+        top: 0;
+        right: 0;
+        height: 100vh; /* 100% висоти екрана */
+        width: 80%; /* 80% ширини екрана */
+        max-width: 300px; /* Але не ширше 300px */
+        
+        background-color: #2a2a2a; /* Трохи темніший фон */
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2); /* Тінь для ефекту */
+
+        /* Сховано за замовчуванням (за межами екрана праворуч) */
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out; /* Плавна анімація виїзду */
+
+        /* Налаштування списку всередині панелі */
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* Центруємо посилання вертикально */
+        align-items: center; /* Центруємо посилання горизонтально */
+        margin: 0;
+        padding: 0;
+        z-index: 1000; /* Меню має бути НАД усім, окрім кнопки */
+    }
+
+    /* Стиль для ВІДКРИТОГО меню */
+    nav ul.menu-open {
+        transform: translateX(0); /* Виїжджає на екран */
+    }
+
+    /* --- Стилі для посилань всередині меню --- */
+
+    nav ul li {
+        width: 100%;
+        text-align: center;
+        margin: 0;
+    }
+
+    nav ul li a {
+        display: block; /* Посилання займає всю ширину */
+        padding: 25px; /* Велика область для натискання пальцем */
+        font-size: 1.2rem; /* Збільшуємо шрифт */
+        color: #fff;
+        text-decoration: none;
+        transition: background-color 0.2s; /* Ефект при натисканні */
+    }
+
+    /* Ефект при наведенні/натисканні на посилання в меню */
+    nav ul li a:hover,
+    nav ul li a:focus {
+        background-color: #444; /* Світліший фон */
+    }
+
+
+    /* --- Тут ідуть ваші інші стилі для мобільних --- */
+    /* (скопіюйте їх зі свого старого блоку @media) */
+
+    .about-section {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .about-section img {
+        width: 70%;
+        max-width: 300px;
+        margin-bottom: 20px;
+    }
+
+    .about-text {
+        width: 100%;
+        padding: 0;
+    }
+
+    .portfolio-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-card {
+        width: 90%; 
+        margin-bottom: 20px;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    section {
+        padding: 30px 15px;
+    }
+
+} /* --- Кінець блоку @media --- */
