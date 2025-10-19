@@ -613,7 +613,297 @@ flex-direction: row;
 
 
 
+/*
+=========================================
+== СТИЛІ ДЛЯ ШАПКИ (ДЕСКТОП) ==
+=========================================
+*/
 
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: #fff;
+    padding: 20px 40px; /* Відступи для десктопа */
+    
+    /* "Прилипання" до верху */
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    
+    /* Тінь для об'єму */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    
+    z-index: 100; 
+    box-sizing: border-box; 
+}
+
+/* --- Стилізуємо Логотип (заголовок H1) --- */
+header h1 {
+    margin: 0;
+    font-size: 1.8rem;
+}
+
+header h1 a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    transition: color 0.3s ease;
+}
+
+header h1 a:hover {
+    color: #ddd;
+}
+
+/* --- Стилізуємо саму Навігацію (Десктоп) --- */
+
+header nav {
+    display: block;
+}
+
+header nav ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    
+    /* Скидаємо мобільні стилі */
+    position: static;
+    transform: none;
+    width: auto;
+    height: auto;
+    background-color: transparent;
+    box-shadow: none;
+}
+
+header nav ul li {
+    margin-left: 35px;
+    text-align: left;
+}
+
+/* --- Стилізуємо Посилання в меню (з ефектом) --- */
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 8px 0;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+/* Створюємо підкреслення (сховане) */
+header nav ul li a::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Показываємо підкреслення при наведенні */
+header nav ul li a:hover::after {
+    transform: scaleX(1);
+}
+
+/*
+=========================================
+== СТИЛІ ДЛЯ КНОПКИ ГАМБУРГЕР-МЕНЮ ==
+=========================================
+*/
+
+/* Ховаємо кнопку на ПК */
+.menu-toggle {
+    display: none;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    padding: 0;
+    width: 30px; 
+    height: 24px;
+    position: relative;
+    z-index: 1001; /* Кнопка НАД меню */
+}
+
+/* Смужки гамбургера */
+.hamburger-bar {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 3px;
+    position: absolute;
+    left: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.hamburger-bar:nth-child(1) {
+    top: 0;
+}
+.hamburger-bar:nth-child(2) {
+    top: 50%;
+    transform: translateY(-50%);
+}
+.hamburger-bar:nth-child(3) {
+    bottom: 0;
+}
+
+/* Анімація в "Хрестик" */
+.menu-toggle.active .hamburger-bar:nth-child(1) {
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+}
+.menu-toggle.active .hamburger-bar:nth-child(2) {
+    opacity: 0;
+}
+.menu-toggle.active .hamburger-bar:nth-child(3) {
+    bottom: 50%;
+    transform: translateY(50%) rotate(-45deg);
+}
+
+
+/*
+=====================================================
+== СТИЛІ ДЛЯ МОБІЛЬНИХ ПРИСТРОЇВ (АДАПТАЦІЯ) ==
+== (Екрани 768px і менше) ==
+=====================================================
+*/
+@media (max-width: 768px) {
+
+    /* --- Адаптація Шапки (Header) --- */
+    header {
+        /* Успадковує 'position: sticky' від десктопа */
+        /* Ми просто зменшуємо відступи */
+        padding: 15px;
+    }
+
+    /* Ховаємо десктопне меню */
+    header nav {
+        display: none;
+    }
+
+    /* Показуємо кнопку-гамбургер */
+    .menu-toggle {
+        display: block;
+    }
+
+    /* --- СТИЛІ ПАНЕЛІ МЕНЮ, ЩО ВИЇЖДЖАЄ --- */
+
+    nav ul {
+        /* Панель на весь екран, що виїжджає справа */
+        position: fixed; 
+        top: 0;
+        right: 0;
+        height: 100vh; /* 100% висоти екрана */
+        width: 80%; 
+        max-width: 300px;
+        
+        background-color: #2a2a2a; 
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
+
+        /* Сховано за замовчуванням */
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out;
+
+        /* Налаштування списку всередині панелі */
+        display: flex;
+        flex-direction: column;
+        justify-content: center; 
+        align-items: center; 
+        margin: 0;
+        padding: 0;
+        z-index: 1000; /* Меню над контентом */
+    }
+
+    /* Стиль для ВІДКРИТОГО меню */
+    nav ul.menu-open {
+        transform: translateX(0); /* Виїжджає на екран */
+    }
+
+    /* --- Стилі для посилань всередині меню --- */
+    nav ul li {
+        width: 100%;
+        text-align: center;
+        margin: 0;
+    }
+
+    nav ul li a {
+        display: block; 
+        padding: 25px; /* Велика область для натискання */
+        font-size: 1.2rem; 
+        color: #fff;
+        text-decoration: none;
+        transition: background-color 0.2s;
+        
+        /* Прибираємо ефект підкреслення з десктопа */
+        position: static;
+    }
+    
+    /* Прибираємо лінію підкреслення на мобільному */
+    nav ul li a::after {
+        display: none;
+    }
+
+    nav ul li a:hover,
+    nav ul li a:focus {
+        background-color: #444;
+    }
+
+
+    /* --- Адаптація секції "Про мене" --- */
+    .about-section {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .about-section img {
+        width: 70%;
+        max-width: 300px;
+        margin-bottom: 20px;
+    }
+
+    .about-text {
+        width: 100%;
+        padding: 0;
+    }
+
+    /* --- Адаптація секції "Портфоліо" --- */
+    .portfolio-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-card {
+        width: 90%; 
+        margin-bottom: 20px;
+    }
+
+    /* --- Загальні покращення --- */
+    
+    /* Зменшуємо заголовки */
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    /* Зменшуємо відступи секцій */
+    section {
+        padding: 30px 15px;
+    }
+
+} /* --- Кінець блоку @media --- */
 
 
 
