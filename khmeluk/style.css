@@ -1,0 +1,358 @@
+/* Базові стилі */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Плавна прокрутка */
+html {
+    scroll-behavior: smooth;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 32px;
+    color: #004a99; /* Головний колір акценту */
+}
+
+/* --- Шапка (Header) --- */
+header {
+    background: #ffffff;
+    padding: 20px 0;
+    border-bottom: 2px solid #004a99;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Для мобільних пристроїв */
+}
+
+.logo-block .logo {
+    margin: 0;
+    font-size: 28px;
+    color: #004a99;
+}
+
+.logo-block .tagline {
+    margin: 0;
+    font-size: 16px;
+    color: #555;
+}
+
+header nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+header nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #004a99;
+}
+
+/* --- (НОВІ СТИЛІ) Головний блок (Hero) --- */
+.hero {
+    height: 90vh; /* Висота майже на весь екран */
+    color: #ffffff; /* Колір тексту - білий */
+    
+    /* ВАЖЛИВО: Замініть це посилання на URL вашої картинки.
+      Я використав тимчасове зображення Феміди.
+    */
+    background-image: url('./lawyer.jpg');
+    
+    background-size: cover; /* Картинка заповнює весь блок */
+    background-position: center center; /* Картинка центрується */
+    
+    display: flex;
+    align-items: center; /* Центрує вміст по вертикалі */
+    justify-content: center; /* Центрує вміст по горизонталі */
+    text-align: center;
+    position: relative; /* Потрібно для накладання */
+}
+
+/* Це створює ефект затемнення, щоб текст краще читався */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Чорний на 60% прозорий */
+    z-index: 1; /* Шар затемнення */
+}
+
+/* Контейнер з текстом має бути поверх затемнення */
+.hero .container {
+    position: relative;
+    z-index: 2;
+}
+
+.hero .hero-title {
+    font-size: 48px;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.hero .hero-slogan {
+    font-size: 24px;
+    font-style: italic;
+    color: #ffc107; /* Жовтий акцент для слогану */
+    max-width: 600px;
+    margin: 0 auto;
+}
+/* --- Кінець нових стилів --- */
+
+
+/* --- Секції --- */
+section {
+    padding: 60px 0;
+}
+/* Забираємо відступ у першої секції ПІСЛЯ hero */
+main section:first-of-type {
+    padding-top: 60px;
+}
+
+
+
+/* Секція "Про мене" */
+.about-text {
+    text-align: center;
+    font-size: 18px;
+    max-width: 800px;
+    margin: 0 auto;
+    font-style: italic;
+}
+
+/* --- Секція "Послуги" (Акордеон) --- */
+.accordion {
+    background-color: #004a99;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: 0.4s;
+    margin-top: 10px;
+    border-radius: 5px 5px 0 0;
+}
+
+.accordion:after { /* Додаємо "+" */
+    content: '\002B'; /* Знак плюса */
+    color: #ffc107; /* Жовтий акцент */
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+
+.accordion.active:after {
+    content: "\2212"; /* Знак мінуса */
+}
+
+.accordion:hover, .accordion.active {
+    background-color: #003a7a; /* Трохи темніший синій */
+}
+
+.panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0; /* Це головний трюк - панель прихована */
+    overflow: hidden;
+    transition: max-height 0.3s ease-out; /* Плавна анімація */
+    border: 1px solid #ddd;
+    border-top: none;
+    border-radius: 0 0 5px 5px;
+}
+.panel p {
+    margin: 15px 0;
+}
+
+/* --- Секція "Відгуки" (Слайдер) --- */
+.slider-container {
+    max-width: 800px;
+    position: relative;
+    margin: auto;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.testimonial-slide {
+    display: none; /* Всі слайди приховані за замовчуванням */
+    text-align: center;
+}
+
+.testimonial-slide q { /* Стиль для цитати */
+    font-size: 20px;
+    font-style: italic;
+    line-height: 1.5;
+}
+
+.testimonial-slide .author {
+    font-weight: bold;
+    margin-top: 15px;
+    color: #004a99;
+}
+
+/* Анімація зникнення/появи */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+/* Крапки для навігації */
+.slider-dots {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.dot.active, .dot:hover {
+    background-color: #004a99;
+}
+
+/* --- Секція "Лозунг" --- */
+#slogan {
+    background: #004a99;
+    color: #ffffff;
+    text-align: center;
+}
+
+#slogan blockquote {
+    font-size: 28px;
+    font-style: italic;
+    font-weight: bold;
+    margin: 0;
+}
+
+/* --- Секція "Контактна форма" --- */
+.contact-form {
+    max-width: 700px;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.cta-button {
+    display: inline-block;
+    background: #ffc107; /* Жовтий акцент */
+    color: #333;
+    padding: 12px 25px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%; /* Кнопка на всю ширину форми */
+}
+
+.cta-button:hover {
+    background-color: #e0a800;
+}
+
+/* --- Підвал (Footer) --- */
+footer {
+    background: #333;
+    color: #ffffff;
+    text-align: center;
+    padding: 30px 0;
+}
+
+footer h3 {
+    font-size: 24px;
+    color: #ffc107;
+    margin-top: 0;
+}
+
+.footer-contacts p {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+.footer-contacts a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.footer-contacts a:hover {
+    text-decoration: underline;
+}
+
+.copyright {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #aaa;
+}
