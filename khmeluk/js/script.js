@@ -172,3 +172,40 @@ document.addEventListener("DOMContentLoaded", function() {
         // 5. ДОДАЙТЕ ЦЕЙ РЯДОК: Перемикаємо клас 'active' на самій кнопці
         menuToggle.classList.toggle('active');
     });
+
+
+
+    document.addEventListener('DOMContentLoaded', function () {
+        const accordionHeaders = document.querySelectorAll('.accordion-header');
+
+        accordionHeaders.forEach(header => {
+            header.addEventListener('click', function () {
+                const content = this.nextElementSibling;
+                const icon = this.querySelector('.accordion-icon');
+                const isActive = this.classList.contains('active');
+
+                // Закриваємо всі інші відкриті акордеони
+                accordionHeaders.forEach(otherHeader => {
+                    if (otherHeader !== this) {
+                        otherHeader.classList.remove('active');
+                        otherHeader.setAttribute('aria-expanded', 'false');
+                        otherHeader.nextElementSibling.style.maxHeight = null;
+                        otherHeader.querySelector('.accordion-icon').textContent = '+';
+                    }
+                });
+                
+                // Відкриваємо/закриваємо поточний
+                if (isActive) {
+                    this.classList.remove('active');
+                    this.setAttribute('aria-expanded', 'false');
+                    content.style.maxHeight = null;
+                    icon.textContent = '+';
+                } else {
+                    this.classList.add('active');
+                    this.setAttribute('aria-expanded', 'true');
+                    content.style.maxHeight = content.scrollHeight + 'px'; // Встановлюємо висоту
+                    icon.textContent = '−'; // Використовуємо мінус
+                }
+            });
+        });
+    });
