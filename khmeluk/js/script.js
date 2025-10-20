@@ -158,21 +158,37 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
-    // 1. Знаходимо нашу кнопку
-    const menuToggle = document.querySelector('.menu-toggle');
-    
-    // 2. Знаходимо наше меню (список ul)
-    const navMenu = document.querySelector('nav ul');
+    // Чекаємо, поки вся сторінка завантажиться
+    document.addEventListener('DOMContentLoaded', () => {
 
-    // 3. "Вішаємо" подію: "Коли хтось натисне на кнопку..."
-    menuToggle.addEventListener('click', function() {
-        // 4. ...перемикай клас 'menu-open' на нашому меню.
-        navMenu.classList.toggle('menu-open');
+        // 1. Знаходимо нашу кнопку-бургер
+        const burgerButton = document.querySelector('.burger-menu');
         
-        // 5. ДОДАЙТЕ ЦЕЙ РЯДОК: Перемикаємо клас 'active' на самій кнопці
-        menuToggle.classList.toggle('active');
-    });
+        // 2. Знаходимо список <ul> з нашою навігацією
+        const navMenu = document.querySelector('.navigation ul');
 
+        // 3. Перевіряємо, чи існують обидва елементи
+        if (burgerButton && navMenu) {
+            
+            // 4. Вішаємо "слухача" події 'click' на кнопку
+            burgerButton.addEventListener('click', () => {
+                
+                // 5. При кожному кліку:
+                
+                // Додаємо/прибираємо клас 'active' для самої кнопки
+                // (це робить анімацію "X")
+                burgerButton.classList.toggle('active');
+                
+                // Додаємо/прибираємо клас 'active' для меню <ul>
+                // (це показує або ховає меню)
+                navMenu.classList.toggle('active');
+
+                // Оновлюємо атрибут для доступності
+                const isExpanded = burgerButton.getAttribute('aria-expanded') === 'true';
+                burgerButton.setAttribute('aria-expanded', !isExpanded);
+            });
+        }
+    });
 
 
     document.addEventListener('DOMContentLoaded', function () {
