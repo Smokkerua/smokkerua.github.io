@@ -158,38 +158,6 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
-    // Чекаємо, поки вся сторінка завантажиться
-    document.addEventListener('DOMContentLoaded', () => {
-
-        // 1. Знаходимо нашу кнопку-бургер
-        const burgerButton = document.querySelector('.burger-menu');
-        
-        // 2. Знаходимо список <ul> з нашою навігацією
-        const navMenu = document.querySelector('.navigation ul');
-
-        // 3. Перевіряємо, чи існують обидва елементи
-        if (burgerButton && navMenu) {
-            
-            // 4. Вішаємо "слухача" події 'click' на кнопку
-            burgerButton.addEventListener('click', () => {
-                
-                // 5. При кожному кліку:
-                
-                // Додаємо/прибираємо клас 'active' для самої кнопки
-                // (це робить анімацію "X")
-                burgerButton.classList.toggle('active');
-                
-                // Додаємо/прибираємо клас 'active' для меню <ul>
-                // (це показує або ховає меню)
-                navMenu.classList.toggle('active');
-
-                // Оновлюємо атрибут для доступності
-                const isExpanded = burgerButton.getAttribute('aria-expanded') === 'true';
-                burgerButton.setAttribute('aria-expanded', !isExpanded);
-            });
-        }
-    });
-
 
     document.addEventListener('DOMContentLoaded', function () {
         const accordionHeaders = document.querySelectorAll('.accordion-header');
@@ -225,3 +193,40 @@ document.addEventListener("DOMContentLoaded", function() {
             });
         });
     });
+
+
+
+
+    // Ждем, пока весь HTML-документ загрузится
+    document.addEventListener('DOMContentLoaded', function() {
+        
+        // Находим иконку бургера по ее классу
+        const burgerIcon = document.querySelector('.burger-menu-icon');
+        
+        // Находим мобильное меню по его классу
+        const mobileNav = document.querySelector('.nav-mobile');
+        
+        // Добавляем "прослушку" клика на иконку бургера
+        burgerIcon.addEventListener('click', function() {
+            // Переключаем (добавляем/убираем) класс 'active' у иконки
+            burgerIcon.classList.toggle('active');
+            
+            // Переключаем (добавляем/убираем) класс 'active' у мобильного меню
+            mobileNav.classList.toggle('active');
+        });
+
+        // БОНУС: Закрываем меню при клике на ссылку в нем
+        // Находим все ссылки в мобильном меню
+        const mobileLinks = document.querySelectorAll('.nav-mobile a');
+
+        mobileLinks.forEach(function(link) {
+            link.addEventListener('click', function() {
+                // Убираем класс 'active' у иконки
+                burgerIcon.classList.remove('active');
+                // Убираем класс 'active' у меню
+                mobileNav.classList.remove('active');
+            });
+        });
+
+    });
+
