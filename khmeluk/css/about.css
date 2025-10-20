@@ -1,0 +1,194 @@
+/* ================== About Section (з Анімацією та ФОНОМ) ================== */
+
+/* 1. Визначення анімації (вона нам знадобиться пізніше) */
+@keyframes fadeInUp {
+    /* Анімація починається з... */
+    from {
+        opacity: 0; /* Повністю прозорий */
+        transform: translateY(30px); /* І трохи зсунутий вниз */
+    }
+    /* Анімація закінчується... */
+    to {
+        opacity: 1; /* Повністю видимий */
+        transform: translateY(0); /* У своїй звичайній позиції */
+    }
+}
+
+
+/* 2. Основна секція #about */
+#about {
+    /* Встановлюємо відступи, трохи більші для кращого ефекту */
+    padding: 100px 0;
+    
+    /* === ФОНОВЕ ЗОБРАЖЕННЯ === */
+    /* !!! ВАЖЛИВО: Заміни це посилання на своє власне зображення. 
+       Я тимчасово використав тематичне зображення хмелю.
+       Шукай на Pexels.com або Unsplash.com за запитом "hops" або "brewery".
+    */
+    background-image: url('../img/pexels-photo-1267438.jpeg');
+    
+    background-size: cover; /* Масштабуємо, щоб заповнити весь блок */
+    background-position: center center; /* Центруємо зображення */
+    
+    /* === ЕФЕКТ PARALLAX === */
+    /* Фон "заморожується" на місці під час прокрутки */
+    background-attachment: fixed;
+    
+    /* position: relative потрібен для роботи оверлею */
+    position: relative;
+}
+
+/* 3. Оверлей (затемнення) */
+/* * Ми створюємо псевдо-елемент, який розтягується на весь блок #about
+ * і лягає між фоновим зображенням та контентом.
+ */
+#about::before {
+    content: ''; /* Обов'язково для псевдо-елементів */
+    position: absolute; /* Позиціонуємо відносно #about */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    
+    /* Наш оверлей: напівпрозорий чорний колір (70% непрозорості) */
+    background: rgba(0, 0, 0, 0.7); 
+    
+    /* z-index: 1 поміщає оверлей над фоном */
+    z-index: 1;
+}
+
+/* 4. Контейнер з контентом */
+/* * Нам потрібно, щоб ВЕСЬ контент (текст, фото) був НАД оверлеєм.
+ * Для цього ми даємо йому position: relative та z-index: 2.
+ */
+#about .container {
+    position: relative;
+    z-index: 2;
+}
+
+/* 5. Внутрішній блок (Flex-контейнер) */
+.about__inner {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+/* 6. Колонки (для фото і для тексту) */
+.about__item {
+    flex: 1; /* Кожна займає 50% */
+}
+
+/* 7. Зображення (те, що всередині, не фон) */
+.about__img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    /* Тінь тепер помітніша на темному фоні */
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* 8. Текст (Заголовок) */
+/* * Ми змінюємо колір тексту на білий, щоб його було видно!
+ * Я звертаюся до нього через #about, щоб ці стилі
+ * застосувалися тільки всередині цього блоку.
+ */
+#about .section__title {
+    color: #ffffff; /* БІЛИЙ КОЛІР */
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+/* 9. Текст (Параграфи) */
+#about .about__text {
+    color: #f0f0f0; /* Світло-сірий (трохи м'якший за білий) */
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+/* 10. Кнопка (старі стилі кнопки чудово підходять) */
+.about__btn {
+    display: inline-block;
+    background-color: #c0a183;
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 20px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.about__btn:hover {
+    background-color: #a88a6d;
+    transform: translateY(-2px);
+}
+
+/* === АНІМАЦІЯ КОНТЕНТУ === */
+/* * Тепер ми застосовуємо нашу анімацію "fadeInUp" 
+ * до обох колонок (.about__item).
+ */
+ 
+/* Анімація для першої колонки (з фото) */
+.about__item:first-child {
+    /* (назва анімації, тривалість, функція плавності, затримка, режим заповнення) */
+    animation: fadeInUp 1s ease-out 0.3s forwards;
+}
+
+/* Анімація для другої колонки (з текстом) */
+.about__item:last-child {
+    /* Ми додаємо більшу затримку (0.6s), щоб вона з'явилася
+       трохи пізніше за фотографію. Це виглядає дуже стильно.
+    */
+    animation: fadeInUp 1s ease-out 0.6s forwards;
+}
+
+.about-text {
+    color: #fff;
+}
+.about__title {
+    color: #fff;
+}
+/* ================== Адаптація для мобільних ================== */
+
+@media (max-width: 768px) {
+
+    /* === ВАЖЛИВО: Вимикаємо Parallax === */
+    #about {
+        /* * Ефект background-attachment: fixed погано працює 
+         * на більшості мобільних пристроїв (викликає "стрибки").
+         * Тому ми його вимикаємо, змінюючи на 'scroll'.
+         */
+        background-attachment: scroll;
+        
+        /* Зменшуємо відступи */
+        padding: 50px 0;
+    }
+
+    /* * Всі інші стилі (flex-direction: column тощо) 
+     * повинні працювати з минулого разу, але ми їх продублюємо 
+     * для надійності.
+     */
+     
+    .about__inner {
+        flex-direction: column; /* Складаємо колонки одна під одну */
+    }
+
+    .about__item {
+        text-align: center; /* Центруємо вміст (кнопку, заголовок) */
+    }
+    
+    #about .about__text {
+         /* А сам текст вирівнюємо по центру для кращого вигляду на мобільному */
+        text-align: center;
+    }
+
+    .about__item:first-child {
+        margin-bottom: 30px; /* Відступ між фото і текстом */
+    }
+
+    #about .section__title {
+        font-size: 28px; /* Трохи менший заголовок */
+    }
+}
