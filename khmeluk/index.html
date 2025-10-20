@@ -6,249 +6,171 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Олег Хмелюк - Юридичні послуги</title>
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/home.css">
     <link rel="stylesheet" href="./css/about.css">
     <link rel="stylesheet" href="./css/services.css">
     <link rel="stylesheet" href="./css/slogan.css">
-    <link rel="stylesheet" href="./css/adaptyve.css">
-    
-</head>
+    <link rel="stylesheet" href="./css/adaptyve.css"> </head>
 
 <body>
-
-    <header>
-        <h1><a href="index.html">Хмелюк Олег</a></h1>
-        <nav>
-            <ul>
-                <li><a href="#about">Про мене</a></li>
-                <li><a href="#portfolio">Портфоліо</a></li>
-                <li><a href="#contacts">Контакти</a></li>
-            </ul>
-        </nav>
-        <button class="menu-toggle" aria-label="Відкрити меню">
-    <span class="hamburger-bar"></span>
-    <span class="hamburger-bar"></span>
-    <span class="hamburger-bar"></span>
-</button>
-    </header>
-
-    <section id="home" class="hero">
+    <header class="header">
         <div class="container">
-            <h2 class="hero-title">Олег Хмелюк</h2>
-            <p class="hero-slogan">Мої Юридичні Послуги (Онлайн)</p>
+            <h1><a href="index.html">Хмелюк Олег</a></h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Головна</a></li>
+                    <li><a href="#about">Про мене</a></li>
+                    <li><a href="#services_block">Послуги</a></li>
+                    <li><a href="#testimonials">Відгуки</a></li>
+                    <li><a href="#contact">Контакти</a></li>
+                </ul>
+            </nav>
+            <button class="menu-toggle" aria-label="Відкрити меню"> <span class="hamburger-bar"></span> <span class="hamburger-bar"></span> <span class="hamburger-bar"></span> </button>
         </div>
+    </header>
+    <section id="home" class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Ваш надійний партнер у юридичних справах</h1>
+            <p>Професійна допомога у вирішенні складних питань для бізнесу та приватних осіб.</p> <a href="contact.html" class="cta-button">Отримати консультацію</a> </div>
     </section>
-
     <main>
-
         <section id="about">
             <div class="container">
                 <h2 class="about__title">Про мене</h2>
-                <p class="about-text">
-                    Я — фаховий юрист-консультант із практичним досвідом. Пропоную комплексні дистанційні послуги, що допоможуть Вам захистити свої інтереси, мінімізувати ризики та врегулювати спори. Моя робота зосереджена на глибокому правовому аналізі, якісному складанні документів та ефективному досудовому врегулюванні.
-                </p>
+                <p class="about-text"> Я — фаховий юрист-консультант із практичним досвідом. Пропоную комплексні дистанційні послуги, що допоможуть Вам захистити свої інтереси, мінімізувати ризики та врегулювати спори. Моя робота зосереджена на глибокому правовому аналізі, якісному складанні документів та ефективному досудовому врегулюванні. </p>
             </div>
         </section>
-
         <section id="services_block" class="services-wrapper">
-    
-    <h2 class="services-main-title">Базові Юридичні Послуги</h2>
-    
-    <div class="basic-services-grid">
-        
-        <div class="service-card">
-            <h3>Експертні Консультації та Аналіз</h3>
-            <ul class="service-list">
-                <li>
-                    <strong>Усна юридична консультація</strong>
-                    <p>Детальне роз'яснення Вашої правової ситуації. Оцінка ризиків та визначення стратегії дій.</p>
-                    <span class="platform">Zoom, Telegram, Телефон</span>
-                </li>
-                <li>
-                    <strong>Письмовий юридичний висновок</strong>
-                    <p>Ґрунтовна письмова відповідь з посиланнями на норми законодавства та актуальну судову практику.</p>
-                    <span class="platform">E-mail (захищений документ)</span>
-                </li>
-                <li>
-                    <strong>Аналіз документів (Правовий аудит)</strong>
-                    <p>Перевірка наданих Вами документів на відповідність закону та виявлення правових ризиків.</p>
-                    <span class="platform">E-mail, захищений хмарний сервіс</span>
-                </li>
-            </ul>
-        </div>
-
-        <div class="service-card">
-            <h3>Досудове Врегулювання</h3>
-            <ul class="service-list">
-                <li>
-                    <strong>Розробка Претензій та Вимог</strong>
-                    <p>Складання офіційних документів для позасудового врегулювання спору, стягнення заборгованості чи відшкодування шкоди.</p>
-                </li>
-                <li>
-                    <strong>Консалтинг з Переговорів</strong>
-                    <p>Розробка правової позиції та стратегії для успішного проведення переговорів із контрагентами або опонентами.</p>
-                </li>
-            </ul>
-        </div>
-        
-    </div>
-
-    <h2 class="services-main-title">Послуги за Галузями Права</h2>
-    <p class="services-subtitle">Я забезпечую повну документальну готовність до будь-яких правових дій у наступних галузях.</p>
-    
-    <div class="accordion-container">
-        
-        <div class="accordion-item">
-            <button class="accordion-header" aria-expanded="false">
-                I. Цивільне Право (Договори, Майно, Спадщина)
-                <span class="accordion-icon" aria-hidden="true">+</span>
-            </button>
-            <div class="accordion-content">
-                <p>Я допоможу захистити Ваші права власника та забезпечити юридичну чистоту угод.</p>
-                <div class="service-details">
-                    <strong>Договірна робота:</strong>
-                    <p>Розробка всіх видів договорів "під ключ" (купівлі-продажу, позики, оренди, надання послуг), складання претензій та відповідей на претензії.</p>
+            <h2 class="services-main-title">Базові Юридичні Послуги</h2>
+            <div class="basic-services-grid">
+                <div class="service-card">
+                    <h3>Експертні Консультації та Аналіз</h3>
+                    <ul class="service-list">
+                        <li> <strong>Усна юридична консультація</strong>
+                            <p>Детальне роз'яснення Вашої правової ситуації. Оцінка ризиків та визначення стратегії дій.</p> <span class="platform">Zoom, Telegram, Телефон</span> </li>
+                        <li> <strong>Письмовий юридичний висновок</strong>
+                            <p>Ґрунтовна письмова відповідь з посиланнями на норми законодавства та актуальну судову практику.</p> <span class="platform">E-mail (захищений документ)</span> </li>
+                        <li> <strong>Аналіз документів (Правовий аудит)</strong>
+                            <p>Перевірка наданих Вами документів на відповідність закону та виявлення правових ризиків.</p> <span class="platform">E-mail, захищений хмарний сервіс</span> </li>
+                    </ul>
                 </div>
-                <div class="service-details">
-                    <strong>Спадкове право:</strong>
-                    <p>Консультування щодо порядку прийняття спадщини, складання заяв про прийняття/відмову від спадщини (для нотаріуса).</p>
-                </div>
-                <div class="service-details">
-                    <strong>Процесуальні Документи:</strong>
-                    <p>Підготовка проекту позовної заяви (майнові спори, стягнення боргу), проекту відзиву, проекту апеляційної/касаційної скарги.</p>
+                <div class="service-card">
+                    <h3>Досудове Врегулювання</h3>
+                    <ul class="service-list">
+                        <li> <strong>Розробка Претензій та Вимог</strong>
+                            <p>Складання офіційних документів для позасудового врегулювання спору, стягнення заборгованості чи відшкодування шкоди.</p>
+                        </li>
+                        <li> <strong>Консалтинг з Переговорів</strong>
+                            <p>Розробка правової позиції та стратегії для успішного проведення переговорів із контрагентами або опонентами.</p>
+                        </li>
+                    </ul>
                 </div>
             </div>
-        </div>
-
-        <div class="accordion-item">
-            <button class="accordion-header" aria-expanded="false">
-                II. Адміністративне Право та КАСУ (Спори з Державою)
-                <span class="accordion-icon" aria-hidden="true">+</span>
-            </button>
-            <div class="accordion-content">
-                <p>Я допоможу правильно взаємодіяти з органами влади та оскаржити їхні неправомірні рішення.</p>
-                 <div class="service-details">
-                    <strong>Взаємодія з Органами:</strong>
-                    <p>Підготовка скарг на дії/бездіяльність посадових осіб, запитів на отримання публічної інформації, консультування щодо адмінпослуг.</p>
+            <h2 class="services-main-title">Послуги за Галузями Права</h2>
+            <p class="services-subtitle">Я забезпечую повну документальну готовність до будь-яких правових дій у наступних галузях.</p>
+            <div class="accordion-container">
+                <div class="accordion-item">
+                    <button class="accordion-header" aria-expanded="false"> I. Цивільне Право (Договори, Майно, Спадщина) <span class="accordion-icon" aria-hidden="true">+</span> </button>
+                    <div class="accordion-content">
+                        <p>Я допоможу захистити Ваші права власника та забезпечити юридичну чистоту угод.</p>
+                        <div class="service-details"> <strong>Договірна робота:</strong>
+                            <p>Розробка всіх видів договорів "під ключ" (купівлі-продажу, позики, оренди, надання послуг), складання претензій та відповідей на претензії.</p>
+                        </div>
+                        <div class="service-details"> <strong>Спадкове право:</strong>
+                            <p>Консультування щодо порядку прийняття спадщини, складання заяв про прийняття/відмову від спадщини (для нотаріуса).</p>
+                        </div>
+                        <div class="service-details"> <strong>Процесуальні Документи:</strong>
+                            <p>Підготовка проекту позовної заяви (майнові спори, стягнення боргу), проекту відзиву, проекту апеляційної/касаційної скарги.</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="service-details">
-                    <strong>Оскарження Рішень:</strong>
-                    <p>Аналіз постанов про накладення штрафів та підготовка документів для їх досудового оскарження.</p>
+                <div class="accordion-item">
+                    <button class="accordion-header" aria-expanded="false"> II. Адміністративне Право та КАСУ (Спори з Державою) <span class="accordion-icon" aria-hidden="true">+</span> </button>
+                    <div class="accordion-content">
+                        <p>Я допоможу правильно взаємодіяти з органами влади та оскаржити їхні неправомірні рішення.</p>
+                        <div class="service-details"> <strong>Взаємодія з Органами:</strong>
+                            <p>Підготовка скарг на дії/бездіяльність посадових осіб, запитів на отримання публічної інформації, консультування щодо адмінпослуг.</p>
+                        </div>
+                        <div class="service-details"> <strong>Оскарження Рішень:</strong>
+                            <p>Аналіз постанов про накладення штрафів та підготовка документів для їх досудового оскарження.</p>
+                        </div>
+                        <div class="service-details"> <strong>Процесуальні Документи:</strong>
+                            <p>Підготовка проекту позовної заяви до адміністративного суду (оскарження рішень, дій/бездіяльності), проекту відзиву, проекту апеляційної/касаційної скарги за правилами КАСУ.</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="service-details">
-                    <strong>Процесуальні Документи:</strong>
-                    <p>Підготовка проекту позовної заяви до адміністративного суду (оскарження рішень, дій/бездіяльності), проекту відзиву, проекту апеляційної/касаційної скарги за правилами КАСУ.</p>
+                <div class="accordion-item">
+                    <button class="accordion-header" aria-expanded="false"> III. Трудове Право (Відносини Працівник-Роботодавець) <span class="accordion-icon" aria-hidden="true">+</span> </button>
+                    <div class="accordion-content">
+                        <p>Забезпечення законності трудових відносин та підготовка до вирішення трудових спорів.</p>
+                        <div class="service-details"> <strong>Кадровий Документообіг:</strong>
+                            <p>Розробка трудових договорів, положень про преміювання, наказів та інструкцій.</p>
+                        </div>
+                        <div class="service-details"> <strong>Спори:</strong>
+                            <p>Консультування щодо законності звільнення, переведення, скорочення. Складання вимог та претензій до сторін трудового спору.</p>
+                        </div>
+                        <div class="service-details"> <strong>Процесуальні Документи:</strong>
+                            <p>Підготовка проекту позовної заяви (відновлення на роботі, стягнення заробітної плати, зміна формулювання звільнення), проекту заперечення на позов.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" aria-expanded="false"> IV. Сімейне Право (Особисті та Майнові Відносини) <span class="accordion-icon" aria-hidden="true">+</span> </button>
+                    <div class="accordion-content">
+                        <p>Врегулювання відносин, пов'язаних зі шлюбом, майном та дітьми, з фокусом на угодах.</p>
+                        <div class="service-details"> <strong>Документація:</strong>
+                            <p>Розробка шлюбних договорів, угод про добровільний поділ майна, договорів про виплату аліментів (нотаріальне оформлення).</p>
+                        </div>
+                        <div class="service-details"> <strong>Процесуальні Документи:</strong>
+                            <p>Підготовка проекту позовної заяви (розірвання шлюбу, поділ майна, визначення місця проживання дитини), проекту заперечення, проекту апеляційної скарги.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-        
-        <div class="accordion-item">
-            <button class="accordion-header" aria-expanded="false">
-                III. Трудове Право (Відносини Працівник-Роботодавець)
-                <span class="accordion-icon" aria-hidden="true">+</span>
-            </button>
-            <div class="accordion-content">
-                 <p>Забезпечення законності трудових відносин та підготовка до вирішення трудових спорів.</p>
-                 <div class="service-details">
-                    <strong>Кадровий Документообіг:</strong>
-                    <p>Розробка трудових договорів, положень про преміювання, наказів та інструкцій.</p>
-                </div>
-                <div class="service-details">
-                    <strong>Спори:</strong>
-                    <p>Консультування щодо законності звільнення, переведення, скорочення. Складання вимог та претензій до сторін трудового спору.</p>
-                </div>
-                <div class="service-details">
-                    <strong>Процесуальні Документи:</strong>
-                    <p>Підготовка проекту позовної заяви (відновлення на роботі, стягнення заробітної плати, зміна формулювання звільнення), проекту заперечення на позов.</p>
-                </div>
-            </div>
-        </div>
-        
-        <div class="accordion-item">
-            <button class="accordion-header" aria-expanded="false">
-                IV. Сімейне Право (Особисті та Майнові Відносини)
-                <span class="accordion-icon" aria-hidden="true">+</span>
-            </button>
-            <div class="accordion-content">
-                <p>Врегулювання відносин, пов'язаних зі шлюбом, майном та дітьми, з фокусом на угодах.</p>
-                 <div class="service-details">
-                    <strong>Документація:</strong>
-                    <p>Розробка шлюбних договорів, угод про добровільний поділ майна, договорів про виплату аліментів (нотаріальне оформлення).</p>
-                </div>
-                <div class="service-details">
-                    <strong>Процесуальні Документи:</strong>
-                    <p>Підготовка проекту позовної заяви (розірвання шлюбу, поділ майна, визначення місця проживання дитини), проекту заперечення, проекту апеляційної скарги.</p>
-                </div>
-            </div>
-        </div>
-
-    </div>
-</section>
-       
+        </section>
         <section id="testimonials">
             <div class="container">
                 <h2>Відгуки</h2>
-
                 <div class="slider-container">
-                    <div class="testimonial-slide fade">
-                        <q>Олег - справжній професіонал! Допоміг вирішити дуже складне військове питання.
+                    <div class="testimonial-slide fade"> <q>Олег - справжній професіонал! Допоміг вирішити дуже складне військове питання.
                             Рекомендую!</q>
                         <p class="author">- Сергій В.</p>
                     </div>
-
-                    <div class="testimonial-slide fade">
-                        <q>Дуже вдячна за допомогу в процесі розлучення. Все пройшло набагато легше,
+                    <div class="testimonial-slide fade"> <q>Дуже вдячна за допомогу в процесі розлучення. Все пройшло набагато легше,
                             ніж я очікувала. Справжній сімейний адвокат.</q>
                         <p class="author">- Анна К.</p>
                     </div>
-
-                    <div class="testimonial-slide fade">
-                        <q>Витягнув з такої ситуації, що я вже й не сподівався.
+                    <div class="testimonial-slide fade"> <q>Витягнув з такої ситуації, що я вже й не сподівався.
                             Дійсно, "пів життя садив - тепер витягає"! 10/10.</q>
                         <p class="author">- Іван П.</p>
                     </div>
                 </div>
-
-                <div class="slider-dots">
-                    <span class="dot" onclick="currentSlide(1)"></span>
-                    <span class="dot" onclick="currentSlide(2)"></span>
-                    <span class="dot" onclick="currentSlide(3)"></span>
+                <div class="slider-dots"> <span class="dot" onclick="currentSlide(1)"></span> <span class="dot" onclick="currentSlide(2)"></span> <span class="dot" onclick="currentSlide(3)"></span> </div>
+            </div>
+        </section>
+        <section id="slogan">
+            <div class="container">
+                <div class="slogan__inner">
+                    <h3 class="slogan__title">Важлива Інформація щодо Судового Представництва</h3>
+                    <p class="slogan__text"> Я є фаховим юристом-консультантом (не адвокатом). </p>
+                    <p class="slogan__text"> Моя робота — забезпечити Вам 100% документальну готовність до будь-яких правових дій, включаючи якісно підготовлені процесуальні документи для суду. </p>
+                    <p class="slogan__text"> Я не надаю послуги із процесуального представництва Ваших інтересів у суді (у більшості категорій справ) та не виконую функцій захисника у кримінальних провадженнях. Подальший супровід та виступ у суді здійснюється Вами особисто або обраним Вами адвокатом. </p>
                 </div>
             </div>
         </section>
-
-        <section id="slogan">
-    <div class="container">
-        <div class="slogan__inner">
-           <h3 class="slogan__title">Важлива Інформація щодо Судового Представництва</h3>
-            <p class="slogan__text">
-           Я є фаховим юристом-консультантом (не адвокатом).
-            </p>
-             <p class="slogan__text">
-           Моя робота — забезпечити Вам 100% документальну готовність до будь-яких правових дій, включаючи якісно підготовлені процесуальні документи для суду.
-            </p>
-             <p class="slogan__text">
-                Я не надаю послуги із процесуального представництва Ваших інтересів у суді (у більшості категорій справ) та не виконую функцій захисника у кримінальних провадженнях. Подальший супровід та виступ у суді здійснюється Вами особисто або обраним Вами адвокатом.
-            </p>
-        </div>
-    </div>
-</section>
-
-          
-
         <section id="contact">
             <div class="container">
                 <h2>Форма зворотнього зв'язку</h2>
                 <p>Залиште свої дані, і я зв'яжуся з вами найближчим часом.</p>
-
                 <form id="main-contact-form" class="contact-form">
                     <div class="form-group">
                         <label for="name">Ваше ім'я:</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
+                        <input type="text" id="name" name="name" required> </div>
                     <div class="form-group">
                         <label for="phone">Ваш телефон:</label>
-                        <input type="tel" id="phone" name="phone" required>
-                    </div>
+                        <input type="tel" id="phone" name="phone" required> </div>
                     <div class="form-group">
                         <label for="message">Коротко опишіть вашу проблему:</label>
                         <textarea id="message" name="message" rows="5" required></textarea>
@@ -257,9 +179,7 @@
                 </form>
             </div>
         </section>
-
     </main>
-
     <footer>
         <div class="container">
             <h3>Контакти</h3>
@@ -271,9 +191,7 @@
             <p class="copyright">&copy; 2025 Олег Хмелюк. Всі права захищено.</p>
         </div>
     </footer>
-
     <script src="./js/script.js"></script>
-
 </body>
 
 </html>

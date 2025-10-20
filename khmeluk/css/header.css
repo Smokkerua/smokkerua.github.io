@@ -1,0 +1,102 @@
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f4f4f4;;
+    color: #333;
+    padding: 20px 40px;
+    /* Відступи для десктопа */
+
+    /* "Прилипання" до верху */
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    /* Тінь для об'єму */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+
+    z-index: 100;
+    box-sizing: border-box;
+}
+
+/* --- Стилізуємо Логотип (заголовок H1) --- */
+.header h1 {
+    margin: 0;
+    font-size: 1.8rem;
+}
+
+.header h1 a {
+    color: #333;
+    text-decoration: none;
+    font-weight: 700;
+    transition: color 0.3s ease;
+}
+
+.header h1 a:hover {
+    color: green;
+}
+
+/* --- Стилізуємо саму Навігацію (Десктоп) --- */
+
+.header nav {
+    display: block;
+}
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header nav ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    /* Скидаємо мобільні стилі */
+    position: static;
+    transform: none;
+    width: auto;
+    height: auto;
+    background-color: transparent;
+    box-shadow: none;
+}
+
+.header nav ul li {
+    margin-left: 35px;
+    text-align: left;
+}
+
+/* --- Стилізуємо Посилання в меню (з ефектом) --- */
+.header nav ul li a {
+    color: #000;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 8px 0;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+/* Створюємо підкреслення (сховане) */
+.header nav ul li a::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #333;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Показываємо підкреслення при наведенні */
+.header nav ul li a:hover::after {
+    transform: scaleX(1);
+}
+

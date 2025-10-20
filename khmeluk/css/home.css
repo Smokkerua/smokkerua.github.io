@@ -1,0 +1,114 @@
+/* =======================
+   СТИЛІ ДЛЯ ГОЛОВНОЇ СЕКЦІЇ (HOME)
+   ======================== */
+
+.hero-section {
+    position: relative; /* Потрібно для позиціонування оверлею */
+    height: 90vh; /* Висота майже на весь екран (100vh - це повна висота) */
+    display: flex;
+    align-items: center; /* Центрування контенту по вертикалі */
+    justify-content: center; /* Центрування контенту по горизонталі */
+    text-align: center;
+    color: #ffffff; /* Колір тексту - білий */
+    
+    /* --- ВАШЕ ФОНОВЕ ЗОБРАЖЕННЯ --- */
+    /* Замініть 'hero-background.jpg' на посилання на ваше фото */
+    background-image: url('../img/lawyer.jpg');
+    background-size: cover; /* Масштабує зображення, щоб воно заповнило секцію */
+    background-position: center center; /* Центрує зображення */
+}
+
+/* Шар для затемнення фону */
+.hero-section .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Чорний колір з 50% прозорістю */
+    z-index: 1; /* Розміщуємо його під контентом, але над фоном */
+}
+
+/* Контент (текст і кнопка) */
+.hero-section .hero-content {
+    position: relative; /* Щоб контент був поверх затемнення */
+    z-index: 2;
+    max-width: 800px; /* Обмежуємо ширину тексту */
+    padding: 0 20px; /* Відступи по боках для мобільних */
+
+    /* Анімація появи */
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Стиль головного заголовка H1 */
+.hero-section h1 {
+    font-size: 48px; /* Великий, помітний шрифт */
+    font-weight: 700;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+/* Стиль підзаголовка (абзацу) */
+.hero-section p {
+    font-size: 20px;
+    font-weight: 300;
+    margin-bottom: 30px;
+}
+
+/* Стиль для кнопки "Заклик до дії" (CTA) */
+.hero-section .cta-button {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #ffffff;
+    background-color: #a08c5b; /* Той самий золотий акцент, що і в шапці */
+    border: none;
+    border-radius: 5px; /* Легке заокруглення кутів */
+    text-decoration: none;
+    text-transform: uppercase; /* Великі літери */
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Ефект при наведенні миші на кнопку */
+.hero-section .cta-button:hover {
+    background-color: #8c7a4d; /* Трохи темніший колір при наведенні */
+    transform: translateY(-3px); /* Легкий "підйом" кнопки */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* =======================
+   АДАПТИВНІСТЬ (ДЛЯ МОБІЛЬНИХ)
+   ======================== */
+
+@media (max-width: 768px) {
+    .hero-section {
+        height: 80vh; /* Зменшуємо висоту на мобільних */
+    }
+    
+    .hero-section h1 {
+        font-size: 36px; /* Зменшуємо шрифт заголовка */
+    }
+
+    .hero-section p {
+        font-size: 16px; /* Зменшуємо шрифт підзаголовка */
+    }
+
+    .hero-section .cta-button {
+        padding: 12px 25px;
+        font-size: 16px;
+    }
+}
+
+/* Анімація появи */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
