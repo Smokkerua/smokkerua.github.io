@@ -1,194 +1,176 @@
-/* ================== About Section (з Анімацією та ФОНОМ) ================== */
+/* =================== СТИЛІ ДЛЯ СЕКЦІЇ "ПРО МЕНЕ" (ABOUT) =================== */
 
-/* 1. Визначення анімації (вона нам знадобиться пізніше) */
-@keyframes fadeInUp {
-    /* Анімація починається з... */
-    from {
-        opacity: 0; /* Повністю прозорий */
-        transform: translateY(30px); /* І трохи зсунутий вниз */
-    }
-    /* Анімація закінчується... */
-    to {
-        opacity: 1; /* Повністю видимий */
-        transform: translateY(0); /* У своїй звичайній позиції */
-    }
+.about-section {
+    padding: 40px 20px;
+    background-color: #ffffff;
+    /* Чистий білий фон */
 }
 
-
-/* 2. Основна секція #about */
-#about {
-    /* Встановлюємо відступи, трохи більші для кращого ефекту */
-    padding: 100px 0;
-    
-    /* === ФОНОВЕ ЗОБРАЖЕННЯ === */
-    /* !!! ВАЖЛИВО: Заміни це посилання на своє власне зображення. 
-       Я тимчасово використав тематичне зображення хмелю.
-       Шукай на Pexels.com або Unsplash.com за запитом "hops" або "brewery".
-    */
-    background-image: url('../img/pexels-photo-1267438.jpeg');
-    
-    background-size: cover; /* Масштабуємо, щоб заповнити весь блок */
-    background-position: center center; /* Центруємо зображення */
-    
-    /* === ЕФЕКТ PARALLAX === */
-    /* Фон "заморожується" на місці під час прокрутки */
-    background-attachment: fixed;
-    
-    /* position: relative потрібен для роботи оверлею */
-    position: relative;
-}
-
-/* 3. Оверлей (затемнення) */
-/* * Ми створюємо псевдо-елемент, який розтягується на весь блок #about
- * і лягає між фоновим зображенням та контентом.
- */
-#about::before {
-    content: ''; /* Обов'язково для псевдо-елементів */
-    position: absolute; /* Позиціонуємо відносно #about */
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    
-    /* Наш оверлей: напівпрозорий чорний колір (70% непрозорості) */
-    background: rgba(0, 0, 0, 0.7); 
-    
-    /* z-index: 1 поміщає оверлей над фоном */
-    z-index: 1;
-}
-
-/* 4. Контейнер з контентом */
-/* * Нам потрібно, щоб ВЕСЬ контент (текст, фото) був НАД оверлеєм.
- * Для цього ми даємо йому position: relative та z-index: 2.
- */
-#about .container {
-    position: relative;
-    z-index: 2;
-}
-
-/* 5. Внутрішній блок (Flex-контейнер) */
-.about__inner {
-    display: flex;
-    align-items: center;
-    gap: 40px;
-}
-
-/* 6. Колонки (для фото і для тексту) */
-.about__item {
-    flex: 1; /* Кожна займає 50% */
-}
-
-/* 7. Зображення (те, що всередині, не фон) */
-.about__img {
+.underline {
+    display: block;
     width: 100%;
-    height: auto;
-    border-radius: 8px;
-    /* Тінь тепер помітніша на темному фоні */
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    height: 3px;
+    background: linear-gradient(45deg, #007bff, #0056b3);
+    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.35);
+    border-radius: 50px;
 }
 
-/* 8. Текст (Заголовок) */
-/* * Ми змінюємо колір тексту на білий, щоб його було видно!
- * Я звертаюся до нього через #about, щоб ці стилі
- * застосувалися тільки всередині цього блоку.
+/* * СТИЛІ ЗАГОЛОВКІВ СЕКЦІЇ
+ * (Вони вже мають бути у тебе, але про всяк випадок дублюю)
  */
-#about .section__title {
-    color: #ffffff; /* БІЛИЙ КОЛІР */
-    font-size: 36px;
+.about-section .section-title {
+    text-align: center;
+    font-size: 2.5rem;
     font-weight: 700;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.about-section .section-subtitle {
+    text-align: center;
+    font-size: 1.6rem;
+    margin-bottom: 40px;
+    /* Більший відступ до контенту */
+    color: #666;
+}
+
+/* * Головний контейнер
+ * Використовуємо Flexbox для створення 2-х колонок 
+ */
+.about-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    /* Для мобільної адаптації */
+    align-items: center;
+    /* Вертикальне вирівнювання по центру */
+    justify-content: center;
+    gap: 50px;
+    /* Простір між фото та текстом */
+
+    max-width: 1100px;
+    /* Обмежуємо ширину для читабельності */
+    margin: 0 auto;
+}
+
+/* --- Колонка 1: Фото --- */
+.about-image {
+    flex: 1;
+    /* Дозволяє колонці рости/стискатися */
+    min-width: 300px;
+    /* Мінімальна ширина колонки */
+    text-align: center;
+}
+
+.about-image img {
+    width: 100%;
+    max-width: 350px;
+    /* Обмежуємо макс. розмір фото */
+    height: auto;
+
+    /* Робимо фото круглим - це виглядає стильно */
+    border-radius: 50%;
+
+    border: 7px solid #ffffff;
+    /* Біла рамка */
+    /* Тінь, щоб "відірвати" фото від фону */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Колонка 2: Текст --- */
+.about-text {
+    flex: 1.5;
+    /* Робимо колонку з текстом трохи ширшою (1.5 до 1) */
+    min-width: 300px;
+    text-align: left;
+    /* Текст для читання має бути зліва */
+}
+
+.about-text h3 {
+    font-size: 2.2rem;
+    /* Велике ім'я */
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.about-text .about-tagline {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #007bff;
+    /* Використовуємо наш синій акцентний колір */
+    margin-bottom: 25px;
+    font-style: italic;
+}
+
+/* * СТИЛІ ДЛЯ ЧИТАБЕЛЬНОГО ТЕКСТУ (Дуже важливо!) 
+ */
+.about-text p {
+    font-size: 1.05rem;
+    /* Трохи більший шрифт */
+    line-height: 1.7;
+    /* Збільшений міжрядковий інтервал */
+    color: #555;
+    /* Не чисто чорний, а темно-сірий (легше для очей) */
     margin-bottom: 20px;
 }
 
-/* 9. Текст (Параграфи) */
-#about .about__text {
-    color: #f0f0f0; /* Світло-сірий (трохи м'якший за білий) */
-    font-size: 16px;
-    line-height: 1.7;
+/* --- Список переваг --- */
+.about-principles {
+    list-style: none;
+    /* Прибираємо стандартні крапки */
+    padding-left: 0;
+    margin-top: 30px;
+}
+
+.about-principles li {
+    position: relative;
+    /* Потрібно для позиціонування іконки */
+    padding-left: 35px;
+    /* Залишаємо місце для іконки */
     margin-bottom: 15px;
+    font-size: 1rem;
+    line-height: 1.6;
 }
 
-/* 10. Кнопка (старі стилі кнопки чудово підходять) */
-.about__btn {
-    display: inline-block;
-    background-color: #c0a183;
-    color: #fff;
-    padding: 12px 24px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: 600;
-    margin-top: 20px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+/* Іконка-галочка */
+.about-principles .icon {
+    position: absolute;
+    left: 0;
+    top: 2px;
+    color: #007bff;
+    /* Синій акцент */
+    font-weight: 700;
+    font-size: 1.2rem;
 }
 
-.about__btn:hover {
-    background-color: #a88a6d;
-    transform: translateY(-2px);
-}
-
-/* === АНІМАЦІЯ КОНТЕНТУ === */
-/* * Тепер ми застосовуємо нашу анімацію "fadeInUp" 
- * до обох колонок (.about__item).
- */
- 
-/* Анімація для першої колонки (з фото) */
-.about__item:first-child {
-    /* (назва анімації, тривалість, функція плавності, затримка, режим заповнення) */
-    animation: fadeInUp 1s ease-out 0.3s forwards;
-}
-
-/* Анімація для другої колонки (з текстом) */
-.about__item:last-child {
-    /* Ми додаємо більшу затримку (0.6s), щоб вона з'явилася
-       трохи пізніше за фотографію. Це виглядає дуже стильно.
-    */
-    animation: fadeInUp 1s ease-out 0.6s forwards;
-}
-
-.about-text {
-    color: #fff;
-}
-.about__title {
-    color: #fff;
-}
-/* ================== Адаптація для мобільних ================== */
-
+/* --- АДАПТАЦІЯ ДЛЯ МОБІЛЬНИХ --- */
 @media (max-width: 768px) {
-
-    /* === ВАЖЛИВО: Вимикаємо Parallax === */
-    #about {
-        /* * Ефект background-attachment: fixed погано працює 
-         * на більшості мобільних пристроїв (викликає "стрибки").
-         * Тому ми його вимикаємо, змінюючи на 'scroll'.
-         */
-        background-attachment: scroll;
-        
-        /* Зменшуємо відступи */
-        padding: 50px 0;
+    .about-wrapper {
+        /* На мобільних ставимо колонки одну під одною */
+        flex-direction: column;
+        gap: 30px;
+        /* Зменшуємо відступ */
     }
 
-    /* * Всі інші стилі (flex-direction: column тощо) 
-     * повинні працювати з минулого разу, але ми їх продублюємо 
-     * для надійності.
-     */
-     
-    .about__inner {
-        flex-direction: column; /* Складаємо колонки одна під одну */
+    .about-image {
+        min-width: auto;
+        /* Скидаємо мін. ширину */
     }
 
-    .about__item {
-        text-align: center; /* Центруємо вміст (кнопку, заголовок) */
+    .about-image img {
+        max-width: 250px;
+        /* Робимо фото меншим на мобільних */
     }
-    
-    #about .about__text {
-         /* А сам текст вирівнюємо по центру для кращого вигляду на мобільному */
+
+    /* На мобільних центруємо текст */
+    .about-text {
         text-align: center;
     }
 
-    .about__item:first-child {
-        margin-bottom: 30px; /* Відступ між фото і текстом */
-    }
-
-    #about .section__title {
-        font-size: 28px; /* Трохи менший заголовок */
+    .about-text p,
+    .about-principles li {
+        text-align: left;
+        /* ...але самі параграфи вирівнюємо по лівому краю */
     }
 }
