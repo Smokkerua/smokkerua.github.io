@@ -219,3 +219,70 @@ var swiper = new Swiper(".mySwiper", { // '.mySwiper' - це клас нашог
     // але 'grabCursor' додає іконку "руки" при наведенні)
     grabCursor: true
 , });
+
+
+
+
+    // Чекаємо, поки весь HTML-документ завантажиться
+    document.addEventListener('DOMContentLoaded', function() {
+        
+        // --- 1. Знаходимо всі потрібні елементи ---
+        
+        // Всі кнопки, які мають відкривати вікно.
+        // Ми використовуємо querySelectorAll, щоб їх могло бути декілька
+        const openModalButtons = document.querySelectorAll('.cta-button'); 
+        
+        // Саме модальне вікно (фон-оверлей)
+        const modalOverlay = document.getElementById('feedback-modal');
+        
+        // Кнопка "Закрити" (хрестик)
+        const closeModalButton = document.querySelector('.modal-close');
+        
+        // Весь <body>, до якого ми будемо додавати клас
+        const body = document.body;
+
+        // --- 2. Функції для відкриття/закриття ---
+        
+        function openModal() {
+            body.classList.add('modal-is-open'); // Додаємо клас до <body>
+        }
+        
+        function closeModal() {
+            body.classList.remove('modal-is-open'); // Прибираємо клас з <body>
+        }
+
+        // --- 3. Вішаємо обробники подій ---
+        
+        // Відкриття: Клікаємо на КОЖНУ кнопку .cta-button
+        openModalButtons.forEach(button => {
+            button.addEventListener('click', function(event) {
+                // Це важливо, якщо кнопка є посиланням (<a>)
+                event.preventDefault(); 
+                openModal();
+            });
+        });
+
+        // Закриття: Клік на хрестик
+        closeModalButton.addEventListener('click', function() {
+            closeModal();
+        });
+
+        // Закриття: Клік на темний фон (оверлей)
+        modalOverlay.addEventListener('click', function(event) {
+            // Важливо: закриваємо, тільки якщо клік був саме на фон (event.target),
+            // а не на контент всередині (на форму)
+            if (event.target === modalOverlay) {
+                closeModal();
+            }
+        });
+        
+        // Закриття: Натискання на клавішу Escape (Esc)
+        document.addEventListener('keydown', function(event) {
+            // Перевіряємо, чи натиснута клавіша Esc 
+            // І чи вікно взагалі відкрите
+            if (event.key === 'Escape' && body.classList.contains('modal-is-open')) {
+                closeModal();
+            }
+        });
+
+    });

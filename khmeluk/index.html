@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="./css/slogan.css">
     <link rel="stylesheet" href="./css/contact.css">
     <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/modal.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" /> </head>
 
 <body>
@@ -252,6 +253,40 @@
             </div>
         </div>
     </footer>
+    
+    
+    
+    <div id="feedback-modal" class="modal-overlay">
+    
+        <div class="modal-content">
+
+            <button class="modal-close" title="Закрити">&times;</button>
+
+            <div class="contact-form modal-form-content">
+                <h3>Залишіть заявку</h3>
+                <p>Опишіть ваше питання, і я зв'яжуся з вами найближчим часом.</p>
+
+                <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                    <div class="form-group">
+                        <label for="modal-name">Ваше ім'я:</label>
+                        <input type="text" id="modal-name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="modal-contact">Ваш Email або Телефон:</label>
+                        <input type="text" id="modal-contact" name="contact" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="modal-message">Ваше повідомлення:</label>
+                        <textarea id="modal-message" name="message" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Відправити</button>
+                </form>
+            </div>
+
+        </div> 
+    </div>
+    
+    
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./js/script.js"></script>
 </body>
