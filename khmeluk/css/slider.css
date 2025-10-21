@@ -1,81 +1,112 @@
-/* --- Секція "Відгуки" (Слайдер) --- */
-.slider-container {
-    max-width: 800px;
-    position: relative;
-    margin: auto;
-    background: #ffffff;
+/* =================== СТИЛІ ДЛЯ СЛАЙДЕРА ВІДГУКІВ =================== */
+
+.reviews-section {
+    padding: 60px 20px;
+    background-color: #ffffff; /* Чистий білий фон */
+    text-align: center;
+}
+
+/* Заголовки (використовуємо ті ж, що й у блоці Contact) */
+.reviews-section .section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.reviews-section .section-subtitle {
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+    color: #666;
+}
+
+/* * Налаштування контейнера Swiper
+ * 'overflow: hidden' важливо, щоб приховати слайди поза зоною видимості.
+ * 'padding-bottom' потрібен, щоб пагінація (крапки) не налізала на картки.
+ */
+.swiper.mySwiper {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 20px;
+    padding-bottom: 60px; /* Залишаємо місце для крапок */
+    overflow: hidden; /* Обов'язково */
+}
+
+/* * СТИЛІ КАРТКИ ВІДГУКУ (ОДИН СЛАЙД)
+ * 'height: auto' дозволяє карткам мати різну висоту, 
+ * якщо текст відгуку різний.
+ */
+.swiper-slide {
+    height: auto; /* Важливо для адаптивності */
+    padding: 10px; /* Дає "повітря" між картками */
+    box-sizing: border-box;
+}
+
+.review-card {
+    background: #f9f9f9; /* Світлий фон картки */
+    border: 1px solid #eee;
+    border-radius: 10px; /* Скруглені кути */
     padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-.testimonial-slide {
-    display: none;
-    /* Всі слайди приховані за замовчуванням */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* Легка тінь */
     text-align: center;
+    /* Це змусить картку зайняти всю доступну висоту слайда */
+    height: 100%; 
+    box-sizing: border-box; /* Враховуємо padding */
 }
 
-.testimonial-slide q {
-    /* Стиль для цитати */
-    font-size: 20px;
+.review-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%; /* Робимо аватар круглим */
+    margin-bottom: 20px;
+    object-fit: cover; /* Щоб фото не розтягувалось */
+    border: 3px solid #007bff; /* Акцентна рамка */
+}
+
+.review-rating {
+    font-size: 1.3rem;
+    color: #f39c12; /* Золотий колір для зірок */
+    margin-bottom: 15px;
+}
+
+.review-text {
+    font-size: 1rem;
     font-style: italic;
-    line-height: 1.5;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    /* Встановлюємо мінімальну висоту, щоб картки не "стрибали" */
+    min-height: 100px; 
 }
 
-.testimonial-slide .author {
-    font-weight: bold;
-    margin-top: 15px;
-    color: #004a99;
-}
-
-/* Анімація зникнення/появи */
-.fade {
-    animation-name: fade;
-    animation-duration: 1.5s;
-}
-
-@keyframes fade {
-    from {
-        opacity: .4
-    }
-
-    to {
-        opacity: 1
-    }
-}
-
-/* Крапки для навігації */
-.slider-dots {
-    text-align: center;
-    margin-top: 20px;
-}
-
-.dot {
-    cursor: pointer;
-    height: 15px;
-    width: 15px;
-    margin: 0 5px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-}
-
-.dot.active,
-.dot:hover {
-    background-color: #004a99;
-}
-
-/* --- Секція "Лозунг" --- */
-#slogan {
-    background: #004a99;
-    color: #ffffff;
-    text-align: center;
-}
-
-#slogan blockquote {
-    font-size: 28px;
-    font-style: italic;
-    font-weight: bold;
+.review-author {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #333;
     margin: 0;
+}
+
+/* * СТИЛІЗАЦІЯ СТРІЛОК ТА ПАГІНАЦІЇ
+ */
+
+/* Стрілки (робимо їх синіми та помітними) */
+.swiper-button-next,
+.swiper-button-prev {
+    color: #007bff; /* Головний синій колір */
+    /* Зменшуємо розмір, якщо вони завеликі */
+    transform: scale(0.8); 
+}
+
+/* Крапки (пагінація) */
+.swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    background: #ccc;
+    opacity: 1;
+}
+
+/* Активна крапка */
+.swiper-pagination-bullet-active {
+    background: #007bff;
 }
