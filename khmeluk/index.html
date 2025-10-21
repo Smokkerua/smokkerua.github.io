@@ -10,8 +10,11 @@
     <link rel="stylesheet" href="./css/home.css">
     <link rel="stylesheet" href="./css/about.css">
     <link rel="stylesheet" href="./css/services.css">
+    <link rel="stylesheet" href="./css/slider.css">
     <link rel="stylesheet" href="./css/slogan.css">
-    <link rel="stylesheet" href="./css/adaptyve.css"> </head>
+    <link rel="stylesheet" href="./css/contact.css">
+    <link rel="stylesheet" href="./css/footer.css">
+ </head>
 
 <body>
     <header class="site-header">
@@ -138,7 +141,7 @@
                 </div>
             </div>
         </section>
-        <section id="testimonials">
+        <section id="slider">
             <div class="container">
                 <h2>Відгуки</h2>
                 <div class="slider-container">
@@ -168,37 +171,77 @@
                 </div>
             </div>
         </section>
-        <section id="contact">
-            <div class="container">
-                <h2>Форма зворотнього зв'язку</h2>
-                <p>Залиште свої дані, і я зв'яжуся з вами найближчим часом.</p>
-                <form id="main-contact-form" class="contact-form">
+
+        
+        <section id="contact" class="contact-section">
+    <div class="container">
+        <h2 class="section-title">Зв'яжіться зі мною</h2>
+        <p class="section-subtitle">Буду радий відповісти на ваші питання</p>
+
+        <div class="contact-wrapper">
+            
+            <div class="contact-info">
+                <h3>Контактна інформація</h3>
+                <p>Не соромтесь звертатись до мене по будь-яким питанням</p>
+                <ul class="info-list">
+                    <li>
+                        <span class="icon">📧</span> <span class="text"><a href="mailto:vashemail@example.com">vashemail@example.com</a></span>
+                    </li>
+                    <li>
+                        <span class="icon">📞</span>
+                        <span class="text"><a href="tel:+380001234567">+38 (000) 123-45-67</a></span>
+                    </li>
+                    <li>
+                        <span class="icon">📍</span>
+                        <span class="text">м. Умань, Україна</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="contact-form">
+                <h3>Відправити повідомлення</h3>
+                <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
                     <div class="form-group">
                         <label for="name">Ваше ім'я:</label>
-                        <input type="text" id="name" name="name" required> </div>
+                        <input type="text" id="name" name="name" required>
+                    </div>
                     <div class="form-group">
-                        <label for="phone">Ваш телефон:</label>
-                        <input type="tel" id="phone" name="phone" required> </div>
+                        <label for="email">Ваш Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
                     <div class="form-group">
-                        <label for="message">Коротко опишіть вашу проблему:</label>
+                        <label for="message">Повідомлення:</label>
                         <textarea id="message" name="message" rows="5" required></textarea>
                     </div>
-                    <button type="submit" class="cta-button">Надіслати</button>
+                    <button type="submit" class="btn btn-primary">Відправити</button>
                 </form>
             </div>
-        </section>
-    </main>
-    <footer>
-        <div class="container">
-            <h3>Контакти</h3>
-            <div class="footer-contacts">
-                <p><strong>Адреса:</strong> [Ваша Адреса, м. Київ, вул. Прикладна, 1]</p>
-                <p><strong>Телефон:</strong> <a href="tel:+380000000000">[+38 (000) 000-00-00]</a></p>
-                <p><strong>Email:</strong> <a href="mailto:info@example.com">[oleg.khmeliuk@law.com]</a></p>
-            </div>
-            <p class="copyright">&copy; 2025 Олег Хмелюк. Всі права захищено.</p>
+
         </div>
-    </footer>
+    </div>
+</section>
+    </main>
+<footer id="footer" class="site-footer">
+    <div class="container">
+        
+        <div class="footer-socials">
+            <a href="#" target="_blank" rel="noopener noreferrer" title="GitHub">
+                <i class="fab fa-github"></i> </a>
+            <a href="#" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+                <i class="fab fa-linkedin"></i>
+                </a>
+            <a href="#" target="_blank" rel="noopener noreferrer" title="Telegram">
+                <i class="fab fa-telegram"></i>
+                </a>
+        </div>
+
+        <div class="footer-copyright">
+            <p>&copy; @2025 Всі права захищені.</p>
+            <p>Сайт разработан <a href="https://smokkerua.github.io/" target="_blank">smokker</a>.</p>
+        </div>
+
+    </div>
+</footer>
     <script src="./js/script.js"></script>
 </body>
 
