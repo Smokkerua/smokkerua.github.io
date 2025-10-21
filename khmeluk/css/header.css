@@ -1,34 +1,51 @@
 /* --- Общие стили для шапки --- */
 .site-header {
-    background-color: #2c3e50; /* Темно-синий фон */
+    background-color: #2c3e50;
+    /* Темно-синий фон */
     color: white;
     padding: 15px 0;
     /* Фиксируем шапку наверху при прокрутке */
-    position: sticky; 
+    position: sticky;
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 1000; /* Шапка будет поверх другого контента */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Легкая тень */
+    z-index: 1000;
+    /* Шапка будет поверх другого контента */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    /* Легкая тень */
 }
 
 .site-header .container {
     display: flex;
-    justify-content: space-between; /* Лого слева, меню справа */
+    justify-content: space-between;
+    /* Лого слева, меню справа */
     align-items: center;
-    width: 90%; /* Ограничиваем ширину контента */
-    margin: 0 auto; /* Центрируем */
+    width: 90%;
+    /* Ограничиваем ширину контента */
+    margin: 0 auto;
+    /* Центрируем */
 }
 
 .logo {
     font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-weight: bold;
     color: white;
     text-decoration: none;
     transition: transform 0.3s;
 }
+
+.logo__img {
+    display: block;
+    width: 30px;
+    margin-right: 15px
+}
+
 .logo:hover {
-    transform: scale(1.05); /* Небольшой эффект при наведении */
+    transform: scale(0.95);
+    /* Небольшой эффект при наведении */
 }
 
 /* --- Навигация для десктопа --- */
@@ -36,11 +53,13 @@
     margin: 0;
     padding: 0;
     list-style: none;
-    display: flex; /* Выстраиваем ссылки в ряд */
+    display: flex;
+    /* Выстраиваем ссылки в ряд */
 }
 
 .nav-desktop li {
-    margin-left: 25px; /* Расстояние между ссылками */
+    margin-left: 25px;
+    /* Расстояние между ссылками */
 }
 
 .nav-desktop a {
@@ -48,21 +67,26 @@
     text-decoration: none;
     font-size: 16px;
     padding-bottom: 5px;
-    border-bottom: 2px solid transparent; /* Для эффекта подчеркивания */
+    border-bottom: 2px solid transparent;
+    /* Для эффекта подчеркивания */
     transition: border-color 0.3s;
 }
 
 .nav-desktop a:hover {
-    border-color: #3498db; /* Подчеркивание при наведении */
+    border-color: #3498db;
+    /* Подчеркивание при наведении */
 }
 
 /* --- Скрываем мобильные элементы на десктопе --- */
 .burger-menu-icon {
-    display: none; /* Скрыто на десктопе */
+    display: none;
+    /* Скрыто на десктопе */
     cursor: pointer;
 }
+
 .nav-mobile {
-    display: none; /* Скрыто на десктопе */
+    display: none;
+    /* Скрыто на десктопе */
 }
 
 
@@ -70,17 +94,18 @@
 /* Все, что внутри, применится на экранах 768px и меньше */
 
 @media (max-width: 768px) {
-    
+
     /* Скрываем десктопную навигацию */
     .nav-desktop {
         display: none;
     }
-    
+
     /* Показываем иконку бургера */
     .burger-menu-icon {
-        display: block; /* Показываем на мобильных */
+        display: block;
+        /* Показываем на мобильных */
     }
-    
+
     /* Стилизуем три полоски бургера */
     .burger-menu-icon span {
         display: block;
@@ -90,63 +115,73 @@
         margin: 5px 0;
         transition: all 0.3s ease-in-out;
     }
-    
+
     /* Стили для мобильного меню (когда оно скрыто) */
     .nav-mobile {
-        background-color: #34495e; /* Фон чуть светлее шапки */
+        background-color: #34495e;
+        /* Фон чуть светлее шапки */
         position: absolute;
-        top: 100%; /* Появляется сразу под шапкой */
+        top: 100%;
+        /* Появляется сразу под шапкой */
         left: 0;
         width: 100%;
-        
+
         /* Скрываем его с помощью max-height: 0 */
         max-height: 0;
         overflow: hidden;
-        transition: max-height 0.4s ease-out; /* Плавная анимация */
+        transition: max-height 0.4s ease-out;
+        /* Плавная анимация */
     }
-    
+
     .nav-mobile ul {
         list-style: none;
         padding: 0;
         margin: 0;
-        flex-direction: column; /* Элементы идут друг под другом */
+        flex-direction: column;
+        /* Элементы идут друг под другом */
     }
-    
+
     .nav-mobile li {
         text-align: center;
-        border-bottom: 1px solid #4a637c; /* Разделитель */
+        border-bottom: 1px solid #4a637c;
+        /* Разделитель */
     }
-    
+
     .nav-mobile a {
-        display: block; /* Ссылка на всю ширину */
+        display: block;
+        /* Ссылка на всю ширину */
         padding: 18px;
         color: white;
         text-decoration: none;
         transition: background-color 0.3s;
     }
-    
+
     .nav-mobile a:hover {
         background-color: #3e5770;
     }
-    
+
     /* --- Классы-модификаторы (добавляются через JS) --- */
-    
+
     /* Показываем мобильное меню, когда у .nav-mobile есть класс 'active' */
     .nav-mobile.active {
-        display: block; /* Делаем блочным */
-        max-height: 300px; /* Анимируем высоту (подберите свою) */
+        display: block;
+        /* Делаем блочным */
+        max-height: 300px;
+        /* Анимируем высоту (подберите свою) */
         transition: max-height 0.4s ease-in;
     }
-    
+
     /* Анимация иконки бургера в "крестик" */
     .burger-menu-icon.active span:nth-child(1) {
         transform: rotate(45deg) translate(5px, 5px);
     }
+
     .burger-menu-icon.active span:nth-child(2) {
-        opacity: 0; /* Средняя полоска исчезает */
+        opacity: 0;
+        /* Средняя полоска исчезает */
     }
+
     .burger-menu-icon.active span:nth-child(3) {
         transform: rotate(-45deg) translate(5px, -5px);
     }
 }
-
