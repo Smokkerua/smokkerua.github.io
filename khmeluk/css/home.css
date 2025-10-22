@@ -9,7 +9,7 @@
     background-color: #f0f2f5; /* Світло-сірий фон */
     width: 100%;
     padding: 0px 20px; /* Відступи зверху/знизу та по боках */
-    padding-top: 60px;
+    padding-top: 100px;
     /* Використовуємо flex для вертикального центрування контейнера */
     display: flex;
     align-items: center;
@@ -33,7 +33,7 @@
 grid-template-columns: 1fr 1fr;
     align-items: center; /* Центрування вмісту по вертикалі */
     gap: 50px; /* Проміжок між колонками */
-    max-width: 1140px; /* Загальна ширина макету */
+    max-width: 1240px; /* Загальна ширина макету */
     width: 100%;
     margin: 0 auto; /* Центрування самого контейнера */
 }
@@ -64,7 +64,7 @@ grid-template-columns: 1fr 1fr;
 }
 
 .hero-section .home-text-content h1 {
-    font-size: 48px; /* Розмір з вашого старого коду */
+    font-size: 4.5rem; /* Розмір з вашого старого коду */
     font-weight: 700;
     margin-bottom: 20px;
     line-height: 1.2;
@@ -73,14 +73,14 @@ grid-template-columns: 1fr 1fr;
 
 /* Ваш старий h2 не використовується в новому HTML, але стилі про всяк випадок */
 .hero-section .home-text-content h2 {
-    font-size: 36px;
+    font-size: 40px;
     font-weight: 700;
     margin-bottom: 20px;
     line-height: 1.2;
 }
 
 .hero-section .home-text-content p {
-    font-size: 18px; /* Трохи більший для читабельності */
+    font-size: 20px; /* Трохи більший для читабельності */
     font-weight: 400; /* Стандартна жирність */
     margin-bottom: 35px;
     line-height: 1.6;
@@ -100,7 +100,7 @@ grid-template-columns: 1fr 1fr;
     /* --- Нові стилі з картинки --- */
     background: #3cb878; /* Зелений колір */
     color: #ffffff;
-    font-size: 1.1rem; /* 17.6px (як у вас і було) */
+    font-size: 1.7rem; /* 17.6px (як у вас і було) */
     font-weight: 700;
     padding: 15px 35px; /* (як у вас і було) */
     border: none;
