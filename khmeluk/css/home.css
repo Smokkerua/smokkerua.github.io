@@ -19,13 +19,31 @@
     /* Скидаємо старі фон, висоту і т.д. */
     height: auto; 
     text-align: left; /* Вирівнювання по лівому краю за замовчуванням */
+    
+    background: linear-gradient(
+        -45deg, 
+        #e1f5fe,  /* Небесно-голубой */
+        #e3f2fd,  /* Чуть насыщеннее */
+        #e0f7fa,  /* Легкий бирюзовый оттенок */
+        #e1f5fe   /* Снова небесно-голубой */
+    );
 }
 
 /* Прибираємо старий оверлей (якщо він ще є в HTML) */
 .hero-section .hero-overlay {
     display: none;
 }
-
+@keyframes animateGradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
 /* Новий контейнер для сітки (2 колонки) */
 .hero-section .home-container {
     display: grid;
