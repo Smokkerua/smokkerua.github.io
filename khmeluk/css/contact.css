@@ -180,6 +180,84 @@
     /* Легкий эффект "подъема" */
 }
 
+
+
+
+
+.countdown__title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #222;
+}
+
+/* Главный контейнер таймера */
+.countdown-container {
+    display: flex;
+    /* Располагаем сегменты в ряд */
+    gap: 20px;
+    /* Пространство между сегментами */
+    text-align: center;
+}
+
+/* Стиль для каждого сегмента (дни, часы и т.д.) */
+.time-segment {
+    /* Фон для "плашки" */
+    background-color: #34495e;
+
+    /* Внутренние отступы */
+    padding: 15px 20px;
+
+    /* Скругленные углы */
+    border-radius: 10px;
+
+    /* Небольшая тень для объема */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+
+    /* Минимальная ширина, чтобы все выглядели одинаково */
+    min-width: 100px;
+}
+
+/* Стиль для большого числа (значения) */
+.time-value {
+    font-size: 3.5rem;
+    /* Крупный шрифт */
+    font-weight: bold;
+    color: #ffffff;
+    /* Белый цвет */
+    line-height: 1.1;
+    display: block;
+    /* Чтобы занимал всю ширину */
+}
+
+/* Стиль для подписи (Дней, Часов и т.д.) */
+.time-label {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    color: #bdc3c7;
+    /* Светло-серый цвет */
+    margin-top: 5px;
+    display: block;
+    /* Чтобы был под цифрой */
+}
+
+.countdown__title span {
+    color: green;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* --- Адаптивность (для мобильных) --- */
 
 /* * Когда ширина экрана 768px или меньше
@@ -195,5 +273,39 @@
     .contact-section .section-title {
         font-size: 2rem;
         /* Уменьшаем заголовок на мобильных */
+    }
+
+    .contact-section {
+        padding: 40px 15px;
+    }
+
+    .contact-info,
+    .contact-form {
+        flex: 1;
+        min-width: 300px;
+        background: #ffffff;
+        padding: 20px;
+
+    }
+
+    .contact-section .section-title {
+        font-size: 1.5rem;
+    }
+
+
+    .countdown-container {
+        flex-direction: column;
+        /* Ставим сегменты друг под друга */
+        gap: 15px;
+    }
+
+    .time-segment {
+        padding: 15px;
+        min-width: 200px;
+        /* На всю ширину */
+    }
+
+    .time-value {
+        font-size: 2.5rem;
     }
 }
