@@ -214,7 +214,9 @@
         grid-template-columns: 1fr;
         gap: 20px;
     }
-    
+    .basic-services-grid {
+        margin-bottom: 30px;
+    }
     .service-card {
         padding: 20px;
     }

@@ -1,185 +1,185 @@
-/* =======================
-   СТИЛІ ДЛЯ ГОЛОВНОЇ СЕКЦІЇ (HOME)
-   ======================== */
+/* ======================================================
+   НОВІ СТИЛІ ДЛЯ ГОЛОВНОЇ СЕКЦІЇ (HOME) - ДИЗАЙН З КАРТИНКИ
+   ====================================================== */
 
+/* Повністю скидаємо старі стилі секції */
 .hero-section {
     position: relative;
-    /* Потрібно для позиціонування оверлею */
-    height: 90vh;
-    /* Висота майже на весь екран (100vh - це повна висота) */
+    /* Новий фон, як на картинці */
+    background-color: #f0f2f5; /* Світло-сірий фон */
+    width: 100%;
+    padding: 0px 20px; /* Відступи зверху/знизу та по боках */
+    padding-top: 60px;
+    /* Використовуємо flex для вертикального центрування контейнера */
     display: flex;
     align-items: center;
-    /* Центрування контенту по вертикалі */
     justify-content: center;
-    /* Центрування контенту по горизонталі */
-    text-align: center;
-    color: #ffffff;
-    /* Колір тексту - білий */
-
-    /* --- ВАШЕ ФОНОВЕ ЗОБРАЖЕННЯ --- */
-    /* Замініть 'hero-background.jpg' на посилання на ваше фото */
-    background-image: url('../img/lawyer.jpg');
-    background-size: cover;
-    /* Масштабує зображення, щоб воно заповнило секцію */
-    background-position: center center;
-    /* Центрує зображення */
+    color: #333; /* Темний колір тексту (замість білого) */
+    
+    /* Скидаємо старі фон, висоту і т.д. */
+    height: auto; 
+    text-align: left; /* Вирівнювання по лівому краю за замовчуванням */
 }
 
-/* Шар для затемнення фону */
+/* Прибираємо старий оверлей (якщо він ще є в HTML) */
 .hero-section .hero-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    /* Чорний колір з 50% прозорістю */
-    z-index: 1;
-    /* Розміщуємо його під контентом, але над фоном */
+    display: none;
 }
 
-/* Контент (текст і кнопка) */
-.hero-section .hero-content {
-    position: relative;
-    /* Щоб контент був поверх затемнення */
-    z-index: 2;
-    max-width: 800px;
-    /* Обмежуємо ширину тексту */
-    padding: 0 20px;
-    /* Відступи по боках для мобільних */
+/* Новий контейнер для сітки (2 колонки) */
+.hero-section .home-container {
+    display: grid;
+    /* Дві колонки: 40% під фото, 60% під текст. Можете змінити на "1fr 1fr" для рівних */
+grid-template-columns: 1fr 1fr;
+    align-items: center; /* Центрування вмісту по вертикалі */
+    gap: 50px; /* Проміжок між колонками */
+    max-width: 1140px; /* Загальна ширина макету */
+    width: 100%;
+    margin: 0 auto; /* Центрування самого контейнера */
+}
 
+/* Стилі для колонки з фото */
+.hero-section .home-image {
+    text-align: center; /* Центруємо фото в колонці */
+}
+
+.hero-section .home-image img {
+    width: 100%;
+    height: auto;
+    width: 700px;
+    border-radius: 10px; /* Легке заокруглення */
+    display: block;
+    margin: 0 auto; /* Центрування фото */
+}
+
+/* Стилі для колонки з текстом (перезаписуємо .hero-content) */
+.hero-section .home-text-content {
+    position: relative;
+    z-index: 2;
+    max-width: 100%; /* Займає всю ширину колонки */
+    padding: 0;
+    
     /* Анімація появи */
     animation: fadeIn 1.5s ease-in-out;
 }
 
-/* Стиль головного заголовка H1 */
-.hero-section h1 {
-    font-size: 48px;
-    /* Великий, помітний шрифт */
+.hero-section .home-text-content h1 {
+    font-size: 48px; /* Розмір з вашого старого коду */
     font-weight: 700;
     margin-bottom: 20px;
     line-height: 1.2;
+    color: #222; /* Темний заголовок */
 }
 
-.hero-section h2 {
+/* Ваш старий h2 не використовується в новому HTML, але стилі про всяк випадок */
+.hero-section .home-text-content h2 {
     font-size: 36px;
-    /* Великий, помітний шрифт */
     font-weight: 700;
     margin-bottom: 20px;
     line-height: 1.2;
 }
 
-/* Стиль підзаголовка (абзацу) */
-.hero-section p {
-    font-size: 20px;
-    font-weight: 300;
-    margin-bottom: 30px;
+.hero-section .home-text-content p {
+    font-size: 18px; /* Трохи більший для читабельності */
+    font-weight: 400; /* Стандартна жирність */
+    margin-bottom: 35px;
+    line-height: 1.6;
+    max-width: 500px; /* Обмежимо ширину параграфа */
 }
 
-/* =================== СУПЕР-КРАСИВА КНОПКА CTA =================== */
+/* =====================================================
+   НОВІ СТИЛІ ДЛЯ КНОПКИ (ПЕРЕЗАПИСУЮТЬ СТАРІ .cta-button)
+   ===================================================== */
 
-.cta-button {
-    /* --- Базові стилі --- */
-    display: inline-block;
-    /* Дозволяє задати відступи */
-    font-size: 1.1rem;
-    /* Розмір шрифту (17.6px) */
-    font-weight: 700;
-    /* Жирний шрифт */
+/* * Ми робимо ці стилі більш "сильними" (специфічними), 
+ * додаючи ".hero-section" попереду. 
+ * Це гарантує, що вони перезапишуть ваші старі стилі .cta-button.
+ * Тепер кнопка буде зеленою, як на картинці-шаблоні.
+*/
+.hero-section .cta-button {
+    /* --- Нові стилі з картинки --- */
+    background: #3cb878; /* Зелений колір */
     color: #ffffff;
-    /* Білий колір тексту */
-    text-decoration: none;
-    /* Прибираємо підкреслення (якщо це посилання) */
-    text-align: center;
-    /* Центруємо текст (про всяк випадок) */
-    cursor: pointer;
-    /* Курсор у вигляді руки */
-
-    /* --- Форма та відступи --- */
-    padding: 15px 35px;
-    /* Внутрішні відступи (15px зверху/знизу, 35px зліва/справа) */
+    font-size: 1.1rem; /* 17.6px (як у вас і було) */
+    font-weight: 700;
+    padding: 15px 35px; /* (як у вас і було) */
     border: none;
-    /* Прибираємо рамку */
-    border-radius: 50px;
-    /* Робимо кнопку овальною ("пігулка") - це сучасно */
-
-    /* --- Магія: Колір та Тінь --- */
-    /* Використовуємо градієнт замість одного кольору */
-    background: linear-gradient(45deg, #007bff, #0056b3);
-
-    /* Тінь, яка створює ефект "глибини" */
-    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.35);
-
-    /* --- Магія: Анімація --- */
-    /* Це найголовніше! 
-       Всі зміни (transform, box-shadow, background) 
-       будуть відбуватися плавно за 0.3 секунди
-    */
+    border-radius: 8px; /* Закруглені кути, але не "пігулка" */
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    
+    /* --- Скидаємо та замінюємо старі ефекти --- */
+    background-image: none; /* Прибираємо градієнт */
+    box-shadow: 0 4px 15px rgba(60, 184, 120, 0.4); /* Нова тінь */
+    transform: translateY(0); /* Скидаємо старий transform */
     transition: all 0.3s ease-in-out;
 }
 
-/* * =================== ЕФЕКТ ПРИ НАВЕДЕННІ (ХОВЕР) ===================
- * Це те, що бачить користувач, коли наводить мишку
- */
-.cta-button:hover {
-    /* 1. Змінюємо градієнт на трохи яскравіший або інший */
-    background: linear-gradient(45deg, #0069d9, #004a99);
-
-    /* 2. "Піднімаємо" кнопку на 3px вгору */
-    transform: translateY(-4px);
-
-    /* 3. Робимо тінь більшою та інтенсивнішою, щоб посилити ефект "підйому" */
-    box-shadow: 0 8px 25px rgba(0, 123, 255, 0.5);
+.hero-section .cta-button:hover {
+    background: #34a56a; /* Трохи темніший зелений */
+    transform: translateY(-3px); /* "Підйом" кнопки */
+    box-shadow: 0 6px 20px rgba(60, 184, 120, 0.5); /* Сильніша тінь */
 }
 
-/* * =================== ЕФЕКТ ПРИ НАТИСКАННІ (ACTIVE) ===================
- * Користувач відчує "клік"
- */
-.cta-button:active {
-    /* "Втискаємо" кнопку трохи назад */
+.hero-section .cta-button:active {
     transform: translateY(-1px);
-    /* І тінь робимо меншою, ніби вона притиснулась до екрану */
-    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
+    box-shadow: 0 3px 10px rgba(60, 184, 120, 0.3);
 }
 
-/* =======================
+/* =================================
    АДАПТИВНІСТЬ (ДЛЯ МОБІЛЬНИХ)
-   ======================== */
+   ================================= */
 
+/* * Стара медіа-умова @media (max-width: 768px) залишається, 
+ * але ми її теж перезаписуємо для нової структури
+*/
 @media (max-width: 768px) {
     .hero-section {
-        height: 80vh;
-        /* Зменшуємо висоту на мобільних */
+        padding: 40px 20px; /* Менше відступів на мобільних */
+        min-height: auto; /* Дозволяємо секції бути нижчою */
     }
 
-    .hero-section h1 {
-        font-size: 36px;
-        /* Зменшуємо шрифт заголовка */
+    .hero-section .home-container {
+        /* На мобільних робимо 1 колонку */
+        grid-template-columns: 1fr;
+        gap: 30px;
+        text-align: center; /* Центруємо весь текст */
     }
 
-    .hero-section h1 {
-        font-size: 36px;
-        /* Зменшуємо шрифт заголовка */
+    /* * На мобільних фото буде зверху, а текст знизу. 
+     * Якщо хочете навпаки (спочатку текст), додайте:
+     * .hero-section .home-image { order: 2; }
+     * .hero-section .home-text-content { order: 1; }
+    */
+    
+    .hero-section .home-image img {
+        max-width: 300px; /* Робимо фото трохи меншим на моб. */
     }
 
-    .hero-section p {
-        font-size: 16px;
-        /* Зменшуємо шрифт підзаголовка */
+    .hero-section .home-text-content h1 {
+        font-size: 36px; /* Зменшуємо шрифт заголовка */
     }
 
+    .hero-section .home-text-content p {
+        font-size: 16px; /* Зменшуємо шрифт підзаголовка */
+        max-width: 100%; /* Дозволяємо тексту зайняти всю ширину */
+        margin-bottom: 30px;
+    }
+    
+    /* Стилі кнопки для мобільних (з вашого старого коду) */
     .hero-section .cta-button {
         padding: 12px 25px;
         font-size: 16px;
     }
 }
 
-/* Анімація появи */
+/* Анімація появи (залишаємо як є) */
 @keyframes fadeIn {
     from {
         opacity: 0;
         transform: translateY(20px);
     }
-
     to {
         opacity: 1;
         transform: translateY(0);

@@ -110,3 +110,32 @@
 .swiper-pagination-bullet-active {
     background: #007bff;
 }
+
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+    .reviews-section {
+        padding: 30px 20px;
+    }
+    
+    .reviews-section .section-title {
+        font-size: 2rem;
+    }
+    .reviews-section .section-subtitle {
+        margin-bottom: 20px;
+    }
+}
+
+
+
+
+
+
+
+

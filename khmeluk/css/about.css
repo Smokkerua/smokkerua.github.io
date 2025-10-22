@@ -152,7 +152,13 @@
         gap: 30px;
         /* Зменшуємо відступ */
     }
-
+    .about-section .section-title {
+        font-size: 2rem;
+    }
+    .about-section .section-subtitle {
+        font-size: 1.4rem;
+        margin-bottom: 20px;
+    }
     .about-image {
         min-width: auto;
         /* Скидаємо мін. ширину */

@@ -1,97 +1,110 @@
 // Чекаємо, поки весь HTML-документ завантажиться
 document.addEventListener("DOMContentLoaded", function () {
+
+    console.log("DOM полностью загружен. Запускаем скрипты.");
+
     // ---------------------------------
-    // --- 1. ЛОГІКА ДЛЯ АКОРДЕОНУ ---
+    // --- 1. ЛОГИКА ДЛЯ БУРГЕР-МЕНЮ ---
     // ---------------------------------
-    // Знаходимо всі кнопки з класом "accordion"
-    const accordions = document.getElementsByClassName("accordion");
-    // Перебираємо всі кнопки і додаємо кожній слухача події "click"
-    for (let i = 0; i < accordions.length; i++) {
-        accordions[i].addEventListener("click", function () {
-            // "this" - це кнопка, на яку натиснули
-            // 1. Додаємо/видаляємо клас "active" для кнопки (щоб міняти + на -)
-            this.classList.toggle("active");
-            // 2. Знаходимо наступний елемент (це наша панель .panel)
-            const panel = this.nextElementSibling;
-            // 3. Перевіряємо, чи панель ВЖЕ відкрита (чи є у неї max-height)
-            if (panel.style.maxHeight) {
-                // Якщо так - закриваємо її (ставимо max-height = null)
-                panel.style.maxHeight = null;
-                a // Чекаємо, поки весь HTML-документ завантажиться
-                document.addEventListener("DOMContentLoaded", function () {
-                    // Знаходимо нашу форму за її ID
-                    const contactForm = document.getElementById("main-contact-form");
-                    // Додаємо "слухача" події "submit" (відправка форми)
-                    contactForm.addEventListener("submit", function (event) {
-                        // Зупиняємо стандартну поведінку (щоб сторінка не перезавантажувалась)
-                        event.preventDefault();
-                        // Отримуємо значення з полів
-                        const name = document.getElementById("name").value;
-                        const email = document.getElementById("email").value;
-                        const message = document.getElementById("message").value;
-                        // Проста перевірка, чи поля не порожні
-                        if (name === "" || email === "" || message === "") {
-                            alert("Будь ласка, заповніть усі поля.");
-                            return; // Зупиняємо виконання, якщо є помилка
-                        }
-                        // --- Важливе зауваження! ---
-                        // Цей код лише перевіряє форму на стороні клієнта.
-                        // Для реальної відправки email вам знадобиться серверний скрипт
-                        // (наприклад, на PHP, Node.js) або сторонній сервіс (наприклад, Formspree, Netlify Forms).
-                        // Оскільки це простий HTML/CSS/JS сайт, ми просто імітуємо успішну відправку.
-                        console.log("Дані форми готові до відправки:");
-                        console.log("Ім'я:", name);
-                        console.log("Email:", email);
-                        console.log("Повідомлення:", message);
-                        // Повідомляємо користувача про успіх
-                        alert("Дякуємо за ваше звернення! Ми зв'яжемося з вами найближчим часом.");
-                        // Очищуємо поля форми після "відправки"
-                        contactForm.reset();
-                    });
-                });
-            } else {
-                // Якщо ні - відкриваємо.
-                // Встановлюємо max-height рівний реальній висоті вмісту (scrollHeight)
-                // Це потрібно для плавної анімації
-                panel.style.maxHeight = panel.scrollHeight + "px";
-            }
+    const burgerIcon = document.querySelector('.burger-menu-icon');
+    const mobileNav = document.querySelector('.nav-mobile');
+
+    // Проверяем, что элементы меню существуют
+    if (burgerIcon && mobileNav) {
+        // Добавляем "прослушку" клика на иконку бургера
+        burgerIcon.addEventListener('click', function () {
+            // Переключаем (добавляем/убираем) класс 'active'
+            burgerIcon.classList.toggle('active');
+            mobileNav.classList.toggle('active');
         });
+
+        // БОНУС: Закрываем меню при клике на ссылку в нем
+        const mobileLinks = document.querySelectorAll('.nav-mobile a');
+        mobileLinks.forEach(function (link) {
+            link.addEventListener('click', function () {
+                // Убираем класс 'active' у иконки и меню
+                burgerIcon.classList.remove('active');
+                mobileNav.classList.remove('active');
+            });
+        });
+    } else {
+        console.warn("Элементы бургер-меню (.burger-menu-icon или .nav-mobile) не найдены.");
     }
+
     // ---------------------------------
-    // --- 2. ЛОГІКА ДЛЯ СЛАЙДЕРА ---
+    // --- 2. ЛОГИКА ДЛЯ АККОРДЕОНА (Улучшенная версия) ---
     // ---------------------------------
-    let slideIndex = 1; // Починаємо з першого слайду
-    showSlides(slideIndex); // Показуємо перший слайд одразу
-    // Встановлюємо таймер для автоматичної прокрутки кожні 5 секунд
-    let slideInterval = setInterval(function () {
-        plusSlides(1);
-    }, 5000); // 5000 мілісекунд = 5 секунд
-    // Робимо функції `currentSlide` та `plusSlides` глобальними,
-    // щоб їх можна було викликати з HTML (onclick)
-    window.currentSlide = function (n) {
-        // При ручному натисканні - скидаємо таймер і показуємо слайд
-        clearInterval(slideInterval);
-        showSlides(slideIndex = n);
-        // І запускаємо таймер знову
-        slideInterval = setInterval(function () {
-            plusSlides(1);
-        }, 5000);
+    const accordionHeaders = document.querySelectorAll('.accordion-header');
+    
+    // Проверяем, есть ли аккордеоны на странице
+    if (accordionHeaders.length > 0) {
+        accordionHeaders.forEach(header => {
+            header.addEventListener('click', function () {
+                const content = this.nextElementSibling;
+                const icon = this.querySelector('.accordion-icon');
+                const isActive = this.classList.contains('active');
+
+                // Сначала закрываем ВСЕ другие открытые аккордеоны
+                accordionHeaders.forEach(otherHeader => {
+                    if (otherHeader !== this && otherHeader.classList.contains('active')) {
+                        otherHeader.classList.remove('active');
+                        otherHeader.setAttribute('aria-expanded', 'false');
+                        otherHeader.nextElementSibling.style.maxHeight = null;
+                        const otherIcon = otherHeader.querySelector('.accordion-icon');
+                        if (otherIcon) {
+                            otherIcon.textContent = '+';
+                        }
+                    }
+                });
+
+                // Теперь открываем или закрываем текущий
+                if (isActive) {
+                    // Закрываем
+                    this.classList.remove('active');
+                    this.setAttribute('aria-expanded', 'false');
+                    content.style.maxHeight = null;
+                    if (icon) {
+                        icon.textContent = '+';
+                    }
+                } else {
+                    // Открываем
+                    this.classList.add('active');
+                    this.setAttribute('aria-expanded', 'true');
+                    content.style.maxHeight = content.scrollHeight + 'px';
+                    if (icon) {
+                        icon.textContent = '−'; // Используем минус
+                    }
+                }
+            });
+        });
+    } else {
+        console.warn("Элементы аккордеона (.accordion-header) не найдены.");
     }
-    window.plusSlides = function (n) {
-        showSlides(slideIndex += n);
-    }
-    // Головна функція, що показує слайди
+
+
+    // ---------------------------------
+    // --- 3. ЛОГИКА ДЛЯ СЛАЙДЕРА "TESTIMONIALS" (Ручной) ---
+    // ---------------------------------
+    let slideIndex = 1;
+    const slides = document.getElementsByClassName("testimonial-slide");
+    const dots = document.getElementsByClassName("dot");
+
+    // Главная функция, что показывает слайды
     function showSlides(n) {
+        // Проверяем, что слайды и точки вообще есть
+        if (slides.length === 0 || dots.length === 0) {
+            return; // Выходим, если нечего показывать
+        }
+
         let i;
-        const slides = document.getElementsByClassName("testimonial-slide");
-        const dots = document.getElementsByClassName("dot");
-        // Логіка "зациклення"
+        // Логика "зацикления"
         if (n > slides.length) {
-            slideIndex = 1
-        } // Якщо дійшли до кінця - на початок
+            slideIndex = 1;
+        }
         if (n < 1) {
-            slideIndex = slides.length
-        } // Якщо пішли назад з першого - в кінець
+            slideIndex = slides.length;
+        }
+
         // 1. Ховаємо всі слайди
         for (i = 0; i < slides.length; i++) {
             slides[i].style.display = "none";
@@ -104,188 +117,184 @@ document.addEventListener("DOMContentLoaded", function () {
         slides[slideIndex - 1].style.display = "block";
         dots[slideIndex - 1].className += " active";
     }
-    // ---------------------------------
-    // --- 3. ЛОГІКА ДЛЯ ФОРМИ ---
-    // ---------------------------------
-    // Знаходимо нашу форму за її ID
-    const contactForm = document.getElementById("main-contact-form");
-    // Додаємо "слухача" події "submit"
-    contactForm.addEventListener("submit", function (event) {
-        // Зупиняємо стандартну поведінку
-        event.preventDefault();
-        // Отримуємо значення з полів
-        const name = document.getElementById("name").value;
-        const phone = document.getElementById("phone").value;
-        const message = document.getElementById("message").value;
-        if (name === "" || phone === "" || message === "") {
-            alert("Будь ласка, заповніть усі поля.");
-            return;
+
+    // Эта функция будет вызвана из HTML (onclick="plusSlides(-1)")
+    window.plusSlides = function (n) {
+        showSlides(slideIndex += n);
+    }
+    
+    // Эта функция будет вызвана из HTML (onclick="currentSlide(1)")
+    window.currentSlide = function (n) {
+        showSlides(slideIndex = n);
+    }
+
+    // Если слайды есть, показываем первый и запускаем таймер
+    if (slides.length > 0) {
+        showSlides(slideIndex); // Показываем первый слайд
+
+        let slideInterval = setInterval(function () {
+            plusSlides(1);
+        }, 5000); // 5000 мілісекунд = 5 секунд
+
+        // Переопределяем функции, чтобы они сбрасывали таймер
+        window.currentSlide = function (n) {
+            clearInterval(slideInterval);
+            showSlides(slideIndex = n);
+            slideInterval = setInterval(() => plusSlides(1), 5000);
         }
-        // Імітація відправки
-        console.log("Дані форми:", {
-            name,
-            phone,
-            message
+        window.plusSlides = function (n) {
+            clearInterval(slideInterval);
+            showSlides(slideIndex += n);
+            slideInterval = setInterval(() => plusSlides(1), 5000);
+        }
+    }
+
+   // ---------------------------------
+    // --- 7. ЛОГИКА ДЛЯ МОДАЛЬНОГО ОКНА ---
+    // ---------------------------------
+
+    console.log("Загрузка скриптов для модального окна...");
+
+    // 1. Находим все нужные элементы
+    const modal = document.getElementById('feedback-modal');
+    // Находим ВСЕ кнопки, которые должны открывать окно
+    const allOpenButtons = document.querySelectorAll('.open-modal-btn'); 
+    // Находим кнопку "X" внутри окна
+    const closeButton = modal.querySelector('.modal-close');
+
+    // 2. Функция "Открыть окно"
+    function openModal() {
+        if (modal) { // Проверяем, что окно существует
+            modal.classList.add('is-open'); 
+            // Добавляем класс 'is-open' (мы его стилизуем в CSS)
+        }
+    }
+
+    // 3. Функция "Закрыть окно"
+    function closeModal() {
+        if (modal) { // Проверяем, что окно существует
+            modal.classList.remove('is-open');
+             // Убираем класс 'is-open'
+        }
+    }
+
+    // 4. Назначаем обработчики событий
+
+    // A. Открываем по клику на ЛЮБУЮ кнопку .open-modal-btn
+    allOpenButtons.forEach(button => {
+        button.addEventListener('click', (event) => {
+            event.preventDefault(); // Запрещаем ссылке переход по #
+            openModal();
         });
-        alert("Дякую! Ваша заявка прийнята. Я скоро з вами зв'яжуся.");
-        // Очищуємо поля форми
-        contactForm.reset();
     });
-});
-document.addEventListener('DOMContentLoaded', function () {
-    const accordionHeaders = document.querySelectorAll('.accordion-header');
-    accordionHeaders.forEach(header => {
-        header.addEventListener('click', function () {
-            const content = this.nextElementSibling;
-            const icon = this.querySelector('.accordion-icon');
-            const isActive = this.classList.contains('active');
-            // Закриваємо всі інші відкриті акордеони
-            accordionHeaders.forEach(otherHeader => {
-                if (otherHeader !== this) {
-                    otherHeader.classList.remove('active');
-                    otherHeader.setAttribute('aria-expanded', 'false');
-                    otherHeader.nextElementSibling.style.maxHeight = null;
-                    otherHeader.querySelector('.accordion-icon').textContent = '+';
-                }
-            });
-            // Відкриваємо/закриваємо поточний
-            if (isActive) {
-                this.classList.remove('active');
-                this.setAttribute('aria-expanded', 'false');
-                content.style.maxHeight = null;
-                icon.textContent = '+';
-            } else {
-                this.classList.add('active');
-                this.setAttribute('aria-expanded', 'true');
-                content.style.maxHeight = content.scrollHeight + 'px'; // Встановлюємо висоту
-                icon.textContent = '−'; // Використовуємо мінус
+
+    // Б. Закрываем по клику на крестик 'X'
+    if (closeButton) {
+        closeButton.addEventListener('click', closeModal);
+    }
+
+    // В. Закрываем по клику на темный фон (оверлей)
+    if (modal) {
+        modal.addEventListener('click', (event) => {
+            // Сработает, только если кликнули на сам фон (modal),
+            // а не на его "внутренности" (modal-content)
+            if (event.target === modal) {
+                closeModal();
             }
         });
-    });
-});
-// Ждем, пока весь HTML-документ загрузится
-document.addEventListener('DOMContentLoaded', function () {
-    // Находим иконку бургера по ее классу
-    const burgerIcon = document.querySelector('.burger-menu-icon');
-    // Находим мобильное меню по его классу
-    const mobileNav = document.querySelector('.nav-mobile');
-    // Добавляем "прослушку" клика на иконку бургера
-    burgerIcon.addEventListener('click', function () {
-        // Переключаем (добавляем/убираем) класс 'active' у иконки
-        burgerIcon.classList.toggle('active');
-        // Переключаем (добавляем/убираем) класс 'active' у мобильного меню
-        mobileNav.classList.toggle('active');
-    });
-    // БОНУС: Закрываем меню при клике на ссылку в нем
-    // Находим все ссылки в мобильном меню
-    const mobileLinks = document.querySelectorAll('.nav-mobile a');
-    mobileLinks.forEach(function (link) {
-        link.addEventListener('click', function () {
-            // Убираем класс 'active' у иконки
-            burgerIcon.classList.remove('active');
-            // Убираем класс 'active' у меню
-            mobileNav.classList.remove('active');
-        });
-    });
-});
-// 'new Swiper' - це команда, яка створює новий слайдер
-var swiper = new Swiper(".mySwiper", { // '.mySwiper' - це клас нашого HTML-контейнера
-    // --- Налаштування АДАПТИВНОСТІ ---
-    slidesPerView: 1, // За замовчуванням (на мобільних) показуємо 1 слайд
-    spaceBetween: 30, // Відстань між слайдами
-    breakpoints: {
-        // Коли ширина екрану >= 768px (планшети)
-        768: {
-            slidesPerView: 2, // Показувати 2 слайди
-            spaceBetween: 30
-        }, // Коли ширина екрану >= 1024px (комп'ютери)
-        1024: {
-            slidesPerView: 3, // Показувати 3 слайди
-            spaceBetween: 30
+    }
+
+    // Г. Закрываем по нажатию клавиши 'Escape' (для удобства)
+    document.addEventListener('keydown', (event) => {
+        // Проверяем, что нажата 'Escape' И окно сейчас открыто
+        if (event.key === 'Escape' && modal.classList.contains('is-open')) {
+            closeModal();
         }
-    }, // --- Налаштування ФУНКЦІЙ ---
-    loop: true, // Безкінечна прокрутка
-    // Вмикаємо крапки (пагінацію)
-    pagination: {
-        el: ".swiper-pagination",
-        clickable: true, // Можна натискати на крапки
-    }, // Вмикаємо стрілки
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-    }, // Вмикаємо свайп (він ввімкнений за замовчуванням, 
-    // але 'grabCursor' додає іконку "руки" при наведенні)
-    grabCursor: true,
-});
+    });
+
+    console.log("Модальное окно готово к работе.");
+
+    // ---------------------------------
+    // --- 5. ЛОГИКА ДЛЯ СЛАЙДЕРА "SWIPER" (Библиотека) ---
+    // ---------------------------------
+    // Проверяем, что и библиотека Swiper и элемент .mySwiper существуют
+    if (typeof Swiper !== 'undefined' && document.querySelector('.mySwiper')) {
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            breakpoints: {
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 30
+                },
+                1024: {
+                    slidesPerView: 3,
+                    spaceBetween: 30
+                }
+            },
+            loop: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            grabCursor: true,
+        });
+    } else {
+        console.warn("Swiper.js не подключен или элемент .mySwiper не найден.");
+    }
 
 
-// --- 1. Настройка ---
+    // ---------------------------------
+    // --- 6. ЛОГИКА ДЛЯ ТАЙМЕРА ОБРАТНОГО ОТСЧЕТА ---
+    // ---------------------------------
+    const hoursEl = document.getElementById('hours');
+    const minutesEl = document.getElementById('minutes');
+    const secondsEl = document.getElementById('seconds');
 
-// Находим наши три элемента на странице
-const hoursEl = document.getElementById('hours');
-const minutesEl = document.getElementById('minutes');
-const secondsEl = document.getElementById('seconds');
-
-// --- 2. Основные функции ---
-
-/**
- * Главная функция, которая запускается каждую секунду.
- */
-function updateCountdown() {
+    // Вспомогательная функция. Добавляет ведущий ноль.
+    function formatTime(time) {
+        return time < 10 ? `0${time}` : time;
+    }
     
-    // 1. Получаем текущее время
-    const now = new Date();
+    /**
+     * Принимает оставшееся время (в мс) и отображает его на странице.
+     */
+    function updateDisplay(distance) {
+        const hours = Math.floor(distance / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-    // 2. Устанавливаем целевое время — это полночь СЛЕДУЮЩЕГО дня.
-    // (Это самый простой способ посчитать "до конца дня")
-    const targetDate = new Date(now);
-    targetDate.setDate(targetDate.getDate() + 1); // Устанавливаем "завтра"
-    targetDate.setHours(0, 0, 0, 0); // Устанавливаем на 00:00:00
+        // Отображаем значения
+        hoursEl.innerText = formatTime(hours);
+        minutesEl.innerText = formatTime(minutes);
+        secondsEl.innerText = formatTime(seconds);
+    }
 
-    // 3. Вычисляем разницу (в миллисекундах)
-    // targetDate.getTime() - это время в мс до полуночи завтрашнего дня
-    // now.getTime() - это текущее время в мс
-    const distance = targetDate.getTime() - now.getTime();
+    /**
+     * Главная функция, которая запускается каждую секунду.
+     */
+    function updateCountdown() {
+        const now = new Date();
+        const targetDate = new Date(now);
+        targetDate.setDate(targetDate.getDate() + 1);
+        targetDate.setHours(0, 0, 0, 0);
 
-    // 4. Обновляем отображение на странице
-    updateDisplay(distance);
-}
+        const distance = targetDate.getTime() - now.getTime();
+        updateDisplay(distance);
+    }
+    
+    // Проверяем, что все элементы таймера на месте
+    if (hoursEl && minutesEl && secondsEl) {
+        // Запускаем таймер
+        setInterval(updateCountdown, 1000);
+        // Запускаем сразу, чтобы не ждать первую секунду
+        updateCountdown();
+    } else {
+        console.warn("Элементы таймера (#hours, #minutes, #seconds) не найдены.");
+    }
 
-/**
- * Принимает оставшееся время (в мс) и отображает его на странице.
- * (Эта функция не изменилась)
- * @param {number} distance - Оставшееся время в миллисекундах.
- */
-function updateDisplay(distance) {
-    // Вычисляем общее кол-во часов, и остаток минут/секунд
-    // Когда до полуночи останется 1 секунда, distance будет 1000мс,
-    // и Math.floor(1000 / (1000 * 60 * 60)) будет 0.
-    // Когда наступит полночь, `distance` станет 86,400,000 (24 часа).
-    const hours = Math.floor(distance / (1000 * 60 * 60));
-    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-    // Отображаем значения
-    hoursEl.innerText = formatTime(hours);
-    minutesEl.innerText = formatTime(minutes);
-    secondsEl.innerText = formatTime(seconds);
-}
-
-/**
- * Вспомогательная функция. Добавляет ведущий ноль.
- * (Эта функция не изменилась)
- * @param {number} time - Число.
- * @returns {string} - Отформатированное строковое значение.
- */
-function formatTime(time) {
-    return time < 10 ? `0${time}` : time;
-}
-
-// --- 3. Запуск таймера ---
-
-// 1. Запускаем функцию updateCountdown() каждую секунду (1000 мс)
-setInterval(updateCountdown, 1000);
-
-// 2. Также запускаем ее один раз сразу при загрузке страницы,
-//    чтобы не ждать первую секунду до появления цифр.
-updateCountdown();
+}); // --- КОНЕЦ "DOMContentLoaded" ---
