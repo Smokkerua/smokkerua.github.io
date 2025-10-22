@@ -1,73 +1,151 @@
-/* ======================================================
-   НОВІ СТИЛІ ДЛЯ ГОЛОВНОЇ СЕКЦІЇ (HOME) - ДИЗАЙН З КАРТИНКИ
-   ====================================================== */
-
-/* Повністю скидаємо старі стилі секції */
 .hero-section {
     position: relative;
-    /* Новий фон, як на картинці */
-    background-color: #f0f2f5; /* Світло-сірий фон */
     width: 100%;
-    padding: 0px 20px; /* Відступи зверху/знизу та по боках */
+    padding: 0px;
     padding-top: 60px;
-    /* Використовуємо flex для вертикального центрування контейнера */
-    display: flex;
+
+    /*    display: flex;*/
     align-items: center;
     justify-content: center;
-    color: #333; /* Темний колір тексту (замість білого) */
-    
+    color: #333;
+    /* Темний колір тексту (замість білого) */
+
     /* Скидаємо старі фон, висоту і т.д. */
-    height: auto; 
-    text-align: left; /* Вирівнювання по лівому краю за замовчуванням */
-    
-    background: linear-gradient(
-        -45deg, 
-        #e1f5fe,  /* Небесно-голубой */
-        #e3f2fd,  /* Чуть насыщеннее */
-        #e0f7fa,  /* Легкий бирюзовый оттенок */
-        #e1f5fe   /* Снова небесно-голубой */
-    );
+    height: auto;
+    text-align: left;
+    /* Вирівнювання по лівому краю за замовчуванням */
+
+    background: linear-gradient(-45deg,
+            #e1f5fe,
+            /* Небесно-голубой */
+            #e3f2fd,
+            /* Чуть насыщеннее */
+            #e0f7fa,
+            /* Легкий бирюзовый оттенок */
+            #e1f5fe
+            /* Снова небесно-голубой */
+        );
 }
+
+
+
+#home {
+    /* ... (здесь твои существующие стили для #home) ... */
+    overflow-x: hidden;
+}
+
+/* * ШАГ 2: Определяем сами анимации (ключевые кадры)
+ */
+
+/* Анимация для появления слева (для картинки) */
+@keyframes slideInLeft {
+    from {
+        /* Начинаем за левым краем */
+        transform: translateX(-50%);
+        /* И полностью прозрачным */
+        opacity: 0;
+    }
+
+    to {
+        /* Заканчиваем на своем месте */
+        transform: translateX(0);
+        /* И полностью видимым */
+        opacity: 1;
+    }
+}
+
+/* Анимация для появления справа (для текста) */
+@keyframes slideInRight {
+    from {
+        /* Начинаем за правым краем */
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* * ШАГ 3: Применяем анимации к твоим классам из HTML
+ */
+
+/* Применяем к твоему блоку с картинкой */
+.home-image {
+    animation: slideInLeft 1s ease-out forwards;
+}
+
+
+.home-text-content {
+    animation: slideInRight 1s ease-out forwards;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* Прибираємо старий оверлей (якщо він ще є в HTML) */
 .hero-section .hero-overlay {
     display: none;
 }
+
 @keyframes animateGradient {
     0% {
         background-position: 0% 50%;
     }
+
     50% {
         background-position: 100% 50%;
     }
+
     100% {
         background-position: 0% 50%;
     }
 }
+
 /* Новий контейнер для сітки (2 колонки) */
 .hero-section .home-container {
     display: grid;
     /* Дві колонки: 40% під фото, 60% під текст. Можете змінити на "1fr 1fr" для рівних */
-grid-template-columns: 1fr 1fr;
-    align-items: center; /* Центрування вмісту по вертикалі */
-    gap: 50px; /* Проміжок між колонками */
-    max-width: 1240px; /* Загальна ширина макету */
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    /* Центрування вмісту по вертикалі */
+    gap: 50px;
+    /* Проміжок між колонками */
+    max-width: 1240px;
+    /* Загальна ширина макету */
     width: 100%;
-    margin: 0 auto; /* Центрування самого контейнера */
+    margin: 0 auto;
+    /* Центрування самого контейнера */
 }
 
 /* Стилі для колонки з фото */
 .hero-section .home-image {
-    text-align: center; /* Центруємо фото в колонці */
+    text-align: center;
+    /* Центруємо фото в колонці */
 }
 
 .hero-section .home-image img {
     width: 100%;
     height: auto;
-    border-radius: 10px; /* Легке заокруглення */
+    border-radius: 10px;
+    /* Легке заокруглення */
     display: block;
-    margin: 0 auto; /* Центрування фото */
+    margin: 0 auto;
+    /* Центрування фото */
 }
 
 /* Стилі для колонки з текстом (перезаписуємо .hero-content) */
@@ -75,19 +153,23 @@ grid-template-columns: 1fr 1fr;
     position: relative;
     z-index: 2;
     top: -10%;
-    max-width: 100%; /* Займає всю ширину колонки */
+    max-width: 100%;
+    /* Займає всю ширину колонки */
     padding: 0;
-    
+text-align: left;
     /* Анімація появи */
     animation: fadeIn 1.5s ease-in-out;
 }
 
 .hero-section .home-text-content h1 {
-    font-size: 4.5rem; /* Розмір з вашого старого коду */
+    font-size: 4.5rem;
+    /* Розмір з вашого старого коду */
     font-weight: 700;
     margin-bottom: 20px;
     line-height: 1.2;
-    color: #222; /* Темний заголовок */
+    color: #222;
+    /* Темний заголовок */
+    color: #fff;
 }
 
 /* Ваш старий h2 не використовується в новому HTML, але стилі про всяк випадок */
@@ -99,11 +181,14 @@ grid-template-columns: 1fr 1fr;
 }
 
 .hero-section .home-text-content p {
-    font-size: 20px; /* Трохи більший для читабельності */
-    font-weight: 400; /* Стандартна жирність */
+    font-size: 20px;
+    /* Трохи більший для читабельності */
+    font-weight: 400;
+    /* Стандартна жирність */
     margin-bottom: 35px;
     line-height: 1.6;
-    max-width: 500px; /* Обмежимо ширину параграфа */
+    max-width: 500px;
+    /* Обмежимо ширину параграфа */
 }
 
 /* =====================================================
@@ -117,28 +202,38 @@ grid-template-columns: 1fr 1fr;
 */
 .hero-section .cta-button {
     /* --- Нові стилі з картинки --- */
-    background: #3cb878; /* Зелений колір */
+    background: #3cb878;
+    /* Зелений колір */
     color: #ffffff;
-    font-size: 1.7rem; /* 17.6px (як у вас і було) */
+    font-size: 1.7rem;
+    /* 17.6px (як у вас і було) */
     font-weight: 700;
-    padding: 15px 35px; /* (як у вас і було) */
+    padding: 15px 35px;
+    /* (як у вас і було) */
     border: none;
-    border-radius: 8px; /* Закруглені кути, але не "пігулка" */
+    border-radius: 8px;
+    /* Закруглені кути, але не "пігулка" */
     cursor: pointer;
     text-decoration: none;
     display: inline-block;
-    
+
     /* --- Скидаємо та замінюємо старі ефекти --- */
-    background-image: none; /* Прибираємо градієнт */
-    box-shadow: 0 4px 15px rgba(60, 184, 120, 0.4); /* Нова тінь */
-    transform: translateY(0); /* Скидаємо старий transform */
+    background-image: none;
+    /* Прибираємо градієнт */
+    box-shadow: 0 4px 15px rgba(60, 184, 120, 0.4);
+    /* Нова тінь */
+    transform: translateY(0);
+    /* Скидаємо старий transform */
     transition: all 0.3s ease-in-out;
 }
 
 .hero-section .cta-button:hover {
-    background: #34a56a; /* Трохи темніший зелений */
-    transform: translateY(-3px); /* "Підйом" кнопки */
-    box-shadow: 0 6px 20px rgba(60, 184, 120, 0.5); /* Сильніша тінь */
+    background: #34a56a;
+    /* Трохи темніший зелений */
+    transform: translateY(-3px);
+    /* "Підйом" кнопки */
+    box-shadow: 0 6px 20px rgba(60, 184, 120, 0.5);
+    /* Сильніша тінь */
 }
 
 .hero-section .cta-button:active {
@@ -155,15 +250,18 @@ grid-template-columns: 1fr 1fr;
 */
 @media (max-width: 768px) {
     .hero-section {
-        padding: 30px 15px; /* Менше відступів на мобільних */
-        min-height: auto; /* Дозволяємо секції бути нижчою */
+        padding: 30px 15px;
+        /* Менше відступів на мобільних */
+        min-height: auto;
+        /* Дозволяємо секції бути нижчою */
     }
 
     .hero-section .home-container {
         /* На мобільних робимо 1 колонку */
         grid-template-columns: 1fr;
         gap: 30px;
-        text-align: center; /* Центруємо весь текст */
+        text-align: center;
+        /* Центруємо весь текст */
     }
 
     /* * На мобільних фото буде зверху, а текст знизу. 
@@ -175,20 +273,25 @@ grid-template-columns: 1fr 1fr;
 
         top: 0%;
     }
+
     .hero-section .home-image img {
-        max-width: 200px; /* Робимо фото трохи меншим на моб. */
+        max-width: 200px;
+        /* Робимо фото трохи меншим на моб. */
     }
 
     .hero-section .home-text-content h1 {
-        font-size: 36px; /* Зменшуємо шрифт заголовка */
+        font-size: 36px;
+        /* Зменшуємо шрифт заголовка */
     }
 
     .hero-section .home-text-content p {
-        font-size: 16px; /* Зменшуємо шрифт підзаголовка */
-        max-width: 100%; /* Дозволяємо тексту зайняти всю ширину */
+        font-size: 16px;
+        /* Зменшуємо шрифт підзаголовка */
+        max-width: 100%;
+        /* Дозволяємо тексту зайняти всю ширину */
         margin-bottom: 30px;
     }
-    
+
     /* Стилі кнопки для мобільних (з вашого старого коду) */
     .hero-section .cta-button {
         padding: 12px 25px;
@@ -202,8 +305,130 @@ grid-template-columns: 1fr 1fr;
         opacity: 0;
         transform: translateY(20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.header {
+    position: relative;
+    text-align: center;
+    background: linear-gradient(60deg, rgba(84, 58, 183, 1) 0%, rgba(0, 172, 193, 1) 100%);
+    color: white;
+}
+
+
+
+
+
+.waves {
+    position: relative;
+    width: 100%;
+    height: 15vh;
+    margin-bottom: -7px;
+    /*Fix for safari gap*/
+    min-height: 100px;
+    max-height: 150px;
+}
+
+.content {
+    position: relative;
+    height: 20vh;
+    text-align: center;
+    background-color: white;
+}
+
+/* Animation */
+
+.parallax > use {
+    animation: move-forever 25s cubic-bezier(.55, .5, .45, .5) infinite;
+}
+
+.parallax > use:nth-child(1) {
+    animation-delay: -2s;
+    animation-duration: 7s;
+}
+
+.parallax > use:nth-child(2) {
+    animation-delay: -3s;
+    animation-duration: 10s;
+}
+
+.parallax > use:nth-child(3) {
+    animation-delay: -4s;
+    animation-duration: 13s;
+}
+
+.parallax > use:nth-child(4) {
+    animation-delay: -5s;
+    animation-duration: 20s;
+}
+
+@keyframes move-forever {
+    0% {
+        transform: translate3d(-90px, 0, 0);
+    }
+
+    100% {
+        transform: translate3d(85px, 0, 0);
+    }
+}
+
+/*Shrinking for mobile*/
+@media (max-width: 768px) {
+    .waves {
+        height: 40px;
+        min-height: 40px;
+    }
+
+    .content {
+        height: 30vh;
+    }
+
+    h1 {
+        font-size: 24px;
     }
 }
