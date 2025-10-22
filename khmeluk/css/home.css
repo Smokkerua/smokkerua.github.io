@@ -9,7 +9,7 @@
     background-color: #f0f2f5; /* Світло-сірий фон */
     width: 100%;
     padding: 0px 20px; /* Відступи зверху/знизу та по боках */
-    padding-top: 100px;
+    padding-top: 60px;
     /* Використовуємо flex для вертикального центрування контейнера */
     display: flex;
     align-items: center;
@@ -28,6 +28,7 @@
         #e1f5fe   /* Снова небесно-голубой */
     );
 }
+
 
 /* Прибираємо старий оверлей (якщо він ще є в HTML) */
 .hero-section .hero-overlay {
@@ -64,7 +65,6 @@ grid-template-columns: 1fr 1fr;
 .hero-section .home-image img {
     width: 100%;
     height: auto;
-    width: 700px;
     border-radius: 10px; /* Легке заокруглення */
     display: block;
     margin: 0 auto; /* Центрування фото */
@@ -74,6 +74,7 @@ grid-template-columns: 1fr 1fr;
 .hero-section .home-text-content {
     position: relative;
     z-index: 2;
+    top: -10%;
     max-width: 100%; /* Займає всю ширину колонки */
     padding: 0;
     
@@ -154,7 +155,7 @@ grid-template-columns: 1fr 1fr;
 */
 @media (max-width: 768px) {
     .hero-section {
-        padding: 40px 20px; /* Менше відступів на мобільних */
+        padding: 30px 15px; /* Менше відступів на мобільних */
         min-height: auto; /* Дозволяємо секції бути нижчою */
     }
 
@@ -170,9 +171,12 @@ grid-template-columns: 1fr 1fr;
      * .hero-section .home-image { order: 2; }
      * .hero-section .home-text-content { order: 1; }
     */
-    
+    .hero-section .home-text-content {
+
+        top: 0%;
+    }
     .hero-section .home-image img {
-        max-width: 300px; /* Робимо фото трохи меншим на моб. */
+        max-width: 200px; /* Робимо фото трохи меншим на моб. */
     }
 
     .hero-section .home-text-content h1 {
