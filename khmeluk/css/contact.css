@@ -297,6 +297,7 @@
         flex-direction: column;
         /* Ставим сегменты друг под друга */
         gap: 15px;
+        margin-bottom: 20px;
     }
 
     .time-segment {
@@ -307,5 +308,25 @@
 
     .time-value {
         font-size: 2.5rem;
+    }
+
+    .countdown-container {
+        gap: 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+    }
+        .time-segment {
+            padding: 10px;
+            min-width: 80px;
+            margin: 0 10px;
+        }
+    .time-label {
+        margin-top: 0px;
+    }
+    .countdown__title {
+        margin-bottom: 15px;
+        text-align: center;
     }
 }

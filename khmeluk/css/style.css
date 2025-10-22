@@ -83,4 +83,7 @@ main section:first-of-type {
     .container {
         width: 100%;
     }
+    main section:first-of-type {
+        padding-top: 30px;
+    }
 }
