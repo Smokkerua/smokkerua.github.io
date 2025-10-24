@@ -100,8 +100,8 @@
 
 
 .nav-mobile {
+    display: block;
     background-color: #593333;
-    /* Фон чуть светлее шапки */
     position: absolute;
     top: 100%;
     left: 0;
@@ -142,7 +142,6 @@
 }
 
 .nav-mobile.active {
-    display: block;
     max-height: 350px;
     transition: max-height 0.4s ease-in;
 }
