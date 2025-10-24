@@ -87,91 +87,93 @@
         display: none;
     }
 }
+
 .site-header {
     height: 60px;
 }
-    /* Показываем иконку бургера */
-    .burger-menu-icon {
-        display: block;
-        /* Показываем на мобильных */
-    }
 
-    /* Стилизуем три полоски бургера */
-    .burger-menu-icon span {
-        display: block;
-        width: 25px;
-        height: 3px;
-        background-color: white;
-        margin: 5px 0;
-        transition: all 0.3s ease-in-out;
-    }
+/* Показываем иконку бургера */
+.burger-menu-icon {
+    display: block;
+    /* Показываем на мобильных */
+}
 
-    /* Стили для мобильного меню (когда оно скрыто) */
-    .nav-mobile {
-        background-color: #34495e;
-        /* Фон чуть светлее шапки */
-        position: absolute;
-        top: 100%;
-        /* Появляется сразу под шапкой */
-        left: 0;
-        width: 100%;
+/* Стилизуем три полоски бургера */
+.burger-menu-icon span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
+    transition: all 0.3s ease-in-out;
+}
 
-        /* Скрываем его с помощью max-height: 0 */
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.4s ease-out;
-        /* Плавная анимация */
-    }
 
-    .nav-mobile ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        flex-direction: column;
-        /* Элементы идут друг под другом */
-    }
+/* Стили для мобильного меню (когда оно скрыто) */
+.nav-mobile {
+    background-color: #593333;
+    /* Фон чуть светлее шапки */
+    position: absolute;
+    top: 100%;
+    /* Появляется сразу под шапкой */
+    left: 0;
+    width: 100%;
 
-    .nav-mobile li {
-        text-align: center;
-        border-bottom: 1px solid #4a637c;
-        /* Разделитель */
-    }
+    /* Скрываем его с помощью max-height: 0 */
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out;
+    /* Плавная анимация */
+}
 
-    .nav-mobile a {
-        display: block;
-        /* Ссылка на всю ширину */
-        padding: 18px;
-        color: white;
-        text-decoration: none;
-        transition: background-color 0.3s;
-    }
+.nav-mobile ul li:first-of-type {
+    border-top: 1px solid #fff;
+}
 
-    .nav-mobile a:hover {
-        background-color: #3e5770;
-    }
+.nav-mobile ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-direction: column;
+    /* Элементы идут друг под другом */
+}
 
-    /* --- Классы-модификаторы (добавляются через JS) --- */
+.nav-mobile li {
+    text-align: center;
+    border-bottom: 1px solid #fff;
+    /* Разделитель */
+}
 
-    /* Показываем мобильное меню, когда у .nav-mobile есть класс 'active' */
-    .nav-mobile.active {
-        display: block;
-        /* Делаем блочным */
-        max-height: 300px;
-        /* Анимируем высоту (подберите свою) */
-        transition: max-height 0.4s ease-in;
-    }
+.nav-mobile a {
+    display: block;
+    /* Ссылка на всю ширину */
+    padding: 18px;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
 
-    /* Анимация иконки бургера в "крестик" */
-    .burger-menu-icon.active span:nth-child(1) {
-        transform: rotate(45deg) translate(5px, 5px);
-    }
+.nav-mobile a:hover {
+    background-color: #3e5770;
+}
 
-    .burger-menu-icon.active span:nth-child(2) {
-        opacity: 0;
-        /* Средняя полоска исчезает */
-    }
+.nav-mobile.active {
+    display: block;
+    max-height: 350px;
+    transition: max-height 0.4s ease-in;
+}
 
-    .burger-menu-icon.active span:nth-child(3) {
-        transform: rotate(-45deg) translate(5px, -5px);
-    }
+/* Анимация иконки бургера в "крестик" */
+.burger-menu-icon.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.burger-menu-icon.active span:nth-child(2) {
+    opacity: 0;
+    /* Средняя полоска исчезает */
+}
+
+.burger-menu-icon.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
 }
