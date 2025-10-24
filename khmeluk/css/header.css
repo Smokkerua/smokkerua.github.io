@@ -71,9 +71,6 @@
     cursor: pointer;
 }
 
-.nav-mobile {
-    display: none;
-}
 
 
 @media (max-width: 768px) {
@@ -162,5 +159,4 @@
 
 .burger-menu-icon.active span:nth-child(3) {
     transform: rotate(-45deg) translate(5px, -5px);
-}
 }
