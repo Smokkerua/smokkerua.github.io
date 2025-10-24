@@ -23,50 +23,34 @@
     <link rel="stylesheet" href="./css/modal.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <style>
-        /* Основні стилі для футера */
         .footer {
             background-color: #1a1a1a;
-            /* Темний, майже чорний фон */
             color: #f0f0f0;
-            /* Світлий колір тексту */
             padding: 30px 20px;
-            /* Внутрішній відступ */
             text-align: center;
-            /* Вирівнювання тексту по центру */
         }
 
-        /* Контейнер для вмісту футера (Flexbox для розташування) */
         .footer-container {
             max-width: 1200px;
             margin: 0 auto;
             display: flex;
-            /* Вмикаємо Flexbox */
             justify-content: space-around;
-            /* Рівномірний розподіл простору */
-            align-items: flex-start;
-            /* Вирівнювання елементів по верхньому краю */
+            align-items: center;
             flex-wrap: wrap;
-            /* Дозволяємо переносити елементи на новий рядок на малих екранах */
             gap: 30px;
-            /* Відстань між основними блоками */
         }
 
-        /* Стилі для логотипу та назви */
         .footer-brand,
         .footer-contact,
         .footer-social {
             flex-basis: 200px;
-            /* Базова ширина для всіх блоків */
-            /* Ця базова ширина допомагає блокам акуратно переноситися на мобільних пристроях */
         }
 
         .footer-logo {
             width: 50px;
-            /* Розмір логотипу */
             height: auto;
             display: block;
             margin: 0 auto 10px;
-            /* Центруємо і додаємо відступ */
         }
 
         .footer-name {
@@ -74,7 +58,6 @@
             font-size: 1.2em;
             font-weight: bold;
             color: #ffc107;
-            /* Золотистий акцентний колір */
         }
 
         .footer-copy {
@@ -83,30 +66,26 @@
             margin-top: 5px;
         }
 
-        /* Стилі для посилань (загальні) */
         .footer a {
             color: #f0f0f0;
             text-decoration: none;
             transition: color 0.3s;
             display: block;
-            /* Щоб посилання займали весь рядок */
         }
 
         .footer a:hover {
             color: #ffc107;
-            /* Зміна кольору при наведенні */
         }
 
-        /* Стилі для соцмереж */
         .footer-social {
             display: flex;
             justify-content: center;
-            /* Центруємо іконки */
+
             align-items: center;
             gap: 15px;
-            /* Відстань між іконками */
+
             font-size: 1.5em;
-            /* Розмір іконок */
+ 
         }
 
         .footer-social a {
@@ -116,7 +95,6 @@
         /* Стилі для контактів */
         .footer-contact {
             text-align: center;
-            /* У мобільному вигляді буде виглядати акуратніше, якщо все по центру */
         }
 
         .footer-contact a {
@@ -129,27 +107,26 @@
             width: 50px;
         }
 
-        /* Медіа-запит для адаптивності на малих екранах (мобільні пристрої) */
         @media (max-width: 768px) {
             .footer-container {
                 flex-direction: column;
-                /* На мобільних екранах ставимо елементи один під одним */
+
                 align-items: center;
-                /* Центруємо всі блоки */
+
             }
 
             .footer-brand,
             .footer-contact,
             .footer-social {
                 margin-bottom: 20px;
-                /* Додатковий відступ між блоками */
+
                 width: 100%;
-                /* Займаємо всю доступну ширину */
+
             }
 
             .footer-contact {
                 text-align: center;
-                /* Забезпечуємо центрування тексту в контактному блоці */
+  
             }
         }
 
