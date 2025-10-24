@@ -2,7 +2,8 @@
 .site-header {
     color: white;
     padding: 15px 0;
-    position: absolute;
+    background: #593333;
+    position: sticky;
     top: 0;
     left: 0;
     width: 100%;
