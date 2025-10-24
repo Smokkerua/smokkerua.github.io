@@ -67,9 +67,6 @@
 
 
 
-
-
-
 /* Новий контейнер для сітки (2 колонки) */
 .hero-section .home-container {
     display: grid;
@@ -379,9 +376,6 @@
    АДАПТИВНІСТЬ (ДЛЯ МОБІЛЬНИХ)
    ================================= */
 
-/* * Стара медіа-умова @media (max-width: 768px) залишається, 
- * але ми її теж перезаписуємо для нової структури
-*/
 @media (max-width: 768px) {
     .hero-section {
         padding: 20px 15px;
@@ -389,11 +383,9 @@
     }
 
     .hero-section .home-container {
-        /* На мобільних робимо 1 колонку */
         grid-template-columns: 1fr;
         gap: 30px;
         text-align: center;
-        /* Центруємо весь текст */
     }
 
     /* * На мобільних фото буде зверху, а текст знизу. 
@@ -401,30 +393,27 @@
      * .hero-section .home-image { order: 2; }
      * .hero-section .home-text-content { order: 1; }
     */
+    
+    
     .hero-section .home-text-content {
 
         top: 0%;
     }
 
     .hero-section .home-image img {
-        max-width: 200px;
-        /* Робимо фото трохи меншим на моб. */
+        max-width: 270px;
     }
 
     .hero-section .home-text-content h1 {
         font-size: 36px;
-        /* Зменшуємо шрифт заголовка */
     }
 
     .hero-section .home-text-content p {
         font-size: 16px;
-        /* Зменшуємо шрифт підзаголовка */
         max-width: 100%;
-        /* Дозволяємо тексту зайняти всю ширину */
         margin-bottom: 30px;
     }
 
-    /* Стилі кнопки для мобільних (з вашого старого коду) */
     .hero-section .cta-button {
         padding: 12px 25px;
         font-size: 16px;

@@ -65,6 +65,12 @@ h2 {
     /* Головний колір акценту */
 }
 
+.mobile {
+    display: none;
+}
+.desctop {
+    display: block;
+}
 
 
 /* --- Секції --- */
@@ -86,4 +92,12 @@ main section:first-of-type {
     main section:first-of-type {
         padding-top: 30px;
     }
+    
+    .mobile {
+        display: block!important;
+    }
+    .desctop {
+        display: none!important;
+    }
+
 }
