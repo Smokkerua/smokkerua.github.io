@@ -86,7 +86,10 @@
     .nav-desktop {
         display: none;
     }
-
+}
+.site-header {
+    height: 60px;
+}
     /* Показываем иконку бургера */
     .burger-menu-icon {
         display: block;

@@ -386,7 +386,7 @@
     .hero-section {
         padding: 30px 15px;
         /* Менше відступів на мобільних */
-        min-height: auto;
+        min-height: calc(100vh - 60px);
         /* Дозволяємо секції бути нижчою */
     }
 
