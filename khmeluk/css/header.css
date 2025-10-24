@@ -1,7 +1,7 @@
 /* --- Общие стили для шапки --- */
 .site-header {
     color: white;
-    padding: 15px 0;
+    padding: 10px 0;
     background: #593333;
     position: sticky;
     top: 0;

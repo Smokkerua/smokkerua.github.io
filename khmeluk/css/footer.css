@@ -1,16 +1,10 @@
 /* =================== СТИЛИ ДЛЯ FOOTER (ПОДВАЛА) =================== */
 
 .site-footer {
-    background-color: #222;
-    /* Темный фон для футера */
+    background-color: #593333;
     color: #aaa;
-    /* Светлый цвет текста */
-    padding: 40px 20px;
-    /* Отступы сверху/снизу и по бокам */
+    padding: 20px 20px;
     text-align: center;
-    /* Центрируем весь текст */
-    border-top: 3px solid #007bff;
-    /* Акцентная полоска сверху (тот же цвет, что у кнопки) */
 }
 
 .site-footer .container {
@@ -18,10 +12,8 @@
     margin: 0 auto;
 }
 
-/* --- Стили для иконок соцсетей --- */
 .footer-socials {
     margin-bottom: 25px;
-    /* Отступ от иконок до копирайта */
 }
 
 .footer-socials a {
@@ -30,19 +22,14 @@
 }
 
 
-/* --- Стили для копирайта --- */
 .footer-copyright p {
     margin: 8px 0;
-    /* Небольшой отступ между строками */
     font-size: 0.9rem;
-    /* 14.4px */
     line-height: 1.5;
 }
 
-/* Стили для ссылок в копирайте */
 .footer-copyright a {
     color: #fff;
-    /* Делаем ссылку в копирайте белой */
     font-weight: 600;
     text-decoration: none;
     transition: color 0.3s ease;
@@ -50,7 +37,6 @@
 
 .footer-copyright a:hover {
     color: #007bff;
-    /* Цвет ссылки при наведении */
     text-decoration: underline;
 }
 
