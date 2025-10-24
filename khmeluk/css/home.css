@@ -384,10 +384,8 @@
 */
 @media (max-width: 768px) {
     .hero-section {
-        padding: 30px 15px;
-        /* Менше відступів на мобільних */
+        padding: 20px 15px;
         min-height: calc(100vh - 60px);
-        /* Дозволяємо секції бути нижчою */
     }
 
     .hero-section .home-container {
