@@ -66,10 +66,10 @@ h2 {
 }
 
 .mobile {
-    display: none;
+    display: none!important;
 }
 .desctop {
-    display: block;
+    display: block!important;
 }
 
 
@@ -77,7 +77,10 @@ h2 {
 section {
     padding: 60px 0;
 }
-
+:target,
+[id] {
+  scroll-margin-top: 60px;
+}
 /* Забираємо відступ у першої секції ПІСЛЯ hero */
 main section:first-of-type {
     padding-top: 60px;
