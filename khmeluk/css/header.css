@@ -73,12 +73,8 @@
 
 .nav-mobile {
     display: none;
-    /* Скрыто на десктопе */
 }
 
-
-/* --- АДАПТАЦИЯ (Медиа-запрос) --- */
-/* Все, что внутри, применится на экранах 768px и меньше */
 
 @media (max-width: 768px) {
 
@@ -92,13 +88,10 @@
     height: 60px;
 }
 
-/* Показываем иконку бургера */
 .burger-menu-icon {
     display: block;
-    /* Показываем на мобильных */
 }
 
-/* Стилизуем три полоски бургера */
 .burger-menu-icon span {
     display: block;
     width: 25px;
@@ -109,21 +102,16 @@
 }
 
 
-/* Стили для мобильного меню (когда оно скрыто) */
 .nav-mobile {
     background-color: #593333;
     /* Фон чуть светлее шапки */
     position: absolute;
     top: 100%;
-    /* Появляется сразу под шапкой */
     left: 0;
     width: 100%;
-
-    /* Скрываем его с помощью max-height: 0 */
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.4s ease-out;
-    /* Плавная анимация */
 }
 
 .nav-mobile ul li:first-of-type {
@@ -135,7 +123,6 @@
     padding: 0;
     margin: 0;
     flex-direction: column;
-    /* Элементы идут друг под другом */
 }
 
 .nav-mobile li {
