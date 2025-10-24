@@ -8,9 +8,9 @@
     color: #fff;
     height: auto;
     text-align: left;
-   background: -webkit-linear-gradient(0deg, rgb(154, 179, 201), rgb(229, 185, 159));
-background: -moz-linear-gradient(0deg, rgb(154, 179, 201), rgb(229, 185, 159));
-background: linear-gradient(0deg, rgb(154, 179, 201), rgb(229, 185, 159));
+    background: -webkit-linear-gradient(0deg, rgb(154, 179, 201), rgb(229, 185, 159));
+    background: -moz-linear-gradient(0deg, rgb(154, 179, 201), rgb(229, 185, 159));
+    background: linear-gradient(0deg, rgb(154, 179, 201), rgb(229, 185, 159));
 }
 
 @keyframes slideInLeft {
