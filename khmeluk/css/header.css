@@ -73,20 +73,11 @@
 
 
 
-@media (max-width: 768px) {
 
-    /* Скрываем десктопную навигацию */
-    .nav-desktop {
-        display: none;
-    }
-}
+
 
 .site-header {
     height: 60px;
-}
-
-.burger-menu-icon {
-    display: block;
 }
 
 .burger-menu-icon span {
@@ -158,4 +149,22 @@
 
 .burger-menu-icon.active span:nth-child(3) {
     transform: rotate(-45deg) translate(5px, -5px);
+}
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+    
+    .nav-desktop {
+        display: none;
+    }
+
+    .burger-menu-icon {
+        display: block;
+    }
+
 }
