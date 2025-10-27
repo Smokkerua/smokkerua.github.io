@@ -63,7 +63,7 @@
 
 .about-image img {
     width: 100%;
-    max-width: 350px;
+    max-width: 500px;
     /* Обмежуємо макс. розмір фото */
     height: auto;
 
@@ -165,7 +165,7 @@
     }
 
     .about-image img {
-        max-width: 250px;
+        max-width: 280px;
         /* Робимо фото меншим на мобільних */
     }
 

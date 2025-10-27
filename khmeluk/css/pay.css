@@ -1,0 +1,71 @@
+.pay {
+    padding: 20px;
+    background: #f9f9f9;
+}
+
+
+.dogovir {
+    height: 400px;
+    overflow: auto;
+    border: 1px solid #000;
+    padding: 15px;
+}
+
+.mod-title {
+    font-family: 'SourceSansProBlack';
+    font-size: 43px;
+    line-height: 100%;
+    color: #0a1922;
+    display: inline-block;
+    margin-bottom: 40px;
+}
+
+.checkbox-block {
+    margin: 30px 0;
+    text-align: center;
+}
+
+.checkbox-block .check1 {
+    display: inline-block;
+    margin-right: 10px;
+    position: relative;
+    top: -1px;
+}
+
+label {
+    display: inline-block;
+    margin-bottom: .5rem;
+}
+
+
+.button-pay {
+    display: block;
+    width: fit-content;
+    margin: auto;
+    padding: 12px 25px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+
+}
+.button-pay a {
+        color: #fff;
+    text-decoration: none;
+}
+.button-pay:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+.disabled {
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+
+
+

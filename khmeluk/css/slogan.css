@@ -169,4 +169,7 @@
         width: 90%;
         margin: 0 auto;
     }
+    .slogan__rounded {
+        padding-left: 10px;
+    }
 }

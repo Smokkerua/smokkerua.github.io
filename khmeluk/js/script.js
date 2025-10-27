@@ -297,4 +297,34 @@ document.addEventListener("DOMContentLoaded", function () {
         console.warn("Элементы таймера (#hours, #minutes, #seconds) не найдены.");
     }
 
-}); // --- КОНЕЦ "DOMContentLoaded" ---
+}); 
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    
+    // 1. Находим ваш чекбокс по id "check1"
+    const checkbox = document.getElementById('check1');
+    
+    // 2. Находим ваш DIV с кнопкой по классу "button-pay"
+    // Используем querySelector, так как у него нет id
+    const buttonWrapper = document.querySelector('.button-pay');
+
+    // 3. Добавляем слушатель события 'change' на чекбокс
+    checkbox.addEventListener('change', function() {
+        
+        // 4. Проверяем, стоит ли галочка
+        // "this.checked" вернет true (истина), если галочка стоит
+        
+        if (this.checked) {
+            // Галочка ПОСТАВЛЕНА:
+            // Убираем класс "disabled" у <div class="button-pay ...">
+            buttonWrapper.classList.remove('disabled');
+            
+        } else {
+            // Галочка СНЯТА:
+            // Возвращаем класс "disabled" к <div class="button-pay ...">
+            buttonWrapper.classList.add('disabled');
+        }
+    });
+});
