@@ -11,23 +11,39 @@
 }
 
 .slogan__text {
-    font-size: 26px;
+    font-size: 23px;
     font-style: italic;
     line-height: 1.7;
     color: #444;
     text-align: center;
-    /* z-index: 2 робить текст "вищим" за лапки */
     position: relative;
     z-index: 2;
+    text-decoration: underline;
+}
+
+.slogan__varning {
+    font-size: 26px;
+    text-align: left;
+    font-style: italic;
+    line-height: 1.7;
+}
+
+.slogan__content {
+    font-size: 23px;
+    font-style: italic;
+    line-height: 1.7;
+    z-index: 2;
+    color: #444;
+    text-align: left;
+    position: relative;
 }
 
 .slogan__title {
-    font-size: 42px;
+    font-size: 38px;
     font-style: italic;
     line-height: 1.7;
     color: #444;
     text-align: center;
-    /* z-index: 2 робить текст "вищим" за лапки */
     position: relative;
     z-index: 2;
 }
@@ -36,13 +52,9 @@
 .slogan__inner::before,
 .slogan__inner::after {
     font-family: Georgia, 'Times New Roman', serif;
-    /* Гарний шрифт з засічками */
     font-size: 150px;
-    /* Дуже великий розмір */
     color: #e9e9e9;
-    /* Дуже світлий колір */
     position: absolute;
-    /* Абсолютне позиціонування */
     z-index: 1;
 }
 
@@ -61,6 +73,63 @@
 
 
 
+
+
+
+.slogan__rounded {
+    counter-reset: li;
+    list-style: none;
+    padding: 0;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, .5);
+}
+
+.slogan__rounded li {
+    position: relative;
+    display: block;
+    padding: .4em .4em .4em 2em;
+    margin: .5em 0;
+    background: #DAD2CA;
+    color: #444;
+    text-decoration: none;
+    border-radius: .3em;
+    transition: .3s ease-out;
+}
+
+.slogan__rounded li:before {
+    content: counter(li);
+    counter-increment: li;
+    position: absolute;
+    left: -1.3em;
+    top: 50%;
+    margin-top: -1.3em;
+    background: #593333;
+    height: 2em;
+    width: 2em;
+    line-height: 2em;
+    border: .3em solid white;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 2em;
+    color: #fff;
+    transition: all .3s ease-out;
+    box-sizing: content-box;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media (max-width: 768px) {
 
     #slogan {
@@ -69,20 +138,23 @@
     }
 
     .slogan__title {
-        font-size: 28px;
+        font-size: 26px;
 
     }
 
     .slogan__text {
-        font-size: 18px;
+        font-size: 22px;
         line-height: 1.6;
+        text-align: left;
     }
 
     .slogan__inner::before,
     .slogan__inner::after {
         font-size: 90px;
     }
-
+    .slogan__content {
+        font-size: 20px;
+    }
     .slogan__inner::before {
         left: 0;
         top: -25px;
