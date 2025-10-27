@@ -11,6 +11,7 @@
     <link rel="значок скорочення" href="./img/favicon/favico co" />
     <link rel="apple-touch-icon" sizes="180x180" href="./img/favicon/apple-touch-ico ng" />
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/home.css">
@@ -18,10 +19,9 @@
     <link rel="stylesheet" href="./css/services.css">
     <link rel="stylesheet" href="./css/slider.css">
     <link rel="stylesheet" href="./css/slogan.css">
+    <link rel="stylesheet" href="./css/reasons.css">
     <link rel="stylesheet" href="./css/contact.css">
     <link rel="stylesheet" href="./css/footer.css">
-    <link rel="stylesheet" href="./css/modal.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
 </head>
 
@@ -390,158 +390,6 @@
 
         </section>
 
-
-        <style>
-            /* --- Секція "Причини" (Reasons) --- */
-
-            /* Базовий контейнер секції */
-            .reasons {
-                color: #262626;
-                padding-top: 60px;
-                box-sizing: border-box;
-            }
-
-            /* Головний заголовок секції */
-            .reasons__title {
-                font-size: 38px;
-                font-style: italic;
-                line-height: 1.7;
-                color: #444;
-                text-align: center;
-            }
-
-            /* --- Блок з однією причиною --- */
-
-            /* Контейнер для одного ряду (одна причина) */
-            .reasons__box {
-                display: flex;
-                justify-content: space-between;
-                margin-bottom: 25px;
-                position: relative;
-            }
-
-            /* Модифікатор для 5-го блоку (прибирає нижній відступ) */
-            .reasons__box-5 {
-                margin-bottom: 0;
-            }
-
-            /* Ліва колонка в блоці (часто для фото) */
-            .reasons__box-left {
-                display: flex;
-                width: 50%;
-                flex-direction: column;
-                justify-content: center;
-                max-height: 400px;
-                margin-right: 15px;
-            }
-
-            /* Права колонка в блоці (часто для тексту) */
-            .reasons__box-right {
-                width: 50%;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                max-height: 400px;
-                margin-left: 15px;
-            }
-
-            /* Модифікатор для правої колонки (вирівнювання?) */
-            .reasons__box-right-margin {
-                margin-left: auto;
-            }
-
-            /* Заголовок у правій колонці */
-            .reasons__box-right-title {
-                font-size: 26px;
-                font-weight: 900;
-                margin-bottom: 30px;
-                z-index: 1;
-                /* Поверх фонових зображень */
-                line-height: 1.1;
-            }
-
-            /* Текст у правій колонці */
-            .reasons__box-right-text {
-                font-size: 18px;
-                line-height: 1.5;
-                z-index: 1;
-                /* Поверх фонових зображень */
-            }
-
-            /* --- Елементи з фото --- */
-
-            /* Контейнер для фото в лівій колонці */
-            .reasons__box-left-foto {
-                display: block;
-            }
-
-            .reasons__box-left-foto img {
-                display: block;
-                width: 400px;
-                border-radius: 14px;
-            }
-
-            /* Модифікатор для фото в лівій колонці */
-            .reasons__box-left--foto img {
-                width: 100%;
-                height: auto;
-                z-index: -1;
-                /* Ховається за фон */
-            }
-
-            /* Окремий елемент фото (можливо, в правій колонці?) */
-            .reasons__box-foto {
-                z-index: -1;
-                /* Ховається за фон */
-            }
-
-            /* Модифікатор для фото з відступом */
-            .reasons__box-foto-margin {
-                display: block;
-                width: 470px;
-                padding: 0;
-                margin-left: auto;
-                z-index: -1;
-                /* Ховається за фон (дублює .reasons__box-foto) */
-            }
-
-            /* --- Фонові зображення (декорації) --- */
-
-            /* Базовий клас для фонових картинок */
-            .bg_images {
-                position: absolute;
-                bottom: 0;
-                z-index: 0;
-                /* Між фоном та текстом */
-            }
-
-            .bg_images-1 {
-                left: 32%;
-                width: 250px;
-            }
-
-            .bg_images-2 {
-                left: 48%;
-            }
-
-            .bg_images-3 {
-                left: 24%;
-                bottom: -40px;
-            }
-
-            .bg_images-4 {
-                left: 50%;
-                transform: translateX(-50%);
-                bottom: -2px;
-            }
-
-            .bg_images-5 {
-                left: 22%;
-                bottom: -23px;
-            }
-
-        </style>
-
         <section id="contact" class="contact-section">
             <div class="container">
                 <h2 class="section-title">Зв'яжіться зі мною</h2>
@@ -677,7 +525,6 @@
 
         </div>
     </div>
-
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>

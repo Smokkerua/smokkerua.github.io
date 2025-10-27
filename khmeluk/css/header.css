@@ -154,11 +154,36 @@
 
 
 
+@media (max-width: 1200px) {
 
+    .logo {
+        font-size: 20px;
+    }
 
+    .nav-desktop li {
+        margin-left: 15px;
+    }
+}
 
-@media (max-width: 768px) {
-    
+@media (max-width: 990px) {
+    .logo {
+        font-size: 18px;
+    }
+
+    .site-header {
+        height: 50px;
+    }
+
+    .logo__img {
+        ;
+        width: 25px;
+        margin-right: 10px;
+    }
+
+    .nav-desktop li {
+        margin-left: 10px;
+    }
+
     .nav-desktop {
         display: none;
     }
@@ -167,4 +192,11 @@
         display: block;
     }
 
+}
+
+@media (max-width: 768px) {
+    .nav-mobile a {
+            padding: 12px;
+        font-size: 14px;
+    }
 }
