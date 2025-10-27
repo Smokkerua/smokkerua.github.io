@@ -315,7 +315,8 @@
 
     .reasons__box-right-text {
         text-align: center;
-        font-size: 16px;
+        line-height: 1.6;
+        font-size: 18px;
     }
 
     .reasons__box-left {
